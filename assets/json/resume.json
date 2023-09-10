@@ -1,61 +1,61 @@
 {
   "basics": {
-    "name": "Albert Einstein",
-    "label": "Scientist",
+    "name": "Yuxuan (Vincent) Zhang",
+    "label": "Postdoctoral Researcher",
     "image": "",
-    "email": "albert@einstein.de",
-    "phone": "(912) 123-4567",
-    "url": "https://alshedivat.github.io/al-folio/",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
+    "email": "quantum.zhang@utoronto.ca",
+    #"phone": "(912) 123-4567",
+    "url": "https://cqiqc.physics.utoronto.ca/people/cqiqc-postdoctoral-fellows/yuxuan-zhang/",
+    "summary": "A China-born theoretical quantum scientist, enjoyer of classical music, poetry, and nature",
     "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
-      "countryCode": "US",
-      "region": "California"
+      "address": "MP1023, 60 St George St",
+      "postalCode": "M5R 2M8",
+      "city": "",
+      "countryCode": "Canada",
+      "region": "ON"
     },
     "profiles": [
       {
-        "network": "Twitter",
-        "username": "AlbertEinstein",
-        "url": "https://twitter.com/AlbertEinstein"
+        "network": "Google Scholar",
+        #"username": "AlbertEinstein",
+        "url": "https://scholar.google.com/citations?user=jf5oJUUAAAAJ&hl=en"
       }
     ]
   },
   "work": [
     {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "url": "https://example.com",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
-      "highlights": [
-        "Relativity"
-      ]
+      "name": "Centre for Quantum Information and Quantum Control, University of Toronto",
+      "position": "CQIQC Fellow",
+      "url": "https://cqiqc.physics.utoronto.ca/people/cqiqc-postdoctoral-fellows/yuxuan-zhang/",
+      "startDate": "Sep. 2023",
+      "endDate": "Present",
+      "summary": "Hosted by Yong-Baek Kim and Juan Felipe Carrasquilla, I have broad interests in quantum matter, quantum information, quantum communication, and machine learning",
+      #"highlights": [
+      #  "Relativity"
+      #]
     }
   ],
   "volunteer": [],
   "education": [
     {
-      "institution": "University of Zurich, Zurich, Switzerland",
-      "url": "https://www.uzh.ch/",
-      "area": "Software Development",
+      "institution": "University of Texas at Austin",
+      "url": "https://www.utexas.edu/",
+      "area": "Quantum information and quantum matter",
       "studyType": "PhD",
-      "startDate": "1905-01-01",
-      "endDate": "1905-01-01",
+      "startDate": "Aug. 2017",
+      "endDate": "Aug. 2023",
       "score": "",
       "courses": [
-        "Theory of Relativity"
+        
       ]
     }
   ],
   "awards": [
     {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
+      "title": "UCSB Highest Honors",
+      "date": "Jun. 2016",
+      "awarder": "University of California, Santa Barbara",
+      "summary": "Awarded to the top 2.5% of undergraduate students at graduation.:"
     }
   ],
   "certificates": [],
@@ -63,7 +63,7 @@
   "skills": [],
   "languages": [
     {
-      "language": "German",
+      "language": "Chinese",
       "fluency": "Native speaker"
     },
     {
