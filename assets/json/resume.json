@@ -4,7 +4,7 @@
     "label": "Postdoctoral Researcher",
     "image": "",
     "email": "quantum.zhang@utoronto.ca",
-    #"phone": "(912) 123-4567",
+    "phone": "",
     "url": "https://cqiqc.physics.utoronto.ca/people/cqiqc-postdoctoral-fellows/yuxuan-zhang/",
     "summary": "A China-born theoretical quantum scientist, enjoyer of classical music, poetry, and nature",
     "location": {
@@ -17,7 +17,7 @@
     "profiles": [
       {
         "network": "Google Scholar",
-        #"username": "AlbertEinstein",
+        "username": "",
         "url": "https://scholar.google.com/citations?user=jf5oJUUAAAAJ&hl=en"
       }
     ]
