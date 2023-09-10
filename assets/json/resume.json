@@ -10,7 +10,7 @@
     "location": {
       "address": "MP1023, 60 St George St",
       "postalCode": "M5R 2M8",
-      "city": "",
+      "city": "Toronto",
       "countryCode": "Canada",
       "region": "ON"
     },
@@ -30,9 +30,7 @@
       "startDate": "Sep. 2023",
       "endDate": "Present",
       "summary": "Hosted by Yong-Baek Kim and Juan Felipe Carrasquilla, I have broad interests in quantum matter, quantum information, quantum communication, and machine learning",
-      #"highlights": [
-      #  "Relativity"
-      #]
+      "highlights": []
     }
   ],
   "volunteer": [],
@@ -46,7 +44,6 @@
       "endDate": "Aug. 2023",
       "score": "",
       "courses": [
-        
       ]
     }
   ],
