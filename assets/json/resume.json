@@ -29,7 +29,34 @@
       "url": "https://cqiqc.physics.utoronto.ca/people/cqiqc-postdoctoral-fellows/yuxuan-zhang/",
       "startDate": "Sep. 2023",
       "endDate": "Present",
-      "summary": "Hosted by Yong-Baek Kim and Juan Felipe Carrasquilla, I have broad interests in quantum matter, quantum information, quantum communication, and machine learning",
+      "summary": "Conducting research related to many-body physics, photonics, and quantum information science",
+      "highlights": []
+    },
+    {
+      "name": "Vector Institute for Artificial Intelligence",
+      "position": "Researcher",
+      "url": "",
+      "startDate": "Sep. 2023",
+      "endDate": "Present",
+      "summary": "Applying machine learning techniques to study the quantum world",
+      "highlights": []
+    },
+    {
+      "name": "Cisco Research",
+      "position": "PhD intern",
+      "url": "https://research.cisco.com/research-projects/quantum",
+      "startDate": "May 2022",
+      "endDate": "Sept. 2022",
+      "summary": "Developed the new tools of photonic quantum computation and network",
+      "highlights": []
+    },
+        {
+      "name": "Institute of High Energy Physics",
+      "position": "Visiting Researcher",
+      "url": "",
+      "startDate": "June 2016",
+      "endDate": "June 2017",
+      "summary": "Designed algorithms for particle reconstruction in colliders",
       "highlights": []
     }
   ],
@@ -37,11 +64,21 @@
   "education": [
     {
       "institution": "University of Texas at Austin",
-      "url": "https://www.utexas.edu/",
-      "area": "Quantum information and quantum matter",
+      "url": "https://www.cs.utexas.edu/~qic/",
+      "area": "Thesis: Exploring quantum matter in the era of quantum computers",
       "studyType": "PhD",
-      "startDate": "Aug. 2017",
+      "startDate": "Sep. 2017",
       "endDate": "Aug. 2023",
+      "score": "",
+      "courses": [
+      ]
+    },
+        {
+      "institution": "University of California at Austin",
+      "area": "Thesis: Exploring quantum matter in the era of quantum computers",
+      "studyType": "BS",
+      "startDate": "Sep. 2013",
+      "endDate": "Jun. 2016",
       "score": "",
       "courses": [
       ]
@@ -52,7 +89,7 @@
       "title": "UCSB Highest Honors",
       "date": "Jun. 2016",
       "awarder": "University of California, Santa Barbara",
-      "summary": "Awarded to the top 2.5% of undergraduate students at graduation.:"
+      "summary": "Awarded to the top 2.5% of undergraduate students at graduation."
     }
   ],
   "certificates": [],
@@ -66,6 +103,10 @@
     {
       "language": "English",
       "fluency": "Fluent"
+    }
+    {
+      "language": "Python",
+      "fluency": "Fluent in writing, not as much in speaking"
     }
   ],
   "interests": [],
