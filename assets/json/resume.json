@@ -66,7 +66,7 @@
       "institution": "University of Texas at Austin",
       "url": "https://www.cs.utexas.edu/~qic/",
       "area": "Thesis: Exploring quantum matter in the era of quantum computers",
-      "studyType": "PhD",
+      "studyType": "Ph.D.",
       "startDate": "Sep. 2017",
       "endDate": "Aug. 2023",
       "score": "",
@@ -74,9 +74,9 @@
       ]
     },
         {
-      "institution": "University of California at Austin",
-      "area": "Thesis: Exploring quantum matter in the era of quantum computers",
-      "studyType": "BS",
+      "institution": "University of California, Santa Barbara",
+      "area": "Physics",
+      "studyType": "B.S.",
       "startDate": "Sep. 2013",
       "endDate": "Jun. 2016",
       "score": "",
@@ -109,7 +109,7 @@
       "fluency": "Fluent in writing, not as much in speaking"
     }
   ],
-  "interests": ["piano", "ping pong", "wine tasting", "history", "literature", "strategy games"],
+  "interests": [],
   "references": [],
   "projects": []
 }
