@@ -103,13 +103,13 @@
     {
       "language": "English",
       "fluency": "Fluent"
-    }
+    },
     {
       "language": "Python",
       "fluency": "Fluent in writing, not as much in speaking"
     }
   ],
-  "interests": [],
+  "interests": ["piano", "ping pong", "wine tasting", "history", "literature", "strategy games"],
   "references": [],
   "projects": []
 }
