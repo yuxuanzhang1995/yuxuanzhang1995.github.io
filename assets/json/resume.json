@@ -96,19 +96,19 @@
   "awards": [    
       {
       "title": "Professional Development Award",
-      "date": "Fall 2019, Spring 2023",
+      "date": "2019, 2023",
       "awarder": "The University of Texas at Austin",
       "summary": "Scholarship for original research presentation."
     },
     {
       "title": "Lawrence C. Biedenharn Jr. Endowed Fellowship",
-      "date": "Fall 2017",
+      "date": "2017",
       "awarder": "The University of Texas at Austin",
       "summary": "Awarded to top physics graduate students."
     },
     {
       "title": "UCSB Highest Honors",
-      "date": "Jun. 2016",
+      "date": "2016",
       "awarder": "University of California, Santa Barbara",
       "summary": "Awarded to the top 2.5% of undergraduate students at graduation."
     }
