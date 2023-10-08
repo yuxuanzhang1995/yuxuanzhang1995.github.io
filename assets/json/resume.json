@@ -42,6 +42,15 @@
       "highlights": []
     },
     {
+      "name": "Perimeter Institute for Theoretical Physics",
+      "position": "Visiting Researcher",
+      "url": "",
+      "startDate": "Aug. 2023",
+      "endDate": "Sep. 2023",
+      "summary": "",
+      "highlights": []
+    },
+    {
       "name": "Cisco Research",
       "position": "PhD intern",
       "url": "https://research.cisco.com/research-projects/quantum",
@@ -84,7 +93,19 @@
       ]
     }
   ],
-  "awards": [
+  "awards": [    
+      {
+      "title": "Professional Development Award",
+      "date": "Fall 2019, Spring 2023",
+      "awarder": "The University of Texas at Austin",
+      "summary": "Scholarship for original research presentation."
+    },
+    {
+      "title": "Lawrence C. Biedenharn Jr. Endowed Fellowship",
+      "date": "Fall 2017",
+      "awarder": "The University of Texas at Austin",
+      "summary": "Awarded to top physics graduate students."
+    },
     {
       "title": "UCSB Highest Honors",
       "date": "Jun. 2016",
@@ -107,6 +128,10 @@
     {
       "language": "Python",
       "fluency": "Fluent in writing, not as much in speaking"
+    },
+    {
+      "language": "C++",
+      "fluency": "Familar"
     }
   ],
   "interests": [],
