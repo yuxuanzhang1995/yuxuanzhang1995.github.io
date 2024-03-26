@@ -23,4 +23,4 @@ Hello! This is Yuxuan Zhang (张宇轩). I am currently a postdoctoral fellow at
 
 I completed my early education in my hometown, Tangshan, and graduated from Tangshan No. 1 High School in 2013. I then earned my B.S. in physics from the University of California, Santa Barbara with Highest Honors in 2016. Following this, I spent a year at the Institute of High Energy Physics, where I had fun with fundamental particles. In 2017, I attended [The University of Texas at Austin](https://www.cs.utexas.edu/~qic/) and developed a new interest in quantum information and quantum matter. There, I was lucky to be mentored by [Andrew C. Potter](https://qmi.ubc.ca/team-member/andrew-potter/) and [Scott Aaronson](https://scottaaronson.blog/) throughout my Ph.D. studies.
 
-Apart from my enthusiasm for science and nature, I'm a part-time poet, amateur pianist, and unprofessional photographer.
+Apart from my enthusiasm for science and nature, I'm a part-time poet, amateur pianist, unprofessional photographer, and semi-competitive RTS gamer.
