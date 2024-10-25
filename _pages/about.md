@@ -9,7 +9,7 @@ profile:
   image: prof_pic2.jpg
   image_circular: false # crops the image to make it circular
   address: >
-    <p>MP 1023, </p>
+    <p>MP 1023C, </p>
     <p>60 St George St.</p>
     <p>Toronto, ON M5R 2M8</p>
 
