@@ -203,7 +203,8 @@ kramdown:
     block:
       line_numbers: false
       start_line: 1
-
+  auto_ids: true
+  toc_levels: 1..6
 # Includes & excludes
 include: ['_pages']
 exclude:
