@@ -19,14 +19,16 @@ latest_posts: false  # includes a list of the newest posts
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false  # includes social icons at the bottom of the page
 ---
-Hello! This is Yuxuan (Vincent) Zhang (张宇轩). I am currently a postdoctoral researcher in [Prof. Dmitry Abanin](https://phy.princeton.edu/people/dmitry-abanin)’s group that superposes between Princeton and EPFL. My research lies at the interface of quantum information, quantum many-body physics, and artificial intelligence, with a particular focus on quantum algorithms, quantum advantage, and AI-assisted physical science descovery. I'm always open to new collaborations and looking for motivated students, if intersted, please feel free to reach out to me! 
+Hello! This is Yuxuan (Vincent) Zhang (张宇轩). I am currently a postdoctoral researcher in [Prof. Dmitry Abanin](https://phy.princeton.edu/people/dmitry-abanin)’s group, superposed between Princeton and EPFL. I am also a part-time Research Scientist at [BlueQubit](https://www.bluequbit.io/), working on quantum algorithm development.
 
-I completed my early education in my hometown, Tangshan, and graduated from Tangshan No. 1 High School in 2013. I received my B.S. in physics with Highest Honors from the University of California, Santa Barbara in 2016, and then spent a year at the Institute of High Energy Physics in Beijing, working on collider physics and detector reconstruction. 
+My research lies at the interface of quantum information, quantum many-body physics, and artificial intelligence. I am strongly motivated by questions such as: How can we achieve verifiable quantum advantage on near-term hardware? How can ideas from many-body physics advance quantum computation, and how can quantum computers help us better understand the laws of nature? And how can we best use machine-learning tools to improve the design of quantum computers?
 
-I then obtained my Ph.D. in physics from The University of Texas at Austin, where I was advised by Andrew C. (Drew) Potter and Scott Aaronson. From Fall 2023-2025, I was a CQIQC Fellow at the [Centre for Quantum Information and Quantum Control](https://cqiqc.physics.utoronto.ca/) at the University of Toronto, with a joint appointment at the Vector Institute for Artificial Intelligence, working closely with [Yong-Baek Kim](https://sites.google.com/view/ybkimgroup/yong-baek-kim), [Juan Carrasquilla](https://www.phys.ethz.ch/the-department/people/person-detail.jcarrasquill.html), and [Dvira Segal](https://sites.chem.utoronto.ca/chemistry/dsegal/). 
+Previously, I was a CQIQC Fellow at the [Centre for Quantum Information and Quantum Control](https://cqiqc.physics.utoronto.ca/) at the University of Toronto, with a joint appointment at the Vector Institute for Artificial Intelligence, where I worked closely with [Yong-Baek Kim](https://sites.google.com/view/ybkimgroup/yong-baek-kim), [Juan Carrasquilla](https://www.phys.ethz.ch/the-department/people/person-detail.jcarrasquill.html)(now at ETHz), and [Dvira Segal](https://sites.chem.utoronto.ca/chemistry/dsegal/).
 
-Outside of research, I enjoy traveling, photography, classical music, and real-time strategy games.
+I obtained my Ph.D. in Physics from The University of Texas at Austin, where I was fortunate to be mentored by [Andrew C. Potter](https://scholar.google.com/citations?user=QfLJm4QAAAAJ)(now at Quantinuum) and [Scott Aaronson](https://www.scottaaronson.com/). During my Ph.D., I became deeply interested in quantum information, quantum matter, and the computational structure of physical systems. Before that, I received my B.S. in Physics with Highest Honors from the University of California, Santa Barbara in 2016, and then spent a year at the Institute of High Energy Physics in Beijing, working on collider physics and detector reconstruction.
+
+Outside research, I enjoy traveling, photography, classical music, and real-time strategy games.
 
 After all, what have I learned about the quantum world so far? Well, in short:
 
-> You observed me, and thus we entangled – though I could never be a copy of you.
+> You observed me, and thus we entangled — though I could never be a copy of you.
