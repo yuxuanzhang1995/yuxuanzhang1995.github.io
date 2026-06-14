@@ -18,7 +18,7 @@ latest_posts: false  # includes a list of the newest posts
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false  # includes social icons at the bottom of the page
 ---
-Hello! This is Yuxuan (Vincent) Zhang (张宇轩). I am currently a postdoctoral researcher in [Prof. Dmitry Abanin](https://phy.princeton.edu/people/dmitry-abanin)’s group, superposed between Princeton and EPFL.
+Hello! This is Yuxuan (Vincent) Zhang (张宇轩). I am currently a postdoctoral researcher in [Prof. Dmitry Abanin](https://scholar.google.com/citations?user=beJ_6ykAAAAJ&hl=en)’s group, superposed between Princeton and EPFL.
 
 My research lies at the interface of quantum information, quantum many-body physics, and artificial intelligence. I am strongly motivated by questions such as: How can we achieve verifiable quantum advantage on near-term hardware? How can ideas from many-body physics advance quantum computation, and how can quantum computers help us better understand the laws of nature? And how can we best use machine-learning tools to improve the design of quantum computers?
 
