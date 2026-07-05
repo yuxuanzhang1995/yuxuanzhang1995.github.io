@@ -19,7 +19,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false  # includes social icons at the bottom of the page
 ---
 <div style="border-left: 3px solid var(--global-theme-color); background: rgba(128,128,128,0.06); padding: 0.55rem 0.9rem; margin-bottom: 1.4rem; border-radius: 3px;">
-<strong>Incoming — December 2026:</strong> I will join the <strong>National University of Singapore (NUS)</strong> as an <strong>Assistant Professor</strong>, jointly appointed in <strong>Computer Science</strong> and <strong>Physics</strong>. I am starting a group at the interface of quantum information, quantum many-body physics, and AI, and I am <strong>recruiting PhD students and postdocs</strong> — if that excites you, please <a href="mailto:quantum.zhang@utoronto.ca">get in touch</a>.
+<strong>Incoming — December 2026:</strong> I will join the <strong>National University of Singapore (NUS)</strong> as an <strong>Assistant Professor</strong>, jointly appointed in <strong>Computer Science</strong> and <strong>Physics</strong>. I am starting a group at the interface of quantum information, quantum many-body physics, and AI, and I am <strong>recruiting PhD students and postdocs</strong> — if that excites you, please <a href="mailto:quantum.yxz@gmail.com">get in touch</a>.
 </div>
 
 Hello! This is Yuxuan (Vincent) Zhang (张宇轩). I am currently a postdoctoral researcher in [Prof. Dmitry Abanin](https://scholar.google.com/citations?user=beJ_6ykAAAAJ&hl=en)’s group, superposed between Princeton and EPFL.
