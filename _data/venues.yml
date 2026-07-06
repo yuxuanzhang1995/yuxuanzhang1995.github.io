@@ -8,3 +8,23 @@
 "Nat. Commun.":
   url: https://www.nature.com/ncomms/
   color: "#0f7b6c"
+
+"PRX Quantum":
+  url: https://journals.aps.org/prxquantum/
+  color: "#6a4c93"
+
+"Phys. Rev. Lett.":
+  url: https://journals.aps.org/prl/
+  color: "#14539b"
+
+"Phys. Rev. Res.":
+  url: https://journals.aps.org/prresearch/
+  color: "#2f8f5b"
+
+"Quantum":
+  url: https://quantum-journal.org/
+  color: "#d68c45"
+
+"arXiv":
+  url: https://arxiv.org/
+  color: "#b31b1b"
