@@ -20,7 +20,6 @@ intelligence, with one organising goal: identifying quantum computations that ar
 .rfig-ph{display:flex;align-items:center;justify-content:center;min-height:230px;
   background:rgba(128,128,128,.06);color:var(--global-text-color-light);font-size:.9rem;text-align:center;padding:1rem}
 .rcap{color:var(--global-text-color-light);font-size:.85rem;margin:.1rem 0 2rem}
-.rfig-empty,.rfig-empty + .rcap{display:none}  /* TEMP: drop this line when the figures land */
 .rpapers{list-style:none;padding:0;margin:.6rem 0 0}
 .rpapers li{padding:.4rem 0;border-bottom:1px solid var(--global-divider-color)}
 .rpapers li:last-child{border-bottom:0}
@@ -31,7 +30,7 @@ intelligence, with one organising goal: identifying quantum computations that ar
 
 ## Quantum advantage and its classical boundary
 
-<div class="rfig rfig-empty"><div class="rfig-ph">[ figure 1 — magic / classical-simulation crossover ]</div></div>
+<div class="rfig"><img src="{{ 'assets/img/research/advantage-boundary.webp' | relative_url }}" alt="A quantum circuit with a “magic” T gate above; below, the cost of the best classical simulation growing from manageable to intractable, with a marked crossover to quantum advantage." loading="lazy"></div>
 <div class="rcap">Adding non-Clifford “magic” drives the cost of the best classical simulation from manageable to intractable; the crossover is where quantum advantage begins.</div>
 
 Sampling experiments have demonstrated quantum advantage, but their outputs are hard to check. I
@@ -56,8 +55,8 @@ results that map the boundary between the classically tractable and the genuinel
 
 ## Quantum simulation of many-body and open systems
 
-<div class="rfig rfig-empty"><div class="rfig-ph">[ figure 2 — one circuit, many states: ground / excited / dynamics / open ]</div></div>
-<div class="rcap">One circuit, many accessible states — and, once noise is included, phases that exist only in the open-system setting.</div>
+<div class="rfig"><img src="{{ 'assets/img/research/simulation-states.webp' | relative_url }}" alt="One quantum circuit whose measurements reveal different outcomes — ground state, excited state, and dynamics — drawn as three cats." loading="lazy"></div>
+<div class="rcap">One circuit, many accessible states: ground state, excited states, and real-time dynamics.</div>
 
 Today's processors are good enough to probe physics that is otherwise hard to reach. Using
 holographic (qubit-efficient) tensor-network circuits and trapped-ion hardware, I study
@@ -78,7 +77,7 @@ correction.
 
 ## Machine learning for quantum computing
 
-<div class="rfig rfig-wide rfig-empty"><div class="rfig-ph">[ figure 3 — learn &amp; compile · discover · adapt ]</div></div>
+<div class="rfig rfig-wide"><img src="{{ 'assets/img/research/ml-for-quantum.webp' | relative_url }}" alt="Three roles for machine learning in quantum computing: compiling long dynamics into short circuits, discovering new phases from learned representations, and adapting to hardware feedback." loading="lazy"></div>
 <div class="rcap">Three ways learning enters: compiling long dynamics into short circuits, discovering phases from learned representations, and adapting to hardware feedback.</div>
 
 Learning enters quantum computing in three places. I use machine learning to *compile* long
