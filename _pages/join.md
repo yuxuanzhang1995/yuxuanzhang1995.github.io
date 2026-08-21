@@ -76,11 +76,3 @@ Email me at [quantum.yxz@gmail.com](mailto:quantum.yxz@gmail.com) with:
 - for PhD applicants, when you intend to apply and which scholarship you are targeting.
 
 I read everything that arrives, though replies can be slow during heavy stretches.
-
-## Mentoring
-
-Although the group starts in December 2026, I have worked closely with students in my host groups,
-each time resulting in joint publications: Massimo Solinas and Brandon Barton, and Matteo D'Anna
-(with Juan Carrasquilla); Shahin Jahanbani and Ameya Riswadkar (with Andrew Potter); and Brett Min
-(with Dvira Segal). Students in the new group can expect the same close, hands-on supervision —
-which is, honestly, one of the advantages of joining a group in its first years.
