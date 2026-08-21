@@ -16,7 +16,6 @@ intelligence, with one organising goal: identifying quantum computations that ar
 <style>
 .rfig{margin:1.6rem 0 .6rem;border:1px solid var(--global-divider-color);border-radius:6px;overflow:hidden}
 .rfig img{display:block;width:100%;height:auto}
-.rfig.rfig-wide{margin-left:max(-9vw,-120px);margin-right:max(-9vw,-120px)}
 .rfig-ph{display:flex;align-items:center;justify-content:center;min-height:230px;
   background:rgba(128,128,128,.06);color:var(--global-text-color-light);font-size:.9rem;text-align:center;padding:1rem}
 .rcap{color:var(--global-text-color-light);font-size:.85rem;margin:.1rem 0 2rem}
@@ -77,7 +76,7 @@ correction.
 
 ## Machine learning for quantum computing
 
-<div class="rfig rfig-wide"><img src="{{ 'assets/img/research/ml-for-quantum.webp' | relative_url }}" alt="Three roles for machine learning in quantum computing: compiling long dynamics into short circuits, discovering new phases from learned representations, and adapting to hardware feedback." loading="lazy"></div>
+<div class="rfig"><img src="{{ 'assets/img/research/ml-for-quantum.webp' | relative_url }}" alt="Three roles for machine learning in quantum computing: compiling long dynamics into short circuits, discovering new phases from learned representations, and adapting to hardware feedback." loading="lazy"></div>
 <div class="rcap">Three ways learning enters: compiling long dynamics into short circuits, discovering phases from learned representations, and adapting to hardware feedback.</div>
 
 Learning enters quantum computing in three places. I use machine learning to *compile* long
@@ -110,3 +109,9 @@ all-photonic one-way quantum repeaters (<a href="https://doi.org/10.1038/s41534-
 and quantum algorithms for network-flow optimisation (<a href="https://doi.org/10.22331/q-2021-07-27-510">Quantum <b>5</b>, 510</a>).
 Full list on the <a href="/publications/">publications</a> page.
 </p>
+
+<div class="newdir" style="margin-top:2rem">
+<strong>Interested in joining?</strong> I am recruiting postdocs, PhD students, visiting researchers,
+and project students. See <a href="{{ '/join/' | relative_url }}">join the group</a> for open
+positions, application timelines, and what to send.
+</div>
