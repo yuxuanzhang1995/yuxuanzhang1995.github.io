@@ -79,23 +79,61 @@
         "Supported by the CQIQC Fellowship (2023–2025) and the Quantum Software Consortium Grant (2025)",
         "Hosts: Yong-Baek Kim, Juan Felipe Carrasquilla Álvarez, and Dvira Segal"
       ]
+    }
+  ],
+  "visits": [
+    {
+      "organization": "School for Near-Term Quantum Computing, Benasque",
+      "position": "Lecturer",
+      "url": "",
+      "startDate": "2026-03",
+      "endDate": "2026-03",
+      "summary": "Lectured on quantum complexity and quantum supremacy.",
+      "highlights": []
     },
     {
-      "name": "Cisco Research",
-      "position": "PhD Intern",
+      "organization": "Kavli Institute for Theoretical Physics",
+      "position": "Program participant",
+      "url": "",
+      "startDate": "2024-04",
+      "endDate": "2025-11",
+      "summary": "Apr. 2024; Nov. 2025.",
+      "highlights": []
+    },
+    {
+      "organization": "ETH Zürich",
+      "position": "Academic guest",
+      "url": "",
+      "startDate": "2024-11",
+      "endDate": "2025-12",
+      "summary": "Nov.–Dec. 2024; Dec. 2025.",
+      "highlights": []
+    },
+    {
+      "organization": "Perimeter Institute for Theoretical Physics",
+      "position": "Visitor",
+      "url": "",
+      "startDate": "2023-08",
+      "endDate": "2025-10",
+      "summary": "Aug. 2023; Mar., May, Jul. 2024; May, Oct. 2025.",
+      "highlights": []
+    },
+    {
+      "organization": "Tsinghua University",
+      "position": "Visitor",
+      "url": "",
+      "startDate": "2023-12",
+      "endDate": "2024-12",
+      "summary": "Dec. 2023; Dec. 2024.",
+      "highlights": []
+    },
+    {
+      "organization": "Cisco Research",
+      "position": "PhD intern",
       "url": "",
       "startDate": "2022-05",
       "endDate": "2022-08",
       "summary": "Benchmarking photonic quantum processors.",
-      "highlights": []
-    },
-    {
-      "name": "Institute of High Energy Physics, Beijing",
-      "position": "Visiting Researcher",
-      "url": "",
-      "startDate": "2016-07",
-      "endDate": "2017-08",
-      "summary": "Collider physics and detector reconstruction.",
       "highlights": []
     }
   ],
@@ -144,13 +182,6 @@
       "summary": "Declined."
     },
     {
-      "title": "Professional Development Award",
-      "date": "2019, 2023",
-      "awarder": "The University of Texas at Austin",
-      "url": "",
-      "summary": "Scholarship for original research presentation."
-    },
-    {
       "title": "Lawrence C. Biedenharn Jr. Endowed Fellowship",
       "date": "2017",
       "awarder": "The University of Texas at Austin",
@@ -163,13 +194,6 @@
       "awarder": "University of California, Santa Barbara",
       "url": "",
       "summary": "Awarded to the top 2.5% of undergraduate students."
-    },
-    {
-      "title": "Dean's Honors",
-      "date": "2013 – 2016",
-      "awarder": "University of California, Santa Barbara",
-      "url": "",
-      "summary": ""
     }
   ],
   "volunteer": [
@@ -199,19 +223,10 @@
       ]
     },
     {
-      "organization": "School for Near-Term Quantum Computing, Benasque",
-      "position": "Lecturer",
-      "url": "",
-      "startDate": "2026-03",
-      "endDate": "2026-03",
-      "summary": "Lectured on quantum complexity and quantum supremacy.",
-      "highlights": []
-    },
-    {
       "organization": "APS March Meeting",
-      "position": "Session Chair and Abstract Sorter",
+      "position": "Session Chair",
       "url": "",
-      "startDate": "2022-10",
+      "startDate": "2023-03",
       "endDate": "2023-03",
       "summary": "",
       "highlights": []
