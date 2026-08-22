@@ -22,7 +22,7 @@ table.jdates th{color:var(--global-text-color-light);font-weight:600}
 
 I am starting a group at NUS in December 2026, jointly in the
 [School of Computing](https://www.comp.nus.edu.sg/cs/) and the
-[Department of Physics](https://www.physics.nus.edu.sg/), and I am recruiting at every level.
+[Department of Physics](https://www.physics.nus.edu.sg/), and I am recruiting at every level (see my [NUS faculty profile](https://www.comp.nus.edu.sg/cs/people/zhangyx/)).
 
 We work on quantum advantage and the boundary of classical simulation, quantum simulation of
 many-body and open systems, and machine learning for quantum computing — see

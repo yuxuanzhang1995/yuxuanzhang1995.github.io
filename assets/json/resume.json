@@ -16,6 +16,11 @@
     },
     "profiles": [
       {
+        "network": "NUS",
+        "username": "ZHANG Yuxuan",
+        "url": "https://www.comp.nus.edu.sg/cs/people/zhangyx/"
+      },
+      {
         "network": "Google Scholar",
         "username": "Yuxuan Zhang",
         "url": "https://scholar.google.com/citations?user=jf5oJUUAAAAJ&hl=en"
@@ -36,7 +41,7 @@
     {
       "name": "National University of Singapore",
       "position": "Assistant Professor (incoming)",
-      "url": "https://www.comp.nus.edu.sg/cs/",
+      "url": "https://www.comp.nus.edu.sg/cs/people/zhangyx/",
       "startDate": "2026-12",
       "endDate": "onwards",
       "summary": "Joint appointment in the School of Computing and the Department of Physics.",
