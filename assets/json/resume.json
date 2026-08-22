@@ -44,7 +44,7 @@
       "url": "https://www.comp.nus.edu.sg/cs/people/zhangyx/",
       "startDate": "2026-12",
       "endDate": "onwards",
-      "summary": "Joint appointment in the School of Computing and the Department of Physics.",
+      "summary": "Joint appointment: Department of Computer Science (primary) and Department of Physics.",
       "highlights": [
         "Starting a group at the interface of quantum information, quantum many-body physics, and AI",
         "Recruiting postdocs, PhD students, and visiting researchers"
@@ -76,8 +76,8 @@
       "endDate": "2025-12",
       "summary": "Synergy between quantum information, quantum matter, and artificial intelligence.",
       "highlights": [
-        "CQIQC Fellow with Yong-Baek Kim and Juan Carrasquilla (2023–2025)",
-        "Quantum Software Consortium Grant with Dvira Segal (2025)"
+        "Supported by the CQIQC Fellowship (2023–2025) and the Quantum Software Consortium Grant (2025)",
+        "Hosts: Yong-Baek Kim, Juan Felipe Carrasquilla Álvarez, and Dvira Segal"
       ]
     },
     {
@@ -224,9 +224,9 @@
       "endDate": "2023-05",
       "summary": "",
       "highlights": [
+        "Chair and representative, Graduate Welfare Committee (2020–2022) — tripled the physics department's student budget; worked on equity and diversity in graduate admissions",
         "Mentor, The Quantum Collective (2022–2023)",
-        "Mentor, Directed Reading Program (2018–2022)",
-        "Chair and representative, Graduate Welfare Committee (2020–2022)"
+        "Mentor, Directed Reading Program (2018–2022)"
       ]
     }
   ],
@@ -256,6 +256,19 @@
     }
   ],
   "skills": [
+    {
+      "name": "Research theme",
+      "level": "",
+      "icon": "",
+      "keywords": [
+        "toward verifiable and practical quantum advantage",
+        "quantum computation",
+        "quantum many-body physics",
+        "artificial intelligence",
+        "algorithm development & verification",
+        "quantum simulation"
+      ]
+    },
     {
       "name": "Quantum information and complexity",
       "level": "",
