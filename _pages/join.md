@@ -29,7 +29,8 @@ many-body and open systems, and machine learning for quantum computing — see
 [research]({{ '/research/' | relative_url }}) for what that means in practice. Theory-leaning,
 numerics-leaning, and hardware-facing projects are all available, and qualified candidates will
 also have opportunities to work with industry partners in quantum computing, including Quantinuum,
-Google, and IBM.
+Google, and IBM, and to take part in an ongoing collaboration spanning North America, Europe, and
+Asia.
 
 ## Open positions
 
