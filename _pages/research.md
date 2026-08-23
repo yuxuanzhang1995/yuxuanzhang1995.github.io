@@ -55,7 +55,7 @@ results that map the boundary between the classically tractable and the genuinel
 ## Quantum simulation of many-body and open systems
 
 <div class="rfig"><img src="{{ 'assets/img/research/simulation-states.webp' | relative_url }}" alt="One quantum circuit whose measurements reveal different outcomes — ground state, excited state, and dynamics — drawn as three cats." loading="lazy"></div>
-<div class="rcap">One circuit, many accessible states: ground state, excited states, and real-time dynamics.</div>
+<div class="rcap">As Richard Feynman envisioned, quantum computers promise both computational and memory advantages for simulating quantum matter — bringing ground states, excited states, and real-time dynamics within reach of today’s devices.</div>
 
 Today's processors are good enough to probe physics that is otherwise hard to reach. Using
 holographic (qubit-efficient) tensor-network circuits and trapped-ion hardware, I study
