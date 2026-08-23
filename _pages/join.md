@@ -20,9 +20,13 @@ table.jdates th,table.jdates td{text-align:left;padding:.45rem .6rem;border-bott
 table.jdates th{color:var(--global-text-color-light);font-weight:600}
 </style>
 
-I am starting a group at NUS in December 2026, jointly in the
+**For 2027 the group has two postdoctoral openings and at least three PhD openings, in Computer
+Science and in Physics — all funded.**
+
+I am starting the group at NUS in December 2026, jointly in the
 [School of Computing](https://www.comp.nus.edu.sg/cs/) and the
-[Department of Physics](https://www.physics.nus.edu.sg/), and I am recruiting at every level (see my [NUS faculty profile](https://www.comp.nus.edu.sg/cs/people/zhangyx/)).
+[Department of Physics](https://www.physics.nus.edu.sg/); see my
+[NUS faculty profile](https://www.comp.nus.edu.sg/cs/people/zhangyx/).
 
 We work on quantum advantage and the boundary of classical simulation, quantum simulation of
 many-body and open systems, and machine learning for quantum computing — see
@@ -92,9 +96,8 @@ dates, and treat the table above as the planning horizon rather than the final w
 
 ## Funding
 
-For 2027 the group has **two postdoctoral openings** and **at least three PhD openings**, all funded.
-You may also want to consider the external awards below; you are welcome to contact me about
-applying together.
+Every position listed above comes with its own funding. You may still want to consider the external
+awards below; you are welcome to contact me about applying together.
 
 **For PhD applicants**
 
