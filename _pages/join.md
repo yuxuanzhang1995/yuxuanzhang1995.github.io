@@ -36,7 +36,7 @@ Asia.
 
 <ul class="jroles">
 <li><span class="jrole">Postdoctoral researchers</span> — from December 2026.
-    <span class="jnote">Candidates holding, or applying for, their own fellowship are especially welcome; I am glad to host applications.</span></li>
+    <span class="jnote">Funded positions; candidates holding or applying for their own fellowship are welcome too, and I am glad to host such applications.</span></li>
 <li><span class="jrole">PhD students</span> — through the NUS graduate programmes in Computer Science or Physics.
     <span class="jnote">Funding is normally through an NUS Research Scholarship, SINGA, or the National Quantum Scholarships Scheme; see the deadlines below.</span></li>
 <li><span class="jrole">Visiting researchers and students</span> — for focused projects, typically three months or longer.</li>
@@ -92,8 +92,10 @@ dates, and treat the table above as the planning horizon rather than the final w
 
 ## Funding
 
-Several routes exist, and they are not mutually exclusive — a strong applicant is often nominated
-for more than one.
+Positions in the group are funded — you do not need to bring your own support. Everything below is
+optional on top of that: these awards carry prestige, sometimes a larger stipend, and in the case of
+fellowships a real measure of independence. They are not mutually exclusive, so a strong applicant
+is often nominated for more than one, and I am glad to support an application to any of them.
 
 **For PhD applicants**
 
