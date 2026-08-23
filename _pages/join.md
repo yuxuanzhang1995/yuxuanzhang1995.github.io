@@ -92,10 +92,13 @@ dates, and treat the table above as the planning horizon rather than the final w
 
 ## Funding
 
-Positions in the group are funded — you do not need to bring your own support. Everything below is
-optional on top of that: these awards carry prestige, sometimes a larger stipend, and in the case of
-fellowships a real measure of independence. They are not mutually exclusive, so a strong applicant
-is often nominated for more than one, and I am glad to support an application to any of them.
+For 2027 the group has **one to two postdoctoral openings** and **at least three PhD openings**, all
+funded. You are encouraged to apply for the awards below anyway, because they are worth having in
+their own right: a named fellowship is a durable line on your CV when you go for your next position,
+it usually comes with its own travel and computing budget, and it buys real freedom in choosing what
+you work on. Every externally funded person also frees a group position for someone else, so the
+group grows faster and you have more people to talk to. Several of these are not mutually exclusive,
+and I am glad to help with any of the applications.
 
 **For PhD applicants**
 
