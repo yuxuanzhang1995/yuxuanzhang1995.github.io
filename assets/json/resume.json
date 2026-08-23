@@ -232,15 +232,15 @@
       "highlights": []
     }
   ],
-  "projects": [
+  "mentorship": [
     {
-      "name": "Student mentorship",
+      "name": "Mentorship and collaboration",
       "url": "",
       "startDate": "2022-01",
       "endDate": "",
-      "summary": "Students I have supervised or co-supervised, listed with their seniority at the time, where they went next, and the resulting output.",
+      "summary": "Students and junior researchers I have supervised, co-supervised, or worked closely with — listed with their seniority at the time, where they went next, and the resulting output.",
       "highlights": [
-        "Shuyi Liang — PhD at NUS (starting 2026) · research paper, 2026",
+        "Shuyi Liang — undergraduate at SJTU → master's at NUS · research paper, 2026",
         "Brandon Barton — PhD at ETH Zürich · research paper, 2026",
         "Jakub Garwola — PhD at University of Toronto · research paper, 2025",
         "Xiang Zou — PhD at University of Toronto · research paper, 2025",
