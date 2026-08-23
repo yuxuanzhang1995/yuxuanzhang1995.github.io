@@ -52,12 +52,23 @@ sure whether you fit, write anyway.
 
 ## Singapore
 
-The [National Quantum Strategy](https://nqo.sg/), launched in 2024, commits about **S$300 million**
-over five years, and it funds precisely the things a new group depends on: the Centre for Quantum
-Technologies at NUS is being built up into a national R&D centre with nodes across the local
-institutions; the National Quantum Processor Initiative is developing trapped-ion and neutral-atom
-hardware — the platforms closest to my own experimental work; and the National Quantum Scholarships
-Scheme is funding up to 100 PhD and 100 master's students over five years.
+Singapore is expanding hard in quantum, on both the academic and the industrial side. The
+[National Quantum Strategy](https://nqo.sg/) committed about **S$300 million** over five years in
+2024, and quantum was named a pillar of the wider RIE2030 research plan in 2026. Academically that
+is building out the [Centre for Quantum Technologies](https://www.cqt.sg/) at NUS into a national
+R&D centre with nodes across the local institutions, alongside A*STAR's
+[Quantum Innovation Centre](https://www.a-star.edu.sg/qinc); the National Quantum Processor
+Initiative is developing trapped-ion and neutral-atom hardware — the platforms closest to my own
+experimental work — and the National Quantum Scholarships Scheme funds up to 100 PhD and 100
+master's students over five years.
+
+Industry has grown alongside it. [Quantinuum](https://www.quantinuum.com/press-releases/quantinuum-expands-global-footprint-to-singapore-with-the-establishment-of-a-new-r-d-centre)
+has established an R&D centre here and a national partnership with the Quantum Office; the
+[National Quantum-Safe Network](https://nqsn.sg/) is moving from testbed to nationwide deployment;
+and CQT spin-offs such as [SpeQtral](https://www.speqtral.space/) and
+[Horizon Quantum Computing](https://www.horizonquantum.com/) are based in the city. For a group
+working on verifiable advantage and hardware-facing simulation, having the machines and the people
+who build them within a few kilometres of the office matters more than it sounds.
 
 The city itself is compact and English-speaking, a short flight from most of Asia while staying well
 connected to Europe and North America — which makes collaborations across three continents a good
