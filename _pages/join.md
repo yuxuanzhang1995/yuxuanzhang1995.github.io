@@ -20,8 +20,8 @@ table.jdates th,table.jdates td{text-align:left;padding:.45rem .6rem;border-bott
 table.jdates th{color:var(--global-text-color-light);font-weight:600}
 </style>
 
-**For 2027 the group has two postdoctoral openings and at least three PhD openings, in Computer
-Science and in Physics — all funded.**
+**For 2027 I have funding for two postdoctoral researchers and at least three PhD students, in
+Computer Science and in Physics.**
 
 I am starting the group at NUS in December 2026, jointly in the
 [School of Computing](https://www.comp.nus.edu.sg/cs/) and the
@@ -96,8 +96,8 @@ dates, and treat the table above as the planning horizon rather than the final w
 
 ## Funding
 
-Every position listed above comes with its own funding. You may still want to consider the external
-awards below; you are welcome to contact me about applying together.
+You may still want to consider the external awards below; you are welcome to contact me about
+applying together.
 
 **For PhD applicants**
 
