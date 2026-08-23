@@ -87,12 +87,14 @@ for more than one.
 **For PhD applicants**
 
 <ul class="jroles">
-<li><span class="jrole"><a href="https://nusgs.nus.edu.sg/scholarships/">NUS Research Scholarship</a></span>
+<li><span class="jrole"><a href="https://nusgs.nus.edu.sg/scholarships/nus-research-scholarship/">NUS Research Scholarship</a></span>
     — <span class="jnote">the default route; awarded through the graduate programme you apply to.</span></li>
 <li><span class="jrole"><a href="https://www.a-star.edu.sg/scholarships/home/scholarships">SINGA</a></span>
     — <span class="jnote">for international applicants in the physical sciences and engineering, which covers this group's work. Deadlines below.</span></li>
 <li><span class="jrole"><a href="https://nqo.sg/">National Quantum Scholarships Scheme</a></span>
     — <span class="jnote">quantum-specific, funding up to 100 PhD and 100 master's students over five years under the National Quantum Strategy.</span></li>
+<li><span class="jrole"><a href="https://www.a-star.edu.sg/scholarships/home/scholarships/ags--scholarship">A*STAR Graduate Scholarship</a></span>
+    — <span class="jnote">for Singapore citizens and permanent residents.</span></li>
 <li><span class="jrole"><a href="https://nusgs.nus.edu.sg/scholarships/presidents-graduate-fellowship/">President's Graduate Fellowship</a></span>
     — <span class="jnote">for exceptional candidates, open to all nationalities. You are nominated by the University rather than applying directly, so it is not something to plan around — but worth knowing it exists.</span></li>
 <li><span class="jrole"><a href="https://www.cqt.sg/students/">CQT graduate programme</a></span>
@@ -106,12 +108,15 @@ for more than one.
     — <span class="jnote">for researchers within about seven years of the PhD who are ready to run an independent programme; it funds independence rather than a mentored postdoc, and needs a host institution to put you forward.</span></li>
 <li><span class="jrole"><a href="https://www.cqt.sg/join-us/">CQT Alice Postdoctoral Fellowship</a></span>
     — <span class="jnote">supports women researchers in quantum science and technology at CQT.</span></li>
+<li><span class="jrole"><a href="https://www.nus.edu.sg/research/postdoctoral-fellowships">NUS postdoctoral fellowships</a></span>
+    — <span class="jnote">the University-wide listing; schemes here change, so check it directly.</span></li>
 <li><span class="jrole">Portable fellowships from your own region</span>
     — <span class="jnote">MSCA, SNSF, NSERC, JSPS, Humboldt and similar schemes can often be held abroad. If you are applying for one, write early — I am glad to act as host and to work on the proposal with you.</span></li>
 </ul>
 
 <p class="jnote">Schemes, stipends and deadlines change from year to year, so treat the links above as
-the authoritative source and this list as a starting point. If you are unsure which route fits, ask
+the authoritative source and this list as a starting point — the full index of NUS graduate
+awards is <a href="https://nusgs.nus.edu.sg/scholarships-list/">here</a>. If you are unsure which route fits, ask
 me — that is a much faster conversation than reading five policy pages.</p>
 
 ## Getting in touch
