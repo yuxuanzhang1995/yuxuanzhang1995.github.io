@@ -79,6 +79,41 @@ group's work. NUS Research Scholarship deadlines are set by each school and can 
 check the School of Computing and Department of Physics graduate admissions pages for the exact
 dates, and treat the table above as the planning horizon rather than the final word.</p>
 
+## Funding
+
+Several routes exist, and they are not mutually exclusive — a strong applicant is often nominated
+for more than one.
+
+**For PhD applicants**
+
+<ul class="jroles">
+<li><span class="jrole"><a href="https://nusgs.nus.edu.sg/scholarships/">NUS Research Scholarship</a></span>
+    — <span class="jnote">the default route; awarded through the graduate programme you apply to.</span></li>
+<li><span class="jrole"><a href="https://www.a-star.edu.sg/scholarships/home/scholarships">SINGA</a></span>
+    — <span class="jnote">for international applicants in the physical sciences and engineering, which covers this group's work. Deadlines below.</span></li>
+<li><span class="jrole"><a href="https://nqo.sg/">National Quantum Scholarships Scheme</a></span>
+    — <span class="jnote">quantum-specific, funding up to 100 PhD and 100 master's students over five years under the National Quantum Strategy.</span></li>
+<li><span class="jrole"><a href="https://nusgs.nus.edu.sg/scholarships/presidents-graduate-fellowship/">President's Graduate Fellowship</a></span>
+    — <span class="jnote">for exceptional candidates, open to all nationalities. You are nominated by the University rather than applying directly, so it is not something to plan around — but worth knowing it exists.</span></li>
+<li><span class="jrole"><a href="https://www.cqt.sg/students/">CQT graduate programme</a></span>
+    — <span class="jnote">a quantum-specific route into NUS, worth looking at alongside the CS and Physics programmes.</span></li>
+</ul>
+
+**For postdoctoral applicants**
+
+<ul class="jroles">
+<li><span class="jrole"><a href="https://www.nrf.gov.sg/grants/nrff/">NRF Fellowship</a></span>
+    — <span class="jnote">for researchers within about seven years of the PhD who are ready to run an independent programme; it funds independence rather than a mentored postdoc, and needs a host institution to put you forward.</span></li>
+<li><span class="jrole"><a href="https://www.cqt.sg/join-us/">CQT Alice Postdoctoral Fellowship</a></span>
+    — <span class="jnote">supports women researchers in quantum science and technology at CQT.</span></li>
+<li><span class="jrole">Portable fellowships from your own region</span>
+    — <span class="jnote">MSCA, SNSF, NSERC, JSPS, Humboldt and similar schemes can often be held abroad. If you are applying for one, write early — I am glad to act as host and to work on the proposal with you.</span></li>
+</ul>
+
+<p class="jnote">Schemes, stipends and deadlines change from year to year, so treat the links above as
+the authoritative source and this list as a starting point. If you are unsure which route fits, ask
+me — that is a much faster conversation than reading five policy pages.</p>
+
 ## Getting in touch
 
 Email me at [quantum.yxz@gmail.com](mailto:quantum.yxz@gmail.com) with:
