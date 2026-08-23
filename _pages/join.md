@@ -52,16 +52,16 @@ sure whether you fit, write anyway.
 
 ## Singapore
 
-Singapore is an unusually good place to be doing quantum research at the moment. The
-[National Quantum Strategy](https://nqo.sg/), launched in 2024, commits about **S$300 million** over
-five years, and it funds precisely the things a new group depends on: the Centre for Quantum
+The [National Quantum Strategy](https://nqo.sg/), launched in 2024, commits about **S$300 million**
+over five years, and it funds precisely the things a new group depends on: the Centre for Quantum
 Technologies at NUS is being built up into a national R&D centre with nodes across the local
 institutions; the National Quantum Processor Initiative is developing trapped-ion and neutral-atom
 hardware — the platforms closest to my own experimental work; and the National Quantum Scholarships
 Scheme is funding up to 100 PhD and 100 master's students over five years.
 
-Practically, it is also a compact, English-speaking city with direct links across Asia, Europe and
-North America, which makes it unusually easy to keep collaborations running on all three continents.
+The city itself is compact and English-speaking, a short flight from most of Asia while staying well
+connected to Europe and North America — which makes collaborations across three continents a good
+deal easier to sustain than they sound.
 
 ## PhD application timeline
 
