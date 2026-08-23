@@ -38,7 +38,7 @@ Asia.
 <li><span class="jrole">Postdoctoral researchers</span> — from December 2026.
     <span class="jnote">Candidates holding, or applying for, their own fellowship are especially welcome; I am glad to host applications.</span></li>
 <li><span class="jrole">PhD students</span> — through the NUS graduate programmes in Computer Science or Physics.
-    <span class="jnote">Funding is normally through an NUS Research Scholarship or SINGA; see the deadlines below.</span></li>
+    <span class="jnote">Funding is normally through an NUS Research Scholarship, SINGA, or the National Quantum Scholarships Scheme; see the deadlines below.</span></li>
 <li><span class="jrole">Visiting researchers and students</span> — for focused projects, typically three months or longer.</li>
 <li><span class="jrole">Master's, FYP and UROP students</span> — once I am on campus.</li>
 </ul>
@@ -49,6 +49,19 @@ starting points. Prior quantum experience helps but is not required — several 
 care about are, at heart, questions about algorithms, optimisation, or statistics. If you are not
 sure whether you fit, write anyway.
 </div>
+
+## Singapore
+
+Singapore is an unusually good place to be doing quantum research at the moment. The
+[National Quantum Strategy](https://nqo.sg/), launched in 2024, commits about **S$300 million** over
+five years, and it funds precisely the things a new group depends on: the Centre for Quantum
+Technologies at NUS is being built up into a national R&D centre with nodes across the local
+institutions; the National Quantum Processor Initiative is developing trapped-ion and neutral-atom
+hardware — the platforms closest to my own experimental work; and the National Quantum Scholarships
+Scheme is funding up to 100 PhD and 100 master's students over five years.
+
+Practically, it is also a compact, English-speaking city with direct links across Asia, Europe and
+North America, which makes it unusually easy to keep collaborations running on all three continents.
 
 ## PhD application timeline
 
