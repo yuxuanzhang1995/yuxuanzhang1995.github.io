@@ -230,19 +230,6 @@
       "endDate": "2023-03",
       "summary": "",
       "highlights": []
-    },
-    {
-      "organization": "The University of Texas at Austin",
-      "position": "Mentor and student representative",
-      "url": "",
-      "startDate": "2018-01",
-      "endDate": "2023-05",
-      "summary": "",
-      "highlights": [
-        "Chair and representative, Graduate Welfare Committee (2020–2022) — tripled the physics department's student budget; worked on equity and diversity in graduate admissions",
-        "Mentor, The Quantum Collective (2022–2023)",
-        "Mentor, Directed Reading Program (2018–2022)"
-      ]
     }
   ],
   "projects": [
@@ -251,22 +238,21 @@
       "url": "",
       "startDate": "2022-01",
       "endDate": "",
-      "summary": "Students I have supervised or co-supervised, with the resulting output and where they went next.",
+      "summary": "Students I have supervised or co-supervised, listed with their seniority at the time, where they went next, and the resulting output.",
       "highlights": [
-        "Shuyi Liang — research paper, 2026; PhD at NUS",
-        "Brandon Barton — research paper, 2026; PhD at ETH Zürich",
-        "Jakub Garwola — research paper, 2025; PhD at University of Toronto",
-        "Xiang Zou — research paper, 2025; PhD at University of Toronto",
-        "Michelle Ding — honors thesis, 2025; PhD at UT Austin",
-        "Xuheng Zhao — master's project, 2025; ETH Zürich",
-        "Ruize Ma — research paper, 2025; PhD at EPFL",
-        "Matteo D'Anna — research paper, 2025; PhD at ETH Zürich",
-        "Massimo Solinas — research paper, 2025; PhD at Regensburg University",
-        "Yifan Zhang — research paper, 2024; PhD at Princeton",
-        "Adam Martinez — honors thesis, 2024; PhD at Oxford",
-        "Xiaoxiao (Alice) Xiong — honors thesis, 2023; Caltech",
-        "Michelle Gelman — honors thesis, 2023; PhD at USC",
-        "Shahin Jahanbani — research paper, 2022; PhD at UC Berkeley"
+        "Shuyi Liang — PhD at NUS (starting 2026) · research paper, 2026",
+        "Brandon Barton — PhD at ETH Zürich · research paper, 2026",
+        "Jakub Garwola — PhD at University of Toronto · research paper, 2025",
+        "Xiang Zou — PhD at University of Toronto · research paper, 2025",
+        "Michelle Ding — undergraduate at UT Austin → PhD at UT Austin · honors thesis, 2025",
+        "Ruize Ma — master's at ETH Zürich → PhD at EPFL · research paper, 2025",
+        "Matteo D'Anna — PhD at ETH Zürich · research paper, 2025",
+        "Massimo Solinas — master's at ETH Zürich → PhD at Regensburg University · research paper, 2025",
+        "Yifan Zhang — PhD at Princeton · research paper, 2024",
+        "Adam Martinez — undergraduate at University of Toronto → PhD at Oxford · honors thesis, 2024",
+        "Xiaoxiao (Alice) Xiong — undergraduate at UBC → Caltech · honors thesis, 2023",
+        "Michelle Gelman — undergraduate at UT Austin → PhD at USC · honors thesis, 2023",
+        "Shahin Jahanbani — undergraduate at UT Austin → PhD at UC Berkeley · research paper, 2022"
       ]
     }
   ],
