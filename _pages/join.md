@@ -94,10 +94,10 @@ group's work. NUS Research Scholarship deadlines are set by each school and can 
 check the School of Computing and Department of Physics graduate admissions pages for the exact
 dates, and treat the table above as the planning horizon rather than the final word.</p>
 
-## Funding
+## Extra funding through fellowships
 
-You may still want to consider the external awards below; you are welcome to contact me about
-applying together.
+Fellowships and scholarships you may want to apply for on top of the group's support. You are
+welcome to contact me about applying together.
 
 **For PhD applicants**
 
