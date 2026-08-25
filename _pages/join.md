@@ -84,19 +84,20 @@ deal easier to sustain than they sound.
 
 ## PhD application timeline
 
-The part people most often miss: **the scholarship deadlines run roughly a year ahead of the
-intake.** If you are aiming to start in August, the application is due the preceding December.
+The part people most often miss: **there are two separate deadlines, and the earlier one is the
+programme application.** Applying to the NUS programme is also how the NUS Research Scholarship is
+awarded; SINGA is a separate application with its own, later deadline.
 
 <table class="jdates">
-<tr><th>Intake</th><th>SINGA deadline</th><th>Get in touch by</th></tr>
-<tr><td>August</td><td>1 December (preceding year)</td><td>October–November</td></tr>
-<tr><td>January</td><td>1 June (preceding year)</td><td>April–May</td></tr>
+<tr><th>Intake</th><th>NUS programme application<br><span class="jnote">(incl. Research Scholarship)</span></th><th>SINGA</th><th>Get in touch by</th></tr>
+<tr><td>August 2027</td><td>mid-November 2026</td><td>1 December 2026</td><td>October 2026</td></tr>
+<tr><td>January 2028</td><td>mid-May 2027</td><td>1 June 2027</td><td>April 2027</td></tr>
 </table>
 
-<p class="jnote">SINGA covers PhDs in the physical sciences and engineering, which includes this
-group's work. NUS Research Scholarship deadlines are set by each school and can differ — please
-check the School of Computing and Department of Physics graduate admissions pages for the exact
-dates, and treat the table above as the planning horizon rather than the final word.</p>
+<p class="jnote">Apply to the programme first — missing that deadline means missing the intake even
+if you have a SINGA application in. Exact dates are set by each school and change from year to year,
+so confirm them with the School of Computing and Department of Physics graduate admissions pages
+before you plan around them.</p>
 
 ## Funding
 
