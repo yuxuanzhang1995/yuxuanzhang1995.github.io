@@ -58,7 +58,8 @@ sure whether you fit, write anyway.
 
 Singapore is expanding hard in quantum, on both the academic and the industrial side. The
 [National Quantum Strategy](https://nqo.sg/) committed about **S$300 million** over five years in
-2024, and quantum was named a pillar of the wider RIE2030 research plan in 2026. Academically that
+2024, and quantum is among the named priority areas of the wider RIE2030 research plan, which commits about
+S$37 billion — roughly 1% of GDP — to research over the five years from 2026. Academically that
 is building out the [Centre for Quantum Technologies](https://www.cqt.sg/) at NUS into a national
 R&D centre with nodes across the local institutions, alongside A*STAR's
 [Quantum Innovation Centre](https://www.a-star.edu.sg/qinc); the National Quantum Processor
