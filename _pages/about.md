@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='https://www.comp.nus.edu.sg/cs/people/zhangyx/'>National University of Singapore</a>
+subtitle: <a href='https://www.comp.nus.edu.sg/cs/people/zhangyx/'>Official webpage</a>
 
 profile:
   align: right
