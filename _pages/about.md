@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='https://cqiqc.physics.utoronto.ca/people/cqiqc-postdoctoral-fellows/yuxuan-zhang/'>Affiliation</a>
+subtitle: <a href='https://www.comp.nus.edu.sg/cs/people/zhangyx/'>Affiliation</a>
 
 profile:
   align: right
