@@ -69,7 +69,9 @@ master's students over five years. The result is a place that offers not only ac
 also unusually direct access to industry.
 
 Industry has grown alongside it. [Quantinuum](https://www.quantinuum.com/press-releases/quantinuum-expands-global-footprint-to-singapore-with-the-establishment-of-a-new-r-d-centre)
-has established an R&D centre here and a national partnership with the Quantum Office; the
+opened a Singapore R&D centre in March 2026 and signed a national partnership with the Quantum
+Office, and Singapore will be the first country outside the United States to host its Helios quantum
+computer; the
 [National Quantum-Safe Network](https://nqsn.sg/) is moving from testbed to nationwide deployment;
 and CQT spin-offs such as [SpeQtral](https://www.speqtral.space/) and
 [Horizon Quantum Computing](https://www.horizonquantum.com/) are based in the city. For a group
