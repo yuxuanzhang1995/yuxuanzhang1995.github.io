@@ -42,7 +42,7 @@ Asia.
 <li><span class="jrole">Postdoctoral researchers</span> — from December 2026.
     <span class="jnote">Funded positions; candidates holding or applying for their own fellowship are welcome too, and I am glad to host such applications.</span></li>
 <li><span class="jrole">PhD students</span> — through the NUS graduate programmes in Computer Science or Physics.
-    <span class="jnote">Funding is normally through an NUS Research Scholarship, SINGA, or the National Quantum Scholarships Scheme; see the deadlines below.</span></li>
+    <span class="jnote">Places are funded, with stipend and tuition awarded on admission; see the funding section for awards that need a separate application.</span></li>
 <li><span class="jrole">Visiting researchers and students</span> — for focused projects, typically three months or longer.</li>
 <li><span class="jrole">Master's, FYP and UROP students</span> — once I am on campus.</li>
 </ul>
