@@ -111,6 +111,8 @@ knowing about.
 <ul class="jroles">
 <li><span class="jrole"><a href="https://www.a-star.edu.sg/scholarships/home/scholarships">Singapore International Graduate Award (SINGA)</a></span>
     — <span class="jnote">for international applicants; a separate application with its own deadline, later than the programme deadline. Students choose their host lab, which can be here.</span></li>
+<li><span class="jrole"><a href="https://www.cqt.sg/students/national-quantum-scholarships-scheme/">National Quantum Scholarships Scheme (NQSS)</a></span>
+    — <span class="jnote">quantum-specific national funding, applied for separately and open year-round. It requires a CQT supervisor, so for a strong candidate I am glad to arrange co-supervision with a CQT colleague.</span></li>
 </ul>
 
 **For postdoctoral applicants**
