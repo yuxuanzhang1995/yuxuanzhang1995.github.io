@@ -65,7 +65,8 @@ R&D centre with nodes across the local institutions, alongside A*STAR's
 [Quantum Innovation Centre](https://www.a-star.edu.sg/qinc); the National Quantum Processor
 Initiative is developing trapped-ion and neutral-atom hardware — the platforms closest to my own
 experimental work — and the National Quantum Scholarships Scheme funds up to 100 PhD and 100
-master's students over five years.
+master's students over five years. The result is a place that offers not only academic strength but
+also unusually direct access to industry.
 
 Industry has grown alongside it. [Quantinuum](https://www.quantinuum.com/press-releases/quantinuum-expands-global-footprint-to-singapore-with-the-establishment-of-a-new-r-d-centre)
 has established an R&D centre here and a national partnership with the Quantum Office; the
