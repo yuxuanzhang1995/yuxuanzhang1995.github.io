@@ -79,11 +79,14 @@ correction.
 <div class="rfig"><img src="{{ 'assets/img/research/ml-for-quantum.webp' | relative_url }}" alt="Three roles for machine learning in quantum computing: compiling long dynamics into short circuits, discovering new phases from learned representations, and adapting to hardware feedback." loading="lazy"></div>
 <div class="rcap">Three ways learning enters: compiling long dynamics into short circuits, discovering phases from learned representations, and adapting to hardware feedback.</div>
 
-Learning enters quantum computing in three places. I use machine learning to *compile* long
-many-body dynamics into much shorter, hardware-friendly circuits; to *discover* phases and phase
-boundaries from learned representations of quantum states, including systems where conventional
-methods struggle; and — more recently — to *adapt* to real devices, learning noise models and
-control strategies from hardware feedback.
+Running anything on a quantum computer today means a long chain of hand-made decisions: choosing a
+circuit, compiling it, calibrating the device, mitigating errors, and checking the output. I think
+most of that chain should be learned rather than hand-designed. So far my work has automated the
+*compile* step — turning long many-body dynamics into much shorter, hardware-friendly circuits — and
+used neural quantum states to *discover* phases and phase boundaries in systems where conventional
+methods struggle. The direction I am pushing now extends this to the rest of the pipeline: learning
+noise models and control strategies directly from device data, in which error mitigation is one
+component rather than a field of its own.
 
 <ul class="rpapers">
 <li>Scalable quantum dynamics compilation via quantum machine learning
@@ -95,9 +98,9 @@ control strategies from hardware feedback.
 </ul>
 
 <div class="newdir">
-<strong>Newer directions.</strong> The <em>discover</em> and <em>adapt</em> strands above are just
-getting started — autonomous exploration of phase diagrams, and learning noise and control directly
-from device data. Both are wide open, with room for students to shape them.
+<strong>Newer directions.</strong> Automating the rest of the workflow is just getting started —
+autonomous exploration of phase diagrams, and learning calibration, control and error mitigation
+directly from device data. Both are wide open, with room for students to shape them.
 </div>
 
 <hr style="margin:2.4rem 0 1.2rem">
