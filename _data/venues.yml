@@ -28,3 +28,7 @@
 "arXiv":
   url: https://arxiv.org/
   color: "#b31b1b"
+
+"IEEE QCE":
+  url: https://qce.quantum.ieee.org/
+  color: "#00629b"

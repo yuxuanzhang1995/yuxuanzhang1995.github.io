@@ -152,6 +152,13 @@
   ],
   "awards": [
     {
+      "title": "Best Paper Award, Quantum Algorithms Track",
+      "date": "2026",
+      "awarder": "IEEE International Conference on Quantum Computing and Engineering (QCE / Quantum Week)",
+      "url": "https://qce.quantum.ieee.org/2026/",
+      "summary": "For “Heuristic Quantum Advantage with Peaked Circuits”."
+    },
+    {
       "title": "Vector Research Grant",
       "date": "2023 – 2025",
       "awarder": "Vector Institute for Artificial Intelligence",
