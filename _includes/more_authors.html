@@ -1,0 +1,16 @@
+<span
+    class="more-authors"
+    title="click to view {{ include.hide }}"
+    onclick="
+      var element = $(this);
+      element.attr('title', '');
+      var more_authors_text = element.text() == {{ include.hide | jsonify | escape }} ? {{ include.show | jsonify | escape }} : {{ include.hide | jsonify | escape }};
+      var cursorPosition = 0;
+      var textAdder = setInterval(function(){
+        element.text(more_authors_text.substring(0, cursorPosition + 1));
+        if (++cursorPosition == more_authors_text.length){
+          clearInterval(textAdder);
+        }
+    }, '{{ site.more_authors_animation_delay }}');
+    "
+>{{ include.hide }}</span>

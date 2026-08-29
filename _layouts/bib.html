@@ -40,7 +40,11 @@
           {% assign author_array_limit = site.max_author_limit %}
         {% endif %}
 
-        {%- comment -%} Find this site's owner so they are never swallowed by the truncation. {%- endcomment -%}
+        {%- comment -%}
+          Locate this site's owner. When truncation would hide them, surface them at their
+          REAL position in the byline: the hidden authors are split into the ones before
+          them and the ones after, so a last author still reads as a last author.
+        {%- endcomment -%}
         {%- assign self_first = '' -%}
         {%- assign self_last = '' -%}
         {%- assign self_index = -1 -%}
@@ -92,48 +96,48 @@
             {%- endif -%}
           {%- endif -%}
         {%- endfor -%}
-        {%- assign more_authors = author_array_size | minus: author_array_limit -%}
-        {%- if self_hidden -%}
-          {%- assign more_authors = more_authors | minus: 1 -%}
-          {%- if more_authors > 0 -%},&nbsp;&hellip;&nbsp;{%- else -%},&nbsp;and&nbsp;{%- endif -%}
-          <em>{{ self_first }} {{ self_last }}</em>
-        {%- endif -%}
 
-        {%- assign more_authors_hide = more_authors | append: " more author" -%}
-        {%- if more_authors > 0 -%}
-          {%- if more_authors > 1 -%}
-            {%- assign more_authors_hide = more_authors_hide | append: "s" -%}
+        {%- if self_hidden -%}
+          {%- assign before_count = self_index | minus: author_array_limit -%}
+          {%- assign after_count = author_array_size | minus: self_index | minus: 1 -%}
+
+          {%- if before_count > 0 -%}
+            {%- assign before_hide = before_count | append: " more author" -%}
+            {%- if before_count > 1 -%}{%- assign before_hide = before_hide | append: "s" -%}{%- endif -%}
+            {%- assign before_show = '' -%}
+            {%- for author in entry.author_array offset: author_array_limit limit: before_count -%}
+              {%- if before_show != '' -%}{%- assign before_show = before_show | append: ", " -%}{%- endif -%}
+              {%- assign before_show = before_show | append: author.first | append: " " | append: author.last -%}
+            {%- endfor -%}
+            ,&nbsp;{% include more_authors.html hide=before_hide show=before_show %}
           {%- endif -%}
-          {%- assign more_authors_show = '' -%}
-          {%- for author in entry.author_array offset: author_array_limit -%}
-            {%- assign is_self = false -%}
-            {%- if self_hidden and author.first == self_first and author.last == self_last -%}
-              {%- assign is_self = true -%}
-            {%- endif -%}
-            {%- unless is_self -%}
-              {%- if more_authors_show != '' -%}
-                {%- assign more_authors_show = more_authors_show | append: ", " -%}
-              {%- endif -%}
+
+          {%- if after_count > 0 -%},&nbsp;{%- else -%},&nbsp;and&nbsp;{%- endif -%}
+          <em>{{ self_first }} {{ self_last }}</em>
+
+          {%- if after_count > 0 -%}
+            {%- assign after_hide = after_count | append: " more author" -%}
+            {%- if after_count > 1 -%}{%- assign after_hide = after_hide | append: "s" -%}{%- endif -%}
+            {%- assign after_offset = self_index | plus: 1 -%}
+            {%- assign after_show = '' -%}
+            {%- for author in entry.author_array offset: after_offset -%}
+              {%- if after_show != '' -%}{%- assign after_show = after_show | append: ", " -%}{%- endif -%}
+              {%- assign after_show = after_show | append: author.first | append: " " | append: author.last -%}
+            {%- endfor -%}
+            ,&nbsp;and&nbsp;{% include more_authors.html hide=after_hide show=after_show %}
+          {%- endif -%}
+        {%- else -%}
+          {%- assign more_authors = author_array_size | minus: author_array_limit -%}
+          {%- if more_authors > 0 -%}
+            {%- assign more_authors_hide = more_authors | append: " more author" -%}
+            {%- if more_authors > 1 -%}{%- assign more_authors_hide = more_authors_hide | append: "s" -%}{%- endif -%}
+            {%- assign more_authors_show = '' -%}
+            {%- for author in entry.author_array offset: author_array_limit -%}
+              {%- if more_authors_show != '' -%}{%- assign more_authors_show = more_authors_show | append: ", " -%}{%- endif -%}
               {%- assign more_authors_show = more_authors_show | append: author.first | append: " " | append: author.last -%}
-            {%- endunless -%}
-          {%- endfor -%}
-          , and
-          <span
-              class="more-authors"
-              title="click to view {{more_authors_hide}}"
-              onclick="
-                var element = $(this);
-                element.attr('title', '');
-                var more_authors_text = element.text() == '{{more_authors_hide}}' ? '{{more_authors_show}}' : '{{more_authors_hide}}';
-                var cursorPosition = 0;
-                var textAdder = setInterval(function(){
-                  element.text(more_authors_text.substring(0, cursorPosition + 1));
-                  if (++cursorPosition == more_authors_text.length){
-                    clearInterval(textAdder);
-                  }
-              }, '{{site.more_authors_animation_delay}}');
-              "
-          >{{more_authors_hide}}</span>
+            {%- endfor -%}
+            ,&nbsp;and&nbsp;{% include more_authors.html hide=more_authors_hide show=more_authors_show %}
+          {%- endif -%}
         {%- endif -%}
 
         </div>
