@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Two preprints on peaked circuits: *Complexity and hardness of random peaked circuits* ([arXiv:2510.00132](https://arxiv.org/abs/2510.00132)) and *Heuristic Quantum Advantage with Peaked Circuits* ([arXiv:2510.25838](https://arxiv.org/abs/2510.25838)).
+Two preprints on peaked circuits — near-term feasible, classically hard, *and* verifiable, which few quantum-advantage proposals manage all at once: *Complexity and hardness of random peaked circuits* ([arXiv:2510.00132](https://arxiv.org/abs/2510.00132), single-author) and *Heuristic Quantum Advantage with Peaked Circuits* ([arXiv:2510.25838](https://arxiv.org/abs/2510.25838)) with the [BlueQubit](https://www.bluequbit.io/) team.

@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I will join the [National University of Singapore](https://www.nus.edu.sg/) as an **Assistant Professor** in December 2026, jointly appointed in [Computer Science](https://www.comp.nus.edu.sg/cs/) and [Physics](https://www.physics.nus.edu.sg/).
+Delighted to share that I will join the [National University of Singapore](https://www.nus.edu.sg/) as an **Assistant Professor** in December 2026, jointly appointed in [Computer Science](https://www.comp.nus.edu.sg/cs/) and [Physics](https://www.physics.nus.edu.sg/), where I will start a group on quantum information, quantum many-body physics, and AI.
