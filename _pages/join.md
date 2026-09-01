@@ -93,6 +93,11 @@ month before Computer Science — and **SINGA is a separate application** with i
 <tr><td>January 2028</td><td>15 May 2027</td><td>15 June 2027</td><td>1 June 2027</td></tr>
 </table>
 
+<p class="jnote"><strong>If you cannot pick me as a supervisor in the application form,
+that is expected</strong> — I start in December 2026 and do not yet appear in every NUS system.
+Name me in your research statement, and send me an email so I know to look out for your
+application.</p>
+
 <p class="jnote">Apply early rather than on the deadline: Research Scholarship places are allocated
 as strong applications are reviewed, not after the closing date. Applications arriving after a
 deadline are rolled to the following intake. Get in touch a month or two beforehand — it is much
