@@ -39,7 +39,7 @@ Asia.
 ## Open positions
 
 <ul class="jroles">
-<li><span class="jrole">Postdoctoral researchers</span> — from December 2026.
+<li><span class="jrole">Postdoctoral researchers</span> — starting in 2027, or from December 2026 if you are ready sooner.
     <span class="jnote">Funded positions; candidates holding or applying for their own fellowship are welcome too, and I am glad to host such applications.</span></li>
 <li><span class="jrole">PhD students</span> — through the NUS graduate programmes in Computer Science or Physics.
     <span class="jnote">Places are funded, with stipend and tuition awarded on admission; see the funding section for awards that need a separate application.</span></li>
@@ -56,31 +56,14 @@ sure whether you fit, write anyway.
 
 ## Singapore
 
-Singapore is expanding hard in quantum, on both the academic and the industrial side. The
-[National Quantum Strategy](https://nqo.sg/) committed about **S$300 million** over five years in
-2024, and quantum is among the named priority areas of the wider RIE2030 research plan, which commits about
-S$37 billion — roughly 1% of GDP — to research over the five years from 2026. Academically that
-is building out the [Centre for Quantum Technologies](https://www.cqt.sg/) at NUS into a national
-R&D centre with nodes across the local institutions, alongside A*STAR's
-[Quantum Innovation Centre](https://www.a-star.edu.sg/qinc); the National Quantum Processor
-Initiative is developing trapped-ion and neutral-atom hardware — the platforms closest to my own
-experimental work — and the National Quantum Scholarships Scheme funds up to 100 PhD and 100
-master's students over five years. The result is a place that offers not only academic strength but
-also unusually direct access to industry.
-
-Industry has grown alongside it. [Quantinuum](https://www.quantinuum.com/press-releases/quantinuum-expands-global-footprint-to-singapore-with-the-establishment-of-a-new-r-d-centre)
-opened a Singapore R&D centre in March 2026 and signed a national partnership with the Quantum
-Office, and Singapore will be the first country outside the United States to host its Helios quantum
-computer; the
-[National Quantum-Safe Network](https://nqsn.sg/) is moving from testbed to nationwide deployment;
-and CQT spin-offs such as [SpeQtral](https://www.speqtral.space/) and
-[Horizon Quantum Computing](https://www.horizonquantum.com/) are based in the city. For a group
-working on verifiable advantage and hardware-facing simulation, having the machines and the people
-who build them within a few kilometres of the office matters more than it sounds.
-
-The city itself is compact and English-speaking, a short flight from most of Asia while staying well
-connected to Europe and North America — which makes collaborations across three continents a good
-deal easier to sustain than they sound.
+Singapore is building quantum hardware, not only funding papers about it. The National Quantum
+Processor Initiative is developing trapped-ion and neutral-atom machines — the platforms closest to
+my own experimental work — and
+[Quantinuum](https://www.quantinuum.com/press-releases/quantinuum-expands-global-footprint-to-singapore-with-the-establishment-of-a-new-r-d-centre)
+opened a Singapore R&D centre in March 2026, with Singapore set to be the first country outside the
+United States to host its Helios machine. For a group working on verifiable advantage, having the
+machines and the people who build them a few kilometres away changes which experiments are worth
+attempting.
 
 ## PhD application timeline
 

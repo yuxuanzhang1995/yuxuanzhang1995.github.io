@@ -8,10 +8,6 @@ profile:
   align: right
   image: prof_pic2.jpg
   image_circular: false # crops the image to make it circular
-  address: >
-    <p>PH H1 477, </p>
-    <p>1015 Lausanne</p>
-    <p>Switzerland</p>
 
 news: true  # includes a list of news items
 latest_posts: false  # includes a list of the newest posts
