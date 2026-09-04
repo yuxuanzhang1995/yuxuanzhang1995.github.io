@@ -6,7 +6,7 @@ title: blank # the website title (if blank, full name will be used instead)
 first_name: Yuxuan
 middle_name: (Vincent)
 last_name: Zhang
-email: quantum.yxz@gmail.com
+email: zhangyx@comp.nus.edu.sg
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Hi! You've reached the personal webpage for Yuxuan Zhang.
 footer_text: >

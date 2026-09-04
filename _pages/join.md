@@ -119,7 +119,7 @@ year to year, so treat the official pages as authoritative.</p>
 
 ## Getting in touch
 
-Email me at [quantum.yxz@gmail.com](mailto:quantum.yxz@gmail.com) with:
+Email me at [zhangyx@comp.nus.edu.sg](mailto:zhangyx@comp.nus.edu.sg) with:
 
 - a CV,
 - a short note on what you would like to work on and why — a paragraph is plenty, and a specific
