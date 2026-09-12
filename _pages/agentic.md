@@ -54,89 +54,9 @@ not as a result.
 
 ## Log
 
-<ul class="arlog">
-
-<li>
-<div class="arhead">
-  <span class="ardate">19 June 2026</span>
-  <span class="arpill arpill-hit">counterexample</span>
+<div class="arbox">
+Entries are being written up and will appear here shortly.
 </div>
-<span class="artitle">Schatten norms of non-integer order</span>
-<span class="arsrc">Open Problem 1 of <a href="https://arxiv.org/abs/2307.06894">arXiv:2307.06894</a> (posed as a question)</span>
-
-An explicit 3&times;3 counterexample, in exact rationals. Two pairs of positive semidefinite
-matrices with matched spectra and equal trace, for which the Schatten-<em>p</em> inequality reverses
-on <em>p</em> &isin; (1, <em>p</em>*), with <em>p</em>* = 1.9758&hellip;. The load-bearing step is a
-cone lemma on a family of two-by-two transfer blocks, with a resonance constant
-<em>r</em>* = 297499/63112 at which the inequality saturates asymptotically from below without ever
-crossing.
-
-<span class="arnote">Corroboration: an independent agent rebuilt the counterexample from scratch
-using its own support-projection frame and its own cone argument, and arrived at the same
-<em>r</em>*. Hostile search covered roughly 470k profiles and every exact string up to length 13
-with no violation. — Caveats: one adversarial lens (Birkhoff/Perron/SOS) stalled before finishing
-its heterogeneous-profile hunt, so the gauntlet is not complete; and this refutes one route to the
-spin-alignment conjecture, not the conjecture itself.</span>
-</li>
-
-<li>
-<div class="arhead">
-  <span class="ardate">19 June 2026</span>
-  <span class="arpill">already solved</span>
-</div>
-<span class="artitle">Shadow tomography at moderate precision</span>
-<span class="arsrc">The gap &epsilon; &isin; [<em>d</em><sup>&minus;12</sup>, <em>d</em><sup>&minus;1</sup>] for general observables, left open by <a href="https://arxiv.org/abs/2407.13874">arXiv:2407.13874</a></span>
-
-The attack turned up the answer in the literature rather than deriving it: the gap was closed by
-<a href="https://arxiv.org/abs/2510.07788">arXiv:2510.07788</a>, whose debiased estimator is exactly
-unbiased and so never incurs the bias radius that walled off the earlier approach. The agent then
-re-verified the mechanism from its own code instead of trusting the write-up — unbiasedness exactly
-at one copy and by Monte Carlo at two, the sign structure of the second-moment identity, the
-variance bound under adversarial search, and the end-to-end threshold derivation.
-
-<span class="arnote">Logged as a result about novelty rather than about mathematics, which is the
-most useful thing a literature-sweeping agent does and the least interesting to write up.</span>
-</li>
-
-<li>
-<div class="arhead">
-  <span class="ardate">19 June 2026</span>
-  <span class="arpill">no counterexample</span>
-</div>
-<span class="artitle">Compatible-marginal majorization at <em>n</em> = 4</span>
-<span class="arsrc">Conjecture 2 of <a href="https://arxiv.org/abs/2603.25410">arXiv:2603.25410</a>, at the maximally mixed reference</span>
-
-A triple-optimizer counterexample hunt found nothing for <em>k</em> = 2 and <em>k</em> = 3, with the
-worst observed margin around 10<sup>&minus;15</sup>. The <em>k</em> = 3 telescoping step closes, but
-the full sum needs a two-body marginal lemma that does not reduce to the one-local argument that
-works at <em>n</em> = 3. At <em>k</em> = 2 the telescoping fails outright, so the non-uniform case
-needs a genuinely different idea.
-
-<span class="arnote">Still open. Recorded because the shape of what failed is more informative than
-the search that found nothing.</span>
-</li>
-
-<li>
-<div class="arhead">
-  <span class="ardate">17 June 2026</span>
-  <span class="arpill arpill-hit">improved bound</span>
-</div>
-<span class="artitle">Precision exponent for shadow tomography</span>
-<span class="arsrc">The linearization validity radius in <a href="https://arxiv.org/abs/2407.13874">arXiv:2407.13874</a>, via <a href="https://arxiv.org/abs/2402.16353">arXiv:2402.16353</a></span>
-
-The published argument carries a validity radius with a fourth-power dependence. Working from an
-exact Schur-function identity for the relevant Haar moment, the agent showed the constant in that
-lemma is enormously slack and replaced the exponent 4 with exponent 1. Downstream this moves the
-precision exponent from 12 to 5/2 for balanced and structured observables, and to 11/2 in general,
-with the copy count unchanged at <em>O</em>(log(1/&delta;)/&epsilon;<sup>2</sup>).
-
-<span class="arnote">The adversarial agent found two accounting gaps and both were closed, both
-exponent-neutral; one of them is an exposition slip in the source paper, where a median bound is
-used as if it were a mean. — Caveat: this is a constant-exponent gain deep in the high-precision
-regime, and it does not reach the frontier.</span>
-</li>
-
-</ul>
 
 <p class="arnote">If you think one of these is wrong, I would like to know — that is rather the
 point of putting them somewhere public instead of on arXiv. Write to
