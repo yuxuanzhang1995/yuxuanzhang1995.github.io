@@ -5,7 +5,10 @@ description: A published lemma that does not close as printed, and the bound tha
 date: 2026-06-17
 status: improved
 target: Chen–Li–Liu, arXiv:2407.13874
+pdf: shadow-linearization.pdf
 ---
+
+<p style="margin:0 0 1.6rem;font-size:.92rem"><a href="{{ '/assets/pdf/agentic/shadow-linearization.pdf' | relative_url }}">Full version (PDF, 2 pp)</a></p>
 
 **Target.** The linearization argument underlying Chen, Li and Liu's shadow-tomography bounds
 ([arXiv:2407.13874](https://arxiv.org/abs/2407.13874), with the moment lemma proved in

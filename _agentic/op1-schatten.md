@@ -5,7 +5,10 @@ description: A counterexample to the word-trace bridge lemma for fractional Scha
 date: 2026-06-17
 status: solved (negative)
 target: Open Problem 1 of arXiv:2307.06894
+pdf: op1-schatten.pdf
 ---
+
+<p style="margin:0 0 1.6rem;font-size:.92rem"><a href="{{ '/assets/pdf/agentic/op1-schatten.pdf' | relative_url }}">Full version (PDF, 2 pp)</a></p>
 
 **Target.** The first concluding open problem of Alhejji and Knill
 ([arXiv:2307.06894](https://arxiv.org/abs/2307.06894)). Take positive semidefinite

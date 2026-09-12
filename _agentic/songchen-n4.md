@@ -5,7 +5,10 @@ description: A complete proof for uniform weights; the general case reduced to a
 date: 2026-06-20
 status: partially solved
 target: Conjecture 2 of arXiv:2603.25410
+pdf: songchen-n4.pdf
 ---
+
+<p style="margin:0 0 1.6rem;font-size:.92rem"><a href="{{ '/assets/pdf/agentic/songchen-n4.pdf' | relative_url }}">Full version (PDF, 2 pp)</a></p>
 
 **Target.** Song and Chen's [arXiv:2603.25410](https://arxiv.org/abs/2603.25410) gives a
 counterexample to the strong spin-alignment conjecture, and leaves a weaker statement — their

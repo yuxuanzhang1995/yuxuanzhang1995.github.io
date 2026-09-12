@@ -5,7 +5,10 @@ description: An 8.65% improvement over the published constant — prover round o
 date: 2026-08-08
 status: partially solved (unverified)
 target: NPT bound-entanglement distillability, 3-copy endpoint
+pdf: gamma3.pdf
 ---
+
+<p style="margin:0 0 1.6rem;font-size:.92rem"><a href="{{ '/assets/pdf/agentic/gamma3.pdf' | relative_url }}">Full version (PDF, 2 pp)</a></p>
 
 **Target.** The three-copy endpoint of NPT bound-entanglement distillability. The two-copy case
 fell in July 2026 to four independent groups, two of them AI-assisted, which moved the live

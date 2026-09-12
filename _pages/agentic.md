@@ -67,6 +67,9 @@ not as a result.
     <a class="artitle" href="{{ item.url | relative_url }}">{{ item.title }}</a>
     <span class="arsrc">{{ item.target }}</span>
     <span class="arnote">{{ item.description }}</span>
+    {%- if item.pdf %}
+    <span class="arnote"> &middot; <a href="{{ item.pdf | prepend: '/assets/pdf/agentic/' | relative_url }}">PDF</a></span>
+    {%- endif %}
   </li>
 {%- endfor -%}
 </ul>
