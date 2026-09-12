@@ -1,6 +1,5 @@
 ---
 layout: page
-published: false
 title: Open Problem 1 of Alhejji–Knill is false
 description: A counterexample to the word-trace bridge lemma for fractional Schatten norms.
 date: 2026-06-17

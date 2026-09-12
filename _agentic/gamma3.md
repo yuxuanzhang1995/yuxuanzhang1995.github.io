@@ -1,6 +1,5 @@
 ---
 layout: page
-published: false
 title: A dimension-free lower bound on γ₃
 description: An 8.65% improvement over the published constant — prover round only, not yet adversarially checked.
 date: 2026-08-08
