@@ -24,7 +24,7 @@ The article specifies a rank-two state on three qubits through two weights and t
 
 Let ρ<sub>rec</sub> be the state recovered by the ordinary Petz map. With base-two logarithms and the **squared** fidelity convention, the proposed inequality reads
 
-> I(A; B | C) ≥ −log₂ F(ρ, ρ<sub>rec</sub>).
+> I(A; B ∣ C) ≥ −log₂ F(ρ, ρ<sub>rec</sub>).
 
 For the displayed state, the two sides are:
 
