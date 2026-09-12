@@ -41,8 +41,10 @@ supply the intuition about where a proof might come from, and design the system 
 out — how a claim gets attacked, who plays adversary, what is allowed to count as verified. Once an
 attack is running I do not intervene in it.
 
-Failures are logged too. A record that keeps only the hits tells you nothing about the base rate,
-and the base rate is the thing I actually want to measure.
+Not everything gets an entry. An attack that moved nothing is not listed, and those are the
+majority — most of what I point these systems at, they fail to shift. What follows is the part that
+moved: problems settled, problems partly settled, and bounds improved. Each one has a short note
+attached saying what was actually established and what is still missing.
 
 <div class="arbox">
 <strong>What “verified” means here.</strong> Computer-verified: exact rational arithmetic wherever
@@ -54,9 +56,20 @@ not as a result.
 
 ## Log
 
-<div class="arbox">
-Entries are being written up and will appear here shortly.
-</div>
+<ul class="arlog">
+{%- assign notes = site.agentic | sort: "date" | reverse -%}
+{%- for item in notes -%}
+  <li>
+    <div class="arhead">
+      <span class="ardate">{{ item.date | date: "%-d %B %Y" }}</span>
+      <span class="arpill{% if item.status == 'solved (negative)' %} arpill-hit{% endif %}">{{ item.status }}</span>
+    </div>
+    <a class="artitle" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+    <span class="arsrc">{{ item.target }}</span>
+    <span class="arnote">{{ item.description }}</span>
+  </li>
+{%- endfor -%}
+</ul>
 
 <p class="arnote">If you think one of these is wrong, I would like to know — that is rather the
 point of putting them somewhere public instead of on arXiv. Write to

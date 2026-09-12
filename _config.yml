@@ -168,6 +168,9 @@ bing_site_verification:  # out your bing-site-verification ID (Bing Webmaster)
 # -----------------------------------------------------------------------------
 
 collections:
+  agentic:
+    output: true
+    permalink: /agentic-research/:path/
   news:
     defaults:
       layout: post
