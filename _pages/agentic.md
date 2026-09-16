@@ -47,11 +47,11 @@ moved: problems settled, problems partly settled, and bounds improved. Each one 
 attached saying what was actually established and what is still missing.
 
 <div class="arbox">
-<strong>What “verified” means here.</strong> Computer-verified: exact rational arithmetic wherever
-the problem allows it, a second agent re-deriving the result from scratch on its own construction,
-and an adversarial agent paid to break it. It does not mean refereed. For most entries no human has
-typeset a proof you could read in a journal. Read each one as a claim with its working attached,
-not as a result.
+<strong>What “verified” means here.</strong> Each entry states its checks. Some have exact
+rational-arithmetic certificates; analytic proof candidates instead have independent AI review
+and adversarial checks. Neither label means external refereeing or formal proof-assistant
+verification. Read each entry as a claim with its working attached. A proof candidate remains
+open to correction, and literature novelty is a separate question.
 </div>
 
 ## Log
