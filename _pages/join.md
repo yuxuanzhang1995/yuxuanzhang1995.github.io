@@ -40,7 +40,7 @@ Asia.
 
 <ul class="jroles">
 <li><span class="jrole">Postdoctoral researchers</span> — starting in 2027, or from December 2026 if you are ready sooner.
-    <span class="jnote">Funded positions; candidates holding or applying for their own fellowship are welcome too, and I am glad to host such applications.</span></li>
+    <span class="jnote">Funded positions; candidates holding or applying for their own fellowship are welcome too, and I am glad to host such applications. Apply through <a href="https://academicjobsonline.org/ajo/jobs/32512">Academic Jobs Online</a> by <strong>15 November 2026</strong>.</span></li>
 <li><span class="jrole">PhD students</span> — through the NUS graduate programmes in Computer Science or Physics.
     <span class="jnote">Places are funded, with stipend and tuition awarded on admission; see the funding section for awards that need a separate application.</span></li>
 <li><span class="jrole">Visiting researchers and students</span> — for focused projects, typically three months or longer.</li>
