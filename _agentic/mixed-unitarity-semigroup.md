@@ -3,6 +3,7 @@ layout: page
 title: A qutrit semigroup can lose mixed unitarity after a positive time
 description: An explicit analytic counterexample candidate, with exact membership at one positive time and a separating witness at a later time.
 date: 2026-09-16
+last_revised: 2026-09-19
 status: counterexample candidate
 target: QIQCOP problem op_722706a9205dcff2
 pdf: mixed-unitarity-semigroup.pdf
@@ -13,7 +14,9 @@ author: Yuxuan Zhang
 Department of Physics, Princeton University, Princeton, New Jersey 08544, USA<br>
 Institute of Physics, École Polytechnique Fédérale de Lausanne (EPFL), CH-1015 Lausanne, Switzerland
 
-<p style="margin:0 0 1.6rem;font-size:.92rem"><a href="{{ '/assets/pdf/agentic/mixed-unitarity-semigroup.pdf' | relative_url }}">Full version (PDF, 6 pages)</a> &middot; <a href="{{ '/assets/code/agentic/mixed-unitarity-semigroup-source.zip' | relative_url }}">LaTeX source and supplementary check (ZIP)</a></p>
+<p style="margin:0 0 1.6rem;font-size:.92rem"><a href="{{ '/assets/pdf/agentic/mixed-unitarity-semigroup.pdf' | relative_url }}">Full version (PDF, 7 pages)</a> &middot; <a href="{{ '/assets/code/agentic/mixed-unitarity-semigroup-source.zip' | relative_url }}">LaTeX source and supplementary check (ZIP)</a></p>
+
+**Revision: 19 September 2026.** The formal manuscript, independent audit summary, primary-source evidence and reproducible checks have been updated.
 
 **Status: a full counterexample candidate, internally reviewed by AI agents.** External expert
 review and literature novelty remain unconfirmed. Both endpoint claims have analytic proofs;
@@ -104,15 +107,11 @@ unitaries or relying on a numerical solver's tolerance.
 
 ## Verification
 
-The proof was generated within the QIQC agent workflow and checked in separate internal AI
-reviews. The checks covered the Lindblad representation, the exact refocusing identity, finite
-convex-hull membership, the global witness inequality, and the strict rational negative bound.
-No mathematical gap was found in that review. This is not external refereeing or formal proof
-verification.
+The complete revised manuscript received a fresh independent adversarial AI review on 19 September 2026: **PASS, exact claim–proof alignment**, with no mathematical gap identified. The executable supplement reproduced twice in clean verifier processes. The main mathematical argument is unchanged from the earlier working draft; this is a publication revalidation, not a new discovery. External expert review, formal proof verification and broad novelty confirmation remain outstanding.
 
-The source archive includes a supplementary numerical reproduction of the Hermitian-jump
-identity, the full channel identity at $$s$$, and the normalized Choi witness at $$t$$.
-It is a diagnostic using NumPy and SciPy; the six-page manuscript contains the analytic proof.
+The audit checked the unital Lindblad representation, all complex matrix blocks, exact refocusing, finite convex-hull membership, the witness for every complex unitary, and the strict rational negative bound. The new supplement checks 18 exact matrix-unit identities, 23 channel time samples and 400 complex-unitary diagnostics. The refocusing residual was below $$3\times10^{-16}$$, and the later witness evaluates to approximately $$-0.0134293096502358$$, consistent with the analytic bound $$-456/38125$$. Random unitary sampling is only a diagnostic; the rank argument supplies the universal witness proof.
+
+The seven-page manuscript includes the complete analytic argument and a reproducibility appendix. Its source archive contains LaTeX, the checker, detailed results, pinned package versions, the AI audit summary, and a primary-source evidence manifest. Scientific Agent Skills informed the evidence-tracking and writing process and is cited in the paper.
 
 ## What remains open
 

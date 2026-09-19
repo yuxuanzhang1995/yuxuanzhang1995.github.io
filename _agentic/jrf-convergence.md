@@ -3,6 +3,7 @@ layout: page
 title: Convergence of the JRF iteration for mixed-state discrimination
 description: An analytic proof candidate for convergence of the uniformly initialized iteration, including rank-deficient states and overlapping supports.
 date: 2026-09-16
+last_revised: 2026-09-19
 status: proof candidate
 target: QIQCOP problem op_76e284219621a785
 pdf: jrf-convergence.pdf
@@ -13,7 +14,9 @@ author: Yuxuan Zhang
 Department of Physics, Princeton University, Princeton, New Jersey 08544, USA<br>
 Institute of Physics, École Polytechnique Fédérale de Lausanne (EPFL), CH-1015 Lausanne, Switzerland
 
-<p style="margin:0 0 1.6rem;font-size:.92rem"><a href="{{ '/assets/pdf/agentic/jrf-convergence.pdf' | relative_url }}">Full version (PDF, 7 pages)</a> &middot; <a href="{{ '/assets/code/agentic/jrf-convergence-source.zip' | relative_url }}">LaTeX source and provenance (ZIP)</a></p>
+<p style="margin:0 0 1.6rem;font-size:.92rem"><a href="{{ '/assets/pdf/agentic/jrf-convergence.pdf' | relative_url }}">Full version (PDF, 8 pages)</a> &middot; <a href="{{ '/assets/code/agentic/jrf-convergence-source.zip' | relative_url }}">LaTeX source and provenance (ZIP)</a></p>
+
+**Revision: 19 September 2026.** The formal manuscript, independent audit summary, primary-source evidence and reproducible checks have been updated.
 
 **Status: a full proof candidate, internally reviewed by AI agents.** External expert review and
 literature novelty remain unconfirmed. The argument is analytic; it has not been checked by a
@@ -80,16 +83,11 @@ $$(D_\infty-A_i)\Pi_{i,\infty}=0$$. These two conditions certify the global disc
 
 ## Verification
 
-The proof was generated within the QIQC agent workflow. An independent adversarial AI pass
-checked the support recurrence, the precise KL hypotheses, the singular-limit contradiction,
-and the multiplication order in the product lemma. A further review of the frozen proof found
-no mathematical gap in the stated scope. This is internal mathematical review, not external
-refereeing or formal verification.
+The complete revised manuscript received a fresh independent adversarial AI review on 19 September 2026: **PASS, exact claim–proof alignment**, with no mathematical gap identified. The executable supplement reproduced twice in clean verifier processes. The main mathematical argument is unchanged from the earlier working draft; this is a publication revalidation, not a new discovery. External expert review, formal proof verification and broad novelty confirmation remain outstanding.
 
-Numerical identity checks on eight ensembles over 240 steps had maximum error below
-$$3\times10^{-15}$$. These checks were used to find mistakes; they are not evidence for the
-universal convergence theorem. The downloadable seven-page manuscript contains the full argument,
-including the product lemma and the correspondence with the original question.
+The audit checked the support compression, the fixed convex feasible set, the KL hypotheses at the correct iterate, the singular-limit contradiction, the order of the noncommuting products, and reconstruction of the optimal POVM. The supplementary script checks the literal and compressed recurrences on 16 seeded complex ensembles in dimensions two through six, for 1,280 updates. The largest residual was below $$4.22\times10^{-13}$$. These finite diagnostics test identities; the universal theorem rests on the written proof.
+
+The eight-page manuscript includes the complete proof and a reproducibility appendix. The source archive contains LaTeX, the checker, detailed results, pinned package versions, the AI audit summary, and a source-evidence manifest. The cited KL theorem and pure-state result were checked against primary full texts. Scientific Agent Skills informed the evidence-tracking and writing process and is cited in the paper.
 
 ## What remains open
 
