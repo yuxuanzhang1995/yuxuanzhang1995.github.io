@@ -21,7 +21,7 @@ Institute of Physics, École Polytechnique Fédérale de Lausanne (EPFL), CH-101
 
 ## The question
 
-Let $$X$$ be a symmetric $$2n\times2n$$ matrix with zero diagonal and independent $$\mathcal{CN}(0,1)$$ entries above it, normalized by $$\mathbb E|X_{ij}|^2=1$$. The [QIQCOP problem](https://qiqc-op.com/problem/op_55be40726cdf7304/) asks for one polynomial $$p$$ such that, for every $$n\geq1$$ and $$0<\delta<1$$,
+Let $$X$$ be a symmetric $$2n\times2n$$ matrix with zero diagonal and independent $$\mathcal{CN}(0,1)$$ entries above it, normalized by $$\mathbb E\lvert X_{ij}\rvert^2=1$$. The [QIQCOP problem](https://qiqc-op.com/problem/op_55be40726cdf7304/) asks for one polynomial $$p$$ such that, for every $$n\geq1$$ and $$0<\delta<1$$,
 
 $$
 \Pr\!\left(|\operatorname{Haf}(X)|<\frac{\sqrt{(2n-1)!!}}{p(n,1/\delta)}\right)<\delta.

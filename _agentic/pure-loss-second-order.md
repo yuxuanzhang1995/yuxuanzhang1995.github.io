@@ -59,7 +59,7 @@ $$
 |u_m;k\rangle=\frac{(\sum_i u_{m,i}a_i^\dagger)^k}{\sqrt{k!}}|0\rangle.
 $$
 
-After loss, the surviving photon number $$L$$ is binomial, and conditional output states are $$|u_m;l\rangle$$. Haar averaging makes these states isotropic in the $$l$$-photon sector of dimension $$d_l=\binom{n+l-1}{l}$$. A Gram–Schmidt measurement has expected average error at most $$(M-1)/(2d_l)$$ in that sector.
+After loss, the surviving photon number $$L$$ is binomial, and conditional output states are $$\lvert u_m;l\rangle$$. Haar averaging makes these states isotropic in the $$l$$-photon sector of dimension $$d_l=\binom{n+l-1}{l}$$. A Gram–Schmidt measurement has expected average error at most $$(M-1)/(2d_l)$$ in that sector.
 
 One common codebook and a direct-sum POVM across sectors therefore give a deterministic code with error at most
 
