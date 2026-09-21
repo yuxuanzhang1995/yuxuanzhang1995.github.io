@@ -10,9 +10,7 @@ pdf: jrf-convergence.pdf
 author: Yuxuan Zhang
 ---
 
-**Yuxuan Zhang**<br>
-Department of Physics, Princeton University, Princeton, New Jersey 08544, USA<br>
-Institute of Physics, École Polytechnique Fédérale de Lausanne (EPFL), CH-1015 Lausanne, Switzerland
+**Yuxuan Zhang**
 
 <p style="margin:0 0 1.6rem;font-size:.92rem"><a href="{{ '/assets/pdf/agentic/jrf-convergence.pdf' | relative_url }}">Full version (PDF, 8 pages)</a> &middot; <a href="{{ '/assets/code/agentic/jrf-convergence-source.zip' | relative_url }}">LaTeX source and provenance (ZIP)</a></p>
 

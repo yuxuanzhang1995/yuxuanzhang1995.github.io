@@ -9,9 +9,7 @@ pdf: multi-slot-conjugation.pdf
 author: Yuxuan Zhang
 ---
 
-**Yuxuan Zhang**<br>
-Department of Physics, Princeton University, Princeton, New Jersey 08544, USA<br>
-Institute of Physics, École Polytechnique Fédérale de Lausanne (EPFL), CH-1015 Lausanne, Switzerland
+**Yuxuan Zhang**
 
 <p style="margin:0 0 1.6rem;font-size:.92rem"><a href="{{ '/assets/pdf/agentic/multi-slot-conjugation.pdf' | relative_url }}">Full version (PDF, 7 pp)</a></p>
 

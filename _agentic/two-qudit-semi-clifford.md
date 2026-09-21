@@ -10,9 +10,7 @@ pdf: two-qudit-semi-clifford.pdf
 author: Yuxuan Zhang
 ---
 
-**Yuxuan Zhang**<br>
-Department of Physics, Princeton University, Princeton, New Jersey 08544, USA<br>
-Institute of Physics, École Polytechnique Fédérale de Lausanne (EPFL), CH-1015 Lausanne, Switzerland
+**Yuxuan Zhang**
 
 <p style="margin:0 0 1.6rem;font-size:.92rem"><a href="{{ '/assets/pdf/agentic/two-qudit-semi-clifford.pdf' | relative_url }}">Full version (PDF, 5 pages)</a> &middot; <a href="{{ '/assets/code/agentic/two-qudit-semi-clifford-source.zip' | relative_url }}">LaTeX source and exact checks (ZIP)</a></p>
 
