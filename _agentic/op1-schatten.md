@@ -1,83 +1,101 @@
 ---
 layout: page
 title: Open Problem 1 of Alhejji–Knill is false
-description: A counterexample to the word-trace bridge lemma for fractional Schatten norms.
+description: An exact diagonal counterexample, with a complete all-word proof and minimal dimension three.
 date: 2026-06-17
+last_revised: 2026-09-22
 status: solved (negative)
-target: Open Problem 1 of arXiv:2307.06894
+target: Section VI, question 1 of Alhejji–Knill, arXiv:2307.06894
 pdf: op1-schatten.pdf
+author: Yuxuan Zhang
 ---
 
-<p style="margin:0 0 1.6rem;font-size:.92rem"><a href="{{ '/assets/pdf/agentic/op1-schatten.pdf' | relative_url }}">Full version (PDF)</a></p>
+**Yuxuan Zhang** · Revised 22 September 2026
 
-## Background
+<p style="margin:0 0 1.6rem;font-size:.92rem"><a href="{{ '/assets/pdf/agentic/op1-schatten.pdf' | relative_url }}">Complete proof (PDF, 3 pages)</a> &middot; <a href="{{ '/assets/code/agentic/op1-schatten-source.zip' | relative_url }}">LaTeX source, exact checker and results (ZIP)</a></p>
 
-Quantum capacity is given by a regularised expression, and the regularisation is genuinely
-necessary: no finite number of channel uses suffices in general [4], capacity is non-additive even
-in very simple channels [3], and the general problem is undecidable [5]. Progress comes from
-finding structured families where the regularisation collapses.
+**The proposed implication is false, already for commuting 3 × 3 matrices.** The proof below covers words of every length. Independent expert review and historical priority remain unverified; this page's status is the author's research-log label.
 
-The spin-alignment conjecture of Alhejji and Knill [1] is one such route, proved there for integer
-Schatten norms, classical states, and two-state mixtures. Carrying it to *all* Schatten norms — and
-so, by continuation, to the von Neumann entropy — would give a single-letter quantum capacity for
-platypus-type families. Among their concluding remarks is a bridge lemma that would supply exactly
-that extension.
+## The precise question
 
-## The problem
+In [Section VI, question 1 of *Towards a resolution of the spin alignment problem*](https://arxiv.org/html/2307.06894v3#S6), Alhejji and Knill consider positive semidefinite matrices $$A_0,A_1,B_0,B_1$$ with $$\lambda(A_i)=\lambda(B_i)$$ for $$i=0,1$$. Write $$\Pi_s(A)$$ for the ordered product selected by a finite binary word $$s$$. If
 
-Let *A*₀, *A*₁, *B*₀, *B*₁ be positive semidefinite with λ(*A*₀) = λ(*B*₀) and λ(*A*₁) = λ(*B*₁),
-and write Π<sub>s</sub> for the product along a binary word *s*. Suppose **word-trace dominance**
-holds:
+$$
+\operatorname{tr}\Pi_s(A)\geq\left|\operatorname{tr}\Pi_s(B)\right|
+\qquad\text{for every word }s,
+$$
 
-> tr Π<sub>s</sub>(*A*) ≥ |tr Π<sub>s</sub>(*B*)| for every word *s*.  (H)
+must $$\lVert A_0+A_1\rVert_p\geq\lVert B_0+B_1\rVert_p$$ for every $$1\leq p<\infty$$? Here $$\lVert X\rVert_p=(\operatorname{tr}|X|^p)^{1/p}$$. This is the paper's proposed bridge from word traces to fractional Schatten norms.
 
-Does it follow that ‖*A*₀ + *A*₁‖<sub>p</sub> ≥ ‖*B*₀ + *B*₁‖<sub>p</sub> for every
-*p* ∈ [1, ∞)?  (C)
+## A small witness, and the whole proof
 
-The hypothesis constrains only *integer* moments; the conclusion is about *fractional* powers of a
-spectrum. Whether the former controls the latter is the whole content of the question — and since
-it is posed as a question, an instance satisfying (H) and violating (C) settles it.
+Take
 
-## A commuting counterexample
+$$
+\begin{aligned}
+A_0&=\operatorname{diag}(2,0,1),& A_1&=\operatorname{diag}(2,1,0),\\
+B_0&=\operatorname{diag}(1,2,0),& B_1&=\operatorname{diag}(2,1,0).
+\end{aligned}
+$$
 
-**The answer is no.** Take
+All four matrices have spectrum $$(2,1,0)$$. Pure words give equal traces, as does the empty word. A mixed word containing $$k\geq1$$ zeros and $$m\geq1$$ ones has traces
 
-> *A*₀ = diag(176, 0, 64) · *A*₁ = diag(80, 49, 0) · *B*₀ = diag(64, 176, 0) · *B*₁ = *A*₁
+$$
+\operatorname{tr}\Pi_s(A)=2^{k+m},\qquad
+\operatorname{tr}\Pi_s(B)=2^k+2^m\leq2^{k+m},
+$$
 
-Spectra match and all four are positive semidefinite. Everything commutes, so every word collapses
-to a product of powers and (H) reduces to one analytic statement,
-(64/176)<sup>k</sup> + (49/80)<sup>m</sup> ≤ 859/880 < 1. The conclusion fails at *p* = 3/2, where
-the two spectral sums are **4951 and 5103** — a comparison between integers, with no numerical
-tolerance anywhere.
+because $$2^{-k}+2^{-m}\leq1$$. All traces are nonnegative. This verifies the hypothesis for every word, without an assumption on its length.
 
-So **the failure is classical**: non-commutativity plays no part in it.
+The two sums have spectra $$(4,1,1)$$ and $$(3,3,0)$$. At $$p=3/2$$, their power traces are $$10$$ and $$6\sqrt3$$. The strict comparison follows from **$$100<108$$** after squaring two positive numbers.
 
-A non-commuting 3×3 instance, found first, fails on the whole interval *p* ∈ (1, *p**) with
-*p** = 1.97584…, and a separate argument rules out *d* = 2, making qutrits minimal.
+In fact, the inequality fails for **every $$1<p<2$$**. Divide the difference of the power traces by $$3^p$$ and obtain
 
-## Verification
+$$
+g(p)=(4/3)^p+2(1/3)^p-2.
+$$
 
-Exact rational or 100-digit arithmetic throughout. The 3×3 instance was re-derived from scratch by
-an independent agent with its own frame and cone argument, reaching the same resonance constant;
-hostile search covered every exact word to length 13 with no violation. The diagonal family came
-from a container-isolated run with no network and no sight of the earlier work.
+The function is strictly convex and vanishes at $$p=1,2$$, so it is negative between those endpoints. It is positive for $$p>2$$. Thus the failure interval, within the question's domain, is exactly $$(1,2)$$.
 
-## What remains open
+## Why dimension three is minimal
 
-1. **A referee-grade write-up of the 3×3 case.** Every scalar inequality was discharged
-   symbolically, so this is a write-up obligation, not a gap — but no one has typeset it as a proof
-   a referee could read linearly.
-2. **The kernel lemma for the diagonal family**, corroborated on thousands of draws but not yet
-   proved symbolically. Since the family commutes this should be routine, and it would make the
-   counterexample self-contained on half a page.
-3. **The conjecture itself.** This blocks the overlap-lemma route from integer to fractional
-   Schatten norms. It does *not* refute spin alignment — in the instance above the *A*-side is not
-   aligned — and the weaker compatible-marginal statement of [2] is still open.
+This part also permits noncommuting matrices. In dimension two, the sums have the same trace $$T$$. The word $$01$$ and matched individual spectra imply
 
-## References
+$$
+\operatorname{tr}(A_0+A_1)^2\geq\operatorname{tr}(B_0+B_1)^2.
+$$
 
-1. M. A. Alhejji and E. Knill, *Towards a resolution of the spin alignment problem*, [arXiv:2307.06894](https://arxiv.org/abs/2307.06894).
-2. Z. Song and L. Chen, *A counterexample to the strong spin alignment conjecture*, [arXiv:2603.25410](https://arxiv.org/abs/2603.25410).
-3. F. Leditzky, D. Leung, V. Siddhu, G. Smith and J. A. Smolin, *Generic nonadditivity of quantum capacity in simple channels*, [arXiv:2202.08377](https://arxiv.org/abs/2202.08377).
-4. T. Cubitt, D. Elkouss, W. Matthews, M. Ozols, D. Pérez-García and S. Strelchuk, *Unbounded number of channel uses are required to see quantum capacity*, [arXiv:1408.5115](https://arxiv.org/abs/1408.5115).
-5. A. Bhattacharyya, A. Mehta and Y. Zhao, *On the undecidability of quantum channel capacities*, [arXiv:2601.22471](https://arxiv.org/abs/2601.22471).
+Write their eigenvalues as $$T/2\pm a$$ and $$T/2\pm b$$, with $$a,b\geq0$$. The squared-trace inequality says $$a\geq b$$. For every $$p\geq1$$, the sum $$(T/2+x)^p+(T/2-x)^p$$ is nondecreasing for $$0\leq x\leq T/2$$. The required norm dominance therefore holds in dimension two. Dimension one is immediate. The displayed three-dimensional example is minimal.
+
+## The earlier integer witness also checks exactly
+
+The original page displayed
+
+$$
+\begin{aligned}
+A_0&=\operatorname{diag}(176,0,64),&A_1&=\operatorname{diag}(80,49,0),\\
+B_0&=\operatorname{diag}(64,176,0),&B_1&=A_1.
+\end{aligned}
+$$
+
+For any mixed word, the trace ratio is
+
+$$
+\frac{\operatorname{tr}\Pi_s(B)}{\operatorname{tr}\Pi_s(A)}
+=\left(\frac{64}{176}\right)^k+\left(\frac{49}{80}\right)^m
+\leq\frac{859}{880}<1.
+$$
+
+Pure words again give equality. At $$p=3/2$$, the power traces are exactly **4951 and 5103**, a strict gap of **152**. No floating-point tolerance enters this comparison.
+
+## Verification and scope
+
+The accompanying checker uses only integers and exact rational arithmetic. It verifies the individual spectra, the uniform ratio bounds, and both decisive strict inequalities. As additional diagnostics, it checks all 8,191 binary words of length at most 12, including the empty word, for each witness. The analytic argument above supplies the conclusion for every length.
+
+Both witnesses appeared in the earlier PDF dated 17 June 2026. This revision makes the all-word, interval, and minimal-dimension arguments explicit. It supersedes the earlier statement that a kernel lemma was still needed for the displayed diagonal construction. The result does not depend on the earlier, incompletely documented noncommuting example or on a general diagonal-family claim.
+
+This answers the bridge question. It does **not** refute the spin-alignment conjecture or establish a quantum-capacity formula. The construction, revision, and checks involved substantial AI assistance; the present revision does not claim independent human mathematical review. [Scientific Agent Skills](https://arxiv.org/abs/2609.00065) guided evidence tracking and exposition and is cited in the PDF.
+
+## Source
+
+M. A. Alhejji and E. Knill, *Towards a resolution of the spin alignment problem*, **Communications in Mathematical Physics 405**, 119 (2024). [Journal](https://doi.org/10.1007/s00220-024-04980-1) · [arXiv](https://arxiv.org/abs/2307.06894). Exact source statement: Section VI, question 1 of arXiv version 3.
