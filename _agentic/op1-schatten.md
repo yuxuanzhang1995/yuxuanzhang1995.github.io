@@ -25,7 +25,7 @@ $$
 \qquad\text{for every word }s,
 $$
 
-must $$\lVert A_0+A_1\rVert_p\geq\lVert B_0+B_1\rVert_p$$ for every $$1\leq p<\infty$$? Here $$\lVert X\rVert_p=(\operatorname{tr}|X|^p)^{1/p}$$. This is the paper's proposed bridge from word traces to fractional Schatten norms.
+must $$\lVert A_0+A_1\rVert_p\geq\lVert B_0+B_1\rVert_p$$ for every $$1\leq p<\infty$$? Here $$\lVert X\rVert_p=(\operatorname{tr}\lvert X\rvert^p)^{1/p}$$. This is the paper's proposed bridge from word traces to fractional Schatten norms.
 
 ## A small witness, and the whole proof
 
