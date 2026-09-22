@@ -3,7 +3,7 @@ layout: page
 title: Fixed-photon-number codes and a proposed pure-loss converse
 description: A zero-leakage shell-code construction exceeds the proposed occupation-constrained second-order upper bound.
 date: 2026-09-20
-last_revised: 2026-09-20
+last_revised: 2026-09-21
 status: counterexample candidate
 target: QIQCOP problem op_89fb664ba06ba5de
 pdf: pure-loss-second-order.pdf
@@ -15,6 +15,8 @@ author: Yuxuan Zhang
 <p style="margin:0 0 1.6rem;font-size:.92rem"><a href="{{ '/assets/pdf/agentic/pure-loss-second-order.pdf' | relative_url }}">Full manuscript (PDF, 4 pages)</a> &middot; <a href="{{ '/assets/code/agentic/pure-loss-second-order-source.zip' | relative_url }}">LaTeX source, proof and checks (ZIP)</a></p>
 
 **Status: a complete counterexample candidate, internally checked with AI assistance.** External expert review and publication priority remain unconfirmed. This is the round-15 result, prepared for publication on 20 September 2026. It has not been formally verified by a proof assistant.
+
+**Scope of the refutation:** the construction contradicts the proposed converse for every fixed $$0<\varepsilon<1/2$$. That range suffices to refute a bound claimed for all error parameters. This argument does not refute the bound at $$\varepsilon\geq1/2$$ or establish an optimal replacement dispersion.
 
 
 ## The question

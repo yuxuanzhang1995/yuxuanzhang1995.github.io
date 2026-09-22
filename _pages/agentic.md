@@ -52,6 +52,9 @@ rational-arithmetic certificates; analytic proof candidates instead have indepen
 and adversarial checks. Neither label means external refereeing or formal proof-assistant
 verification. Read each entry as a claim with its working attached. A proof candidate remains
 open to correction, and literature novelty is a separate question.
+The label “solved (negative)” records this research log's conclusion that an explicit
+counterexample refutes the stated claim. It does not mean QIQCOP has accepted the result,
+that an external expert has approved it, or that publication priority has been established.
 </div>
 
 ## Log

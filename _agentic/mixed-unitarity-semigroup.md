@@ -1,10 +1,10 @@
 ---
 layout: page
 title: A qutrit semigroup can lose mixed unitarity after a positive time
-description: An explicit analytic counterexample candidate, with exact membership at one positive time and a separating witness at a later time.
+description: An explicit analytic counterexample, with exact membership at one positive time and a separating witness at a later time.
 date: 2026-09-16
-last_revised: 2026-09-19
-status: counterexample candidate
+last_revised: 2026-09-21
+status: solved (negative)
 target: QIQCOP problem op_722706a9205dcff2
 pdf: mixed-unitarity-semigroup.pdf
 author: Yuxuan Zhang
@@ -16,9 +16,7 @@ author: Yuxuan Zhang
 
 **Revision: 19 September 2026.** The formal manuscript, independent audit summary, primary-source evidence and reproducible checks have been updated.
 
-**Status: a full counterexample candidate, internally reviewed by AI agents.** External expert
-review and literature novelty remain unconfirmed. Both endpoint claims have analytic proofs;
-the supplementary numerical check is not a proof certificate.
+**Status in this research log: solved (negative), supported by analytic proofs of both endpoints and exact matrix identities.** External expert review and literature novelty remain unconfirmed; [QIQCOP issue #75](https://github.com/Naixu-Guo/quantum-open-problems/issues/75) remains open for review. The published checks were rerun on 21 September 2026. The witness bound over all of $$U(3)$$ follows from the analytic rank argument below; numerical samples do not establish that bound. The manuscript remains unrefereed, and the supplementary numerical check is not a proof certificate.
 
 ## The question
 

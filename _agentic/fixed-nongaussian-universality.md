@@ -3,7 +3,7 @@ layout: page
 title: Universality from every fixed non-Gaussian polynomial generator
 description: Gaussian controls and any fixed essentially self-adjoint higher-degree Weyl polynomial strongly approximate every unitary.
 date: 2026-09-20
-last_revised: 2026-09-20
+last_revised: 2026-09-21
 status: proof candidate
 target: QIQCOP problem op_64046727b81b4024
 pdf: fixed-nongaussian-universality.pdf
@@ -15,6 +15,8 @@ author: Yuxuan Zhang
 <p style="margin:0 0 1.6rem;font-size:.92rem"><a href="{{ '/assets/pdf/agentic/fixed-nongaussian-universality.pdf' | relative_url }}">Full manuscript (PDF, 6 pages)</a> &middot; <a href="{{ '/assets/code/agentic/fixed-nongaussian-universality-source.zip' | relative_url }}">LaTeX source, proof and checks (ZIP)</a></p>
 
 **Status: a complete proof candidate, internally checked with AI assistance.** External expert review and publication priority remain unconfirmed. This is the round-17 result, prepared for publication on 20 September 2026. It has not been formally verified by a proof assistant.
+
+**Revision, 21 September 2026:** Lemma 3 now spells out the fixed-vector telescoping identity and the generator condition needed for Chernoff's product formula. The theorem and its hypotheses are unchanged. This is a clarification checked by AI, with external review still pending in [QIQCOP issue #93](https://github.com/Naixu-Guo/quantum-open-problems/issues/93).
 
 
 ## The question and hypotheses
@@ -53,6 +55,15 @@ $$
 First choose a large enough cutoff, then use strong density on its finite-dimensional range.
 
 ## Verification and relation to prior work
+
+The product derivative in Lemma 3 is now explicit. Write $$U_l(s)=e^{isB_l}$$ and $$P_{l-1}(s)=U_1(s)\cdots U_{l-1}(s)$$, with $$P_0(s)=I$$. Then
+
+$$
+\frac{U_1(s)\cdots U_r(s)-I}{s}\psi
+=\sum_{l=1}^r P_{l-1}(s)\frac{U_l(s)-I}{s}\psi.
+$$
+
+Each difference quotient acts on the fixed vector $$\psi\in\bigcap_l\operatorname{Dom}(B_l)$$. The prefix is unitary and converges strongly to the identity, so every summand converges to $$iB_l\psi$$. This needs no invariance of the common core under individual evolutions. The revised manuscript also checks that the full strong derivative has closure $$iA$$, where $$A$$ is the self-adjoint closure of the sum on that core.
 
 Internal adversarial reviews checked the cores, product formula, filter domains, frequency separation, finite-block generation and reference-assisted estimate. The archive contains symbolic finite-difference and quartic identities, plus finite spectral-filter diagnostics. Those scripts do not certify the infinite-dimensional limits; the manuscript proves them analytically.
 
