@@ -18,7 +18,7 @@ Can two graph states be transformed into one another by changing the basis of ea
 
 **The result is a proof candidate; independent expert review and priority verification are pending.**
 
-## The question and the existing reduction
+## Local-unitary equivalence
 
 For graphs $$G,H$$ on the same labelled set of $$n$$ vertices, the decision problem asks whether
 
@@ -32,7 +32,7 @@ The local-Clifford version already has a polynomial-time algorithm: its graph op
 
 This reduces the task to understanding the generalized operation. Its input is a vector of multiplicities on $$X$$. Only vectors satisfying certain common-neighbor congruences are valid. Each valid vector determines which edges the operation toggles.
 
-## The exact object we need to compute
+## Admissible edge changes
 
 Let $$\Sigma$$ be the set of valid multiplicity vectors, and let $$f(s)$$ record the edges toggled by $$s$$. The set
 
@@ -46,7 +46,7 @@ A basis suffices because each basis vector can be represented by a group of degr
 
 Proposition 2.4 in the manuscript states this input-output relation explicitly. The task left to our construction is therefore precise: compute all of $$\Omega$$ efficiently. The existing algorithm obtains it by writing one incidence constraint for each of many vertex subsets. At the required level $$r=O(\log n)$$, this enumeration produces the quasipolynomial running time.
 
-## Compressing the constraints without losing solutions
+## Incidence compression
 
 Let $$a_v$$ record the neighbors of a vertex $$v$$ in $$X$$, and let $$a_K$$ be the coordinatewise product of the vectors indexed by a set $$K$$. After expressing every congruence modulo $$2^r$$, its row is $$2a_K$$ for pairs and triples, then $$2^{|K|-2}a_K$$ for larger sets.
 
@@ -62,7 +62,7 @@ An integer Hermite basis represents the generated row module with at most $$|X|$
 
 The compressed matrix has exactly the same solutions $$\Sigma$$ as the original congruences. To recover them all, the construction uses an integer lattice to generate the entire kernel over $$\mathbb Z/2^r\mathbb Z$$, including when that kernel is not free. Mapping those generators through $$f$$ and performing binary elimination gives a basis of $$\Omega$$. The corresponding multiplicities are carried through the elimination, so every output basis vector has a witness.
 
-## Returning to the original decision problem
+## The decision algorithm
 
 The two parts now fit together. The graph reduction needs the complete edge-change space; the algebraic construction computes it in polynomial time. The final algorithm handles connected components separately, runs the standard-form reduction, computes $$\Omega$$, and invokes the constrained Clifford test. If $$\Omega$$ is zero, a separate branch uses ordinary LC equivalence on the original standard forms. Section 5 combines the correctness statements and the bit-complexity bounds to prove the main theorem.
 
