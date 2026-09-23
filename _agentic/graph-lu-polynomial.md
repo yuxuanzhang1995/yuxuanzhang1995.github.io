@@ -3,7 +3,7 @@ layout: page
 title: Polynomial-time local-unitary equivalence of graph states
 description: A proof candidate replaces high-order incidence enumeration with a polynomial-size modular computation.
 date: 2026-09-22
-last_revised: 2026-09-22
+last_revised: 2026-09-23
 status: proof candidate
 pdf: graph-lu-polynomial.pdf
 target: QIQCOP problem op_66affd4b198fd445
