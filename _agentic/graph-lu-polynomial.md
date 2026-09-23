@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Polynomial-time local-unitary equivalence of graph states
-description: A proof candidate replaces high-order incidence enumeration with a polynomial-size modular computation.
+description: Generating incidence constraints by closure gives a proposed polynomial-time algorithm for graph-state LU equivalence.
 date: 2026-09-22
 last_revised: 2026-09-23
 status: proof candidate
@@ -10,76 +10,48 @@ target: QIQCOP problem op_66affd4b198fd445
 author: Yuxuan Zhang
 ---
 
-**Yuxuan Zhang** · Round 21 · Posted 22 September 2026
+**Yuxuan Zhang** · 22 September 2026
 
-<p style="margin:0 0 1.6rem;font-size:.92rem"><a href="{{ '/assets/pdf/agentic/graph-lu-polynomial.pdf' | relative_url }}">Full manuscript (PDF, 16 pages)</a> &middot; <a href="{{ '/assets/code/agentic/graph-lu-polynomial-source.zip' | relative_url }}">Manuscript, references and exact checks (ZIP)</a> &middot; <a href="{{ '/assets/code/agentic/graph-lu-polynomial-proof.txt' | relative_url }}">Frozen round-21 proof (text)</a> &middot; <a href="https://github.com/Naixu-Guo/quantum-open-problems/issues/97">QIQC submission</a></p>
+<p style="margin:0 0 1.6rem;font-size:.92rem"><a href="{{ '/assets/pdf/agentic/graph-lu-polynomial.pdf' | relative_url }}">Manuscript (PDF, 16 pages)</a> &middot; <a href="{{ '/assets/code/agentic/graph-lu-polynomial-source.zip' | relative_url }}">Source and exact checks (ZIP)</a> &middot; <a href="https://github.com/Naixu-Guo/quantum-open-problems/issues/97">QIQC submission</a></p>
 
-**Status: a complete proof candidate, with two internal AI reviews and finite exact checks.** Independent expert review and publication priority remain unconfirmed. This post makes the existing round-21 result and its supporting files available on this website. The frozen proof remains available unchanged; the manuscript and diagnostic package have been revised.
+A graph is a compact description of a quantum state: put a qubit at each vertex, prepare every qubit in the state $$|+\rangle$$, and apply a controlled-Z gate along each edge. Two graphs can then describe states related by a separate change of basis on each qubit. The question is whether an efficient calculation on the graphs can decide if those local unitaries exist.
 
-The **expanded 16-page working manuscript** gives the theorem, proofs, two algorithms, and complexity analysis. The latest revision spells out the integer-lattice bounds, the modular-kernel recurrence, and both directions of the constrained graph reduction. It writes down the full Clifford equations and explains how their quadratic determinant conditions are tested in polynomial time. Nine references, a BibTeX file, and a table matching the source's PDF and HTML theorem numbers make the dependencies easier to check. The historical AI reviews concern the frozen round-21 submission; they are not new reviews of these revisions.
+This manuscript gives a proposed polynomial-time decision algorithm. It builds on the quasipolynomial algorithm of [Claudet and Perdrix](https://doi.org/10.4230/LIPIcs.ICALP.2025.59), replacing the part that enumerates high-order incidence constraints. **The result is a proof candidate; independent expert review and priority verification are pending.**
 
-## The question
+## The decision problem
 
-A graph specifies a quantum state by preparing one qubit at each vertex and applying a controlled-Z gate along every edge. Two different graphs can describe states related by changing the basis of each qubit separately. The [QIQCOP question](https://qiqc-op.com/problem/op_66affd4b198fd445/) asks whether this local-unitary equivalence can be decided in deterministic polynomial time for arbitrary graph states.
-
-The vertex labels stay fixed. Given two finite simple graphs on the same labelled set of $$n$$ vertices, the test asks whether there are single-qubit unitaries $$U_1,\ldots,U_n$$ and a global phase $$\phi$$ such that
+Given graphs $$G,H$$ on the same labelled set of $$n$$ vertices, decide whether
 
 $$
-\lvert H\rangle=e^{i\phi}\left(\bigotimes_{v=1}^{n}U_v\right)\lvert G\rangle.
+|H\rangle=e^{i\phi}\left(\bigotimes_{v=1}^{n}U_v\right)|G\rangle
 $$
 
-[Claudet and Perdrix](https://doi.org/10.4230/LIPIcs.ICALP.2025.59) established an exact algorithm with running time $$n^{\log_2 n+O(1)}$$. Their reduction converts the unitary question into discrete graph operations and linear constraints. The remaining expensive stage enumerates incidence conditions indexed by subsets of vertices. The proposed result replaces that stage while retaining their other reductions.
+for some single-qubit unitaries $$U_v$$ and an overall phase $$\phi$$. Vertex labels stay fixed. The input consists of the two adjacency matrices, and the equality is exact.
 
-## The candidate result
+For local Clifford operations, graph equivalence already has a polynomial-time algorithm. Allowing arbitrary single-qubit unitaries gives a larger relation, so that test alone is insufficient. Claudet and Perdrix described the additional transformations through generalized local complementation and obtained a running time of $$n^{\log_2 n+O(1)}$$. The [QIQCOP problem](https://qiqc-op.com/problem/op_66affd4b198fd445/) asks whether the general labelled decision problem admits a polynomial-time algorithm.
 
-The frozen proof claims a deterministic algorithm with polynomial bit complexity for the full labelled decision problem. It includes disconnected graphs and needs no degree or restricted-graph-class promise.
+## Why the subset enumeration can be avoided
 
-The main idea is to represent all the high-order incidence constraints by a small generating matrix. For a prescribed independent support $$X$$ of size $$m$$, the calculation takes place over
+The expensive step has a concrete form. After putting the graphs in standard form, the algorithm considers a generalized operation on an independent set $$X$$. A vector records how many times each vertex of $$X$$ participates. Valid vectors must satisfy congruences involving the common neighbors of pairs, triples, and larger subsets. Listing all those subsets is what produces the quasipolynomial cost.
 
-$$
-R=\mathbb Z/2^r\mathbb Z.
-$$
-
-For a vertex $$v$$ outside $$X$$, let $$a_v$$ record its neighbors in $$X$$. Rather than list every relevant subset, the construction starts with pair and triple rows and repeatedly applies the simple maps
+The rows of this system are not arbitrary. Let $$a_v$$ record the neighbors of $$v$$ in $$X$$. Once a constraint row for a set of at least three vertices is known, adding a new vertex applies the map
 
 $$
 T_v(z)=2a_v\odot z,
 $$
 
-where the product is coordinatewise. Part I proves that the resulting row module is exactly the module generated by all the original constraints. Representing it by an integer lattice keeps every retained basis polynomial in size and bit length. The revised manuscript sharpens the original termination bound to at most $$\max\{0,\min\{r-2,t-3\}\}$$ strict enlargements, where $$t$$ is the number of vertices outside $$X$$. A constraint indexed by $$k$$ vertices is generated from a triple in $$k-3$$ steps.
+where $$\odot$$ is coordinatewise multiplication. All the larger rows can therefore be generated from the triple rows. Pair rows are included separately: pairs and triples have the same weight, so applying this map to a pair would give the triple row an extra factor of two.
 
-Part II turns the compressed matrix into the complete binary space of possible edge toggles. This requires the kernel over $$R$$, not merely a kernel over the two-element field. The proof handles modular carries and kernels that are not free modules, and keeps a multiplicity vector witnessing each generated toggle. In the revision, if $$H$$ is the integer row-lattice basis and $$q=2^r$$, the columns of $$qH^{-1}$$ give all kernel generators modulo $$q$$.
+The computation keeps an integer Hermite basis instead of the subsets that produced the rows. If $$|X|=m$$, at most $$m$$ rows need to be retained, and their entries are bounded by $$2^r$$. The closure stabilizes after at most $$\max\{0,\min(r-2,t-3)\}$$ strict enlargements, where $$t$$ is the number of vertices outside $$X$$. Since the graph-state reduction needs only $$r=O(\log n)$$, these operations take polynomial time.
 
-Part III connects these two algebraic statements to the full Claudet–Perdrix reduction. Taking $$r=O(\log n)$$ leaves only polynomial computations. The integration checks labelled connected components, the hypotheses of the constrained local-Clifford reduction, and the special branch where the toggle space is zero. The auxiliary graphs have $$O(n^3)$$ vertices, so they also remain polynomial in size.
+It is also necessary to recover every admissible edge change. The congruences live over $$\mathbb Z/2^r\mathbb Z$$, whose kernels need not behave like vector spaces over a field. The manuscript computes the complete kernel using an integer lattice, then maps its generators to the binary space of edge changes. A multiplicity vector is retained for each basis element. This gives precisely the space required by the remaining Claudet–Perdrix reduction.
 
-## What changed between rounds 20 and 21
+## What the result establishes
 
-Round 20 supplied the incidence-compression argument for a prescribed support. That intermediate statement did not by itself decide unrestricted local-unitary equivalence. Round 21 added the complete kernel-to-image construction and the integration with the published graph reductions. The downloadable proof retains these three parts so the additional obligations are visible.
+The theorem concerns worst-case decision complexity for arbitrary finite simple graphs, including disconnected graphs. The algebraic construction and its use in the graph reduction are proved in the main text. Appendix C gives the constrained Clifford equations and the determinant test used at the final stage; Appendix B records exact source locators.
 
-The claimed advance is therefore an improvement in worst-case decision complexity. No optimized polynomial exponent or complete executable implementation of the entire graph-state algorithm is supplied. Practical performance remains a separate task.
+The full algorithm has not yet been implemented. The supplied code checks the incidence computation, modular kernels, edge-change spaces, and a restricted graph-reduction step. Appendix A records the test families, exclusions, and deliberately incorrect variants used as controls. One test uses the known [27-vertex construction of Tsimakuridze and Gühne](https://arxiv.org/abs/1611.06938): the generalized operation succeeds while ordinary LC equivalence fails. That graph pair and its LU-but-not-LC property belong to their work.
 
-## Verification and open review
+The remaining implementation work includes the polynomial minimal-local-set cover and standardization procedures. The auxiliary graphs can also be large, so the practical running time needs separate study.
 
-Two separate internal AI reviews examined the same frozen submission and reported no error. The existing diagnostic scripts were also rerun in isolated processes without network access on 22 September 2026. All **45 weighted-module closure comparisons** and **36 modular-kernel and binary-image comparisons** passed. The latter compare against exhaustive multiplicity enumeration within each finite test system.
-
-Preparing the manuscript exposed a coverage gap: all 45 earlier closure systems stabilize at their initial seed lattice. The additional script checks **24 Boolean-pattern closure systems**, including **12 that require strict enlargement**. In every one of those 12 cases, omitting the closure iteration gives the wrong module. It also checks all **256 two-by-two matrices over the integers modulo 4**, all **384 selected binary incidence systems** against **42,752 multiplicity vectors**, and five explicit boundary cases. All checks pass. These counts describe algebraic test systems, not independently solved graph-equivalence instances.
-
-A **second recheck** uses a fresh implementation of the integer dual-lattice method. It checks all **1,024 binary three-by-three incidence systems** at levels two and three against **294,912 multiplicity vectors**, and verifies **2,928 carried witnesses**. Sixteen further closure systems agree with direct enumeration at levels up to 256. Deliberately omitting triple seeds or the factor two produces failures on the designated controls.
-
-The expanded proof gives an integral forward-substitution formula for the kernel. A focused regression check revisits the 256 mod-four matrices and 16 Boolean-pattern systems, plus three unconstrained boundaries. Every division is exact and the outputs agree with the previous inverse-matrix calculation. These checks reuse the existing Hermite and incidence code; they do not add independent graph-equivalence instances to the counts above.
-
-The recheck also compares the constrained auxiliary-graph test with direct graph search on **2,460 small-graph cases**: 1,020 accept, 1,440 reject, and the methods agree throughout. It separately checks **1,105 ordinary-LC cases**. The 261 zero-image arbitrary-support cases are excluded from the gadget comparison because that branch of the general theorem requires standard form.
-
-Finally, the **27-vertex construction of [Tsimakuridze and Gühne (2017), Section 7 and Figure 7](https://arxiv.org/abs/1611.06938), is accepted as LU-equivalent and rejected as ordinarily LC-equivalent**. Its valid level-two operation is explicit, its complete toggle space is recovered, and the ordinary-LC determinant conditions are checked against the entire linear solution space. The graph pair and its LU-but-not-LC property are from that paper; this package uses it as a known control for the reduction.
-
-These are finite checks of the algebra and a restricted graph-reduction step. The general theorem rests on the written argument and its use of the published reductions. The polynomial MLS standardization routine has not been implemented in this package, and independent expert verification remains pending.
-
-The [QIQC submission, issue #97](https://github.com/Naixu-Guo/quantum-open-problems/issues/97), contains the same proof and scripts and is pending maintainer review. This page does not record external acceptance or a new result beyond round 21. The construction, checks, reviews, and exposition involved substantial AI assistance; no independent human mathematical verification is asserted.
-
-## Sources and files
-
-The principal dependency is N. Claudet and S. Perdrix, *Deciding Local Unitary Equivalence of Graph States in Quasi-Polynomial Time*, ICALP 2025. [Published paper](https://doi.org/10.4230/LIPIcs.ICALP.2025.59) · [Long version used for lemma numbering](https://arxiv.org/html/2502.06566v2). The frozen proof explicitly credits the standard-form, level, and constrained-LC results it uses.
-
-The manuscript now consistently cites the [version 3 PDF](https://arxiv.org/pdf/2502.06566v3). Its statement numbers differ from those in the HTML rendering; Appendix A supplies a correspondence table and page locators. The corresponding dependencies were compared with version 2. The bibliography also credits the original LC and MLS-cover algorithms, the generalized-complementation characterization, the integer normal-form complexity theorem, and the known 27-vertex control. [Scientific Agent Skills](https://doi.org/10.48550/arXiv.2609.00065) supplied writing and evidence-tracking guidance and is cited in the manuscript; it did not verify the mathematics.
-
-The expanded archive includes the PDF and LaTeX source, BibTeX references, a citation audit, unmodified frozen proof, original and additional diagnostic scripts, recorded outputs, a compact historical review record, source metadata, a claim-to-evidence map, reproduction instructions, and file hashes. Cited third-party papers are linked rather than redistributed.
+The original result arose in round 21 of the research campaign. Its [frozen proof]({{ '/assets/code/agentic/graph-lu-polynomial-proof.txt' | relative_url }}) and historical review record are preserved in the source archive, alongside the revised manuscript, references, scripts, and outputs. The arguments, code, and exposition were developed with substantial AI assistance. [Scientific Agent Skills](https://doi.org/10.48550/arXiv.2609.00065) was used for writing and evidence tracking; the public record is [QIQC issue #97](https://github.com/Naixu-Guo/quantum-open-problems/issues/97).
