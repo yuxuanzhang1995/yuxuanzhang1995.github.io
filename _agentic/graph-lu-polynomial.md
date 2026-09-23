@@ -3,16 +3,20 @@ layout: page
 title: Polynomial-time local-unitary equivalence of graph states
 description: A proof candidate replaces high-order incidence enumeration with a polynomial-size modular computation.
 date: 2026-09-22
+last_revised: 2026-09-22
 status: proof candidate
+pdf: graph-lu-polynomial.pdf
 target: QIQCOP problem op_66affd4b198fd445
 author: Yuxuan Zhang
 ---
 
 **Yuxuan Zhang** · Round 21 · Posted 22 September 2026
 
-<p style="margin:0 0 1.6rem;font-size:.92rem"><a href="{{ '/assets/code/agentic/graph-lu-polynomial-proof.txt' | relative_url }}">Full round-21 proof (text)</a> &middot; <a href="{{ '/assets/code/agentic/graph-lu-polynomial-source.zip' | relative_url }}">Proof, exact checks and review record (ZIP)</a> &middot; <a href="https://github.com/Naixu-Guo/quantum-open-problems/issues/97">QIQC submission</a></p>
+<p style="margin:0 0 1.6rem;font-size:.92rem"><a href="{{ '/assets/pdf/agentic/graph-lu-polynomial.pdf' | relative_url }}">Full manuscript (PDF, 12 pages)</a> &middot; <a href="{{ '/assets/code/agentic/graph-lu-polynomial-source.zip' | relative_url }}">Manuscript, proof and exact checks (ZIP)</a> &middot; <a href="{{ '/assets/code/agentic/graph-lu-polynomial-proof.txt' | relative_url }}">Frozen round-21 proof (text)</a> &middot; <a href="https://github.com/Naixu-Guo/quantum-open-problems/issues/97">QIQC submission</a></p>
 
 **Status: a complete proof candidate, with two internal AI reviews and finite exact checks.** Independent expert review and publication priority remain unconfirmed. This post makes the existing round-21 result and its supporting files available on this website. The full proof is unchanged from the version submitted for review.
+
+A **12-page working manuscript** now presents the theorem, proofs, two algorithms, complexity analysis, and reproducibility record. It adds targeted diagnostics and makes the published reduction's hypotheses explicit. The frozen round-21 proof remains available unchanged; the historical AI reviews refer to that frozen submission. The manuscript is a fuller presentation of the same candidate.
 
 ## The question
 
@@ -58,6 +62,8 @@ The claimed advance is therefore an improvement in worst-case decision complexit
 
 Two separate internal AI reviews examined the same frozen submission and reported no error. The existing diagnostic scripts were also rerun in isolated processes without network access on 22 September 2026. All **45 weighted-module closure comparisons** and **36 modular-kernel and binary-image comparisons** passed. The latter compare against exhaustive multiplicity enumeration within each finite test system.
 
+Preparing the manuscript exposed a coverage gap: all 45 earlier closure systems stabilize at their initial seed lattice. The additional script checks **24 Boolean-pattern closure systems**, including **12 that require strict enlargement**. In every one of those 12 cases, omitting the closure iteration gives the wrong module. It also checks all **256 two-by-two matrices over the integers modulo 4**, all **384 selected binary incidence systems** against **42,752 multiplicity vectors**, and five explicit boundary cases. All checks pass. These counts describe algebraic test systems, not independently solved graph-equivalence instances.
+
 Those checks test finite algebraic assertions. They do not certify the asymptotic theorem or the complete graph-reduction pipeline. The most important review questions are whether the module closure captures every incidence condition and whether its output satisfies every interface required by the credited reductions.
 
 The [QIQC submission, issue #97](https://github.com/Naixu-Guo/quantum-open-problems/issues/97), contains the same proof and scripts and is pending maintainer review. This page does not record external acceptance or a new result beyond round 21. The construction, checks, reviews, and exposition involved substantial AI assistance; no independent human mathematical verification is asserted.
@@ -66,4 +72,6 @@ The [QIQC submission, issue #97](https://github.com/Naixu-Guo/quantum-open-probl
 
 The principal dependency is N. Claudet and S. Perdrix, *Deciding Local Unitary Equivalence of Graph States in Quasi-Polynomial Time*, ICALP 2025. [Published paper](https://doi.org/10.4230/LIPIcs.ICALP.2025.59) · [Long version used for lemma numbering](https://arxiv.org/html/2502.06566v2). The frozen proof explicitly credits the standard-form, level, and constrained-LC results it uses.
 
-The archive includes the unmodified proof, both diagnostic scripts, their recorded outputs, a compact review record, reproduction instructions, and file hashes. Cited third-party papers are linked rather than redistributed.
+The manuscript uses [version 3](https://arxiv.org/html/2502.06566v3) for its source numbering and records each required interface. The corresponding dependencies were compared with version 2. [Scientific Agent Skills](https://doi.org/10.48550/arXiv.2609.00065) supplied writing and evidence-tracking guidance and is cited in the manuscript; it did not verify the mathematics.
+
+The expanded archive includes the PDF and LaTeX source, unmodified frozen proof, original and additional diagnostic scripts, recorded outputs, a compact historical review record, source metadata, a claim-to-evidence map, reproduction instructions, and file hashes. Cited third-party papers are linked rather than redistributed.
