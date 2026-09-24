@@ -1,0 +1,50 @@
+EXACT CLAIM
+
+Explicit local forward theorem, using natural logarithms. Use the real Bell basis (Phi+,Phi-,Psi+,Psi-), indexed 0,1,2,3, with Phi±=(|00>±|11>)/sqrt(2) and Psi±=(|01>±|10>)/sqrt(2). Let rho*=diag(p0,p1,p2,p3), where pi>0, sum pi=1, and p0>1/2. Other dominant Bell labels are handled by local Pauli conjugation. Put q=1-p0, c=2q, s0=1/2, si=pi/c for i>0, S=diag(s), lambda=4p0-2, and (d0,d1,d2)=(1/2-s3,1/2-s2,1/2-s1).
+There is a neighborhood of rho* in the trace-one Hermitian affine space, consisting of positive definite entangled states, on which the unique closest separable state sigma(rho) and E_R(rho) are real analytic, with sigma(rho*)=S.
+Define ell(a,b)=(log a-log b)/(a-b), continuously extended by ell(a,a)=1/a. Set lij=ell(si,sj), mij=ell(pi,pj). For i<j put
+hij=integral_0^infinity [pi/((si+t)^2(sj+t))+pj/((si+t)(sj+t)^2)]dt.
+For a=si, b=sj, a!=b, this equals
+{pi[log(a/b)-(a-b)/a]+pj[(a-b)/b-log(a/b)]}/(a-b)^2.
+For a=b it equals (pi+pj)/(2a^2). For i,j>0, hij=c lij.
+Set kR_ij=lambda/d_i when j=3, and zero otherwise. Set kI_ij=lambda/d_k when i,j belong to {0,1,2} and k is the remaining member, and zero when j=3.
+For every trace-zero Hermitian H, the derivative X=D sigma(rho*)[H] is
+X00=0,
+Xii=(Hii+pi H00/q)/(2q) for i>0,
+Re Xij=lij Re Hij/(hij+kR_ij),
+Im Xij=lij Im Hij/(hij+kI_ij) for i<j,
+with lower entries determined by Hermiticity. Every denominator is strictly positive.
+The REE Hessian quadratic form is
+Q(H)=H00^2/(p0 q)+2 sum_{i<j}{[mij-lij^2/(hij+kR_ij)](Re Hij)^2+[mij-lij^2/(hij+kI_ij)](Im Hij)^2}.
+There are constants C,r>0 depending only on p such that, for every trace-zero Hermitian K with Hilbert-Schmidt norm ||K||<r,
+||sigma(rho*+K)-S-X(K)|| <= C||K||^2,
+|E_R(rho*+K)-[log 2+p0 log p0+q log q+K00 log(p0/q)+Q(K)/2]| <= C||K||^3.
+No distinct-eigenvalue assumption is needed; the displayed continuous prescriptions cover all repeated positive eigenvalues. For base-two entropy divide the value expansion and its remainder bound by log 2; the optimizer is unchanged. This theorem is local, not a closed formula for arbitrary two-qubit inputs.
+
+FULL FROZEN PROOF
+
+Write Gamma for partial transpose on the second qubit, expressed in the stated Bell basis. Transformation from the computational basis gives S^Gamma=diag(d0,d1,d2,0). Since each tail probability satisfies 0<pi<q, all dk>0. Its kernel projector is Pi=|Psi-><Psi-|, and W=Pi^Gamma=diag(-1,1,1,1)/2.
+For A>0 define the logarithmic derivative L_A(B)=integral_0^infinity (A+tI)^(-1) B (A+tI)^(-1)dt. It is self-adjoint for the trace pairing and analytic in A. At the base point L_S(rho*)=diag(pi/si)=I-lambda W.
+Let F_rho(A)=-Tr rho log A. For every positive definite PPT density matrix tau, convexity and the preceding identity give F_rho*(tau)>=F_rho*(S)+lambda Tr W tau>=F_rho*(S), since Tr W S=0 and Tr W tau=Tr Pi tau^Gamma>=0. Singular tau have infinite relative entropy for full-rank rho*. Thus S is globally optimal, using the supplied two-qubit equivalence of separability and PPT.
+Strict convexity also follows directly. With R=(A+tI)^(-1), the Hessian of F_rho on a nonzero Hermitian Y is 2 integral Tr rho R Y R Y R dt>0 when rho>0. Indeed R Y R Y R=R^(1/2)(R^(1/2)Y R^(1/2))^2 R^(1/2) is nonzero positive semidefinite. Thus any finite minimizer is unique.
+To establish actual analyticity, near S let f(A) be the simple eigenvalue of A^Gamma continuing zero, and Pi(A) its spectral projector. These are real analytic because that eigenvalue is isolated; coincidences among the other eigenvalues are harmless. Set W(A)=Pi(A)^Gamma. Consider
+-L_A(rho)+mu I-beta W(A)=0, Tr A=1, f(A)=0.
+At the base point the solution is (A,mu,beta)=(S,1,lambda). The two constraint gradients I,W are independent. Put G=diag(1/d0,1/d1,1/d2,0). Differentiating the isolated projector gives D Pi(S)[Y]=-G Y^Gamma Pi-Pi Y^Gamma G; this also follows by differentiating the eigenvector equation and projecting onto the orthogonal complement of its kernel. Consequently D^2 f(S)[Y,Y]=-2 Tr Pi Y^Gamma G Y^Gamma<=0.
+The A-block of the bordered Jacobian is
+T(Y)=-D L_S[Y](rho*)+lambda(G Y^Gamma Pi+Pi Y^Gamma G)^Gamma.
+Its quadratic form is the strictly positive logarithmic Hessian plus 2lambda Tr Pi Y^Gamma G Y^Gamma>=0. In particular it is positive definite on M={Y:Tr Y=Tr W Y=0}. The bordered Jacobian is invertible: any kernel vector has A-component Y in M; pairing its stationarity equation with Y gives <Y,T(Y)>=0, hence Y=0. Independence of I,W then forces both multiplier components to vanish. The real analytic implicit-function theorem therefore provides analytic A(rho),mu(rho),beta(rho).
+Shrink the neighborhood so rho,A>0, beta>0, and the other three eigenvalues of A^Gamma remain positive. Then A is PPT. The identity Tr A L_A(rho)=Tr rho=1, together with Tr A W(A)=f(A)=0, gives mu=1. For every PPT density matrix tau, Tr W(A)tau>=0. The same convex supporting inequality now certifies A(rho) as a global minimizer; singular tau again have infinite objective. Strict convexity proves uniqueness. Hence A=sigma, and E_R=Tr rho log rho-Tr rho log A is analytic. Positivity and entanglement of the input persist locally, since rho*>0 and rho*^Gamma has a negative eigenvalue.
+We next evaluate the derivative. Differentiating the constraints yields Tr X=Tr W X=0, equivalently Tr X=X00=0. Differentiating stationarity and pairing with Y in M removes the multiplier variations, leaving <Y,T(X)>=<Y,L_S(H)>.
+Resolvent differentiation gives
+-D L_S[X](rho*)=integral_0^infinity [R X R rho* R+R rho* R X R]dt.
+Since S and rho* are diagonal, this operator multiplies diagonal entry i by pi/si^2 and either off-diagonal coordinate ij by hij. Elementary integration yields the displayed closed expression for hij. At si=sj=a the integral is (pi+pj) integral_0^infinity (a+t)^(-3)dt=(pi+pj)/(2a^2). The integrand is strictly positive, so hij>0. Substituting pi=c si and pj=c sj gives hij=c lij for tail pairs, including equality by continuity.
+Here is the full partial-transpose calculation needed for curvature. Write Sij=|i><j|+|j><i| and Aij=i(|i><j|-|j><i|). In the specified Bell convention, Gamma fixes all six Sij. It interchanges A01 and A23, interchanges A02 and -A13, and interchanges A03 and -A12. These identities follow by expanding the four stated Bell vectors in the computational basis and transposing the second indices. The map Z -> G Z Pi+Pi Z G multiplies only the (i,3) coherence coordinates by 1/di and annihilates the other coordinates. Conjugation by Gamma thus gives precisely the stated kR and kI, without real-imaginary mixing. Diagonal matrices stay diagonal under Gamma, and this curvature map annihilates them. The off-diagonal tangent equations now yield the claimed Xij. Their denominators are positive because hij>0 and all curvature coefficients are nonnegative.
+On the diagonal tangent space, only entries 1,2,3 vary and their sum is zero. Since pi/si^2=c/si, the projected equations say that (c Xii-Hii)/si is independent of i>0. Summing over those entries, using sum si=1/2, sum Hii=-H00 and sum Xii=0, identifies the common value as 2H00. Therefore Xii=(Hii+2si H00)/c, as claimed. These diagonal and coherence equations account for every trace-zero Hermitian input direction.
+Along the optimal branch, Tr L_A(rho) DA[H]=Tr (I-beta W(A)) DA[H]=0 by the differentiated constraints. The trace-zero envelope derivative is consequently DE_R(rho)[H]=Tr H(log rho-log A). At rho*, the log ratio has entry log(2p0) at index zero and log(2q) elsewhere. This proves the linear term. Differentiation once more yields
+D^2 E_R(rho*)[H,H]=Tr H L_rho*(H)-Tr H L_S(X).
+The diagonal contribution simplifies to H00^2/p0+H00^2/q=H00^2/(p0q). For each coherence the trace pairing contributes twice the product of its real coordinates plus twice the product of its imaginary coordinates. Substitution of X therefore gives exactly Q. Direct substitution of S gives the stated base value.
+Finally, the matrix logarithm and its derivatives are analytic on positive definite matrices. Only the zero eigenvalue of S^Gamma must be simple, and its simplicity was proved above. The integral expressions and continuous logarithmic divided differences cover every positive-eigenvalue collision. On a sufficiently small closed ball within the analytic neighborhood, the second derivative of sigma and third derivative of E_R are bounded. Taylor's theorem in this finite-dimensional real affine space gives the two uniform remainder estimates. The accompanying checker is supplementary; no numerical tolerance or sampled inequality is used to establish the theorem.
+
+REMAINING GAP
+
+The closed optimizer and value formula for arbitrary two-qubit density operators remains unresolved. This result is a local expansion about full-rank entangled Bell-diagonal states. Comprehensive published-source comparison and historical novelty remain unverified.

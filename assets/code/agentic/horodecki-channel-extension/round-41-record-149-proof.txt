@@ -1,0 +1,35 @@
+EXACT CLAIM
+
+A constructive exclusion for an explicit non-transpose-symmetric PPT-entangled family. Let A=E=C³, let 0<t<1 and s=1−t², and use the computational product basis |ij>. Define p=|00>+|11>+|22>, v=|20>+t|22>, and H_t=s[|p><p|+∑_{ij∈{01,02,10,12,21}}|ij><ij|]+|v><v|. Put M_t=diag(3s,3s,s+2), W_t=M_t^(−1/2), and J_t=(W_t⊗I)H_t(W_t⊗I). In the convention Tr_E J(Ψ)=I_A, let Ψ_t:L(C³)→L(C³) have Choi operator J_t. Then J_t is PPT entangled, rank(J_t)=7 and rank(J_t^{T_E})=6. Nevertheless Ψ_t is antidegradable, and every minimal complementary channel Φ_t:L(C³)→L(C⁷) is ordinarily degradable. Thus this entire family cannot furnish a transpose-degradable but nondegradable channel by taking Φ_t. The rank mismatch also rules out J_t^{T_E}=(I⊗U)J_t(I⊗U†) for any output unitary U. No transpose-degradability assertion about Φ_t is required or made.
+
+FULL FROZEN PROOF
+
+Write Γ for partial transpose on E. All vectors and coefficients defining H_t are real. The seven vectors p,v,|01>,|02>,|10>,|12>,|21> are linearly independent, and their coefficients in H_t are strictly positive. Consequently H_t≥0 and rank(H_t)=7. Direct partial trace gives Tr_E H_t=diag(3s,3s,s+2)=M_t. Since s>0, W_t exists and J_t is a positive operator with input marginal I_A, hence is the Choi operator of a channel.
+
+PPT and ranks. The partial transpose H_t^Γ is block diagonal in the following orthogonal decomposition. On |00> and |11> its singleton blocks are s. On each ordered pair (|01>,|10>) and (|12>,|21>) its block is s[[1,1],[1,1]]. On (|02>,|20>,|22>) its block is
+  [[s,s,0],[s,1,t],[0,t,1]] = s f f^T + g g^T,
+where f=(1,1,0)^T and g=(0,t,1)^T. This last identity uses s+t²=1. The last block is positive of rank two because f and g are independent; the other nonsingleton blocks each have rank one. Hence H_t^Γ≥0 and rank(H_t^Γ)=2+1+1+2=6. Invertible congruence by W_t⊗I preserves both ranks and positivity, and commutes with Γ. These assertions therefore hold for J_t. Unitary conjugation preserves rank, proving the stated absence of output-unitary transpose symmetry.
+
+Entanglement. Two vectors in ker H_t are |00>−|11> and |00>+t|20>−|22>. Three vectors in ker H_t^Γ are |01>−|10>, |12>−|21>, and |02>−|20>+t|22>. Suppose nonzero x,y satisfy x⊗y∈ran H_t and x⊗conj(y)∈ran H_t^Γ. Orthogonality to these real kernel vectors gives
+  x0 y0=x1 y1,
+  x0 y0+t x2 y0−x2 y2=0,
+  x0 conj(y1)=x1 conj(y0),
+  x1 conj(y2)=x2 conj(y1),
+  x0 conj(y2)−x2 conj(y0)+t x2 conj(y2)=0.
+If y1≠0, the third and fourth equations imply x=c conj(y), where c=x1/conj(y1). Here c≠0, since otherwise x=0. Substitution into the fifth equation gives tc conj(y2)²=0, so y2=x2=0. The second equation now gives x0 y0=0, and the first then gives x1 y1=0, a contradiction. Thus y1=0. Since y≠0, the third and fourth equations now force x1=0.
+
+If H_t were separable, it would be a finite positive sum of product projectors |x⊗y><x⊗y|. Each summand vector belongs to ran H_t: a vector in the kernel of a positive sum must be orthogonal to each summand. Applying the same observation to the partially transposed decomposition puts x⊗conj(y) in ran H_t^Γ. The preceding argument would therefore make every summand have zero |11> component. This contradicts <11|H_t|11>=s>0. Hence H_t is entangled. Invertible local filtering preserves separability in both directions, so J_t is entangled as well.
+
+Positive symmetric extension. Introduce E'≅C³ and order tensor factors A,E,E'. Set
+  w=|000>+|101>+|110>+|202>+|220>+t|222>,
+  z=|2>⊗(|0>+t|2>)⊗(|0>+t|2>),
+  Ω_t=s[|w><w|+|011><011|+|022><022|+|122><122|+|211><211|]+[t²/(1+t²)]|z><z|.
+Every coefficient is positive, so Ω_t≥0. Each displayed vector is invariant under exchanging E and E', hence Ω_t has equal marginals on AE and AE'. To calculate the AE marginal, slice w according to the E' index. Its three slices are p, |10>, and v. Thus Tr_{E'}|w><w|=|p><p|+|10><10|+|v><v|. The four remaining basis projectors contribute |01>,|02>,|12>,|21>, respectively. Finally, Tr_{E'}|z><z|=(1+t²)|v><v|. It follows that Tr_{E'}Ω_t equals H_t, since the coefficient of |v><v| is s+t²=1. By exchange symmetry, the other marginal also equals H_t.
+
+Let K_t=(W_t⊗I⊗I)Ω_t(W_t⊗I⊗I). Its two marginals are J_t and its input marginal is I_A. Hence K_t is the Choi operator of a channel Λ_t:A→E⊗E' whose two output marginal channels are both Ψ_t.
+
+Degrading map and all kernel freedom. Choose any minimal Stinespring isometry U:A→E⊗B for Ψ_t, where dim B=rank J_t=7, and write Φ_t=Tr_E(U·U†). Choose a Stinespring isometry Q:A→E⊗E'⊗F for Λ_t. Viewed as a dilation of its first marginal Ψ_t, Q dilates the same channel as U. Minimal Stinespring uniqueness supplies an isometry R:B→E'⊗F such that Q=(I_E⊗R)U. Define D:L(B)→L(E') by D(Y)=Tr_F(RYR†). This is completely positive and trace preserving. Taking the second marginal of Λ_t gives D∘Φ_t=Ψ_t, identifying E' with E. Thus Φ_t is ordinarily degradable, equivalently Ψ_t is antidegradable. This construction establishes existence of a valid degrading channel without assuming uniqueness of a superoperator inverse or restricting its kernel freedom. The argument applies to every minimal choice of U.
+
+REMAINING GAP
+
+The original existence problem remains unresolved. This proves only that the specified family of complementary channels is ordinarily degradable; it neither supplies a strict example elsewhere nor proves general containment of transpose-degradable channels in degradable channels.

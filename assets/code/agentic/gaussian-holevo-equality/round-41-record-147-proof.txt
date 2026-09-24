@@ -1,0 +1,62 @@
+EXACT CLAIM
+
+Fix a faithful one-mode, two-parameter smooth Gaussian model at a point, with nonsingular SLD Fisher information and dim span_R{∂₁V,∂₂V}=1. Let W be any real positive-definite 2×2 weight. Put v=√det V>1/2, S=√v V^(−1/2), m_j=S∂_j d, and D_j=S(∂_jV)Sᵀ. Then C_G(W)=C_H(W) if and only if there is a real unit vector l such that, for j=1,2, m_j∈Rl and D_j∈R[v²llᵀ−(Ωl)(Ωl)ᵀ/4]. In that case noiseless homodyne of lᵀS(R−d) attains both costs. Explicitly, with a_j=lᵀm_j and b_j=lᵀD_jl, their common value is tr(WF_l^(−1)), where F_l=aaᵀ/v+bbᵀ/(2v²). Otherwise C_G(W)>C_H(W), including infima over arbitrarily squeezed measurements. The equality criterion is independent of the positive weight. This completely resolves the specified restricted target, not the arbitrary-mode original problem.
+
+FULL FROZEN PROOF
+
+All statements are local; measurement settings remain fixed under differentiation. Since det S=1, S is symplectic in one mode. Centering and applying S therefore reduce V to vI without changing the costs. Faithfulness gives v>1/2. Invertible parameter changes, accompanied by the corresponding weight congruence, preserve the problem.
+
+1. Gaussian reduction and compactification.
+An unprocessed Gaussian measurement has normal output with mean Kd and covariance KVKᵀ+N, where N−iKΩKᵀ/2≥0: its measured commuting quadratures are sums of system and independent ancillary quadratures. For rank-two K, invertible output transformations give K=[I;0]. Regressing the first two noise coordinates on the remaining coordinates leaves a sufficient observation with covariance V+N_eff; the remaining coordinates are parameter-independent and independent of this residual throughout the model. The Schur complement gives N_eff−iΩ/2≥0. Singular regression blocks are treated on their support, since positivity annihilates cross blocks on their kernel. Thus N_eff>0 and det N_eff≥1/4. The pure seed N_p=N_eff/(2√det N_eff) satisfies N_p≤N_eff. Adding independent Gaussian noise simulates the original observation, so cannot improve its Fisher information. Rank-one K reduces similarly to a noisy quadrature dominated by noiseless homodyne; rank-zero K is uninformative. Subsequent classical processing cannot improve information. Conversely every positive seed N with det N=1/4 is realizable by pure ancillary Gaussian quadratures r with commutator −iΩ and commuting observation z=R+r.
+
+It consequently suffices to consider pure seeds and homodyne. For C=vI+N their Fisher matrix is
+F_jk=m_jᵀC^(−1)m_k+(1/2)tr(C^(−1)D_jC^(−1)D_k).
+At every finite seed F>0: a null direction would have both moment derivatives zero, hence zero Gaussian-state derivative and zero SLD information.
+Write N=O diag(x,1/(4x))Oᵀ, with O a rotation and 0<x≤1/2. Adjoin x=0 to obtain a compact parameter space. Uniformly over rotations, C^(−1) tends to llᵀ/v, where l is the first column of O. The displayed Fisher matrix thus extends continuously to the homodyne Fisher matrix F_l. Assign infinite cost at singular F. This cost is lower semicontinuous, since tr(WF^(−1))≥λ_min(W)/λ_min(F). There is a finite minimum on the compactified space, and it equals C_G.
+
+2. Every finite seed is strictly above Holevo.
+The efficient centered normal-score estimators have the form
+f_j(z)=a_jᵀz+zᵀB_jz−tr(B_jC),
+and covariance F^(−1). Define Q_j=a_jᵀR+RᵀB_jR−tr(B_jvI). Taking the ancillary expectation maps f_j to Q_j, so the latter are centered and locally unbiased. Set E_j=f_j−Q_j on the product state. Ancillary centering yields ⟨Q_jE_k⟩=⟨E_jQ_k⟩=0. Therefore F^(−1)=Z+K, where Z_jk=⟨Q_jQ_k⟩ and K_jk=⟨E_jE_k⟩≥0; in particular Im K=−Im Z.
+For any Hermitian positive-semidefinite 2×2 H and real W>0,
+tr(W Re H)≥||√W Im H√W||₁.
+Indeed, the trace of √W H√W is at least twice the absolute imaginary part of its upper off-diagonal entry.
+
+The one-dimensional covariance span implies B_j=c_jB for a nonzero real vector c and nonzero real symmetric B, because B_j=(1/2)Σ_k(F^(−1))_jk C^(−1)D_kC^(−1). Decompose
+E_j=a_jᵀr+2RᵀB_jr+[rᵀB_jr−tr(B_jN)].
+The three families have mutually orthogonal complex Gram contributions, by zero system mean and vanishing odd Gaussian moments. The bilinear family contributes κccᵀ with κ>0. For positivity, the system linear Gram matrix vI+iΩ/2 is positive definite, while the ancillary Gram matrix N−iΩ/2=uu† has rank one with Re u and Im u linearly independent. The variance of 2RᵀBr can vanish only if B annihilates u or its conjugate, according to the Gram convention. Since B is real, either condition forces B=0, a contradiction.
+Thus K=κccᵀ+K₀ with K₀≥0. Applying the preceding inequality to K₀ gives
+tr(W Re K)−||√W Im K√W||₁≥κcᵀWc>0.
+Consequently the finite-seed cost strictly exceeds the Holevo objective of Q and hence C_H.
+
+3. Necessary conditions at informative homodyne boundaries.
+Rotate the measured quadrature to q, with conjugate p and V=vI. Its Fisher matrix is nonsingular exactly when its mean-derivative and variance-derivative vectors are independent. The covariance span assumption then permits a parameter change giving
+m₁=(1,b)ᵀ, m₂=(0,h)ᵀ, D₁=0, D₂=[[1,e],[e,f]].
+Put Q=q²−v. The efficient homodyne estimators are X₁=q and X₂=Q. Their Gram matrix is real, diag(v,2v²), so their Holevo objective equals the homodyne cost.
+The centered Hermitian polynomials
+A=p−bq−hQ, B={q,p}−2eQ, C=p²−v−fQ
+have zero derivative pairing with both parameters. They therefore give feasible perturbations of either estimator. Gaussian moments and [q,p]=i give
+Re⟨qA⟩=−bv, Re⟨QA⟩=−2hv², Im⟨qA⟩=1/2, Im⟨QA⟩=0;
+⟨qB⟩=⟨qC⟩=0;
+Re⟨QB⟩=−4ev², Im⟨QB⟩=2v;
+Re⟨QC⟩=−1/2−2fv², Im⟨QC⟩=0.
+These identities follow, for example, from Var(q²)=2v², ⟨(q²−v)(p²−v)⟩=−1/2, and ⟨(q²−v){q,p}⟩=2iv.
+
+If homodyne attains C_H, its estimator pair must minimize the Holevo objective over all feasible pairs. Perturbing X₂ by tB keeps its imaginary cross moment zero and gives derivative −8ev²W₂₂. Perturbing X₂ by tC likewise gives derivative −W₂₂(1+4fv²). Since either sign of t is permitted, necessary conditions are e=0 and f=−1/(4v²).
+Under these conditions take arbitrary real z₁,z₂ and set
+δX₁=z₁A+z₂B/(4v), δX₂=z₂A.
+The first variation of Im⟨X₁X₂⟩ is zero: the contributions Im⟨B,Q⟩/(4v)=−1/2 and Im⟨q,A⟩=1/2 cancel, and Im⟨A,Q⟩=0. Its remaining variation is O(t²), so the trace-norm term has zero derivative. Write r=(bv,2hv²)ᵀ and z=(z₁,z₂)ᵀ. The real weighted variance derivative is −2zᵀWr. If r≠0, choosing z=Wr makes this −2||Wr||²<0. Hence b=h=0 is necessary.
+All perturbations are exactly feasible and have finite second moments. A negative first derivative supplies strict descent for sufficiently small positive t. Thus violation of these conditions gives a strict homodyne-versus-Holevo gap, not merely a failed formal stationarity condition.
+
+4. Sufficiency.
+Suppose b=h=e=0 and f=−1/(4v²). Use the exact centered linear/quadratic restriction of the Holevo minimization supplied in the problem. In this five-dimensional polynomial space the zero-derivative subspace is spanned by
+p, {q,p}, p²−v+Q/(4v²).
+Each is real-Gram orthogonal to both q and Q, using odd Gaussian moments and the identities above. Every feasible pair in the space is therefore (q,Q) plus residuals whose real Gram contribution is positive semidefinite, with no real cross terms. Its weighted real variance is at least vW₁₁+2v²W₂₂, and its trace-norm term is nonnegative. The pair (q,Q) has zero imaginary Gram and attains that value. The supplied exact restriction proves unrestricted Holevo optimality, and homodyne attains it.
+
+5. Translation and equality of infima.
+The canonical conditions say that all mean derivatives lie along the measured line Rl and that the covariance tangent line is generated by llᵀ−(Ωl)(Ωl)ᵀ/(4v²), equivalently by the matrix in the claim. Conversely, under these line conditions the mean and covariance coefficient vectors must be independent: dependence would give a nonzero parameter direction with both moment derivatives zero, contradicting nonsingular SLD information. Thus F_l is nonsingular and the canonical sufficiency argument applies.
+Finally the compactified Gaussian minimum from Step 1 is attained. Every finite seed is strictly above C_H by Step 2; every informative boundary violating the line conditions is strictly above C_H by Step 3; singular boundaries have infinite cost. If the criterion fails, the minimum itself is therefore strictly above C_H. If it holds, Step 4 supplies the explicit optimal homodyne measurement. This proves both directions, including equality of infima. The accompanying checker supplies illustrative exact-arithmetic checks; the general result rests on this analytic proof.
+
+REMAINING GAP
+
+The arbitrary-mode original problem and general covariance-tangent ranks remain unresolved here. The specified faithful one-mode, two-parameter, rank-one covariance-tangent target is completely classified.
