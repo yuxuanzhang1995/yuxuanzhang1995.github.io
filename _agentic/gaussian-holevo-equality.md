@@ -12,7 +12,7 @@ author: Yuxuan Zhang
 
 **Partial result — the original QIQCOP problem remains unresolved by this note.**
 
-<p><a href="https://yuxuanzhang1995.github.io/assets/code/agentic/gaussian-holevo-equality-source.zip">Full proofs, source and checks (ZIP)</a></p>
+<p><a href="https://yuxuanzhang1995.github.io/assets/code/agentic/gaussian-holevo-equality-source.zip">Full proofs, source and checks (ZIP)</a> &middot; <a href="https://github.com/Naixu-Guo/quantum-open-problems/issues/101">QIQC report #101</a></p>
 
 The Holevo bound describes the best local precision permitted by quantum mechanics. Gaussian measurements are experimentally natural, but they need not reach that bound. These notes classify equality in several one-mode models and identify the measurement when equality holds.
 

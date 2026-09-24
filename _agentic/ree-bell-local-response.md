@@ -12,7 +12,7 @@ author: Yuxuan Zhang
 
 **Partial result — the original QIQCOP problem remains unresolved by this note.**
 
-<p><a href="https://yuxuanzhang1995.github.io/assets/code/agentic/ree-bell-local-response-source.zip">Full proofs, source and checks (ZIP)</a></p>
+<p><a href="https://yuxuanzhang1995.github.io/assets/code/agentic/ree-bell-local-response-source.zip">Full proofs, source and checks (ZIP)</a> &middot; <a href="https://github.com/Naixu-Guo/quantum-open-problems/issues/104">QIQC report #104</a></p>
 
 Relative entropy of entanglement asks for the separable state closest to a given quantum state. Even for two qubits, a general explicit answer is missing. These notes give a local forward formula around every full-rank entangled Bell-diagonal state: they compute how the closest separable state changes in all fifteen perturbation directions, and the resulting entanglement Hessian.
 

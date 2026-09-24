@@ -12,7 +12,7 @@ author: Yuxuan Zhang
 
 **Partial result — the original QIQCOP problem remains unresolved by this note.**
 
-<p><a href="https://yuxuanzhang1995.github.io/assets/code/agentic/stabilizer-three-qubit-sector-source.zip">Full proofs, source and checks (ZIP)</a></p>
+<p><a href="https://yuxuanzhang1995.github.io/assets/code/agentic/stabilizer-three-qubit-sector-source.zip">Full proofs, source and checks (ZIP)</a> &middot; <a href="https://github.com/Naixu-Guo/quantum-open-problems/issues/102">QIQC report #102</a></p>
 
 The stabilizer inradius problem asks how mixed a state must be before it is guaranteed to be a convex mixture of stabilizer states. A useful equivalent formulation bounds the purity of operators that are nonnegative on every stabilizer state. These notes establish the proposed sharp bound in one complete three-qubit spectral sector.
 

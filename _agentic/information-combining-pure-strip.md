@@ -12,7 +12,7 @@ author: Yuxuan Zhang
 
 **Partial result — the original QIQCOP problem remains unresolved by this note.**
 
-<p><a href="https://yuxuanzhang1995.github.io/assets/code/agentic/information-combining-pure-strip-source.zip">Full proofs, source and checks (ZIP)</a></p>
+<p><a href="https://yuxuanzhang1995.github.io/assets/code/agentic/information-combining-pure-strip-source.zip">Full proofs, source and checks (ZIP)</a> &middot; <a href="https://github.com/Naixu-Guo/quantum-open-problems/issues/106">QIQC report #106</a></p>
 
 For two independent uniform bits with quantum side information, the erasure-channel conjecture proposes
 

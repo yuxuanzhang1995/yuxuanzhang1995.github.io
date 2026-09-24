@@ -12,7 +12,7 @@ author: Yuxuan Zhang
 
 **Partial result — the original QIQCOP problem remains unresolved by this note.**
 
-<p><a href="https://yuxuanzhang1995.github.io/assets/code/agentic/horodecki-channel-extension-source.zip">Full proofs, source and checks (ZIP)</a></p>
+<p><a href="https://yuxuanzhang1995.github.io/assets/code/agentic/horodecki-channel-extension-source.zip">Full proofs, source and checks (ZIP)</a> &middot; <a href="https://github.com/Naixu-Guo/quantum-open-problems/issues/105">QIQC report #105</a></p>
 
 A candidate for separating transpose degradability from ordinary degradability needs more than a PPT-entangled complementary Choi state. This note eliminates one entire family by constructing an ordinary degrading map through a positive symmetric extension.
 

@@ -12,7 +12,7 @@ author: Yuxuan Zhang
 
 **Partial result — the original QIQCOP problem remains unresolved by this note.**
 
-<p><a href="https://yuxuanzhang1995.github.io/assets/code/agentic/bell-qutrit-exact-regions-source.zip">Full proofs, source and checks (ZIP)</a></p>
+<p><a href="https://yuxuanzhang1995.github.io/assets/code/agentic/bell-qutrit-exact-regions-source.zip">Full proofs, source and checks (ZIP)</a> &middot; <a href="https://github.com/Naixu-Guo/quantum-open-problems/issues/100">QIQC report #100</a></p>
 
 Mixing maximally entangled states can reduce their entanglement, but determining the exact reduction requires minimizing over every pure-state decomposition. For qutrit Bell-diagonal states, that convex-roof problem is still open in general. These notes identify regions of one three-state face where both the minimum and an attaining ensemble can be written explicitly.
 

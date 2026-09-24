@@ -12,7 +12,7 @@ author: Yuxuan Zhang
 
 **Partial result — the original QIQCOP problem remains unresolved by this note.**
 
-<p><a href="https://yuxuanzhang1995.github.io/assets/code/agentic/perfect-code-prime-pairs-source.zip">Full proofs, source and checks (ZIP)</a></p>
+<p><a href="https://yuxuanzhang1995.github.io/assets/code/agentic/perfect-code-prime-pairs-source.zip">Full proofs, source and checks (ZIP)</a> &middot; <a href="https://github.com/Naixu-Guo/quantum-open-problems/issues/107">QIQC report #107</a></p>
 
 A perfect two-error quantum code would partition the entire physical Hilbert space into mutually orthogonal correctable-error subspaces. For local dimensions with more than one prime factor, the general existence question remains open. These notes exclude an infinite collection of such dimensions by a direct quantum Lloyd argument.
 
