@@ -1,0 +1,66 @@
+EXACT CLAIM
+
+Consider a faithful one-mode, two-parameter smooth Gaussian model at a fixed point. In canonical quadratures suppose V=vI₂ with v>1/2 and covariance derivatives D₁=diag(1,−1), D₂=[[0,1],[1,0]]. Let m_j=∂_j d be arbitrary real mean derivatives and W a real positive-definite 2×2 weight. Then C_G(W)=C_H(W) if and only if m₂=−Ωm₁ and W=wI₂ for some w>0. In that case heterodyne with seed N=I₂/2 attains the common value 2w(v+1/2)²/[1+(v+1/2)||m₁||²]. Otherwise C_G(W)>C_H(W), including infima over arbitrarily squeezed measurements. This classifies any one-mode model whose two independent covariance tangents become traceless after whitening, by subsequently changing parameter coordinates to the displayed derivative basis and transforming the means and weight accordingly.
+
+FULL FROZEN PROOF
+
+All settings and quantities below are local. Center the quadratures by a fixed displacement. Write Z=diag(1,−1), X=[[0,1],[1,0]], c=v+1/2, s=v²−1/4 and t=v²+1/4.
+
+1. Gaussian reduction and compactification.
+An unprocessed Gaussian measurement has normal output with mean Kd and covariance KVKᵀ+N, where N−iKΩKᵀ/2≥0. If K has rank two, an invertible output transformation makes K=[I;0]. Regressing the first two noise coordinates on the remaining, parameter-independent coordinates gives an equivalent sufficient observation with covariance V+N_eff. The Schur complement implies N_eff−iΩ/2≥0. Singular regression blocks are treated on their support; positivity annihilates cross blocks on their kernels. Thus N_eff>0 and det N_eff≥1/4. The pure seed N_p=N_eff/(2√det N_eff) satisfies N_p≤N_eff, and independent Gaussian noise simulates N_eff from N_p. Rank-one measurements similarly reduce to noisy quadrature observations dominated by noiseless homodyne. Subsequent processing cannot increase Fisher information. Conversely every positive seed of determinant 1/4 is realizable by a pure ancillary Gaussian mode with reversed commutator and commuting observation z=R+r.
+
+It therefore suffices to consider pure seeds and homodyne. With C=vI+N, their Fisher matrix is
+F_jk=m_jᵀC⁻¹m_k+(1/2)tr(C⁻¹D_jC⁻¹D_k).
+The independent covariance derivatives make F positive definite at every finite seed. Write N=O diag(x,1/(4x))Oᵀ, with O a rotation and 0<x≤1/2. Adjoining x=0 gives a compact space, on which C⁻¹ extends continuously to llᵀ/v, with l the first column of O. Consequently F extends continuously to homodyne Fisher information. Assign infinite cost when F is singular. The resulting cost is lower semicontinuous, since tr(WF⁻¹)≥λ_min(W)/λ_min(F), and has an attained finite minimum equal to C_G.
+
+2. Necessary conditions at finite seeds.
+The efficient centered classical estimators are
+f_j(z)=a_jᵀz+zᵀB_jz−tr(B_jC),
+a_j=Σ_k(F⁻¹)_jk C⁻¹m_k,
+B_j=(1/2)Σ_k(F⁻¹)_jk C⁻¹D_kC⁻¹.
+Their covariance is F⁻¹. Ancillary expectation gives centered locally unbiased system observables Q_j=a_jᵀR+RᵀB_jR−tr(B_jvI). Put E_j=f_j−Q_j. Both ordered cross expectations between Q and E vanish. Hence F⁻¹=Z_Q+K, with K_jk=⟨E_jE_k⟩≥0 and Im K=−Im Z_Q.
+
+For any positive-semidefinite Hermitian 2×2 matrix K,
+tr(W Re K)≥2√det(W)|Im K₁₂|.
+This follows by applying positivity to √W K√W: its trace is at least twice the absolute imaginary part of its off-diagonal entry. Equality requires equal diagonal entries and purely imaginary off-diagonal entry in that transformed matrix, with rank at most one. The measurement cost is the Holevo objective of Q plus this nonnegative noise deficit. Thus equality with C_H requires rank K≤1.
+
+The three families in
+E_j=a_jᵀr+2RᵀB_jr+[rᵀB_jr−tr(B_jN)]
+have mutually orthogonal complex Gram contributions, by centering and vanishing odd Gaussian moments. Write N−iΩ/2=uu†. The bilinear-family Gram is 4w_j†(vI+iΩ/2)w_k, where w_j=B_j conjugate(u). Because v>1/2, its rank equals dim_C span{w₁,w₂}.
+
+For real independent symmetric B₁,B₂, complex dependence of these images implies tr(NB_j)=0 for both j. Here is a direct proof. Write N=TTᵀ/2 with T real symplectic. Congruence B↦TᵀBT and an invertible transformation on images reduce the assertion to N=I/2, conjugate(u)=(1,−i)ᵀ/√2. Apart from normalization, [[a,b],[b,d]] maps to (a−ib,b−id). This injective real map has image the hyperplane Im z₁+Re z₂=0. Two real independent images that are complex dependent span a complex line contained in that hyperplane. Applying the hyperplane condition also to iz gives Re z₁−Im z₂=0, equivalent to a+d=0. Undoing the congruence proves the assertion.
+
+The B_j here are real independent. Therefore rank K≤1 forces C⁻¹NC⁻¹ to be orthogonal to both Z and X, hence scalar. For eigenvalues n₁n₂=1/4 of N, the difference between its two eigenvalues is
+n₁/(v+n₁)²−n₂/(v+n₂)²=(n₁−n₂)(v²−1/4)/[(v+n₁)²(v+n₂)²].
+Faithfulness forces n₁=n₂=1/2. Thus only heterodyne can attain finite-seed equality.
+
+At heterodyne, work before the invertible real reweighting by F⁻¹. The quadratic coefficient matrices are Z/(2c²), X/(2c²). Since X(1,−i)ᵀ=−iZ(1,−i)ᵀ, their bilinear noise Gram is a strictly positive multiple of H₀=[[1,−i],[i,1]]. For the total Gram to have rank one, its positive-semidefinite linear-noise contribution must annihilate the same kernel. With linear coefficients m_j/c and ancillary Gram (I−iΩ)/2, the kernel vector (i,1) gives precisely m₂=−Ωm₁. Explicitly its equation is i(m₁q−im₁p)+(m₂q−im₂p)=0. This includes the case of zero means.
+
+Under this relation, F=fI, where f=||m₁||²/c+1/c². The ancillary quadratic-noise Gram is also proportional to H₀: the centered ancillary quadratics r_q²−r_p² and {r_q,r_p} have variances 1 and cross expectation −i in the reversed-commutator vacuum. Thus after reweighting K=βH₀ with β>0. Its deficit is β[tr W−2√det W], vanishing exactly for W=wI. This proves necessity, without assuming noise saturation implies Holevo optimality.
+
+3. Homodyne cannot attain equality.
+Rotate an arbitrary measured quadrature to q. Covariance derivatives remain traceless. An informative homodyne has efficient estimators X_j=α_jq+β_j(q²−v), with β≠0. The radial observable T=q²+p²−2v is centered and has zero derivative pairing with both parameters, regardless of means. Gaussian moments give ⟨qT⟩=0 and ⟨(q²−v)T⟩=2v²−1/2=2s>0, both real. Perturb feasibly by δX_j=−(Wβ)_jT. The weighted real variance has first variation −4s||Wβ||²<0. The imaginary Gram remains zero, since all cross expectations with T and ⟨T²⟩ are real. A sufficiently small positive perturbation strictly lowers the Holevo objective. Thus every informative homodyne is strictly above C_H; singular ones have infinite cost.
+
+4. Unrestricted Holevo sufficiency.
+Assume m₂=−Ωm₁ and W=wI; initially take w=1. Use the exact centered linear/quadratic restriction of the Holevo optimization supplied in the problem. In the basis (q,p,T,A,B)=(q,p,q²+p²−2v,q²−p²,{q,p}), its complex Gram matrix G=G_R+iG_I has
+G_R=diag(v,v,4s,4t,4t),
+and the only nonzero upper entries of G_I are (G_I)₁₂=1/2 and (G_I)₄₅=4v. Derivative-pairing columns are ℓ₁=(m₁ᵀ,0,2,0)ᵀ and ℓ₂=(m₂ᵀ,0,0,2)ᵀ.
+
+For any feasible real coefficient vectors x₁,x₂, the Holevo objective is at least
+J=x₁ᵀG_Rx₁+x₂ᵀG_Rx₂+2x₁ᵀG_Ix₂.
+The real symmetric matrix representing this quadratic form has eigenvalues v±1/2, 4(v±1/2)² and 4s, each twice, and is positive definite. Set
+x₁=(m₁ᵀ/(fc),0,1/(2fc²),0)ᵀ,
+x₂=(m₂ᵀ/(fc),0,0,1/(2fc²))ᵀ.
+Their derivative pairings are δ_jk. Direct multiplication gives
+G_Rx₁+G_Ix₂=ℓ₁/f,
+G_Rx₂−G_Ix₁=ℓ₂/f.
+Every feasible perturbation y_j satisfies ℓ_kᵀy_j=0. These identities make the first variation vanish; positive definiteness proves global constrained minimality of J, with value 2/f. At this pair,
+Im Z₁₂=||m₁||²/(2f²c²)+v/(f²c⁴)>0,
+so its actual Holevo objective equals J. The supplied exact polynomial restriction proves the unrestricted C_H=2/f. Heterodyne also has cost 2/f. Restoring w gives the stated value.
+
+5. Infima and coordinate scope.
+The compactified Gaussian minimum is attained. Every homodyne boundary is singular or strictly above C_H. Finite-seed equality requires the conditions in Step 2, and Step 4 proves them sufficient. Consequently failure of the criterion gives a strict gap for the minimum itself, not merely for each finite measurement separately. Fixed symplectic whitening and invertible parameter changes preserve the costs with the appropriate weight transformation. Any two independent traceless symmetric 2×2 covariance derivatives span {Z,X}, establishing the claimed coordinate extension.
+
+REMAINING GAP
+
+Trace-bearing covariance planes with arbitrary means remain unclassified, as does the arbitrary-mode original problem. Only the stated traceless-plane target is completely resolved.
