@@ -128,6 +128,8 @@ derivations of the same result, not two solved problems. The archived proof's in
 “awaiting audit” wording records its submission time; the attached reviews record the
 subsequent outcome. External expert confirmation remains pending.
 
+Submitted for specialist review as [QIQC issue #110](https://github.com/Naixu-Guo/quantum-open-problems/issues/110). The issue is pending; no catalog acceptance is implied.
+
 ## References
 
 1. F. Wei, Z. Han, A. Y. He, Z. Li and Z.-W. Liu, *Theory of low-weight quantum codes*, [arXiv:2601.19848v2](https://arxiv.org/abs/2601.19848v2).

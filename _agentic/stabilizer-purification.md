@@ -25,6 +25,8 @@ Five copies suffice to break that stronger claim. The protocol is small enough t
 
 Every operation is a stabilizer operation. The protocol always produces an output, and it does not know the target state.
 
+Submitted for specialist review as [QIQC issue #108](https://github.com/Naixu-Guo/quantum-open-problems/issues/108). The issue is pending; no catalog acceptance is implied.
+
 ## The exact gain
 
 Write the input as $$\rho_t(r)=(I+t\,r\cdot\sigma)/2$$, with $$\lVert r\rVert=1$$ and noise $$\delta=1-t$$. Keeping one input has target fidelity $$(1+t)/2$$. The protocol improves it by exactly

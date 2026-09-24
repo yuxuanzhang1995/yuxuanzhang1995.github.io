@@ -25,6 +25,8 @@ $$
 
 exists for every $$c>0$$, and what it equals. The manuscript proposes a complete answer.
 
+Submitted for specialist review as [QIQC issue #109](https://github.com/Naixu-Guo/quantum-open-problems/issues/109). The issue is pending; no catalog acceptance is implied.
+
 ## The formula
 
 For $$0<c\le1/4$$, the answer is simply $$\varphi(c)=c$$. Above that threshold, define
