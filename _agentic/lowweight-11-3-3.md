@@ -116,6 +116,18 @@ two generators that differ there, where the relevant Pauli may be one that *no* 
 Read with the wrong convention, thirteen configurations survive at $$n=11$$ instead of none. That
 lemma is the load-bearing step and is where a reader should start.
 
+## Additional verification
+
+**Additional verification record, 24 September 2026.** A separate round-37 derivation reaches
+the same complete conclusion through elimination of low-weight stabilizers, three incidence
+profiles, two analytic exclusions, and an exact search of the final two templates. It passed
+two frozen internal reviews and was reproduced again before this update. Its
+[unchanged proof, checker, reviews and provenance]({{ '/assets/code/agentic/lowweight-round37-source.zip' | relative_url }})
+are supplied alongside the article's original cluster-based proof. These are distinct
+derivations of the same result, not two solved problems. The archived proof's initial
+“awaiting audit” wording records its submission time; the attached reviews record the
+subsequent outcome. External expert confirmation remains pending.
+
 ## References
 
 1. F. Wei, Z. Han, A. Y. He, Z. Li and Z.-W. Liu, *Theory of low-weight quantum codes*, [arXiv:2601.19848v2](https://arxiv.org/abs/2601.19848v2).

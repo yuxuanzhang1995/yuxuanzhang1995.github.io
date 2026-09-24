@@ -41,10 +41,11 @@ supply the intuition about where a proof might come from, and design the system 
 out — how a claim gets attacked, who plays adversary, what is allowed to count as verified. Once an
 attack is running I do not intervene in it.
 
-Not everything gets an entry. An attack that moved nothing is not listed, and those are the
-majority — most of what I point these systems at, they fail to shift. What follows is the part that
-moved: problems settled, problems partly settled, and bounds improved. Each one has a short note
-attached saying what was actually established and what is still missing.
+Most attempts do not close the problem. From 24 September 2026, new research entries are
+published only when they cover the complete original question and pass the project's internal
+verification. Partial results and exploratory bounds stay in the local research log. Earlier
+entries retain their stated scope. Each public note records what was established and which
+checks, source questions, or external reviews remain outstanding.
 
 <div class="arbox">
 <strong>What “verified” means here.</strong> Each entry states its checks. Some have exact
