@@ -15,6 +15,8 @@ author: Yuxuan Zhang
 
 **A complete proof candidate from round 42.** Two separate internal AI reviews found no mathematical gap. External specialist confirmation and literature priority remain unverified.
 
+Submitted for specialist review as [QIQC issue #112](https://github.com/Naixu-Guo/quantum-open-problems/issues/112). The issue is pending; no catalog acceptance is implied.
+
 For a Gaussian quantum state, the best possible precision bound need not be attainable with Gaussian measurements. Even when the state is simple to describe, the measurement that reaches its Holevo bound may require more than Gaussian ancillas, Gaussian unitaries, and homodyne detection.
 
 The [QIQCOP question](https://qiqc-op.com/problem/op_8f1853475db7ea27/) asks exactly when the optimal single-copy Gaussian-measurement cost $$C_G$$ equals the Holevo bound $$C_H$$. It allows any finite number of modes and parameters, changes in both displacement and covariance, and limiting measurement sequences. The manuscript proposes a necessary-and-sufficient answer for the entire stated class.
@@ -32,7 +34,7 @@ $$
 The associated classical Fisher matrix is
 
 $$
-F_{j\ell}(G)=m_j^{\mathsf T}Gm_\ell+rac12\operatorname{tr}(GD_jGD_\ell).
+F_{j\ell}(G)=m_j^{\mathsf T}Gm_\ell+\frac12\operatorname{tr}(GD_jGD_\ell).
 $$
 
 The rest of the certificate ties the efficient estimator of this measurement to a dual witness for the Holevo problem. It consists of positive-semidefinite conditions and polynomial equations. Theorem 1 of the PDF gives every matrix and every condition explicitly.
