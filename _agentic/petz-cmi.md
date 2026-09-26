@@ -6,9 +6,13 @@ date: 2026-09-12
 status: solved (negative)
 target: QIQC ordinary-Petz recovery bound for conditional mutual information
 pdf: petz-cmi.pdf
+archive_doi: 10.5281/zenodo.22969546
+archive_pdf: https://zenodo.org/records/22969546/files/petz-cmi.pdf
 ---
 
 <p style="margin:0 0 1.6rem;font-size:.92rem"><a href="{{ '/assets/pdf/agentic/petz-cmi.pdf' | relative_url }}">Full article (PDF, 5 pages)</a> &middot; <a href="{{ '/assets/code/agentic/petz-cmi-source.zip' | relative_url }}">Source, verification code and results (ZIP)</a></p>
+
+**Archival source:** [Manuscript PDF on Zenodo](https://zenodo.org/records/22969546/files/petz-cmi.pdf), preserved in [*Agentic Proofs for QIQC: Collected Manuscripts*, version 1.0](https://doi.org/10.5281/zenodo.22969546) (26 September 2026).
 
 ## The question
 

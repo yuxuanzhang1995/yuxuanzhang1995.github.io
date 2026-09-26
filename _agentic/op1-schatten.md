@@ -8,11 +8,15 @@ status: solved (negative)
 target: Section VI, question 1 of Alhejji–Knill, arXiv:2307.06894
 pdf: op1-schatten.pdf
 author: Yuxuan Zhang
+archive_doi: 10.5281/zenodo.22969546
+archive_pdf: https://zenodo.org/records/22969546/files/op1-schatten.pdf
 ---
 
 **Yuxuan Zhang** · Revised 22 September 2026
 
 <p style="margin:0 0 1.6rem;font-size:.92rem"><a href="{{ '/assets/pdf/agentic/op1-schatten.pdf' | relative_url }}">Complete proof (PDF, 3 pages)</a> &middot; <a href="{{ '/assets/code/agentic/op1-schatten-source.zip' | relative_url }}">LaTeX source, exact checker and results (ZIP)</a></p>
+
+**Archival source:** [Manuscript PDF on Zenodo](https://zenodo.org/records/22969546/files/op1-schatten.pdf), preserved in [*Agentic Proofs for QIQC: Collected Manuscripts*, version 1.0](https://doi.org/10.5281/zenodo.22969546) (26 September 2026).
 
 **The proposed implication is false, already for commuting 3 × 3 matrices.** The proof below covers words of every length. Independent expert review and historical priority remain unverified; this page's status is the author's research-log label.
 

@@ -7,9 +7,13 @@ status: proof candidate
 target: QIQCOP problem op_8f1853475db7ea27
 pdf: gaussian-holevo-criterion.pdf
 author: Yuxuan Zhang
+archive_doi: 10.5281/zenodo.22969546
+archive_pdf: https://zenodo.org/records/22969546/files/gaussian-holevo-criterion.pdf
 ---
 
 **Yuxuan Zhang**
+
+**Archival source:** [Manuscript PDF on Zenodo](https://zenodo.org/records/22969546/files/gaussian-holevo-criterion.pdf), preserved in [*Agentic Proofs for QIQC: Collected Manuscripts*, version 1.0](https://doi.org/10.5281/zenodo.22969546) (26 September 2026).
 
 [Full manuscript (PDF)]({{ '/assets/pdf/agentic/gaussian-holevo-criterion.pdf' | relative_url }}) · [Frozen proof, exact examples, reviews and manuscript source (ZIP)]({{ '/assets/code/agentic/gaussian-holevo-criterion-source.zip' | relative_url }})
 

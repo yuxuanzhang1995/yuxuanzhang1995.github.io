@@ -8,11 +8,15 @@ status: counterexample candidate
 target: QIQCOP problem op_89fb664ba06ba5de
 pdf: pure-loss-second-order.pdf
 author: Yuxuan Zhang
+archive_doi: 10.5281/zenodo.22969546
+archive_pdf: https://zenodo.org/records/22969546/files/pure-loss-second-order.pdf
 ---
 
 **Yuxuan Zhang**
 
 <p style="margin:0 0 1.6rem;font-size:.92rem"><a href="{{ '/assets/pdf/agentic/pure-loss-second-order.pdf' | relative_url }}">Full manuscript (PDF, 4 pages)</a> &middot; <a href="{{ '/assets/code/agentic/pure-loss-second-order-source.zip' | relative_url }}">LaTeX source, proof and checks (ZIP)</a></p>
+
+**Archival source:** [Manuscript PDF on Zenodo](https://zenodo.org/records/22969546/files/pure-loss-second-order.pdf), preserved in [*Agentic Proofs for QIQC: Collected Manuscripts*, version 1.0](https://doi.org/10.5281/zenodo.22969546) (26 September 2026).
 
 **Status: a complete counterexample candidate, internally checked with AI assistance.** External expert review and publication priority remain unconfirmed. This is the round-15 result, prepared for publication on 20 September 2026. It has not been formally verified by a proof assistant.
 

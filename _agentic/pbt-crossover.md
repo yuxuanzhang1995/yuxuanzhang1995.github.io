@@ -7,9 +7,13 @@ status: proof candidate
 target: QIQCOP problem op_25342dbb8d64e728
 pdf: pbt-crossover.pdf
 author: Yuxuan Zhang
+archive_doi: 10.5281/zenodo.22969546
+archive_pdf: https://zenodo.org/records/22969546/files/pbt-crossover.pdf
 ---
 
 **Yuxuan Zhang**
+
+**Archival source:** [Manuscript PDF on Zenodo](https://zenodo.org/records/22969546/files/pbt-crossover.pdf), preserved in [*Agentic Proofs for QIQC: Collected Manuscripts*, version 1.0](https://doi.org/10.5281/zenodo.22969546) (26 September 2026).
 
 [Full manuscript (PDF)]({{ '/assets/pdf/agentic/pbt-crossover.pdf' | relative_url }}) · [Frozen proof, finite checker, reviews and manuscript source (ZIP)]({{ '/assets/code/agentic/pbt-crossover-source.zip' | relative_url }})
 

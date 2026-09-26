@@ -8,11 +8,15 @@ status: proof candidate
 target: QIQCOP problem op_64046727b81b4024
 pdf: fixed-nongaussian-universality.pdf
 author: Yuxuan Zhang
+archive_doi: 10.5281/zenodo.22969546
+archive_pdf: https://zenodo.org/records/22969546/files/fixed-nongaussian-universality.pdf
 ---
 
 **Yuxuan Zhang**
 
 <p style="margin:0 0 1.6rem;font-size:.92rem"><a href="{{ '/assets/pdf/agentic/fixed-nongaussian-universality.pdf' | relative_url }}">Full manuscript (PDF, 6 pages)</a> &middot; <a href="{{ '/assets/code/agentic/fixed-nongaussian-universality-source.zip' | relative_url }}">LaTeX source, proof and checks (ZIP)</a></p>
+
+**Archival source:** [Manuscript PDF on Zenodo](https://zenodo.org/records/22969546/files/fixed-nongaussian-universality.pdf), preserved in [*Agentic Proofs for QIQC: Collected Manuscripts*, version 1.0](https://doi.org/10.5281/zenodo.22969546) (26 September 2026).
 
 **Status: a complete proof candidate, internally checked with AI assistance.** External expert review and publication priority remain unconfirmed. This is the round-17 result, prepared for publication on 20 September 2026. It has not been formally verified by a proof assistant.
 

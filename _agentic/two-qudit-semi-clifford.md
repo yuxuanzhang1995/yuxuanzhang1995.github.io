@@ -8,11 +8,15 @@ status: solved (negative)
 target: QIQCOP problem op_cdd1f718ccfbccf6
 pdf: two-qudit-semi-clifford.pdf
 author: Yuxuan Zhang
+archive_doi: 10.5281/zenodo.22969546
+archive_pdf: https://zenodo.org/records/22969546/files/two-qudit-semi-clifford.pdf
 ---
 
 **Yuxuan Zhang**
 
 <p style="margin:0 0 1.6rem;font-size:.92rem"><a href="{{ '/assets/pdf/agentic/two-qudit-semi-clifford.pdf' | relative_url }}">Full version (PDF, 5 pages)</a> &middot; <a href="{{ '/assets/code/agentic/two-qudit-semi-clifford-source.zip' | relative_url }}">LaTeX source and exact checks (ZIP)</a></p>
+
+**Archival source:** [Manuscript PDF on Zenodo](https://zenodo.org/records/22969546/files/two-qudit-semi-clifford.pdf), preserved in [*Agentic Proofs for QIQC: Collected Manuscripts*, version 1.0](https://doi.org/10.5281/zenodo.22969546) (26 September 2026).
 
 **Status in this research log: solved (negative), supported by an algebraic proof and exact finite checks.** External expert review and publication priority remain unconfirmed; [QIQCOP issue #90](https://github.com/Naixu-Guo/quantum-open-problems/issues/90) remains open for review. This is the round-13 result. The published computational checks were rerun on 21 September 2026. The arbitrary-prime claim relies on the algebraic proof, not extrapolation from the tested primes. The manuscript remains unrefereed and has not been formally verified by a proof assistant.
 

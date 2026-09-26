@@ -8,11 +8,15 @@ status: proof candidate
 pdf: graph-lu-polynomial.pdf
 target: QIQCOP problem op_66affd4b198fd445
 author: Yuxuan Zhang
+archive_doi: 10.5281/zenodo.22969546
+archive_pdf: https://zenodo.org/records/22969546/files/graph-lu-polynomial.pdf
 ---
 
 **Yuxuan Zhang** · 22 September 2026
 
 <p style="margin:0 0 1.6rem;font-size:.92rem"><a href="{{ '/assets/pdf/agentic/graph-lu-polynomial.pdf' | relative_url }}">Manuscript (PDF)</a> &middot; <a href="{{ '/assets/code/agentic/graph-lu-polynomial-source.zip' | relative_url }}">Source and exact checks (ZIP)</a> &middot; <a href="https://github.com/Naixu-Guo/quantum-open-problems/issues/97">QIQC submission</a></p>
+
+**Archival source:** [Manuscript PDF on Zenodo](https://zenodo.org/records/22969546/files/graph-lu-polynomial.pdf), preserved in [*Agentic Proofs for QIQC: Collected Manuscripts*, version 1.0](https://doi.org/10.5281/zenodo.22969546) (26 September 2026).
 
 Can two graph states be transformed into one another by changing the basis of each qubit separately? The states are specified by finite graphs, but the allowed transformations range over arbitrary single-qubit unitaries. [Claudet and Perdrix](https://doi.org/10.4230/LIPIcs.ICALP.2025.59) gave an exact quasipolynomial-time algorithm. This manuscript proposes a polynomial-time replacement for its expensive incidence computation.
 

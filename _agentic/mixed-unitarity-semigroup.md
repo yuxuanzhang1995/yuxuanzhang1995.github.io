@@ -8,11 +8,15 @@ status: solved (negative)
 target: QIQCOP problem op_722706a9205dcff2
 pdf: mixed-unitarity-semigroup.pdf
 author: Yuxuan Zhang
+archive_doi: 10.5281/zenodo.22969546
+archive_pdf: https://zenodo.org/records/22969546/files/mixed-unitarity-semigroup.pdf
 ---
 
 **Yuxuan Zhang**
 
 <p style="margin:0 0 1.6rem;font-size:.92rem"><a href="{{ '/assets/pdf/agentic/mixed-unitarity-semigroup.pdf' | relative_url }}">Full version (PDF, 7 pages)</a> &middot; <a href="{{ '/assets/code/agentic/mixed-unitarity-semigroup-source.zip' | relative_url }}">LaTeX source and supplementary check (ZIP)</a></p>
+
+**Archival source:** [Manuscript PDF on Zenodo](https://zenodo.org/records/22969546/files/mixed-unitarity-semigroup.pdf), preserved in [*Agentic Proofs for QIQC: Collected Manuscripts*, version 1.0](https://doi.org/10.5281/zenodo.22969546) (26 September 2026).
 
 **Revision: 19 September 2026.** The formal manuscript, independent audit summary, primary-source evidence and reproducible checks have been updated.
 

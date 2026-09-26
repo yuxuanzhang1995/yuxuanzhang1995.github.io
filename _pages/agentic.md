@@ -30,10 +30,9 @@ gaps in research mathematics. The question I keep coming back to is how much of 
 the problems I actually work on — quantum information, complexity, quantum many-body physics. The
 only honest way to find out is to run the experiment.
 
-The tempting way to report it would be to post the results to arXiv. I would rather not. The
-literature does not need more machine-written preprints, and a proof no human has read carefully
-has no business being cited. So it goes here instead, where it can be looked at without pretending
-to be something it is not.
+The manuscripts stay here as a public research log. They are also archived on Zenodo so that a
+reader can retrieve and cite the exact version behind a claim. The archive provides a stable
+research record; external proof review and literature novelty remain separate questions.
 
 What follows is a dated log of attempts by AI agents on known open problems. **The proofs are
 machine-generated end to end.** My own role sits upstream of the writing: I choose the problems,
@@ -58,6 +57,8 @@ counterexample refutes the stated claim. It does not mean QIQCOP has accepted th
 that an external expert has approved it, or that publication priority has been established.
 </div>
 
+The fourteen archived manuscripts are collected in [*Agentic Proofs for QIQC: Collected Manuscripts*, version 1.0](https://doi.org/10.5281/zenodo.22969546) (26 September 2026). The [archive index](https://zenodo.org/records/22969546/files/README.md) identifies each paper, its date, and its QIQC report. Each archived paper’s entry below links to its Zenodo record.
+
 ## Log
 
 <ul class="arlog">
@@ -73,6 +74,9 @@ that an external expert has approved it, or that publication priority has been e
     <span class="arnote">{{ item.description }}</span>
     {%- if item.pdf %}
     <span class="arnote"> &middot; <a href="{{ item.pdf | prepend: '/assets/pdf/agentic/' | relative_url }}">PDF</a></span>
+    {%- endif %}
+    {%- if item.archive_doi %}
+    <span class="arnote"> &middot; <a href="https://doi.org/{{ item.archive_doi }}">Zenodo archive</a></span>
     {%- endif %}
   </li>
 {%- endfor -%}

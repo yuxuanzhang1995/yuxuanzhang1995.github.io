@@ -7,11 +7,15 @@ status: solved (negative)
 target: QIQCOP problem op_458e9e86ccbddccb
 pdf: lowweight-11-3-3.pdf
 author: Yuxuan Zhang
+archive_doi: 10.5281/zenodo.22968593
+archive_pdf: https://zenodo.org/records/22968593/files/lowweight-11-3-3.pdf
 ---
 
 **Yuxuan Zhang**
 
 <p style="margin:0 0 1.6rem;font-size:.92rem"><a href="{{ '/assets/pdf/agentic/lowweight-11-3-3.pdf' | relative_url }}">Full article (PDF, 6 pages)</a> &middot; <a href="{{ '/assets/code/agentic/lowweight-11-3-3-source.zip' | relative_url }}">LaTeX source, verification program and provenance (ZIP)</a></p>
+
+**Archival source:** [Manuscript PDF on Zenodo](https://zenodo.org/records/22968593/files/lowweight-11-3-3.pdf), [DOI 10.5281/zenodo.22968593](https://doi.org/10.5281/zenodo.22968593), version 1.0; manuscript dated 21 September 2026. Also included in the [collected manuscripts, version 1.0](https://doi.org/10.5281/zenodo.22969546).
 
 **Status: a negative solution, internally reviewed by two independent AI agents.** External expert
 review and literature novelty remain unconfirmed. The argument is combinatorial, and the finite
