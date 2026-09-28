@@ -57,7 +57,7 @@ counterexample refutes the stated claim. It does not mean QIQCOP has accepted th
 that an external expert has approved it, or that publication priority has been established.
 </div>
 
-The fourteen archived manuscripts are collected in [*Agentic Proofs for QIQC: Collected Manuscripts*, version 1.0](https://doi.org/10.5281/zenodo.22969546) (26 September 2026). The [archive index](https://zenodo.org/records/22969546/files/README.md) identifies each paper, its date, and its QIQC report. Each archived paper’s entry below links to its Zenodo record.
+The sixteen archived manuscripts are collected in [*Agentic Proofs for QIQC: Collected Manuscripts*, version 1.1](https://doi.org/10.5281/zenodo.23022433) (28 September 2026). The [archive index](https://zenodo.org/records/23022433/files/README.md) identifies each paper and its date; the website articles link to the corresponding QIQC reports. Version 1.1 adds the CGLMP statistical-strength counterexample and the six-qubit transversal-T exclusion. Each archived paper’s entry below links to its Zenodo record.
 
 ## Log
 

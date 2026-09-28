@@ -7,11 +7,15 @@ status: solved (negative)
 target: QIQCOP problem op_a34f0e2d6489068f
 pdf: cglmp-statistical-strength.pdf
 author: Yuxuan Zhang
+archive_doi: 10.5281/zenodo.23022433
+archive_pdf: https://zenodo.org/records/23022433/files/cglmp-statistical-strength.pdf
 ---
 
 **Yuxuan Zhang**
 
 [Manuscript, version 1.0, 28 September 2026 (PDF, 5 pages)]({{ '/assets/pdf/agentic/cglmp-statistical-strength.pdf' | relative_url }}) · [Source, exact certificate, physical checks and review records (ZIP)]({{ '/assets/code/agentic/cglmp-statistical-strength-source.zip' | relative_url }})
+
+**Archival source:** [Manuscript PDF on Zenodo](https://zenodo.org/records/23022433/files/cglmp-statistical-strength.pdf), manuscript 15 in [*Agentic Proofs for QIQC: Collected Manuscripts*, version 1.1](https://doi.org/10.5281/zenodo.23022433) (28 September 2026). [QIQC report #117](https://github.com/Naixu-Guo/quantum-open-problems/issues/117) documents the manuscript; submission does not change the catalog status.
 
 **The conjectured optimality fails at dimension four.** On the same maximally entangled state, two simple product measurements give statistical strength greater than **0.087 bits**. The standard CGLMP measurements give less than **0.065 bits**, even after their setting distribution is optimized. Both inequalities have exact rational certificates.
 
@@ -69,4 +73,4 @@ The standalone certificate uses Python integers and exact fractions to enclose t
 
 The result concerns the catalog's relative-entropy criterion. It does not settle maximal linear CGLMP violation, classify Bell facets, or find optimal measurements in every dimension.
 
-The candidate arose in round 48 of the AI-assisted campaign. The manuscript discloses the model, the two subsequent frozen reviews and the independent computational checks. K-Dense's [Scientific Agent Skills](https://doi.org/10.48550/arXiv.2609.00065) guided the evidence record and writing. A Zenodo addition and QIQC report are pending; the earlier collection DOI does not yet archive this manuscript.
+The candidate arose in round 48 of the AI-assisted campaign. The manuscript discloses the model, the two subsequent frozen reviews and the independent computational checks. K-Dense's [Scientific Agent Skills](https://doi.org/10.48550/arXiv.2609.00065) guided the evidence record and writing.

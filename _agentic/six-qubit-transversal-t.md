@@ -7,11 +7,15 @@ status: solved (negative)
 target: QIQCOP problem op_ddfbbe7ca0ead0c8
 pdf: six-qubit-transversal-t.pdf
 author: Yuxuan Zhang
+archive_doi: 10.5281/zenodo.23022433
+archive_pdf: https://zenodo.org/records/23022433/files/six-qubit-transversal-t.pdf
 ---
 
 **Yuxuan Zhang**
 
 [Manuscript, version 1.0, 28 September 2026 (PDF, 7 pages)]({{ '/assets/pdf/agentic/six-qubit-transversal-t.pdf' | relative_url }}) · [Proof, executable certificate and independent checks (ZIP)]({{ '/assets/code/agentic/six-qubit-transversal-t-source.zip' | relative_url }})
+
+**Archival source:** [Manuscript PDF on Zenodo](https://zenodo.org/records/23022433/files/six-qubit-transversal-t.pdf), manuscript 16 in [*Agentic Proofs for QIQC: Collected Manuscripts*, version 1.1](https://doi.org/10.5281/zenodo.23022433) (28 September 2026). [QIQC report #118](https://github.com/Naixu-Guo/quantum-open-problems/issues/118) documents the manuscript; submission does not change the catalog status.
 
 **Six qubits are insufficient for an exact transversal logical T gate on a code that corrects arbitrary single-qubit errors.** This holds even when the six physical gates differ, their angles and eigenbases are unrestricted, and the code is degenerate. Together with the existing seven-qubit construction, the exclusion makes seven the minimum block length under these assumptions.
 
@@ -57,5 +61,3 @@ The initial compiled-helper version could not run inside the verifier's temporar
 The contribution here is the arbitrary-angle completeness reduction and exhaustive six-qubit exclusion. The result concerns the exact transversal model in the question. It does not rule out different non-Clifford logical phases, or protocols using measurements, code switching or additional qubits.
 
 This result emerged in round 48 of the AI-assisted campaign. The full proof was assembled by the coordinator from reviewed lower-order results and new exact coverage checks; the last discovery block's narrower lemma remains separately recorded. The manuscript discloses substantial AI assistance. K-Dense's [Scientific Agent Skills](https://doi.org/10.48550/arXiv.2609.00065) guided the evidence outline, consistency checks and exposition.
-
-A Zenodo collection addition and source-linked QIQC report are pending. The earlier collection DOI does not yet archive this manuscript.
