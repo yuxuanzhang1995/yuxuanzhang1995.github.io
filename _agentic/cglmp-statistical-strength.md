@@ -31,7 +31,7 @@ The state, local dimension, number of settings and number of outcomes are fixed.
 
 ## The construction
 
-Write each four-dimensional local system as two qubits. Under this identification, the prescribed state $$|\Phi_4\rangle$$ is two Bell pairs. Alice's two settings measure both her qubits in the $$Z$$ basis or both in the $$X$$ basis. Bob's two settings measure both in the eigenbasis of $$(Z+X)/\sqrt2$$ or both in the eigenbasis of $$(Z-X)/\sqrt2$$.
+Write each four-dimensional local system as two qubits. Under this identification, the prescribed state $$\lvert\Phi_4\rangle$$ is two Bell pairs. Alice's two settings measure both her qubits in the $$Z$$ basis or both in the $$X$$ basis. Bob's two settings measure both in the eigenbasis of $$(Z+X)/\sqrt2$$ or both in the eigenbasis of $$(Z-X)/\sqrt2$$.
 
 Each party reports two bits as one of four outcomes. There are still exactly **two settings per party**, and each measurement consists of four rank-one projectors. The setting labels are shared by the two component qubits.
 
