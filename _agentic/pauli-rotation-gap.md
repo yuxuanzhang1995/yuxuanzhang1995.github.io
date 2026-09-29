@@ -20,8 +20,8 @@ $$\Lambda^8\mathbb C^{16}$$, not in the fourth moment.
 
 This is a complete negative answer to [the catalog's random-Pauli-rotation question](https://qiqc-op.com/problem/op_aaf9791beced84e4/).
 “Solved (negative)” is the label in this research log. An isolated internal AI review of the complete proof, an independent
-computation over all 255 Pauli operators and a requirements audit against the catalog record found no
-defect. External specialist review, historical
+computation over all 255 Pauli operators, a requirements audit against the catalog record and a blind
+reconstruction from the bare statements found no defect. External specialist review, historical
 priority and QIQCOP acceptance remain unconfirmed.
 
 ## The question
