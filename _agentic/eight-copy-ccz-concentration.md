@@ -7,11 +7,15 @@ status: solved (negative)
 target: QIQCOP problem op_bc61eaba5c332fec
 pdf: eight-copy-ccz-concentration.pdf
 author: Yuxuan Zhang
+archive_doi: 10.5281/zenodo.23032999
+archive_pdf: https://zenodo.org/records/23032999/files/eight-copy-ccz-concentration.pdf
 ---
 
 **Yuxuan Zhang**
 
 [Manuscript, version 1.0, 28 September 2026 (PDF, 7 pages)]({{ '/assets/pdf/agentic/eight-copy-ccz-concentration.pdf' | relative_url }}) · [Manuscript source, exact checker, mutation tests and review records (ZIP)]({{ '/assets/code/agentic/eight-copy-ccz-concentration-source.zip' | relative_url }})
+
+**Archival source:** [Manuscript PDF on Zenodo](https://zenodo.org/records/23032999/files/eight-copy-ccz-concentration.pdf), manuscript 19 in [*Agentic Proofs for QIQC: Collected Manuscripts*, version 1.2](https://doi.org/10.5281/zenodo.23032999) (29 September 2026). [QIQC report #121](https://github.com/Naixu-Guo/quantum-open-problems/issues/121) documents the manuscript; submission does not change the catalog status.
 
 **The candidate optimum fails at every non-stabilizer input.** A fixed protocol built only from Pauli
 measurements, classical feedforward, Clifford unitaries and discarding turns $$\psi^{\otimes8}$$ into an exact

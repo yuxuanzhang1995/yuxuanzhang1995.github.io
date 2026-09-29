@@ -7,11 +7,15 @@ status: solved (negative)
 target: QIQCOP problem op_aaf9791beced84e4
 pdf: pauli-rotation-gap.pdf
 author: Yuxuan Zhang
+archive_doi: 10.5281/zenodo.23032999
+archive_pdf: https://zenodo.org/records/23032999/files/pauli-rotation-gap.pdf
 ---
 
 **Yuxuan Zhang**
 
 [Manuscript, version 1.0, 28 September 2026 (PDF, 8 pages)]({{ '/assets/pdf/agentic/pauli-rotation-gap.pdf' | relative_url }}) · [Manuscript source, exact checker, mutation tests and review records (ZIP)]({{ '/assets/code/agentic/pauli-rotation-gap-source.zip' | relative_url }})
+
+**Archival source:** [Manuscript PDF on Zenodo](https://zenodo.org/records/23032999/files/pauli-rotation-gap.pdf), manuscript 20 in [*Agentic Proofs for QIQC: Collected Manuscripts*, version 1.2](https://doi.org/10.5281/zenodo.23032999) (29 September 2026). [QIQC report #122](https://github.com/Naixu-Guo/quantum-open-problems/issues/122) documents the manuscript; submission does not change the catalog status.
 
 **The conjectured gap fails at four qubits.** Consider the random walk on $$\mathrm{SU}(16)$$ that applies
 $$e^{i\theta P}$$ with a uniformly random non-identity Pauli operator $$P$$ and a uniform angle $$\theta$$. Its

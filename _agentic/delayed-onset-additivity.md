@@ -7,11 +7,15 @@ status: proof candidate
 target: QIQCOP problem op_c0b1045a614d2353
 pdf: delayed-onset-additivity.pdf
 author: Yuxuan Zhang
+archive_doi: 10.5281/zenodo.23032999
+archive_pdf: https://zenodo.org/records/23032999/files/delayed-onset-additivity.pdf
 ---
 
 **Yuxuan Zhang**
 
 [Full manuscript (PDF, 5 pages)]({{ '/assets/pdf/agentic/delayed-onset-additivity.pdf' | relative_url }}) · [Manuscript source, exact checker, reviews and provenance (ZIP)]({{ '/assets/code/agentic/delayed-onset-additivity-source.zip' | relative_url }})
+
+**Archival source:** [Manuscript PDF on Zenodo](https://zenodo.org/records/23032999/files/delayed-onset-additivity.pdf), manuscript 18 in [*Agentic Proofs for QIQC: Collected Manuscripts*, version 1.2](https://doi.org/10.5281/zenodo.23032999) (29 September 2026). [QIQC report #120](https://github.com/Naixu-Guo/quantum-open-problems/issues/120) documents the manuscript; submission does not change the catalog status.
 
 **A complete proof candidate.** An internal AI review of the complete proof and a final internal audit
 of the manuscript and program found no mathematical gap. External specialist confirmation and literature

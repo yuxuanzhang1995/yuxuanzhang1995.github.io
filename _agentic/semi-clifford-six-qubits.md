@@ -7,11 +7,15 @@ status: proof candidate
 target: QIQCOP problem op_5a17b19b8adeb191
 pdf: semi-clifford-six-qubits.pdf
 author: Yuxuan Zhang
+archive_doi: 10.5281/zenodo.23032999
+archive_pdf: https://zenodo.org/records/23032999/files/semi-clifford-six-qubits.pdf
 ---
 
 **Yuxuan Zhang**
 
 [Full manuscript (PDF, 10 pages)]({{ '/assets/pdf/agentic/semi-clifford-six-qubits.pdf' | relative_url }}) · [Manuscript source, exact checker, reviews and provenance (ZIP)]({{ '/assets/code/agentic/semi-clifford-six-qubits-source.zip' | relative_url }})
+
+**Archival source:** [Manuscript PDF on Zenodo](https://zenodo.org/records/23032999/files/semi-clifford-six-qubits.pdf), manuscript 17 in [*Agentic Proofs for QIQC: Collected Manuscripts*, version 1.2](https://doi.org/10.5281/zenodo.23032999) (29 September 2026). [QIQC report #119](https://github.com/Naixu-Guo/quantum-open-problems/issues/119) documents the manuscript; submission does not change the catalog status.
 
 **A complete proof candidate.** Three separate internal AI reviews and a final internal audit of the
 manuscript and program found no mathematical gap. External specialist confirmation and literature
