@@ -2,7 +2,7 @@
 layout: page
 permalink: /agentic-research/
 title: agentic research
-description: A dated log of fully AI-generated attacks on known open problems.
+description: A dated log of research on open problems, led by the author with AI assistance.
 nav: true
 nav_order: 3
 ---
@@ -34,11 +34,12 @@ The manuscripts stay here as a public research log. They are also archived on Ze
 reader can retrieve and cite the exact version behind a claim. The archive provides a stable
 research record; external proof review and literature novelty remain separate questions.
 
-What follows is a dated log of attempts by AI agents on known open problems. **The proofs are
-machine-generated end to end.** My own role sits upstream of the writing: I choose the problems,
-supply the intuition about where a proof might come from, and design the system that carries it
-out — how a claim gets attacked, who plays adversary, what is allowed to count as verified. Once an
-attack is running I do not intervene in it.
+**Human and AI contributions.** The author set the research directions, designed the harness
+that coordinated model tasks, tools, memory, and checking, supplied physical and mathematical
+intuitions and proof skeletons, and guided the development and revision of the research ideas.
+AI models developed detailed candidate arguments and derivations, searched the literature,
+wrote and ran computational checks, and drafted and revised the manuscripts under this
+supervision.
 
 Most attempts do not close the problem. From 24 September 2026, new research entries are
 published only when they cover the complete original question and pass the project's internal
