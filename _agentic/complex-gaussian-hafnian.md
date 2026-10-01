@@ -3,7 +3,7 @@ layout: page
 title: Anticoncentration of independent complex Gaussian hafnians
 description: An all-dimension inverse-variance bound gives polynomial lower-tail control for the independent complex symmetric ensemble.
 date: 2026-09-20
-last_revised: 2026-09-20
+last_revised: 2026-09-30
 status: proof candidate
 target: QIQCOP problem op_55be40726cdf7304
 pdf: complex-gaussian-hafnian.pdf
@@ -20,6 +20,8 @@ archive_pdf: https://zenodo.org/records/22969546/files/complex-gaussian-hafnian.
 
 **Status: a complete proof candidate, internally checked with AI assistance.** External expert review and publication priority remain unconfirmed. This is the round-17 result, prepared for publication on 20 September 2026. It has not been formally verified by a proof assistant.
 
+
+I thank Hongru Zhao for drawing my attention to his earlier resolution of the independent complex Gaussian hafnian lower-tail problem in [*Local Anticoncentration for Gaussian Boson Sampling via Conditional Wishart Geometry*, Theorem 2.2 and Corollary 2.4](https://doi.org/10.5281/zenodo.22856033), whose small-ball bound was already stated in [Eq. (3.4) of his 11 September 2026 arXiv revision](https://arxiv.org/abs/2609.01008v2).
 
 ## The question
 
