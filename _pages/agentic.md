@@ -30,7 +30,7 @@ gaps in research mathematics. The question I keep coming back to is how much of 
 the problems I actually work on — quantum information, complexity, quantum many-body physics. The
 only honest way to find out is to run the experiment.
 
-The manuscripts stay here as a public research log. They are also archived on Zenodo so that a
+The manuscripts stay here as a public research log. Selected manuscripts are also archived on Zenodo so that a
 reader can retrieve and cite the exact version behind a claim. The archive provides a stable
 research record; external proof review and literature novelty remain separate questions.
 
