@@ -6,12 +6,15 @@ date: 2026-10-16
 status: counterexample
 target: Copywise Chernoff exponents — universal measured-exponent equality
 pdf: chernoff-two-pass.pdf
+archive_doi: 10.5281/zenodo.23417491
 author: Yuxuan Zhang
 ---
 
 **Yuxuan Zhang**
 
 [Manuscript, version 1.0, 16 October 2026 (PDF, 10 pages)]({{ '/assets/pdf/agentic/chernoff-two-pass.pdf' | relative_url }}) · [LaTeX source, exact checker and verification records (ZIP)]({{ '/assets/code/agentic/chernoff-two-pass-source.zip' | relative_url }})
+
+Archived in [*Agentic Proofs for QIQC: Collected Manuscripts*, collection version 1.3](https://doi.org/10.5281/zenodo.23417491): [manuscript PDF](https://zenodo.org/records/23417491/files/chernoff-two-pass.pdf) · [source and checking records](https://zenodo.org/records/23417491/files/chernoff-two-pass-source.zip). The manuscript remains version 1.0, 16 October 2026. [QIQC progress report #139](https://github.com/Naixu-Guo/quantum-open-problems/issues/139) records the counterexample and the unresolved optimal-exponent questions.
 
 When many preparations of a quantum system must be measured separately, can exchanging classical information improve how quickly the discrimination error falls? The answer depends on whether each preparation is measured to completion on its first visit. This manuscript gives an explicit example in which retaining a qubit at each party, exchanging information, and returning for a second measurement strictly improves the asymptotic error exponent.
 
@@ -88,6 +91,6 @@ The full manuscript received a fresh internal AI proof review without the earlie
 
 The paper establishes the counterexample and the exact exponent of its specified protocol. It does not identify the optimal unrestricted LOCC or separable exponent, prove that those two classes have equal exponents, or establish convergence of their optimal exponent sequences. It also makes no minimal-dimension or minimum-storage claim. The website label records a counterexample to the universal equality, rather than a complete determination of the broader catalog problem.
 
-The source package contains the manuscript, standalone exact checker, frozen counterexample proofs, primary-source comparison and review records. This is the website release of version 1.0.
+The source package contains the manuscript, standalone exact checker, frozen counterexample proofs, primary-source comparison and review records. The archived PDF and source package are identical to the website release of version 1.0.
 
 **Human and AI contributions.** The author set the research directions, designed the harness that coordinated model tasks, tools, memory, and checking, supplied physical and mathematical intuitions and proof skeletons, and guided the development and revision of the research ideas. AI models developed detailed candidate arguments and derivations, searched the literature, wrote and ran computational checks, and drafted and revised the manuscript under this supervision. K-Dense's [scientific-writing skill](https://arxiv.org/abs/2609.00065) assisted manuscript organization and evidence tracking.

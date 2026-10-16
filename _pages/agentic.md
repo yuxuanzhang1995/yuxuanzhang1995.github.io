@@ -58,7 +58,7 @@ counterexample refutes the stated claim. It does not mean QIQCOP has accepted th
 that an external expert has approved it, or that publication priority has been established.
 </div>
 
-The twenty archived manuscripts are collected in [*Agentic Proofs for QIQC: Collected Manuscripts*, version 1.2](https://doi.org/10.5281/zenodo.23032999) (29 September 2026). The [archive index](https://zenodo.org/records/23032999/files/README.md) identifies each paper and its date; the website articles link to the corresponding QIQC reports. Version 1.2 adds the six-qubit semi-Clifford theorem, the delayed-onset additivity channel, the eight-copy CCZ concentration protocol and the four-qubit Pauli-rotation gap. Each archived paper’s entry below links to its Zenodo record.
+The twenty-one archived manuscripts are collected in [*Agentic Proofs for QIQC: Collected Manuscripts*, version 1.3](https://doi.org/10.5281/zenodo.23417491) (16 October 2026). The [archive index](https://zenodo.org/records/23417491/files/README.md) identifies each paper and its date; the website articles link to the corresponding QIQC reports. Version 1.3 adds the two-pass Chernoff counterexample, which refutes the universal measured-exponent equality while leaving the optimal unrestricted LOCC and SEP exponents unresolved. The twenty earlier manuscript PDFs and their source archive are unchanged. Each archived paper’s entry below links to its Zenodo record.
 
 ## Log
 
