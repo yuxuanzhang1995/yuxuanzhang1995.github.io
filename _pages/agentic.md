@@ -60,6 +60,8 @@ that an external expert has approved it, or that publication priority has been e
 
 The twenty-one archived manuscripts are collected in [*Agentic Proofs for QIQC: Collected Manuscripts*, version 1.3](https://doi.org/10.5281/zenodo.23417491) (16 October 2026). The [archive index](https://zenodo.org/records/23417491/files/README.md) identifies each paper and its date; the website articles link to the corresponding QIQC reports. Version 1.3 adds the two-pass Chernoff counterexample, which refutes the universal measured-exponent equality while leaving the optimal unrestricted LOCC and SEP exponents unresolved. The twenty earlier manuscript PDFs and their source archive are unchanged. Each archived paper’s entry below links to its Zenodo record.
 
+The [22 October 2026 release]({{ '/agentic-research/2026-10-22/' | relative_url }}) adds ten internally reviewed manuscripts on Gibbs preparation and mixing, shallow-circuit sampling, Gaussian entanglement, cooling, reflected entropy and an accepted-instance attack bound. Each has a full PDF and a source package with proof and checking records. These ten website papers are separate from the twenty-one archived manuscripts above.
+
 ## Log
 
 <ul class="arlog">
