@@ -49,8 +49,8 @@ checks, source questions, or external reviews remain outstanding.
 
 <div class="arbox">
 <strong>What “verified” means here.</strong> Each entry states its checks. Some have exact
-rational-arithmetic certificates; analytic proof candidates instead have independent AI review
-and adversarial checks. Neither label means external refereeing or formal proof-assistant
+rational-arithmetic certificates; analytic proof candidates state whether their audit was
+sequential or independent, and describe the checks performed. Neither label means external refereeing or formal proof-assistant
 verification. Read each entry as a claim with its working attached. A proof candidate remains
 open to correction, and literature novelty is a separate question.
 The label “solved (negative)” records this research log's conclusion that an explicit
@@ -61,6 +61,8 @@ that an external expert has approved it, or that publication priority has been e
 The twenty-one archived manuscripts are collected in [*Agentic Proofs for QIQC: Collected Manuscripts*, version 1.3](https://doi.org/10.5281/zenodo.23417491) (16 October 2026). The [archive index](https://zenodo.org/records/23417491/files/README.md) identifies each paper and its date; the website articles link to the corresponding QIQC reports. Version 1.3 adds the two-pass Chernoff counterexample, which refutes the universal measured-exponent equality while leaving the optimal unrestricted LOCC and SEP exponents unresolved. The twenty earlier manuscript PDFs and their source archive are unchanged. Each archived paper’s entry below links to its Zenodo record.
 
 The [22 October 2026 release]({{ '/agentic-research/2026-10-22/' | relative_url }}) adds ten internally reviewed manuscripts on Gibbs preparation and mixing, shallow-circuit sampling, Gaussian entanglement, cooling, reflected entropy and an accepted-instance attack bound. Each has a full PDF and a source package with proof and checking records. These ten website papers are separate from the twenty-one archived manuscripts above.
+
+The [26 October 2026 release]({{ '/agentic-research/2026-10-26/' | relative_url }}) adds M26 on large-order QAOA energy bounds and G02 on near-critical weak-field Ising Gibbs preparation. Both have complete candidate manuscripts, PDFs and source packages. Their current audit is sequential; independent review of the complete manuscripts and their novelty remains outstanding.
 
 ## Log
 
