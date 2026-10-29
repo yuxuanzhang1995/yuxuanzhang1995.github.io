@@ -1,96 +1,112 @@
 ---
 layout: page
-title: Two-pass local measurements beat the measured Chernoff exponent
-description: "An explicit faithful four-dimensional counterexample: revisiting locally stored qubits strictly improves the asymptotic error exponent over every fixed single-copy measurement."
-date: 2026-10-16
+title: Feedback-enhanced quantum Chernoff discrimination
+description: "Retaining quantum outputs for a second visit improves discrimination even for faithful qubits. Version 2 adds an unbounded additive gap, existence of the LOCC exponent, and exact rates for a flagged class."
+date: 2026-10-29
+original_date: 2026-10-16
 status: counterexample
-target: Copywise Chernoff exponents — universal measured-exponent equality
+target: Copywise Chernoff exponents — feedback, local quantum memory and asymptotic rates
 pdf: chernoff-two-pass.pdf
-archive_doi: 10.5281/zenodo.23417491
-author: Yuxuan Zhang
+author: Yuxuan Zhang and Mao-Sheng Li
 ---
 
-**Yuxuan Zhang**
+**Yuxuan Zhang and Mao-Sheng Li**
 
-[Manuscript, version 1.0, 16 October 2026 (PDF, 10 pages)]({{ '/assets/pdf/agentic/chernoff-two-pass.pdf' | relative_url }}) · [LaTeX source, exact checker and verification records (ZIP)]({{ '/assets/code/agentic/chernoff-two-pass-source.zip' | relative_url }})
+[Manuscript, version 2.0, 29 October 2026 (PDF, 17 pages)]({{ '/assets/pdf/agentic/chernoff-two-pass.pdf' | relative_url }}) · [LaTeX source and checking records (ZIP)]({{ '/assets/code/agentic/chernoff-two-pass-source.zip' | relative_url }})
 
-Archived in [*Agentic Proofs for QIQC: Collected Manuscripts*, collection version 1.3](https://doi.org/10.5281/zenodo.23417491): [manuscript PDF](https://zenodo.org/records/23417491/files/chernoff-two-pass.pdf) · [source and checking records](https://zenodo.org/records/23417491/files/chernoff-two-pass-source.zip). The manuscript remains version 1.0, 16 October 2026. [QIQC progress report #139](https://github.com/Naixu-Guo/quantum-open-problems/issues/139) records the counterexample and the unresolved optimal-exponent questions.
+Version 2 expands the earlier four-dimensional counterexample with Mao-Sheng Li's qubit construction, an existence theorem for the optimal LOCC exponent, and rate formulas for orthogonally flagged states. The earlier single-author paper, *Two-pass local measurements beat the measured Chernoff exponent*, remains archived as [version 1.0, 16 October 2026](https://zenodo.org/records/23417491/files/chernoff-two-pass.pdf), with its [original source package](https://zenodo.org/records/23417491/files/chernoff-two-pass-source.zip). That Zenodo record and [QIQC issue #139](https://github.com/Naixu-Guo/quantum-open-problems/issues/139) describe v1; the present website release is v2.
 
-When many preparations of a quantum system must be measured separately, can exchanging classical information improve how quickly the discrimination error falls? The answer depends on whether each preparation is measured to completion on its first visit. This manuscript gives an explicit example in which retaining a qubit at each party, exchanging information, and returning for a second measurement strictly improves the asymptotic error exponent.
+When quantum systems must be measured separately, classical communication still leaves room for a useful form of feedback. A laboratory can make a partial measurement, share its outcome, and retain a quantum output. After hearing from the other laboratories, it can choose how to measure that output. This second visit improves the exponential rate at which the discrimination error falls, even when each input is a qubit.
 
-The result is a complete counterexample to the universal equality with the measured Chernoff exponent in [QIQCOP's copywise discrimination problem](https://qiqc-op.com/problem/op_a370855db65d4d24/). The entry's broader request to determine the optimal LOCC and separable exponents remains open.
+The result refutes the universal equality with the measured Chernoff exponent in [QIQCOP's copywise discrimination problem](https://qiqc-op.com/problem/op_a370855db65d4d24/). Version 2 also establishes existence of the optimal LOCC exponent. The broader determination of optimal LOCC and separable exponents remains open.
 
-## What the second pass changes
+## Local memory and feedback
 
-Each four-dimensional input has an orthogonal classical flag and a conditional qubit. The first pass reads the flag while leaving that qubit available. The parties share all their flags, then use the majority to choose the qubit measurement bases for the second pass. Finally, they make the optimal classical likelihood decision.
+[Hayashi's single-visit theorem](https://arxiv.org/abs/0804.0686) allows each measurement to depend on all preceding outcomes, but requires a copy to be measured to completion before moving on. Classical adaptation within this model has the same optimal exponent as the best fixed single-copy measurement.
 
-Every operation acts on one input copy. The protocol needs local storage and classical messages; it uses no shared entanglement or joint operation on different copies. A pass visits every party, so two passes should not be confused with just two individual LOCC operations.
+The protocols here retain quantum information between visits. The four-dimensional construction reads an orthogonal flag without disturbing a conditional qubit. The qubit construction creates its branch label through a partial measurement, retaining an output on one branch. The final readout depends on the shared first-pass record.
 
-[Hayashi's single-visit adaptive theorem](https://arxiv.org/abs/0804.0686) shows that choosing successive single-copy measurements from earlier classical outcomes does not improve the Chernoff exponent over the best fixed measurement. In the two-pass protocol, all flags can inform the final measurement of every retained qubit. That is the additional resource used here.
+Every operation acts on one input copy. The inputs are product states, and the protocols use local quantum storage and classical messages. A pass visits each relevant input; it may involve many operations and messages. The result does not establish a strict hierarchy between every successive number of communication rounds or visits.
 
-## The quantitative separation
+## A faithful qubit separation
 
-All logarithms are natural. Put
+Let $$0<\epsilon<1/2$$, $$\delta=\epsilon^2$$, and $$L=\log(1/\epsilon)$$. Define
 
 $$
-\varepsilon=2^{-16},\quad a=1-\varepsilon,\quad p=\frac45,\quad
-A=\operatorname{diag}(a,\varepsilon),\quad B=HAH,
+|\phi\rangle=\sqrt\epsilon\,|0\rangle+\sqrt{1-\epsilon}\,|1\rangle,
 $$
 
-where $$H$$ is the qubit Hadamard matrix, and define
+$$
+\rho_\epsilon=(1-\delta)|0\rangle\langle0|+\delta|1\rangle\langle1|,
+\qquad
+\sigma_\epsilon=(1-\delta)|\phi\rangle\langle\phi|+\delta(I-|\phi\rangle\langle\phi|).
+$$
+
+Both states have strictly positive eigenvalues and do not commute. The measured exponent and an achievable LOCC exponent satisfy
+
+$$
+C_{\mathrm M}(\rho_\epsilon,\sigma_\epsilon)\le\frac23L,
+\qquad
+\xi_{\mathrm{LOCC}}(\rho_\epsilon,\sigma_\epsilon)\ge\frac{13}{18}L-\log3.
+$$
+
+Their difference is at least $$L/18-\log3$$. At $$\epsilon=2^{-36}$$ this is $$\log(4/3)>0$$, and the additive gap grows without bound as $$\epsilon\downarrow0$$. For each state pair, $$\epsilon$$ is fixed before the number of copies tends to infinity. The theorem gives an achievable bound, not the exact optimal qubit exponent.
+
+The proof accounts for every first-pass string. With $$\beta_n=2p_{\mathrm e}(n)$$, the specified two-pass protocol obeys
+
+$$
+\beta_n\le(3\epsilon^{13/18})^n
+\qquad(n\ge1).
+$$
+
+Dimension two is therefore sufficient, and minimal, for a strict asymptotic separation. The certified example has very small positive eigenvalues; it is an asymptotic construction rather than a claim of a large experimental noise margin.
+
+## Existence and comparison of rates
+
+For every finite-dimensional state pair, the optimal finite-round copywise LOCC errors satisfy
+
+$$
+\beta_{n+m}^{\mathrm{LOCC}}\ge
+\beta_n^{\mathrm{LOCC}}\beta_m^{\mathrm{LOCC}}.
+$$
+
+This product inequality proves that the ordinary LOCC exponent exists. It applies to arbitrary finite LOCC protocol trees, including revisits and retained local quantum memory.
+
+For orthogonally flagged pure conditional states, explicit formulas determine the measured and collective exponents. LOCC and separable tests attain the collective exponent. The local attainability follows from [Virmani, Sacchi, Plenio and Markham's binary pure-state discrimination theorem](https://arxiv.org/abs/quant-ph/0102073); the paper supplies the rate formulas, an elementary two-pass proof, and a sharp factor $$3/2$$ bound on the ratio to the measured exponent.
+
+Faithful four-dimensional approximations approach the same ratio. The faithful-approximation proof uses conditional noise $$\delta=e^{-T^3}$$ with $$v=e^{-T}$$ and $$\eta=T^{-3/2}$$. The resulting rates are $$C_{\mathrm M}=T+o(1)$$ and $$\xi_{\mathrm{LOCC}}=3T/2-\log2+o(1)$$. This does not establish $$3/2$$ as an upper bound for all faithful pairs. For general faithful states, the standard fidelity comparison gives the upper bound two.
+
+## The four-dimensional example
+
+The original construction is retained in full. With $$\varepsilon=2^{-16}$$, $$a=1-\varepsilon$$, $$p=4/5$$, $$A=\operatorname{diag}(a,\varepsilon)$$ and $$B=HAH$$ for the qubit Hadamard matrix $$H$$, set
 
 $$
 \rho=pA\oplus(1-p)B,\qquad
 \sigma=(1-p)B\oplus pA.
 $$
 
-These states are noncommuting and have minimum eigenvalue $$1/327680>0$$. The best fixed single-copy measurement has exponent
-
-$$
-C_{\mathrm M}<\log(5/4)+0.454<0.677144.
-$$
-
-The displayed two-pass protocol has the exact exponent
+Every fixed single-copy measurement has exponent $$C_{\mathrm M}<0.677144$$. The two-pass protocol has an exactly determined exponent
 
 $$
 E=\log(5/4)+\log2-h_2(u),\qquad
 u=\frac{\log(2a)}{\log65535},
 $$
 
-where $$h_2(u)=-u\log u-(1-u)\log(1-u)$$. Rigorous interval arithmetic gives
+where $$h_2$$ is binary entropy with natural logarithms. Rigorous bounds give
 
 $$
 0.68250256<E<0.68250257,
 \qquad E-C_{\mathrm M}>0.005359.
 $$
 
-An error exponent describes decay roughly as $$e^{-nE}$$. A fixed positive improvement in the exponent therefore persists as the number of copies grows. The manuscript proves the separation analytically, including a rational lower bound of $$0.003$$ on the gap. The sharper decimal enclosure is supplementary.
+Matching finite-copy error bounds establish this exact protocol exponent. It remains a lower bound on the optimal-class exponents.
 
-For every integer $$n\ge1$$, the protocol's actual error obeys
+## Prior work, checks and remaining questions
 
-$$
-\frac{e^{-d-nE}}{4(n+1)^2}
-\le p_{\mathrm e}^{\mathrm{tp}}(n)
-\le \frac{n+1}{2}e^{-nE},
-\qquad d=\log65535.
-$$
+Hayashi's Section V treats single-visit adaptation; Section IX leaves the corresponding two-way LOCC and SEP Chernoff question open. [Calsamiglia and coauthors](https://arxiv.org/abs/1004.5522) studied mixed qubits through finite-copy bounds and asymptotic fits; those fits do not give a converse uniform over all faithful qubit pairs. The copywise model here also differs from the two spatial laboratories of [Matthews and Winter](https://arxiv.org/abs/0710.4113), and from the retained collective receiver memory allowed by [Salek, Hayashi and Winter](https://arxiv.org/abs/2011.06569).
 
-These matching exponential bounds determine the protocol's exponent. Since the protocol is finite-round LOCC and its two decision effects are fully separable, both optimal lower exponents exceed $$C_{\mathrm M}$$ for this pair.
+The complete v2 manuscript passed a fresh internal AI proof review of its exact stated claims. The combined checker ran twice in separate clean verifier processes. It checks the four-dimensional rational bounds, direct qubit matrix identities at five parameter values, 30 finite-transcript cases, and the faithful-approximation estimates with 100-digit arithmetic. The asymptotic conclusions rest on the analytic proofs. These checks are not external peer review or proof-assistant certification; the source package records their scope and results.
 
-## Relation to earlier work
+The optimal exponent of the faithful qubit family remains unknown. General SEP convergence, a possible separation between the optimal LOCC and SEP exponents, and a strict hierarchy for further visits remain open. The equality of LOCC, SEP and collective rates is established for the pure-conditional flagged class. The broader catalog problem is not claimed solved, and exhaustive historical priority has not been certified.
 
-Hayashi's [Section V](https://arxiv.org/pdf/0804.0686) treats successive single-visit measurements; Section IX explicitly asks whether two-way LOCC improves asymptotic performance beyond the Stein setting. The protocol here retains quantum states for a later visit and addresses the symmetric Chernoff setting.
-
-[Calsamiglia and coauthors](https://arxiv.org/abs/1004.5522) studied mixed qubits using finite-copy partial-transpose bounds and asymptotic fits. Their examples do not supply a converse for this four-dimensional pair. [Matthews and Winter](https://arxiv.org/abs/0710.4113) use a different partition, with two laboratories holding many local subsystems. [Salek, Hayashi and Winter's channel-discrimination framework](https://arxiv.org/abs/2011.06569) permits joint operations on a receiver's output memory and new channel outputs. The present model keeps every input copy at a separate party.
-
-The single-copy bound uses a variational method related to measured Rényi quantities; this method is attributed to [Berta, Fawzi and Tomamichel](https://doi.org/10.1007/s11005-017-0990-7). The manuscript includes all inequalities needed for its particular bound. The checked closest sources do not contain the same counterexample; an exhaustive historical priority certification has not been completed.
-
-## Verification and scope
-
-The full manuscript received a fresh internal AI proof review without the earlier review verdicts. Its decisive checker ran twice in separate clean verifier processes. A separate integer implementation evaluates the protocol's transcript error, while outward rational intervals check the exponent, the uniform single-copy cap, and both error bounds for $$n=1,2,3,4,8,16,32,64,128$$. The universal conclusions come from the analytic proof, with finite calculations providing cross-checks. These checks are not external peer review or formal proof-assistant verification.
-
-The paper establishes the counterexample and the exact exponent of its specified protocol. It does not identify the optimal unrestricted LOCC or separable exponent, prove that those two classes have equal exponents, or establish convergence of their optimal exponent sequences. It also makes no minimal-dimension or minimum-storage claim. The website label records a counterexample to the universal equality, rather than a complete determination of the broader catalog problem.
-
-The source package contains the manuscript, standalone exact checker, frozen counterexample proofs, primary-source comparison and review records. The archived PDF and source package are identical to the website release of version 1.0.
-
-**Human and AI contributions.** The author set the research directions, designed the harness that coordinated model tasks, tools, memory, and checking, supplied physical and mathematical intuitions and proof skeletons, and guided the development and revision of the research ideas. AI models developed detailed candidate arguments and derivations, searched the literature, wrote and ran computational checks, and drafted and revised the manuscript under this supervision. K-Dense's [scientific-writing skill](https://arxiv.org/abs/2609.00065) assisted manuscript organization and evidence tracking.
+**Human and AI contributions.** Yuxuan Zhang set research directions, designed the harness coordinating model tasks, tools, memory, and checking, supplied physical and mathematical intuitions and proof skeletons, and guided the development and revision of the research ideas. In that work, AI models developed detailed candidate arguments and derivations, searched the literature, wrote and ran computational checks, and drafted and revised the manuscript under his supervision. Mao-Sheng Li supplied the complementary mathematical draft, including the LOCC product-value argument, the faithful qubit construction and the flagged-state analysis. AI assistance was also used to consolidate and revise the manuscript. K-Dense's [scientific-writing skill](https://arxiv.org/abs/2609.00065) assisted manuscript organization and evidence tracking.
