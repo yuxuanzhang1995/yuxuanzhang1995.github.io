@@ -15,12 +15,12 @@
   "files": {
     "article": {
       "name": "three-round-quantum-cooling-work.md",
-      "sha256": "ff8b6f2899a4e60c1374e10c9255aa0539dba114f7dbbb01d62e060db9eed3ee"
+      "sha256": "401e959fc7a4ff539d130aa8c07f857d8de94a6e7d8f943e11325ceffb657f1e"
     },
     "supplement": {
       "name": "three-round-quantum-cooling-work-v1.zip",
-      "sha256": "0ba4166bfdfe452e2e0b793547f4a63db7cc86e8c8950b38f33c094a9f0f224c",
-      "bytes": 92286
+      "sha256": "ff08ddb8754268f75bb6f755352f6aa1384781aed097461bea87d20b7753ce70",
+      "bytes": 92310
     }
   },
   "reproduction": {
@@ -33,7 +33,8 @@
     "strict_gap": [
       "6.2698268036567188247860194131353601201330312818471535052748493819787595357568E-9",
       "6.2698268036567188247860194131353601201330312818471535052748493819787831696379E-9"
-    ]
+    ],
+    "format_only_revision": "Inline math delimiters and a long displayed interval reformatted after the ten-step replay; all code and numerical inputs unchanged."
   },
   "destinations": {
     "website": "https://yuxuanzhang1995.github.io/agentic-research/three-round-quantum-cooling-work/",
