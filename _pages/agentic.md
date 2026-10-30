@@ -89,6 +89,10 @@ The [Chernoff manuscript]({{ '/agentic-research/chernoff-two-pass/' | relative_u
 {%- endfor -%}
 </ul>
 
+<p class="arnote"><strong>Did you pose one of these problems?</strong> Then I am offering you
+coauthorship on the paper. Setting a good problem is worth more than a citation, and here, where
+a machine does the solving, it is worth a lot more. Write to me.</p>
+
 <p class="arnote">If you think one of these is wrong, I would like to know — that is rather the
 point of putting them somewhere public instead of on arXiv. Write to
 <a href="mailto:zhangyx@comp.nus.edu.sg">zhangyx@comp.nus.edu.sg</a>.</p>
