@@ -1,0 +1,70 @@
+{
+  "title": "Full-output classical simulation of lossy boson sampling at arbitrary mode density",
+  "version": "1.0",
+  "date": "2026-10-31",
+  "status": "complete solution candidate; internally checked",
+  "original_problem": {
+    "package_id": "P60",
+    "public_id": "op_d436ff9fb9cb0ce5",
+    "source": "https://qiqc-op.com/problem/op_d436ff9fb9cb0ce5/"
+  },
+  "claim": "For fixed rational 0<eta<1 and every m>=n, full Fock-output simulation with Haar-average TV<=epsilon and worst-case time polynomial in n,m,1/epsilon and binary input length; input precision contributes <=epsilon/2.",
+  "files": {
+    "article": {
+      "name": "full-output-lossy-boson-sampling.md",
+      "sha256": "f4bfc6575bd612f22fdc45380c2580a7944adf8bec69ae1c85f590c9f61a715d",
+      "bytes": 6589
+    },
+    "manuscript": {
+      "name": "full-output-lossy-boson-sampling-v1.pdf",
+      "sha256": "83883fe9e131c5237b423e00937dd13d1e445cbfed456b3d00c07ecbdadaf003",
+      "bytes": 369339
+    },
+    "source_and_checks": {
+      "name": "full-output-lossy-boson-sampling-v1.zip",
+      "sha256": "3260b39ebfb64a7aa0f7ec75b585a271addd81a4c1b08a319e7b29933b45bef3",
+      "bytes": 394940
+    }
+  },
+  "review": {
+    "validity": "complete candidate supported by targeted internal analytic review and exact controls",
+    "reviewer_relation": "same root agent",
+    "independent_expert_review": false,
+    "formal_certification": false,
+    "specific_source_comparison": "checked",
+    "broader_novelty": "unresolved"
+  },
+  "reproduction": {
+    "from_actual_zip_in_empty_directory": true,
+    "python": "3.13.5",
+    "requires": "Python >=3.10; standard library only",
+    "frame_factorial_controls": 329,
+    "coefficient_cases": 8,
+    "mutation_counts": {
+      "missing_spectators": 4,
+      "missing_second_binomial": 7,
+      "missing_heavy_binomial": 5
+    },
+    "mathematical_functions_unchanged_from_reviewed_checker": true
+  },
+  "manuscript": {
+    "pages": 13,
+    "compiled": true,
+    "all_pages_visually_checked": true,
+    "missing_references_or_typesetting_warnings": 0
+  },
+  "authorship": "No personal byline or affiliation; human-directed AI assistance disclosed, consistently with the existing note from this run.",
+  "destinations": {
+    "website": "https://yuxuanzhang1995.github.io/agentic-research/full-output-lossy-boson-sampling/",
+    "archive": "not submitted",
+    "catalog": "not submitted"
+  },
+  "external_acceptance": "none claimed",
+  "release_state_note": "This manifest identifies the scientific payload. Actual website deployment is tracked separately; no archival deposit or catalog acceptance is claimed.",
+  "open_status_check": {
+    "checked_date": "2026-10-31",
+    "catalog_status": "Unsolved",
+    "same_scope_resolution_found": false,
+    "limit": "Targeted primary-source check; worldwide priority remains unresolved."
+  }
+}
