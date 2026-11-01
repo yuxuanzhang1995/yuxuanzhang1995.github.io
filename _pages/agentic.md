@@ -67,9 +67,9 @@ The [26 October 2026 release]({{ '/agentic-research/2026-10-26/' | relative_url 
 The [Chernoff manuscript]({{ '/agentic-research/chernoff-two-pass/' | relative_url }}) was expanded to **version 2.0 on 29 October 2026**, by Yuxuan Zhang and Mao-Sheng Li. It adds a faithful qubit separation with an unbounded additive gap, existence of the optimal LOCC exponent, and explicit flagged-state rates. This is a website-only update; the Zenodo collection above retains manuscript v1.0.
 
 <div class="arbox">
-<p style="margin:0 0 .55rem"><strong>Did you pose one of these problems?</strong> Then I am offering
-you coauthorship on the paper. Setting a good problem is worth more than a citation, and here, where
-a machine does the solving, it is worth a lot more. Write to me.</p>
+<p style="margin:0 0 .55rem"><strong>If one of these problems is yours</strong>, I would like you on
+the paper as a coauthor. Whoever sets the problem has done half the work, and I would rather write
+these up with the people who posed them than about them. Write to me.</p>
 <p style="margin:0">And if you think one of these is wrong, I would like to know — that is rather the
 point of putting them somewhere public instead of on arXiv.
 <a href="mailto:zhangyx@comp.nus.edu.sg">zhangyx@comp.nus.edu.sg</a></p>
