@@ -8,72 +8,53 @@ nav_order: 4
 ---
 
 <style>
-.jbox{border-left:3px solid var(--global-theme-color);background:rgba(128,128,128,.05);
-  padding:.7rem 1rem;border-radius:3px;margin:1.4rem 0}
-.jroles{list-style:none;padding:0;margin:1rem 0 0}
-.jroles li{padding:.55rem 0;border-bottom:1px solid var(--global-divider-color)}
-.jroles li:last-child{border-bottom:0}
-.jrole{font-weight:600}
-.jnote{color:var(--global-text-color-light);font-size:.92rem}
-table.jdates{width:100%;border-collapse:collapse;margin:.8rem 0 0}
+table.jdates{width:100%;border-collapse:collapse;margin:.6rem 0 1rem}
 table.jdates th,table.jdates td{text-align:left;padding:.45rem .6rem;border-bottom:1px solid var(--global-divider-color);font-size:.95rem}
 table.jdates th{color:var(--global-text-color-light);font-weight:600}
 </style>
 
-**For 2027 we have funded openings for two postdoctoral researchers and at least three PhD students,
-in Computer Science and in Physics.** Singapore Citizens and Permanent Residents have a further
-route in through the [Industrial PhD Programme](https://www.comp.nus.edu.sg/programmes/pg/phdcs/industrial/),
-which is sponsored jointly by EDB and a company partner.
+**We have funded openings for 2027: two postdocs and at least three PhD students, in Computer
+Science and in Physics.**
 
-I am starting the group at NUS in December 2026, jointly in the
+I'm starting the group at NUS in December 2026, with a joint appointment in the
 [School of Computing](https://www.comp.nus.edu.sg/cs/) and the
-[Department of Physics](https://www.physics.nus.edu.sg/); see my
-[NUS faculty profile](https://www.comp.nus.edu.sg/cs/people/zhangyx/).
+[Department of Physics](https://www.physics.nus.edu.sg/). We work on quantum advantage and where
+classical simulation runs out, on simulating many-body and open quantum systems, and on machine
+learning for quantum computers. The [research]({{ '/research/' | relative_url }}) page has the
+details. There's room for theory, numerics and hardware-facing projects, for working with industry
+partners including Quantinuum, Google and IBM, and for collaborating with groups across North
+America, Europe and Asia.
 
-We work on quantum advantage and the boundary of classical simulation, quantum simulation of
-many-body and open systems, and machine learning for quantum computing — see
-[research]({{ '/research/' | relative_url }}) for what that means in practice. Theory-leaning,
-numerics-leaning, and hardware-facing projects are all available, and qualified candidates will
-also have opportunities to work with industry partners in quantum computing, including Quantinuum,
-Google, and IBM, and to take part in an ongoing collaboration spanning North America, Europe, and
-Asia.
+You don't need a quantum background. Physics, computer science and applied maths are all good
+starting points, and a lot of what I care about comes down to algorithms, optimisation or
+statistics. If you're not sure you fit, write anyway.
 
-## Open positions
+## Postdocs
 
-<ul class="jroles">
-<li><span class="jrole">Postdoctoral researchers</span> — starting in 2027, or from December 2026 if you are ready sooner.
-    <span class="jnote">Funded positions; candidates holding or applying for their own fellowship are welcome too, and I am glad to host such applications. Apply through <a href="https://academicjobsonline.org/ajo/jobs/32512">Academic Jobs Online</a> by <strong>15 November 2026</strong>.</span></li>
-<li><span class="jrole">PhD students</span> — through the NUS graduate programmes in Computer Science or Physics.
-    <span class="jnote">Places are funded, with stipend and tuition awarded on admission; see the funding section for awards that need a separate application.</span></li>
-<li><span class="jrole">Industrial PhD students</span> — through NUS Computing's <a href="https://www.comp.nus.edu.sg/programmes/pg/phdcs/industrial/">Industrial PhD Programme</a>, on a project run jointly with a company.
-    <span class="jnote">Candidates are employed by the partner company while doing full-time research here, and the project has to be proposed jointly, so start by writing to me. The EDB-sponsored track covers tuition, salary and employer CPF but is open only to Singapore Citizens and Permanent Residents; the School's own track does not state that restriction. If you are already at a company working on something close to what we do, this is the route worth asking about.</span></li>
-<li><span class="jrole">Long-term visiting students and researchers</span> — six to twelve months is where a visit really pays off; three months is the practical minimum.
-    <span class="jnote">These visits are normally supported by your own funding or an external scheme rather than by the group, so candidates who hold or are applying for such support are the easiest to take. If you are applying to one — a national scholarship council, a joint-PhD or exchange programme, or your own institution's travel support — I am glad to host you and to write the invitation letter and supporting material those applications ask for. Write early: most run on an annual cycle, and the host letter is usually needed well before the scheme's own deadline.</span></li>
-<li><span class="jrole">Master's, FYP and UROP students</span> — once I am on campus.</li>
-</ul>
+Apply through [Academic Jobs Online](https://academicjobsonline.org/ajo/jobs/32512) by
+**15 November 2026**. Positions start in 2027, or from December 2026 if you're ready earlier.
 
-<div class="jbox">
-<strong>Backgrounds.</strong> Physics, computer science, and applied mathematics are all natural
-starting points. Prior quantum experience helps but is not required — several of the problems I
-care about are, at heart, questions about algorithms, optimisation, or statistics. If you are not
-sure whether you fit, write anyway.
-</div>
+If you have your own fellowship, or want to apply for one, I'm happy to host you. These are the
+ones that fit:
 
-## Singapore
+- [Schmidt AI in Science Postdoctoral Fellowship](https://www.nus.edu.sg/research/odprt-home/fellowships/eric-and-wendy-schmidt-ai-in-science-postdoctoral-fellowship):
+  NUS is one of nine host universities. Up to two years.
+- [NUS Fellows Programme (Southeast Asia)](https://nus.edu.sg/research/odprt-home/fellowships):
+  six to twelve months, for researchers from ASEAN countries. We write the proposal together.
+- [NRF Fellowship](https://www.nrf.gov.sg/grants/nrff/): for people within about seven years of
+  their PhD who want to run their own programme.
+- [CQT Alice Fellowship](https://www.cqt.sg/join-us/): for women researchers in quantum science,
+  based at CQT.
+- Fellowships from your home country, such as MSCA, SNSF, NSERC, JSPS or Humboldt. Get in touch
+  early and we'll work on the proposal together.
 
-Singapore is building quantum hardware, not only funding papers about it. The National Quantum
-Processor Initiative is developing trapped-ion and neutral-atom machines — the platforms closest to
-my own experimental work — and
-[Quantinuum](https://www.quantinuum.com/press-releases/quantinuum-expands-global-footprint-to-singapore-with-the-establishment-of-a-new-r-d-centre)
-opened a Singapore R&D centre in March 2026, with Singapore set to be the first country outside the
-United States to host its Helios machine. For a group working on verifiable advantage, having the
-machines and the people who build them a few kilometres away changes which experiments are worth
-attempting.
+## PhD students
 
-## PhD application timeline
+Apply to the NUS PhD programme in Computer Science or in Physics. If you're admitted you're
+funded: the NUS Research Scholarship covers tuition and a monthly stipend, and you ask for it on
+the same application form.
 
-Two things people miss. **The two departments have different deadlines** — Physics closes about a
-month before Computer Science — and **SINGA is a separate application** with its own date.
+The two departments have different deadlines:
 
 <table class="jdates">
 <tr><th>Intake</th><th>Physics</th><th>Computer Science</th><th>SINGA</th></tr>
@@ -81,59 +62,39 @@ month before Computer Science — and **SINGA is a separate application** with i
 <tr><td>January 2028</td><td>15 May 2027</td><td>15 June 2027</td><td>1 June 2027</td></tr>
 </table>
 
-<p class="jnote"><strong>If you cannot pick me as a supervisor in the application form,
-that is expected</strong> — I start in December 2026 and do not yet appear in every NUS system.
-Name me in your research statement, and send me an email so I know to look out for your
-application.</p>
+[SINGA](https://www.a-star.edu.sg/scholarships/home/scholarships) is a separate scholarship for
+international students, with its own application. Scholarships are given out as good applications
+come in, so apply early rather than on the deadline.
 
-<p class="jnote">Apply early rather than on the deadline: Research Scholarship places are allocated
-as strong applications are reviewed, not after the closing date. Applications arriving after a
-deadline are rolled to the following intake. Get in touch a month or two beforehand — it is much
-easier to help if I know you are applying.</p>
+You may not be able to pick me as a supervisor on the form yet, because I don't start until
+December. Name me in your research statement and email me, so I know to look for your application.
 
-## Funding
+Two other routes. If you're a Singapore Citizen or PR, the
+[Industrial PhD Programme](https://www.comp.nus.edu.sg/programmes/pg/phdcs/industrial/) lets a
+company and EDB fund your PhD here; the project is set up jointly, so talk to me first. And the
+[National Quantum Scholarships Scheme](https://www.cqt.sg/students/national-quantum-scholarships-scheme/)
+funds quantum PhDs. It needs a CQT supervisor, and I'm happy to co-supervise with a CQT colleague.
 
-PhD places and postdoctoral positions in the group are funded — a PhD place carries a monthly
-stipend and tuition support, awarded with admission to the programme, and there is nothing extra to
-apply for. The awards below are the ones that *do* need a separate application, and are worth
-knowing about.
+## Visitors
 
-**For PhD applicants**
+Long visits work best, ideally six to twelve months and at least three. Visitors usually bring their
+own funding, from a national scholarship council, a joint-PhD or exchange programme, or their home
+institution. If you're applying for one of these, I'll write the invitation letter and help with
+the application. Ask early, because the host letter is usually needed well before the scheme's own
+deadline.
 
-<ul class="jroles">
-<li><span class="jrole"><a href="https://www.a-star.edu.sg/scholarships/home/scholarships">Singapore International Graduate Award (SINGA)</a></span>
-    — <span class="jnote">for international applicants; a separate application with its own deadline, later than the programme deadline. Students choose their host lab, which can be here.</span></li>
-<li><span class="jrole"><a href="https://www.cqt.sg/students/national-quantum-scholarships-scheme/">National Quantum Scholarships Scheme (NQSS)</a></span>
-    — <span class="jnote">quantum-specific national funding, applied for separately and open year-round. It requires a CQT supervisor, so for a strong candidate I am glad to arrange co-supervision with a CQT colleague.</span></li>
-</ul>
+Master's, FYP and UROP students: once I'm on campus.
 
-**For postdoctoral applicants**
+## Singapore
 
-<ul class="jroles">
-<li><span class="jrole"><a href="https://www.nrf.gov.sg/grants/nrff/">NRF Fellowship</a></span>
-    — <span class="jnote">for researchers within about seven years of the PhD who are ready to run an independent programme; needs a host institution to put you forward.</span></li>
-<li><span class="jrole"><a href="https://www.cqt.sg/join-us/">CQT Alice Postdoctoral Fellowship</a></span>
-    — <span class="jnote">supports women researchers in quantum science and technology at CQT.</span></li>
-<li><span class="jrole"><a href="https://www.nus.edu.sg/research/odprt-home/fellowships/eric-and-wendy-schmidt-ai-in-science-postdoctoral-fellowship">Eric and Wendy Schmidt AI in Science Postdoctoral Fellowship</a></span>
-    — <span class="jnote">NUS is one of nine universities in the Schmidt Sciences programme; the fellowship runs up to two years. You apply to the scheme with a host here, so write to me before you do.</span></li>
-<li><span class="jrole"><a href="https://nus.edu.sg/research/odprt-home/fellowships">NUS Fellows Programme (Southeast Asia)</a></span>
-    — <span class="jnote">six to twelve months for researchers who are citizens of, or resident in, an ASEAN country. The proposal is written together with the host, and the application needs the host's in-principle approval.</span></li>
-<li><span class="jrole">Portable fellowships from your own region</span>
-    — <span class="jnote">MSCA, SNSF, NSERC, JSPS, Humboldt and similar schemes can often be held abroad. If you are applying for one, write early — I am glad to act as host and to work on the proposal with you.</span></li>
-</ul>
-
-<p class="jnote">A full index of NUS graduate awards is
-<a href="https://nusgs.nus.edu.sg/scholarships-list/">here</a>; schemes and deadlines change from
-year to year, so treat the official pages as authoritative.</p>
+The National Quantum Processor Initiative is building trapped-ion and neutral-atom machines here,
+and [Quantinuum](https://www.quantinuum.com/press-releases/quantinuum-expands-global-footprint-to-singapore-with-the-establishment-of-a-new-r-d-centre)
+opened an R&D centre in Singapore in March 2026. Singapore will be the first country outside the
+US to host its Helios machine.
 
 ## Getting in touch
 
-Email me at [zhangyx@comp.nus.edu.sg](mailto:zhangyx@comp.nus.edu.sg) with:
-
-- a CV,
-- a short note on what you would like to work on and why — a paragraph is plenty, and a specific
-  reaction to one of the papers on the [research]({{ '/research/' | relative_url }}) page tells me
-  far more than a general statement of interest,
-- for PhD applicants, when you intend to apply and which scholarship you are targeting.
-
-I read everything that arrives, though replies can be slow during heavy stretches.
+Email me at [zhangyx@comp.nus.edu.sg](mailto:zhangyx@comp.nus.edu.sg) with your CV and a paragraph
+on what you'd like to work on. A specific reaction to one of our papers tells me much more than
+general interest. If you're applying for a PhD, say when and which scholarship. I read everything,
+though replies can be slow.
