@@ -1,103 +1,114 @@
 ---
 layout: page
-title: "Full-output classical simulation of lossy boson sampling at arbitrary mode density"
-description: "A complete internally checked candidate for fixed-transmission, Haar-average simulation, including every collision pattern and finite-bit complexity."
-date: "2026-10-31"
+title: "Full-output classical simulation of lossy boson sampling with single-photon and equal-squeezing inputs"
+description: "Two internally checked theorem candidates: dense Fock-input sampling and all-mode equal-squeezing Gaussian sampling at fixed loss, with full-output Haar-average guarantees."
+date: "2026-11-03"
 permalink: /agentic-research/full-output-lossy-boson-sampling/
-status: "complete solution candidate · internally checked"
-target: "QIQC Open Problem Zoo · Fully polynomial sampling at constant photon transmission"
+status: "research manuscript · internally checked"
+target: "QIQC Open Problem Zoo · Constant-transmission sampling, with a Gaussian extension"
 ---
 
-Yuxuan Zhang · Version 1.1 · 31 October 2026
+Yuxuan Zhang · Version 2.0 · 3 November 2026
 
-This manuscript gives a complete solution candidate for the model below. Its proof has undergone internal analytic review and exact small-case checks. Independent expert review and comprehensive priority confirmation remain outstanding.
+This version adds a Gaussian boson-sampling theorem to the original Fock-input result. When **every mode is equally squeezed** and transmission is fixed below one, the construction samples the complete photon-count distribution to Haar-average total variation error $$\varepsilon$$ in polynomial time. The mean number of surviving photons can grow linearly with the number of modes.
 
-Download the [manuscript (PDF)]({{ '/assets/pdf/agentic/full-output-lossy-boson-sampling-v1.1.pdf' | relative_url }}), [source and exact-check supplement]({{ '/assets/code/agentic/full-output-lossy-boson-sampling-v1.1.zip' | relative_url }}), and [version manifest]({{ '/assets/code/agentic/full-output-lossy-boson-sampling-v1.1.json' | relative_url }}).
+The manuscript has undergone internal proof review and computational checks. Independent expert review and comprehensive priority confirmation remain outstanding.
 
-## The sampling problem
+Download the [manuscript (PDF)]({{ '/assets/pdf/agentic/full-output-lossy-boson-sampling-v2.0.pdf' | relative_url }}), [source, checks and numerical data]({{ '/assets/code/agentic/full-output-lossy-boson-sampling-v2.0.zip' | relative_url }}), and [release manifest]({{ '/assets/code/agentic/full-output-lossy-boson-sampling-v2.0.json' | relative_url }}).
 
-Inject one indistinguishable photon into each of the first $$n$$ inputs of an $$m$$-mode interferometer, with $$m\ge n$$. Each photon survives independently with fixed rational probability $$0<\eta<1$$. Draw the interferometer $$U$$ from Haar measure and measure the full photon-count pattern, including collisions and the vacuum event.
+## Two input models
 
-The construction gives a classical randomized sampler whose output law $$q_U$$ satisfies
+Both theorems include vacuum, every collision pattern and the complete output photon count. For a Haar-random passive interferometer $$U$$, the algorithm's law $$q_U$$ satisfies
 
 $$
-\mathbb E_{U\sim\mathrm{Haar}}\operatorname{TV}(q_U,p_{\eta,U})\le\varepsilon
+\mathbb E_U\operatorname{TV}(q_U,p_U)\le\varepsilon.
 $$
 
-in time polynomial in $$n,m,1/\varepsilon$$ and the binary input length. The polynomial's exponent can depend on fixed $$\eta$$. Matrix encoding uses polynomially many bits in $$n,m,\log(1/\varepsilon)$$ and contributes at most $$\varepsilon/2$$ to the error. The proof includes finite random bits and worst-case runtime.
+| Model | Input and loss assumptions | Guarantee |
+| --- | --- | --- |
+| Single-photon Fock inputs | One photon in each of $$n$$ inputs, every $$m\ge n$$, fixed rational survival probability $$0<\eta<1$$ | Worst-case bit complexity polynomial in $$n,m,1/\varepsilon$$ and input length |
+| Equal-squeezing Gaussian inputs | Every one of the $$m$$ modes squeezed identically, fixed rational $$\zeta=\tanh^2 s\in(0,1)$$ and fixed rational $$\eta\in(0,1)$$ | Worst-case bit complexity polynomial in $$m,1/\varepsilon$$ and input length; mean detected photons $$m\eta\zeta/(1-\zeta)$$ |
 
-This is the scope of the [QIQC Open Problem Zoo question](https://qiqc-op.com/problem/op_d436ff9fb9cb0ce5/). The guarantee averages over interferometers. Running at mean tolerance $$\varepsilon\delta$$ also gives error at most $$\varepsilon$$ with Haar probability at least $$1-\delta$$, by Markov's inequality, at polynomial cost in $$1/\delta$$.
+The polynomial degrees may depend on the fixed physical parameters. Matrix precision and finite random bits are included in the proofs. The Gaussian theorem does not include extra vacuum inputs or unequal squeezing, and neither theorem gives an error guarantee for every deterministic interferometer. These are two distinct input families.
 
-## Relation to earlier work
+The Fock theorem covers the formulation in the [QIQC Open Problem Zoo](https://qiqc-op.com/problem/op_d436ff9fb9cb0ce5/). The Gaussian theorem is an additional restricted result, not another resolution of that catalog question. Running either algorithm at mean tolerance $$\varepsilon\delta$$ also gives TV at most $$\varepsilon$$ with Haar probability at least $$1-\delta$$, by Markov's inequality.
 
-The closest simulation result is [Go and Jeong (2026)](https://arxiv.org/html/2610.27065v1). With $$N$$ input photons, $$k$$ fixed survivors and $$M$$ modes, their full-output Corollary 4 assumes both $$M\ge C_0k^2N$$ and $$M\ge C_Bk^2/(\varepsilon\delta)$$. Their Section XI identifies the case of comparable mode and photon counts as an open direction. The present candidate covers every $$m\ge n$$. Its evaluator resolves individual collision outcomes even when collisions cannot be absorbed into an error budget.
+## What changed mathematically
 
-Exact Haar methods have substantial antecedents. [Nezami (2021)](https://arxiv.org/abs/2104.06423) computes permanent moments using representation theory. [Arienzo, Grinko, Kliesch and Heinrich (2025)](https://arxiv.org/html/2408.11111v2) provide the operator decomposition and measurement frame used here. [Mhiri et al. (2026)](https://arxiv.org/html/2604.14323v1) express Haar second moments through irreducible projections and study anti-concentration beyond the dilute regime. The contribution proposed here is the loss estimate together with a compatible marginal evaluator that retains collisions and supports efficient sampling.
-
-The manuscript also compares earlier noise and loss simulations, and cites the original color-coding and signed-prefix methods. Its bibliography and the supplement's source comparison identify which ingredients are inherited. These comparisons establish the stated scope differences, while priority relative to all concurrent work remains unsettled.
-
-## How the construction works
-
-Trace-one particle reduction gives a factorial cancellation in the exact Haar harmonic decomposition. Averaging over independent loss then suppresses harmonic degree $$l$$ by $$\eta^l$$. The resulting tail bound is
+For Fock inputs, exact particle reduction and the Haar measurement frame cancel the output-dimension factors. Independent loss then gives
 
 $$
 \mathbb E_U\|p_{\eta,U}-q_{U,r}\|_1
 \le\left(\sum_{l=r+1}^{n}\eta^l\right)^{1/2}.
 $$
 
-Degree $$r=O_\eta(1+\log(1/\varepsilon))$$ therefore suffices, without a Haar-to-Gaussian approximation.
+This permits logarithmic harmonic truncation without a dilute-mode approximation. A collision-stratified permanent evaluator computes compatible marginals in time exponential only in the retained degree.
 
-At degree $$l$$, the evaluator separates modes occupied at least twice from singleton modes. A deficit cutoff limits the heavy supports that must be enumerated; random input and output colors compress the remaining sums. An inverse-determinant coefficient identity keeps the heavy-mode binomial weights, singleton spectators and both harmonic projections. Its cost is polynomial in $$n,m$$ times $$\exp(O(l))$$.
+The Gaussian proof needs a different input estimate. Its fixed-number components are invariant pair states, proportional to $$(\sum_i(a_i^\dagger)^2)^{N/2}|0\rangle$$. We derive their reduced-state spectrum and all-order harmonic norms. On a typical loss sector, their exact Haar error weights obey a geometric bound $$A_l\le\rho_*^l$$ with $$\rho_*<1$$ depending only on the fixed parameters. Explicit photon-number tails and a separate small-photon branch cover the remaining sectors.
 
-The colors remain fixed throughout each sample, so every queried prefix belongs to one normalized signed law. Clipping and normalizing the child weights gives a probability sampler. A stability estimate handles small prefix probabilities, and explicit precision bounds control matrix rounding and finite-bit random choices.
+A hafnian generating identity then evaluates the Gaussian marginals. The same collision cutoff and singleton color coding keep the cost exponential only in the logarithmic truncation order. Clipped-prefix sampling produces a proper probability law. The final proof controls matrix rounding in both branches, including the small-photon branch where raw rounded formulas need not remain consistent.
 
-## How expensive is polynomial time?
+## Comparison with prior work
 
-The proof's color-average count $$T$$ has accuracy exponent
+[Go and Jeong](https://arxiv.org/html/2610.27065v1), Corollary 4, give full-output Fock simulation under mode restrictions $$M\ge C_0k^2N$$ and $$M\ge C_Bk^2/(\varepsilon\delta)$$. The Fock theorem here allows every $$m\ge n$$. Their color-coding, inverse-determinant and signed-prefix framework is an important antecedent.
+
+For Gaussian inputs, [Lim](https://arxiv.org/html/2610.06526v1) proves a guarantee for every interferometer, with TV $$O(N\eta^3)$$ and a separate equal-squeezing pair construction reaching $$N^{3/4}$$ mean survivors at fixed accuracy. Our restricted theorem permits a linear mean surviving count at fixed transmission, using Haar averaging. It does not improve the all-interferometer guarantee.
+
+Exact Haar representation methods and the measurement frame are credited to [Nezami](https://arxiv.org/abs/2104.06423), [Arienzo et al.](https://arxiv.org/html/2408.11111v2) and related work. The expanded bibliography also compares [Umanskii–Rubtsov](https://arxiv.org/html/2404.01004v1), [Oh et al.](https://arxiv.org/abs/2306.03709v2), [Renema](https://arxiv.org/abs/1911.10112v1), [Dodd et al.](https://arxiv.org/html/2511.14923v1) and [Liu et al.](https://arxiv.org/html/2512.10643v2). The source supplement records the checked statements and their different assumptions. No equivalent complete restricted theorem was found in that comparison; it does not establish worldwide priority.
+
+## Loss, precision and cost
+
+The Fock construction has a uniform parameter bound. With $$s=1-\eta$$ and $$A=288e^4$$, it uses at most
 
 $$
-\beta(\eta)=2+\frac{2\log 9}{\log(1/\eta)}.
-$$
-
-Each color collection still requires a collision-support search and finite-ring arithmetic. Unpacking those costs gives the conservative full arithmetic bound
-
-$$
-\operatorname{poly}(n,m)\,\widetilde O_\eta(\varepsilon^{-\alpha(\eta)}),
+P(n,m,L_\eta,L_\varepsilon)\,\varepsilon^{-4}s^{-1}A^r,
 \qquad
+r=\min\!\left\{n,\left\lceil\frac{\log(64/(\varepsilon^2s))}{-\log\eta}\right\rceil\right\},
+$$
+
+bit operations, for one polynomial $$P$$ independent of $$\eta,\varepsilon$$. Here the $$L$$ terms are binary input lengths. In particular, loss may decrease as $$1-\eta\ge c\log\log n/\log n$$ while the algorithm stays polynomial for $$\varepsilon^{-1}=O((\log n)^b)$$. This statement does not cover inverse-polynomial accuracy in that same loss regime. It is a sufficient algorithmic region, not a complete hardness phase diagram, and it has not been extended uniformly to the Gaussian theorem.
+
+For fixed Fock transmission, the conservative full arithmetic exponent is
+
+$$
 \alpha(\eta)=4+\frac{2\log(288e^4)}{\log(1/\eta)}.
 $$
 
-The tilde hides powers of $$\log(1/\varepsilon)$$. Section 4.4 of the manuscript derives both estimates.
+| Transmission $$\eta$$ | Full Fock arithmetic upper-bound exponent $$\alpha$$ |
+| --- | ---: |
+| 0.25 | 17.94 |
+| 0.50 | 31.88 |
+| 0.75 | 71.18 |
+| 0.90 | 187.43 |
 
-| Transmission $$\eta$$ | Color count exponent $$\beta$$ | Full arithmetic upper bound $$\alpha$$ |
-| --- | ---: | ---: |
-| 0.25 | 5.17 | 17.94 |
-| 0.50 | 8.34 | 31.88 |
-| 0.75 | 17.28 | 71.18 |
-| 0.90 | 43.71 | 187.43 |
+These are unoptimized theoretical upper bounds, not measured runtimes. The Gaussian construction has its own parameter-dependent constants. Neither result currently demonstrates a practical simulation speedup. A further Fock corollary handles the specified orthogonal bad-bit model of partial distinguishability; arbitrary internal overlap matrices remain outside the claim.
 
-These exponents are unoptimized upper bounds, not measured runtimes. In particular, the exponents near 8 and 44 count color collections only. Polynomial scaling for each fixed transmission leaves the practical cost, especially near $$\eta=1$$, unresolved.
+## Numerical and algebraic checks
 
-## Verification and reproduction
+The package includes 1,536 small Fock-input Haar interferometers and 512 conditional Gaussian pair-state interferometers. All physical output collisions and survivor sectors are enumerated. Across the tested nonzero second-moment cells, the largest measured discrepancies from the exact predictions are 1.870 and 1.385 estimated standard errors, respectively. Cells sharing a matrix are correlated; these are pointwise diagnostics.
 
-The exact checker verifies 329 frame/factorial identities and inequalities, plus eight coefficient cases at degrees 2, 3 and 4. Cases include spectators, full collisions, two heavy modes and an empty input-color class. Removing the spectator factor, second binomial denominator or heavy-mode weights produces discrepancies in 4, 7 and 5 cases respectively.
+![Conditional pair-state Haar tests: mean TV decreases with retained degree, and measured second moments agree with exact predictions within Monte Carlo error bars.]({{ '/assets/img/agentic/full-output-lossy-boson-sampling-v2.0-gaussian.png' | relative_url }})
 
-The checker uses exact rational real and imaginary parts, with a determinant expansion and finite geometric inverse. These tests check sensitive factors in the identities; the all-degree result and bit complexity rest on the analytic proof. The package does not implement or benchmark the full sampler.
+The Gaussian plot starts from fixed-number pair states and uses ideal harmonic truncation. It does not simulate the complete unbounded squeezed-input mixture or benchmark the fast all-size oracle.
 
-To reproduce the checks, extract the supplement and run:
+Finite checks include the original 329 exact Fock identities and eight coefficient cases; 990 exact pair-reduction controls; 7,735 weight-ratio and 6,307 geometric-envelope checks; Gaussian prefix controls through degree eight; and nine exact matrix-rounding cases. Deliberately corrupted formulas are detected. A finite-precision omission in an intermediate Gaussian draft was repaired analytically and tested before this release.
+
+Extract the supplement and run:
 
 ```text
 python3 reproduce.py
 ```
 
-Python 3.10 or later and its standard library suffice. The runner checks payload hashes, executes the comparisons and mutation controls, and compares the results with the included reference. The source, PDF and source comparison are in the supplement.
+Python 3.10 or later, NumPy and SymPy are required. The default run checks hashes, executes finite controls and reaggregates recorded Gaussian data. With Matplotlib installed, `python3 reproduce.py --haar` also reruns both full Haar grids. The numerical backend enumerates small Fock spaces exponentially; it is a validation tool. The all-size claims rest on the proofs.
 
-Derivation, literature comparison, computation, internal review and drafting used AI assistance under human direction. The checker and analytic audit were part of the same research workflow. The website publishes the candidate and its evidence; it does not assign a solved status in the external catalog.
+Derivation, literature comparison, computation, internal review and drafting used AI assistance under human direction. The checks come from that workflow and do not constitute independent expert verification. The external catalog's status is maintained separately.
 
 ## Version history
 
-Version 1.1 adds the author line, expands the literature comparison, clarifies method attribution, removes internal research labels and derives the explicit accuracy-cost table. The main theorem and exact-check cases are unchanged.
+Version 2.0 adds the restricted Gaussian theorem and proof, the uniform Fock loss–accuracy bound, the orthogonal bad-bit corollary, both Haar datasets, the repaired Gaussian precision argument and an expanded literature comparison. The original Fock theorem is retained.
 
-Version 1.0 remains available: [PDF]({{ '/assets/pdf/agentic/full-output-lossy-boson-sampling-v1.pdf' | relative_url }}), [source and checks]({{ '/assets/code/agentic/full-output-lossy-boson-sampling-v1.zip' | relative_url }}), [manifest]({{ '/assets/code/agentic/full-output-lossy-boson-sampling-v1.json' | relative_url }}).
+Version 1.1: [PDF]({{ '/assets/pdf/agentic/full-output-lossy-boson-sampling-v1.1.pdf' | relative_url }}), [source and checks]({{ '/assets/code/agentic/full-output-lossy-boson-sampling-v1.1.zip' | relative_url }}), [manifest]({{ '/assets/code/agentic/full-output-lossy-boson-sampling-v1.1.json' | relative_url }}).
+
+Version 1.0: [PDF]({{ '/assets/pdf/agentic/full-output-lossy-boson-sampling-v1.pdf' | relative_url }}), [source and checks]({{ '/assets/code/agentic/full-output-lossy-boson-sampling-v1.zip' | relative_url }}), [manifest]({{ '/assets/code/agentic/full-output-lossy-boson-sampling-v1.json' | relative_url }}).
 
 [Back to the research log]({{ '/agentic-research/' | relative_url }}).
