@@ -1,20 +1,22 @@
 ---
 layout: page
 title: "Full-output classical simulation of lossy boson sampling with single-photon and equal-squeezing inputs"
-description: "Two internally checked theorem candidates: dense Fock-input sampling and all-mode equal-squeezing Gaussian sampling at fixed loss, with full-output Haar-average guarantees."
+description: "Research notes with corrected prior-work attribution, full-output sampling proofs, exchangeable and nonuniform input-loss corollaries, and reproducibility checks."
 date: "2026-11-03"
 permalink: /agentic-research/full-output-lossy-boson-sampling/
-status: "research manuscript · internally checked"
-target: "QIQC Open Problem Zoo · Constant-transmission sampling, with a Gaussian extension"
+status: "research notes · prior-work attribution corrected"
+target: "QIQC Open Problem Zoo · Constant-transmission sampling; known-covered main guarantees"
 ---
 
-Yuxuan Zhang · Version 2.0 · 3 November 2026
+Yuxuan Zhang · Version 2.1 · 3 November 2026
 
-This version adds a Gaussian boson-sampling theorem to the original Fock-input result. When **every mode is equally squeezed** and transmission is fixed below one, the construction samples the complete photon-count distribution to Haar-average total variation error $$\varepsilon$$ in polynomial time. The mean number of surviving photons can grow linearly with the number of modes.
+**Literature correction.** The previous version missed [Youngrong Lim, *Boson sampling is fragile to loss*](https://arxiv.org/abs/2611.01434). Its Theorems 1–2 already cover the main Fock and equal-squeezing Gaussian guarantees presented here, and Appendix F.2 contains the same nonuniform-input thinning reduction. The earlier statement that no equivalent theorem had been found is withdrawn. These notes retain the proofs, explicit corollaries and reproducibility material without claiming priority for those results.
 
-The manuscript has undergone internal proof review and computational checks. Independent expert review and comprehensive priority confirmation remain outstanding.
+Version 2.1 integrates exchangeable loss through survival moments and independent nonuniform input loss through a short thinning proof. A reduced-purity bound removes the extra factor $$l+1$$ from the nonuniform harmonic estimate. The main Gaussian statement still assumes **every mode is equally squeezed**.
 
-Download the [manuscript (PDF)]({{ '/assets/pdf/agentic/full-output-lossy-boson-sampling-v2.0.pdf' | relative_url }}), [source, checks and numerical data]({{ '/assets/code/agentic/full-output-lossy-boson-sampling-v2.0.zip' | relative_url }}), and [release manifest]({{ '/assets/code/agentic/full-output-lossy-boson-sampling-v2.0.json' | relative_url }}).
+The manuscript has undergone internal proof review and computational checks. Independent expert review remains outstanding. Mathematical checks do not establish novelty.
+
+Download the [manuscript (PDF)]({{ '/assets/pdf/agentic/full-output-lossy-boson-sampling-v2.1.pdf' | relative_url }}), [source, checks and numerical data]({{ '/assets/code/agentic/full-output-lossy-boson-sampling-v2.1.zip' | relative_url }}), and [release manifest]({{ '/assets/code/agentic/full-output-lossy-boson-sampling-v2.1.json' | relative_url }}).
 
 ## Two input models
 
@@ -31,9 +33,37 @@ $$
 
 The polynomial degrees may depend on the fixed physical parameters. Matrix precision and finite random bits are included in the proofs. The Gaussian theorem does not include extra vacuum inputs or unequal squeezing, and neither theorem gives an error guarantee for every deterministic interferometer. These are two distinct input families.
 
-The Fock theorem covers the formulation in the [QIQC Open Problem Zoo](https://qiqc-op.com/problem/op_d436ff9fb9cb0ce5/). The Gaussian theorem is an additional restricted result, not another resolution of that catalog question. Running either algorithm at mean tolerance $$\varepsilon\delta$$ also gives TV at most $$\varepsilon$$ with Haar probability at least $$1-\delta$$, by Markov's inequality.
+The Fock theorem covers the formulation in the [QIQC Open Problem Zoo](https://qiqc-op.com/problem/op_d436ff9fb9cb0ce5/), but this page does not claim a new resolution: the main guarantees are already covered by Lim's work. Running either algorithm at mean tolerance $$\varepsilon\delta$$ also gives TV at most $$\varepsilon$$ with Haar probability at least $$1-\delta$$, by Markov's inequality.
 
-## What changed mathematically
+## Two loss-model corollaries
+
+For exchangeable input loss, let $$K$$ be the survivor count and let
+
+$$
+\mu_l=\mathbb E\frac{(K)_l}{(n)_l}.
+$$
+
+Replacing $$\eta^l$$ by $$\mu_l$$ gives the truncation, collision-bias and color-variance bounds. A polynomial-time guarantee follows when $$\mu_l\le\gamma^l$$ for a fixed $$\gamma<1$$ and the count law is efficiently supplied. In particular, exactly $$k_0\le\gamma n$$ uniformly selected survivors are allowed at **every $$m\ge n$$**, with all output collisions retained. Exchangeability alone does not imply the required decay.
+
+For independent input transmissions $$0\le\eta_i\le\gamma<1$$, first select input $$i$$ with probability $$\eta_i/\gamma$$, then call the uniform-$$\gamma$$ sampler on the selected inputs. Only one subset and one sampler call are needed. Haar invariance under column permutations and TV convexity preserve the error guarantee. This is the reduction already stated in Lim's Appendix F.2; the transmission profile must be independent of $$U$$.
+
+The same mixture gives the stronger reduced-purity estimate
+
+$$
+\sum_{k=l}^n w_k\binom{k}{l}\|R_{k,l}\rho^{(k)}\|_{\mathrm{HS}}^2
+\le\eta_{\max}^l.
+$$
+
+Consequently, the ideal harmonic tail obeys
+
+$$
+\mathbb E_U\|p_U-q_{U,r}\|_1
+\le\left(\sum_{l=r+1}^n\eta_{\max}^l\right)^{1/2},
+$$
+
+without an additional $$l+1$$ factor. The all-zero transmission case is vacuum. This is a proved consequence of the mixture and reduction estimate, not a separate priority claim. General path-dependent attenuation and a guarantee based only on average transmission are outside this statement.
+
+## Proof ingredients
 
 For Fock inputs, exact particle reduction and the Haar measurement frame cancel the output-dimension factors. Independent loss then gives
 
@@ -56,11 +86,15 @@ A hafnian generating identity then evaluates the Gaussian marginals. The same co
 
 ## Comparison with prior work
 
-[Go and Jeong](https://arxiv.org/html/2610.27065v1), Corollary 4, give full-output Fock simulation under mode restrictions $$M\ge C_0k^2N$$ and $$M\ge C_Bk^2/(\varepsilon\delta)$$. The Fock theorem here allows every $$m\ge n$$. Their color-coding, inverse-determinant and signed-prefix framework is an important antecedent.
+[Lim, arXiv:2611.01434v1](https://arxiv.org/html/2611.01434v1), is the direct comparison for both main theorems and independent nonuniform input loss. Its exact Haar estimates and collision-aware low-order construction also overlap the analytic framework here; Appendix D.4 includes finite-bit complexity. The present notes use consistent signed-prefix sampling, whereas Lim uses bounded rejection. No speed or complexity advantage is claimed for that difference. The exchangeable fixed-count statement follows from the conditional estimate also present in Lim's equation (B.20).
 
-For Gaussian inputs, [Lim](https://arxiv.org/html/2610.06526v1) proves a guarantee for every interferometer, with TV $$O(N\eta^3)$$ and a separate equal-squeezing pair construction reaching $$N^{3/4}$$ mean survivors at fixed accuracy. Our restricted theorem permits a linear mean surviving count at fixed transmission, using Haar averaging. It does not improve the all-interferometer guarantee.
+The arXiv record gives a submission date of 1 November 2026 and reports an identical Zenodo version dated 21 October. That earlier date is attributed to the arXiv record; the Zenodo record was not independently verified in this review.
 
-Exact Haar representation methods and the measurement frame are credited to [Nezami](https://arxiv.org/abs/2104.06423), [Arienzo et al.](https://arxiv.org/html/2408.11111v2) and related work. The expanded bibliography also compares [Umanskii–Rubtsov](https://arxiv.org/html/2404.01004v1), [Oh et al.](https://arxiv.org/abs/2306.03709v2), [Renema](https://arxiv.org/abs/1911.10112v1), [Dodd et al.](https://arxiv.org/html/2511.14923v1) and [Liu et al.](https://arxiv.org/html/2512.10643v2). The source supplement records the checked statements and their different assumptions. No equivalent complete restricted theorem was found in that comparison; it does not establish worldwide priority.
+[Go and Jeong](https://arxiv.org/html/2610.27065v1), Corollary 4, give full-output Fock simulation under mode restrictions $$M\ge C_0k^2N$$ and $$M\ge C_Bk^2/(\varepsilon\delta)$$. The fixed-survivor corollary here gives a same-model statement for every $$m\ge n$$. Their color-coding, inverse-determinant and signed-prefix framework is an important antecedent. Uniform/fixed-count conversion predates both papers: see [Oszmaniec–Brod](https://arxiv.org/abs/1801.06166), Section III.A. [Brod–Oszmaniec](https://arxiv.org/abs/1906.06696v4) addresses nonuniform network loss under different, stronger-loss conditions with all-network guarantees.
+
+For Gaussian inputs, [Lim's earlier paper](https://arxiv.org/html/2610.06526v1) proves a guarantee for every interferometer, with TV $$O(N\eta^3)$$ and a separate equal-squeezing pair construction reaching $$N^{3/4}$$ mean survivors at fixed accuracy. The later paper directly covers the fixed-transmission Haar-average theorem; comparison only with the earlier work would be incomplete.
+
+Exact Haar representation methods and the measurement frame are credited to [Nezami](https://arxiv.org/abs/2104.06423), [Arienzo et al.](https://arxiv.org/html/2408.11111v2) and related work. The expanded bibliography also compares [Umanskii–Rubtsov](https://arxiv.org/html/2404.01004v1), [Oh et al.](https://arxiv.org/abs/2306.03709v2), [Renema](https://arxiv.org/abs/1911.10112v1), [Dodd et al.](https://arxiv.org/html/2511.14923v1) and [Liu et al.](https://arxiv.org/html/2512.10643v2). The source supplement records the checked assumptions and the correction to version 2.0's incomplete comparison.
 
 ## Loss, precision and cost
 
@@ -97,7 +131,7 @@ The package includes 1,536 small Fock-input Haar interferometers and 512 conditi
 
 The Gaussian plot starts from fixed-number pair states and uses ideal harmonic truncation. It does not simulate the complete unbounded squeezed-input mixture or benchmark the fast all-size oracle.
 
-Finite checks include the original 329 exact Fock identities and eight coefficient cases; 990 exact pair-reduction controls; 7,735 weight-ratio and 6,307 geometric-envelope checks; Gaussian prefix controls through degree eight; and nine exact matrix-rounding cases. Deliberately corrupted formulas are detected. A finite-precision omission in an intermediate Gaussian draft was repaired analytically and tested before this release.
+Finite checks include the original 329 exact Fock identities and eight coefficient cases; 990 exact pair-reduction controls; 7,735 weight-ratio and 6,307 geometric-envelope checks; Gaussian prefix controls through degree eight; and nine exact matrix-rounding cases. The added loss-model suite has 6,957 exact assertions over 34 transmission profiles, including 328 two-stage probability checks and 102 weighted reduced-purity bounds. It also checks the alternative conditional coefficient identity through degree six. All three mutation families are detected. These are finite algebra controls, not new Haar sampling experiments or a benchmark of the all-size sampler.
 
 Extract the supplement and run:
 
@@ -111,7 +145,9 @@ Derivation, literature comparison, computation, internal review and drafting use
 
 ## Version history
 
-Version 2.0 adds the restricted Gaussian theorem and proof, the uniform Fock loss–accuracy bound, the orthogonal bad-bit corollary, both Haar datasets, the repaired Gaussian precision argument and an expanded literature comparison. The original Fock theorem is retained.
+Version 2.1 integrates the two loss-model corollaries, the bound without $$l+1$$, the ninth finite check suite and the corrected literature attribution. No new catalog resolution is credited.
+
+Version 2.0 added the Gaussian proof, explicit Fock corollaries and numerical evidence. Its novelty comparison is superseded by the correction above. Preserved historical files: [PDF]({{ '/assets/pdf/agentic/full-output-lossy-boson-sampling-v2.0.pdf' | relative_url }}), [source and checks]({{ '/assets/code/agentic/full-output-lossy-boson-sampling-v2.0.zip' | relative_url }}), [manifest]({{ '/assets/code/agentic/full-output-lossy-boson-sampling-v2.0.json' | relative_url }}).
 
 Version 1.1: [PDF]({{ '/assets/pdf/agentic/full-output-lossy-boson-sampling-v1.1.pdf' | relative_url }}), [source and checks]({{ '/assets/code/agentic/full-output-lossy-boson-sampling-v1.1.zip' | relative_url }}), [manifest]({{ '/assets/code/agentic/full-output-lossy-boson-sampling-v1.1.json' | relative_url }}).
 
