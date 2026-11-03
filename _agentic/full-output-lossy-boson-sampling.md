@@ -44,7 +44,13 @@ $$
 
 This permits logarithmic harmonic truncation without a dilute-mode approximation. A collision-stratified permanent evaluator computes compatible marginals in time exponential only in the retained degree.
 
-The Gaussian proof needs a different input estimate. Its fixed-number components are invariant pair states, proportional to $$(\sum_i(a_i^\dagger)^2)^{N/2}|0\rangle$$. We derive their reduced-state spectrum and all-order harmonic norms. On a typical loss sector, their exact Haar error weights obey a geometric bound $$A_l\le\rho_*^l$$ with $$\rho_*<1$$ depending only on the fixed parameters. Explicit photon-number tails and a separate small-photon branch cover the remaining sectors.
+The Gaussian proof needs a different input estimate. Its fixed-number components are invariant pair states, proportional to
+
+$$
+\left(\sum_i(a_i^\dagger)^2\right)^{N/2}\lvert0\rangle.
+$$
+
+We derive their reduced-state spectrum and all-order harmonic norms. On a typical loss sector, their exact Haar error weights obey a geometric bound $$A_l\le\rho_{\star}^l$$ with $$\rho_{\star}<1$$ depending only on the fixed parameters. Explicit photon-number tails and a separate small-photon branch cover the remaining sectors.
 
 A hafnian generating identity then evaluates the Gaussian marginals. The same collision cutoff and singleton color coding keep the cost exponential only in the logarithmic truncation order. Clipped-prefix sampling produces a proper probability law. The final proof controls matrix rounding in both branches, including the small-photon branch where raw rounded formulas need not remain consistent.
 

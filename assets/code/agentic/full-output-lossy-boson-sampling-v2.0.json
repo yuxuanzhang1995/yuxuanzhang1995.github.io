@@ -30,7 +30,7 @@
   },
   "supplement": {
     "path": "assets/code/agentic/full-output-lossy-boson-sampling-v2.0.zip",
-    "sha256": "9300e1f2dc83bcbbe2775e751d2e133a4090918d4e0b0e606112855efbe0abeb",
+    "sha256": "7d359ee8ef23b56b0c94574455ebeb9c0191c8e0f85e9105656d53c7aeaaf7fe",
     "payload_files": 52,
     "manifest_path": "MANIFEST.json"
   },
@@ -40,42 +40,42 @@
     "checks": [
       {
         "script": "checks/exact_checks.py",
-        "seconds": 0.34427950001554564,
+        "seconds": 0.33558633300708607,
         "status": "pass"
       },
       {
         "script": "code/pair_spectrum.py",
-        "seconds": 0.30317058303626254,
+        "seconds": 0.3290497499983758,
         "status": "pass"
       },
       {
         "script": "code/verify_identities.py",
-        "seconds": 0.6802533330046572,
+        "seconds": 0.6259432499646209,
         "status": "pass"
       },
       {
         "script": "code/gaussian_prefix.py",
-        "seconds": 0.3492458749678917,
+        "seconds": 0.35478012496605515,
         "status": "pass"
       },
       {
         "script": "code/check_bottlenecks.py",
-        "seconds": 1.4159315409488045,
+        "seconds": 1.5099136249627918,
         "status": "pass"
       },
       {
         "script": "code/check_precision.py",
-        "seconds": 0.3435042920173146,
+        "seconds": 0.339493915962521,
         "status": "pass"
       },
       {
         "script": "code/check_parameters.py",
-        "seconds": 0.08717954199528322,
+        "seconds": 0.07721429102821276,
         "status": "pass"
       },
       {
         "script": "code/check_extensions.py",
-        "seconds": 1.0882449999917299,
+        "seconds": 1.0941982080112211,
         "status": "pass"
       }
     ],
