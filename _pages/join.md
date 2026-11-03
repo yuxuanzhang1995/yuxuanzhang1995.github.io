@@ -115,9 +115,7 @@ knowing about.
 <li><span class="jrole"><a href="https://www.cqt.sg/join-us/">CQT Alice Postdoctoral Fellowship</a></span>
     — <span class="jnote">supports women researchers in quantum science and technology at CQT.</span></li>
 <li><span class="jrole"><a href="https://www.nus.edu.sg/research/odprt-home/fellowships/eric-and-wendy-schmidt-ai-in-science-postdoctoral-fellowship">Eric and Wendy Schmidt AI in Science Postdoctoral Fellowship</a></span>
-    — <span class="jnote">NUS is one of nine universities in the Schmidt Sciences programme. Calls run in annual rounds, so check the page for the current one.</span></li>
-<li><span class="jrole">NUS Lee Kuan Yew Postdoctoral Fellowship</span>
-    — <span class="jnote">terms of appointment close to an assistant professorship, and a hosting team whose candidate is selected can apply for additional research funding. Candidates are put forward by the host, so this one begins with an email to me rather than a form.</span></li>
+    — <span class="jnote">NUS is one of nine universities in the Schmidt Sciences programme; the fellowship runs up to two years. You apply to the scheme with a host here, so write to me before you do.</span></li>
 <li><span class="jrole"><a href="https://nus.edu.sg/research/odprt-home/fellowships">NUS Fellows Programme (Southeast Asia)</a></span>
     — <span class="jnote">six to twelve months for researchers who are citizens of, or resident in, an ASEAN country. The proposal is written together with the host, and the application needs the host's in-principle approval.</span></li>
 <li><span class="jrole">Portable fellowships from your own region</span>
