@@ -29,6 +29,19 @@ You don't need a quantum background. Physics, computer science and applied maths
 starting points, and a lot of what I care about comes down to algorithms, optimisation or
 statistics. If you're not sure you fit, write anyway.
 
+## Singapore
+
+Singapore is investing heavily in quantum, and much of it is close by. The
+[Centre for Quantum Technologies](https://www.cqt.sg/) is on the NUS campus, and the National Quantum
+Processor Initiative is building trapped-ion and neutral-atom machines here.
+[Quantinuum](https://www.quantinuum.com/press-releases/quantinuum-expands-global-footprint-to-singapore-with-the-establishment-of-a-new-r-d-centre)
+opened an R&D centre in Singapore in March 2026, and Singapore will be the first country outside the
+US to host its Helios computer.
+
+That's a big help for the kind of work we do. A lot of my experimental work has run on Quantinuum's
+trapped-ion machines, and being near the hardware, and the people who build it, makes it much easier
+to go from a theory idea to a test on a real device.
+
 ## Postdocs
 
 Apply through [Academic Jobs Online](https://academicjobsonline.org/ajo/jobs/32512) by
@@ -84,13 +97,6 @@ the application. Ask early, because the host letter is usually needed well befor
 deadline.
 
 Master's, FYP and UROP students: once I'm on campus.
-
-## Singapore
-
-The National Quantum Processor Initiative is building trapped-ion and neutral-atom machines here,
-and [Quantinuum](https://www.quantinuum.com/press-releases/quantinuum-expands-global-footprint-to-singapore-with-the-establishment-of-a-new-r-d-centre)
-opened an R&D centre in Singapore in March 2026. Singapore will be the first country outside the
-US to host its Helios machine.
 
 ## Getting in touch
 
