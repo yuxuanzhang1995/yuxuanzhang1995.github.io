@@ -31,16 +31,11 @@ statistics. If you're not sure you fit, write anyway.
 
 ## Singapore
 
-Singapore is investing heavily in quantum, and much of it is close by. The
+Singapore is investing heavily in quantum and AI, and a lot of it is close by. The
 [Centre for Quantum Technologies](https://www.cqt.sg/) is on the NUS campus, and the National Quantum
-Processor Initiative is building trapped-ion and neutral-atom machines here.
-[Quantinuum](https://www.quantinuum.com/press-releases/quantinuum-expands-global-footprint-to-singapore-with-the-establishment-of-a-new-r-d-centre)
-opened an R&D centre in Singapore in March 2026, and Singapore will be the first country outside the
-US to host its Helios computer.
-
-That's a big help for the kind of work we do. A lot of my experimental work has run on Quantinuum's
-trapped-ion machines, and being near the hardware, and the people who build it, makes it much easier
-to go from a theory idea to a test on a real device.
+Processor Initiative is building trapped-ion and neutral-atom machines here. Quantum companies
+building R&D in Singapore include Horizon Quantum, Quantinuum and Universal Quantum, and Google
+DeepMind, NVIDIA and OpenAI have all set up AI research labs in the city.
 
 ## Postdocs
 
