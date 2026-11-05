@@ -1,0 +1,64 @@
+{
+  "title": "The error prefactor for sequential discrimination of trine states",
+  "authors": [
+    "Yuxuan Zhang"
+  ],
+  "version": "1.1",
+  "date": "2026-11-05",
+  "language": "en",
+  "scope": "Equiprobable pure qubit trine. One pass over identical copies with classical memory. The ratio of sequential to collective minimum errors tends to two.",
+  "question": "Error-ratio formulation of the Vienna geometrically uniform states question.",
+  "article": "https://yuxuanzhang1995.github.io/agentic-research/trine-error-prefactor/",
+  "verification": "Author-side proof review, an alternate purification derivation and exact arithmetic controls. Independent expert review outstanding.",
+  "source_credit": "The all-copy collective success is explicit in Chitambar, Duan and Hsieh, proof of Theorem 12, and Wang, Guo and Zhang, Eq. (29). The sequential converse applies Montanaro, Theorem 1, to the first-copy posterior.",
+  "payload": [
+    {
+      "path": "_agentic/trine-error-prefactor.md",
+      "sha256": "dd7cd79ae8e573fdecb78366af469882244eac8f7a363334bcd21202d501eea7",
+      "bytes": 4410
+    },
+    {
+      "path": "assets/pdf/agentic/trine-error-prefactor-v1.1.pdf",
+      "sha256": "f81604197ead08136618efab7019f57673b31b547b0c922c874943092d6fbe3e",
+      "bytes": 326399
+    },
+    {
+      "path": "assets/code/agentic/trine-error-prefactor-v1.1.zip",
+      "sha256": "ca4f4b0cd628f51009ccb9410e7724539429bac273ad62994e02ead098f9b7e0",
+      "bytes": 11596
+    }
+  ],
+  "source_archive_files": {
+    "README.txt": "c7ab20f8ee664472c7fa8bba5746cbb3fc41f28348749d81e7f46b4fd2a36318",
+    "trine-error-prefactor-v1.1.tex": "0ea3598d47462fb35934635d8bb67f383494d53818f3ee44bc23c01fa82e5e3f",
+    "SOURCE-REVIEW.md": "fc69b9ac9e5872f5604872ca6bbe6204dd2d6b6128aeb0b5d94f8778e97b01ce",
+    "check_prefactor.py": "eadc8cc5809fed7cdc6c05dd6860a164c298b4ff422319ec0d8397f341cb5209",
+    "checks.json": "cb3e9f3f4d5af941c7663b571d8287be99f3c4746fdcac3fcc1b674b3d56a4a5"
+  },
+  "checks": {
+    "physical_first_effects": 1549,
+    "binary_coarsening_cases": 192,
+    "copy_counts_with_certified_enclosures": 127,
+    "collective_comparators": [
+      "binomial Fourier measurement",
+      "real Gram matrix",
+      "Wang, Guo and Zhang (2025), Eq. (29)"
+    ],
+    "arithmetic": "rational arithmetic and integer square-root enclosures"
+  },
+  "source_comparison": {
+    "collective": {
+      "citation": "S.-Y. Wang, D.-W. Guo and W.-H. Zhang (2025), Eqs. (22), (29)",
+      "doi": "10.1360/SSPMA-2024-0534",
+      "comparison": "Their success equals one minus the manuscript collective error for every N. Their unitary acts on all copies."
+    },
+    "zhang_2023": {
+      "citation": "W.-H. Zhang (2023), online 2022-12-15",
+      "doi": "10.1007/s11128-022-03772-7",
+      "access": "publisher preview and institutional listing",
+      "sequential_prefactor": "full-text comparison pending"
+    },
+    "priority": "open"
+  },
+  "prior_version": "1.0"
+}

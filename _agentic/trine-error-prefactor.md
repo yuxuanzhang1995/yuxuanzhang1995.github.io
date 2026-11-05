@@ -6,10 +6,10 @@ date: "2026-11-05"
 permalink: /agentic-research/trine-error-prefactor/
 status: "research note · internally reviewed"
 target: "Geometrically uniform states · the error-ratio formulation of Vienna Problem 31"
-pdf: "trine-error-prefactor-v1.pdf"
+pdf: "trine-error-prefactor-v1.1.pdf"
 ---
 
-Yuxuan Zhang · 5 November 2026 · Version 1.0
+Yuxuan Zhang · 5 November 2026 · Version 1.1
 
 A source chooses one of three equally spaced pure qubit states, the *trine*, and sends $$N$$ identical copies. One receiver measures each copy once, discards it and uses the classical outcomes to choose subsequent measurements. A second receiver can hold the copies and measure them together. How much does the first receiver lose?
 
@@ -32,8 +32,12 @@ $$
 t\leq P_{\rm seq}(N)\leq \frac{1-\sqrt{1-4t}}{2}.
 $$
 
-The collective coefficient follows from the exact square-root measurement on the three product states. Earlier work treats the collective trine, optimal sequential discrimination on two copies, and the binary continuation used here. The note combines these results with the first-outcome bound. [Collective trine](https://doi.org/10.1007/s11128-022-03772-7) · [Finite-copy LOCC comparison](https://arxiv.org/abs/1308.1737) · [Two-copy sequential protocol](https://arxiv.org/abs/1704.01409) · [Adaptive binary discrimination](https://arxiv.org/abs/quant-ph/0410097).
+### What earlier work establishes
 
-The derivation and checks used AI assistance under human direction. Review was internal. The comparison with Wen-Hai Zhang's paper uses the publisher's abstract. Further overlap and independent expert review remain open.
+The collective coefficient of one half follows from a published formula. Chitambar, Duan and Hsieh give the exact collective success in the proof of Theorem 12. Wang, Guo and Zhang obtain the same expression in Eq. (29). They apply a joint unitary to all copies in Eq. (22) and set the probability of unambiguous identification to zero to recover minimum-error discrimination. Expanding either expression gives the coefficient directly. [Chitambar, Duan and Hsieh, Sec. IV-B3](https://arxiv.org/html/1308.1737) · [Wang, Guo and Zhang, Eqs. (22) and (29)](https://doi.org/10.1360/SSPMA-2024-0534).
 
-[Read the paper (PDF)]({{ '/assets/pdf/agentic/trine-error-prefactor-v1.pdf' | relative_url }}) · [LaTeX source and exact checks (ZIP)]({{ '/assets/code/agentic/trine-error-prefactor-v1.zip' | relative_url }}) · [Version and checksums (JSON)]({{ '/assets/code/agentic/trine-error-prefactor-v1.json' | relative_url }})
+On the sequential side, the optimal two-copy protocol and the adaptive binary measurement are known. Applying Montanaro's bound after the first outcome gives a lower bound for every sequential receiver and fixes its leading coefficient at one. Wen-Hai Zhang's 2023 publisher abstract describes optimal joint detection. Checking that article for the sequential bound or the factor two still requires the full text. The note makes no priority claim. [Two-copy sequential protocol](https://arxiv.org/abs/1704.01409) · [Adaptive binary measurement](https://arxiv.org/abs/quant-ph/0410097) · [Zhang's 2023 article](https://doi.org/10.1007/s11128-022-03772-7).
+
+The derivation and source review used AI assistance under human direction. Independent expert review remains open.
+
+[Read the paper (PDF)]({{ '/assets/pdf/agentic/trine-error-prefactor-v1.1.pdf' | relative_url }}) · [Source, literature review and exact checks (ZIP)]({{ '/assets/code/agentic/trine-error-prefactor-v1.1.zip' | relative_url }}) · [Version and checksums (JSON)]({{ '/assets/code/agentic/trine-error-prefactor-v1.1.json' | relative_url }})
