@@ -1,0 +1,43 @@
+{
+  "title": "The error prefactor for sequential discrimination of trine states",
+  "authors": [
+    "Yuxuan Zhang"
+  ],
+  "version": "1.0",
+  "date": "2026-11-05",
+  "language": "en",
+  "scope": "Equiprobable pure qubit trine. One pass over identical copies with classical memory. The ratio of sequential to collective minimum errors tends to two.",
+  "question": "Error-ratio formulation of the Vienna geometrically uniform states question.",
+  "article": "https://yuxuanzhang1995.github.io/agentic-research/trine-error-prefactor/",
+  "verification": "AI-assisted same-agent mathematical review, fresh exact-arithmetic controls and frozen-check replay. Independent expert review and priority remain open.",
+  "source_credit": "The converse follows from Montanaro (2008), Theorem 1, applied to the first-copy posterior. The antitrine and binary continuation and the collective benchmark are established tools.",
+  "payload": [
+    {
+      "path": "_agentic/trine-error-prefactor.md",
+      "sha256": "026fc17408e2e7ca320155a06589137ab2a463ed2d9162956ec7d372c8d02f84",
+      "bytes": 3773
+    },
+    {
+      "path": "assets/pdf/agentic/trine-error-prefactor-v1.pdf",
+      "sha256": "b89960de0071dbfc29ef563d988326c4b7b64f2319de81d27c39c2ae4a10bfd5",
+      "bytes": 269646
+    },
+    {
+      "path": "assets/code/agentic/trine-error-prefactor-v1.zip",
+      "sha256": "8e3d0edf14cf2c9ca3f1c8ef336856724359119b6eefa5057c0ddb1045d6d657",
+      "bytes": 7623
+    }
+  ],
+  "source_archive_files": {
+    "README.txt": "3f511d659aa2bb3e25e39807246b57a3518cbc2652bb444950cc1f2bedff575b",
+    "trine-error-prefactor-v1.tex": "cbd36b1032f6e17c6c3934f604deb8f5849ce6371b350cbaf2e592d8807574e1",
+    "check_prefactor.py": "ce96eb20f7057c6ba8aa06c99adb6060194338811c0d02614bc9206e223c703a",
+    "checks.json": "fbd84c53f841f97500d47a8b74b6460d553675ef39ee426d88c8498d9b172c80"
+  },
+  "checks": {
+    "physical_first_effects": 1549,
+    "binary_coarsening_cases": 192,
+    "copy_counts_with_certified_enclosures": 127,
+    "arithmetic": "rational arithmetic and integer square-root enclosures"
+  }
+}
