@@ -61,7 +61,13 @@ ones that fit:
 
 Apply to the NUS PhD programme in Computer Science or in Physics. If you're admitted you're
 funded: the NUS Research Scholarship covers tuition and a monthly stipend, and you ask for it on
-the same application form.
+the same application form. Strong applicants are also considered, from that same form, for
+better-paid awards: the
+[President's Graduate Fellowship](https://nusgs.nus.edu.sg/scholarships/presidents-graduate-fellowship)
+and, in Physics, the
+[Dean's Graduate Fellowship](https://nusgs.nus.edu.sg/scholarships/faculty-of-science-deans-graduate-fellowship).
+The [AI Singapore PhD Fellowship](https://nusgs.nus.edu.sg/scholarships/ai-singapore-scholarship)
+works by university nomination, so if your project is AI-heavy, tell me.
 
 The two departments have different deadlines:
 
@@ -96,7 +102,14 @@ institution. If you're applying for one of these, I'll write the invitation lett
 the application. Ask early, because the host letter is usually needed well before the scheme's own
 deadline.
 
-Master's, FYP and UROP students: once I'm on campus.
+Undergraduate and master's students can also come for two to three months through
+[IRIS@NUS](https://nusgs.nus.edu.sg/irisnus/), which NUS funds in full.
+
+Visiting PhD students register at NUS as non-graduating research students. Unless your university
+has an exchange agreement with NUS, that means paying a research fee each semester, so include it
+in your funding application. The NUS application goes in at least 12 weeks before you start.
+
+Master's, FYP and UROP students at NUS: once I'm on campus.
 
 ## Getting in touch
 
