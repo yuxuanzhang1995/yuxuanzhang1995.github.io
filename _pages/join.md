@@ -65,14 +65,18 @@ the same application form.
 The two departments have different deadlines:
 
 <table class="jdates">
-<tr><th>Intake</th><th>Physics</th><th>Computer Science</th><th>SINGA</th></tr>
-<tr><td>August 2027</td><td>15 November 2026</td><td>15 December 2026</td><td>1 December 2026</td></tr>
-<tr><td>January 2028</td><td>15 May 2027</td><td>15 June 2027</td><td>1 June 2027</td></tr>
+<tr><th>Intake</th><th>Physics</th><th>Computer Science</th><th>A*STAR (AGS, ACIS)</th></tr>
+<tr><td>August 2027</td><td>15 November 2026</td><td>15 December 2026</td><td>8 February 2027</td></tr>
+<tr><td>January 2028</td><td>15 May 2027</td><td>15 June 2027</td><td>1 August 2027</td></tr>
 </table>
 
-[SINGA](https://www.a-star.edu.sg/scholarships/home/scholarships) is a separate scholarship for
-international students, with its own application. Scholarships are given out as good applications
-come in, so apply early rather than on the deadline.
+Scholarships are given out as good applications come in, so apply early rather than on the deadline.
+
+A\*STAR also funds PhDs at NUS, for international students as well as Singaporeans. The
+[A\*STAR Graduate Scholarship](https://nusgs.nus.edu.sg/scholarships/astar-graduate-scholarship)
+and, for computer science, the
+[A\*STAR Computing and Information Science Scholarship](https://nusgs.nus.edu.sg/scholarships/astar-computing-and-information-science-acis-scholarship)
+are separate applications with their own deadlines, shown in the last column above.
 
 You may not be able to pick me as a supervisor on the form yet, because I don't start until
 December. Name me in your research statement and email me, so I know to look for your application.
