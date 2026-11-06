@@ -51,10 +51,11 @@ ones that fit:
   six to twelve months, for researchers from ASEAN countries. We write the proposal together.
 - [NRF Fellowship](https://www.nrf.gov.sg/grants/nrff/): for people within about seven years of
   their PhD who want to run their own programme.
-- [CQT Alice Fellowship](https://www.cqt.sg/join-us/): for women researchers in quantum science,
-  based at CQT.
-- Fellowships from your home country, such as MSCA, SNSF, NSERC, JSPS or Humboldt. Get in touch
-  early and we'll work on the proposal together.
+- [CQT Alice Fellowship](https://www.cqt.sg/alice-prizes/): for women researchers in quantum
+  science. A CQT group leader makes the nomination, so this one runs through a CQT colleague
+  co-hosting with me.
+- Fellowships from your home country that can be held abroad, such as MSCA, SNSF Postdoc.Mobility,
+  DFG Walter Benjamin or JSPS. Get in touch early and we'll work on the proposal together.
 
 ## PhD students
 
