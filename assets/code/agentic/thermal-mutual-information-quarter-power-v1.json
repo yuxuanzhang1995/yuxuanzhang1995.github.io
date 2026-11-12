@@ -1,0 +1,37 @@
+{
+  "schema": "research-release/1",
+  "title": "Thermal mutual information of order beta^(1/4) in one dimension",
+  "author": "Yuxuan Zhang",
+  "affiliation": null,
+  "version": "1.0",
+  "date": "2026-11-13",
+  "original_identifiers": [
+    "P13",
+    "Q048"
+  ],
+  "website_url": "https://yuxuanzhang1995.github.io/agentic-research/thermal-mutual-information-quarter-power/",
+  "status": "complete proof candidate; sequential internal review",
+  "original_coverage": "complete",
+  "review": {
+    "same_root": true,
+    "independent_agent": false,
+    "external_expert": false,
+    "formal_proof_assistant": false,
+    "report_in_zip": "review/REVIEW.md",
+    "sources_in_zip": "review/PRIMARY-COMPARISON.md"
+  },
+  "source_comparison": "Specific differences supported against inspected primary sources; comprehensive priority unresolved",
+  "files": {
+    "thermal-mutual-information-quarter-power-v1.pdf": "6fca0c671d921222ac0a7c3d749eeeba7b3724257c0678e7a088efee6fc87c70",
+    "thermal-mutual-information-quarter-power-v1.zip": "4c0df16853c0e76ccd9160ac36a29f18510dbba7c57b8cf3a7277012eac988d4"
+  },
+  "source_sha256": "bfe29f822b91e4200dd38b623760d245f9c80fa8f00828829267917beca55d86",
+  "package_manifest_sha256": "5749e978767b576a7c72672a1a3199f8d76f43692031680dbf9883b82076665a",
+  "reproduction": "Fresh-directory finite controls PASS; not all-size proof certification",
+  "external_status": {
+    "journal_review": false,
+    "arxiv_submission": false,
+    "catalogue_acceptance": false
+  },
+  "overlap": null
+}
