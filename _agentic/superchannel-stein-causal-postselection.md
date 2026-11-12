@@ -2,7 +2,7 @@
 layout: page
 title: "Causal postselection and the Stein exponent for quantum superchannels"
 description: "A proof candidate that general causal interleavings, nested strategies and parallel strategies have the same superchannel Stein exponent, with an exponential strong converse."
-date: "2026-11-13"
+date: "2026-11-13T00:00:00+01:00"
 permalink: /agentic-research/superchannel-stein-causal-postselection/
 status: "Complete proof candidate · sequential internal review"
 target: "QIQCOP · Adaptive discrimination of quantum superchannels"
@@ -20,10 +20,10 @@ causality. Can this improve the asymptotic discrimination rate?
 The proposed theorem says that it cannot in the Stein setting:
 
 $$
-zeta_{mathrm{general}}
-=zeta_{mathrm{nested}}
-=zeta_{mathrm{parallel}}
-=D_{mathrm{sc}}^infty(Theta_1VertTheta_2).
+\zeta_{\mathrm{general}}
+=\zeta_{\mathrm{nested}}
+=\zeta_{\mathrm{parallel}}
+=D_{\mathrm{sc}}^\infty(\Theta_1\Vert\Theta_2).
 $$
 
 It covers every finite-dimensional pair, with arbitrary finite tester

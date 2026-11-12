@@ -2,7 +2,7 @@
 layout: page
 title: "Thermal mutual information of order beta to the one-quarter power in one dimension"
 description: "A bounded-local one-dimensional Hamiltonian whose full Gibbs state has middle-cut mutual information at least c beta^(1/4), including all charge and spin sectors."
-date: "2026-11-13"
+date: "2026-11-13T00:00:00+01:00"
 permalink: /agentic-research/thermal-mutual-information-quarter-power/
 status: "Complete proof candidate · sequential internal review"
 target: "Thermal correlations · one-dimensional Gibbs states"
@@ -17,8 +17,8 @@ thermal mutual information grows at least as the one-quarter power of
 inverse temperature:
 
 $$
-I(L:R)_{ho_{eta_N}}ge c,eta_N^{1/4},
-qquad ho_{eta_N}=rac{e^{-eta_NH_N}}{operatorname{Tr}e^{-eta_NH_N}}.
+I(L:R)_{\rho_{\beta_N}}\ge c\,\beta_N^{1/4},
+\qquad \rho_{\beta_N}=\frac{e^{-\beta_NH_N}}{\operatorname{Tr}e^{-\beta_NH_N}}.
 $$
 
 The Hamiltonian has fixed local dimension, nearest-neighbor interactions
@@ -33,16 +33,16 @@ review and comprehensive priority assessment remain outstanding.
 
 ## The precise result
 
-For every $$Nge2^{30}$$ divisible by four, the construction gives an open
+For every $$N\ge2^{30}$$ divisible by four, the construction gives an open
 chain of $$N$$ sites of dimension nine. At
 
 $$
-eta_N=2^{44}N^4,qquad
-I(L:R)_{ho_{eta_N}}gerac{log 2}{8}N.
+\beta_N=2^{44}N^4,\qquad
+I(L:R)_{\rho_{\beta_N}}\ge\frac{\log 2}{8}N.
 $$
 
 Logarithms here are natural. Thus one can take
-$$c=(log2)/(8cdot2^{11})$$. The small local potential depends on the chain
+$$c=(\log2)/(8\cdot2^{11})$$. The small local potential depends on the chain
 length; its coefficients remain uniformly bounded. The theorem is an
 asymptotic existence result along this sequence, with conservative constants.
 It does not claim practical temperatures, translation invariance or an
@@ -78,7 +78,7 @@ does not give the same temperature dependence for a thermal state.
 
 [Kuwahara, Alhambra and Anshu](https://arxiv.org/html/2007.11174v2), Section
 III.2, obtain a thermal lower bound of order
-$$(eta/logeta)^{1/5}$$. The proposed advance here is the finite-density
+$$(\beta/\log\beta)^{1/5}$$. The proposed advance here is the finite-density
 construction and its full-sector thermal estimate, which replace that
 exponent by $$1/4$$. The path-exclusion spectral gap is inherited from
 [Caputo, Liggett and Richthammer](https://arxiv.org/html/0906.1238v4).
