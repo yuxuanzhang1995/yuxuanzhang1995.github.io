@@ -1,0 +1,500 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{microtype}
+\usepackage{needspace}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=MidnightBlue,citecolor=MidnightBlue,
+  urlcolor=MidnightBlue,pdftitle={Scalar compressions and asymptotically optimal tough error models},
+  pdfsubject={Review draft; independent proof and prior-work review pending}}
+\newcommand{\C}{\mathbb C}
+\newcommand{\E}{\mathcal E}
+\newcommand{\V}{\mathcal V}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\ran}{ran}
+\DeclareMathOperator{\Span}{span}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\numberwithin{equation}{section}
+\setlength{\emergencystretch}{1em}
+\title{Scalar compressions and asymptotically optimal\protect\\ tough error models}
+\author{}
+\date{13 November 2026\\[4pt]
+  \small Review draft: independent proof and prior-work review pending}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+For an $e$-dimensional complex space of errors acting on $\C^n$, let
+$c(e,n)$ be the largest code dimension guaranteed by the Knill--Laflamme
+conditions without further assumptions on the errors. We prove
+\[
+ \max\!\left\{1,\left\lfloor\frac{n+1}{e^2+1}\right\rfloor\right\}
+ \le c(e,n)\le
+ \left\lceil\frac{n}{e^2+1}\right\rceil
+ \qquad (1\le e\le n^2).
+\]
+The two bounds differ by at most one. Explicit error spaces attain the
+upper bound, so their largest codes are within one dimension of the
+worst possible value. The lower bound follows from a scalar-compression
+theorem: every $D$-dimensional operator system in $M_n(\C)$ has a rank-$k$
+scalar compression when $2\le k\le n$ and $n\ge Dk-1$.
+We minimize the squared traceless parts of the compressed observables.
+At a positive minimum, stationarity supplies two linear dependencies;
+these leave a common orthogonal direction along which a sum of second
+variations is negative. Thus $c(e,n)=n/(e^2+1)+O(1)$ uniformly in $e,n$,
+with relative asymptotic equality whenever $n/(e^2+1)\to\infty$.
+Some finite integer values remain undetermined.
+\end{abstract}
+
+\section{The guaranteed code dimension}
+
+How large an exactly correcting subspace must exist if only the dimension
+of the error space is known? This is the tough-error-model problem in
+Kr\"uger and Werner's collection~\cite[Problem~14]{KW05} and in its
+current catalog formulation~\cite{QIQC}.
+Let $\E\subseteq M_n(\C)$ be a complex linear space with
+$\dim_{\C}\E=e$. A nonzero subspace $C\subseteq\C^n$ corrects $\E$ if
+its orthogonal projection $P_C$ satisfies
+\begin{equation}\label{eq:kl}
+ P_C A^*B P_C=\lambda(A,B)P_C\qquad(A,B\in\E)
+\end{equation}
+for suitable scalars $\lambda(A,B)$. This is the algebraic
+Knill--Laflamme condition~\cite{KL97,KLV00}. Define
+\begin{equation}\label{eq:minimax}
+ \alpha(\E)=\max\{\dim C:C\text{ satisfies \eqref{eq:kl}}\},
+ \qquad
+ c(e,n)=\min_{\substack{\E\subseteq M_n(\C)\\\dim_{\C}\E=e}}
+ \alpha(\E).
+\end{equation}
+Every line satisfies \eqref{eq:kl}, so these quantities are positive
+integers. The definition imposes neither $I_n\in\E$ nor a
+trace-preserving normalization on a basis of $\E$. In particular, $e$
+counts a dimension of an arbitrary error space, rather than the Kraus
+rank of a normalized channel.
+
+\Needspace{7\baselineskip}
+\begin{theorem}\label{thm:main}
+For all integers $n\ge1$ and $1\le e\le n^2$,
+\begin{equation}\label{eq:main}
+ L(e,n):=\max\!\left\{1,\left\lfloor\frac{n+1}{e^2+1}\right\rfloor\right\}
+ \le c(e,n)\le
+ U(e,n):=\left\lceil\frac{n}{e^2+1}\right\rceil.
+\end{equation}
+There is an explicit $e$-dimensional error space $\E_{e,n}$ with
+$\alpha(\E_{e,n})=U(e,n)$. The gap $U(e,n)-L(e,n)$ is at most one.
+\end{theorem}
+
+Thus the construction is asymptotically optimal whenever the guaranteed
+code dimension diverges. More precisely,
+\begin{equation}\label{eq:asymptotic}
+ \left|c(e,n)-\frac{n}{e^2+1}\right|<1,
+ \qquad
+ \frac{c(e,n)}{n/(e^2+1)}\longrightarrow1
+ \quad\text{if }\frac{n}{e^2+1}\longrightarrow\infty.
+\end{equation}
+The error bound is absolute and allows $e$ to vary with $n$. This answers
+the asymptotically matching-bounds version of the problem. It does not
+determine the exact rounding at every integer pair.
+
+The new lower bound comes from treating all scalar-compression constraints
+at once. For a Hermitian basis $I_n,H_1,\ldots,H_{D-1}$ of an operator
+system, consider the sum of the squared traceless parts of
+$X^*H_jX$, where $X$ is an $n\times k$ isometry. If this sum is positive
+at a minimum, stationarity makes the columns of
+$[X,H_1X,\ldots,H_{D-1}X]$ linearly dependent in at least two directions.
+When $n\ge Dk-1$, a vector perpendicular to all these columns remains.
+Rotating each column of $X$ toward that vector gives a negative sum of
+second derivatives, contradicting minimality. Section~\ref{sec:variance}
+gives the argument without assumptions on the spectra or commutators of
+the observables.
+
+For comparison, the historical estimate recorded in~\cite{KW05}, from
+the Knill--Laflamme--Viola construction~\cite{KLV00}, has scale
+$n/[e^2(e^2+1)]$. Reimpell also studied this problem through repeated
+Hermitian compression and numerical optimization~\cite[Section~3.3.4]{Reimpell}.
+In operator-system language, a scalar compression is a quantum anticlique.
+Weaver's general existence argument~\cite[Theorem~2.10]{Weaver} uses
+diagonal compression followed by a convex partition, with an ambient
+dimension requirement quadratic in the operator-system dimension.
+Allen and Kornell~\cite[Theorem~2.7]{AK} obtain sharper bounds in small
+dimensions: dimension at most $2\ell+1$ guarantees rank $k$ when
+$n>3^\ell(k-1)$, and dimension at most $2\ell+2$ when
+$n>2\cdot3^\ell(k-1)$. In particular, their result gives
+$c(2,n)\ge\lceil n/9\rceil$, whereas \eqref{eq:main} has asymptotic
+coefficient $1/5$. These comparisons concern the stated general bounds;
+special low-dimensional results can have better integer thresholds than
+the theorem below.
+
+The upper construction uses standard rank-one spanning vectors from
+Li and Tam~\cite[Section~2.1]{LiTam} and the block-rank obstruction
+in Weaver~\cite[Proposition~2.1]{Weaver}. Section~\ref{sec:models}
+assembles these ingredients into an $e$-dimensional error space, including
+the zero label required by the unnormalized formulation. The construction
+and its exact largest-code calculation are included in full. Geometric
+and variational descriptions of scalar compression also occur in recent
+work on Pauli detection~\cite{Gupta,Sun}; the theorem here is a uniform
+existence statement for arbitrary operator systems, with no prescribed
+Pauli or representation structure.
+
+\section{A variational scalar-compression theorem}\label{sec:variance}
+
+An \emph{operator system} $\V\subseteq M_n(\C)$ is a complex linear
+subspace containing $I_n$ and satisfying $\V^*=\V$. A rank-$k$
+\emph{scalar compression} of $\V$ is an isometry
+$X:\C^k\longrightarrow\C^n$ for which $X^*HX$ is a scalar multiple
+of $I_k$ for every $H\in\V$. Equivalently, $P=XX^*$ is a rank-$k$
+projection with $P\V P=\C P$.
+
+\Needspace{10\baselineskip}
+\begin{theorem}\label{thm:compression}
+Let $\V\subseteq M_n(\C)$ be an operator system of complex dimension
+$D$. If $2\le k\le n$ and
+\begin{equation}\label{eq:threshold}
+ n\ge Dk-1,
+\end{equation}
+then $\V$ has a rank-$k$ scalar compression. Consequently, every such
+system has a scalar compression of rank at least
+\begin{equation}\label{eq:rank-bound}
+ \min\!\left\{n,\max\!\left\{1,
+ \left\lfloor\frac{n+1}{D}\right\rfloor\right\}\right\}.
+\end{equation}
+For $D=1$, the entire space is a scalar compression.
+\end{theorem}
+
+\begin{proof}
+The self-adjoint part of $\V$ has real dimension $D$ and spans $\V$
+over $\C$. Choose a Hermitian basis $I_n,H_1,\ldots,H_{D-1}$.
+For an isometry $X\in M_{n\times k}(\C)$, set
+\begin{equation}\label{eq:objective}
+ G_j=X^*H_jX,\qquad
+ \mu_j=\frac{\Tr G_j}{k},\qquad
+ T_j=G_j-\mu_j I_k,\qquad
+ F(X)=\sum_{j=1}^{D-1}\Tr(T_j^2).
+\end{equation}
+Each $T_j$ is Hermitian and traceless. Thus $F(X)\ge0$, with equality
+precisely when $X$ is a scalar compression. The function is continuous
+on the compact space of isometries and invariant under $X\mapsto XU$
+for unitary $U\in M_k(\C)$. Fix a global minimizer $X$ and suppose
+that $F(X)>0$.
+
+For an arbitrary variation $Z$ of $X$, differentiation gives
+\begin{equation}\label{eq:differential}
+ dF_X[Z]=4\operatorname{Re}\Tr\!\left[
+ \left(\sum_jH_jXT_j\right)^*Z\right].
+\end{equation}
+Every $Z$ satisfying $X^*Z=0$ is tangent to the isometries at $X$.
+Since \eqref{eq:differential} vanishes for all such $Z$, the horizontal
+component of the gradient is zero. Hence
+\begin{equation}\label{eq:stationarity}
+ \sum_j H_jXT_j=XS,\qquad
+ S=\sum_jG_jT_j.
+\end{equation}
+Each $G_j$ commutes with $T_j$, so $S$ is Hermitian. Introduce the block
+matrices
+\begin{equation}\label{eq:dependencies}
+ M=\begin{bmatrix}X&H_1X&\cdots&H_{D-1}X\end{bmatrix},
+ \qquad
+ B=\begin{bmatrix}-S\\T_1\\\vdots\\T_{D-1}\end{bmatrix}.
+\end{equation}
+Equation~\eqref{eq:stationarity} says $MB=0$. Since $F(X)>0$, at least
+one $T_j$ is a nonzero traceless Hermitian matrix. Such a matrix has
+both a positive and a negative eigenvalue, and therefore rank at least
+two. As a block of $B$, it implies $\rank B\ge2$. The matrix $M$ has
+$Dk$ columns, and its kernel contains the range of $B$. Consequently,
+\begin{equation}\label{eq:rank-defect}
+ \rank M\le Dk-2<n.
+\end{equation}
+Choose a unit vector $y\in\C^n$ orthogonal to the range of $M$. Then
+\begin{equation}\label{eq:orthogonality}
+ X^*y=0,\qquad X^*H_jy=0\quad(1\le j\le D-1),
+\end{equation}
+where the second equality uses $H_j^*=H_j$.
+
+Write $X=[x_1,\ldots,x_k]$. For each $a\in\{1,\ldots,k\}$, replace
+the column $x_a$ by $\cos\theta\,x_a+\sin\theta\,y$, leaving all
+other columns fixed. Denote this isometry by $X_a(\theta)$ and put
+$F_a(\theta)=F(X_a(\theta))$. Let $f_a$ be the $a$th coordinate vector
+of $\C^k$, $E_a=f_af_a^*$, and
+$C_a(\theta)=I_k+(\cos\theta-1)E_a$. Then
+\[
+ X_a(\theta)=XC_a(\theta)+\sin\theta\,yf_a^*.
+\]
+Writing $h_j=y^*H_jy$, the orthogonality in
+\eqref{eq:orthogonality} gives the exact identity
+\begin{equation}\label{eq:rotation-exact}
+ X_a(\theta)^*H_jX_a(\theta)
+ =C_a(\theta)G_jC_a(\theta)+\sin^2\theta\,h_jE_a.
+\end{equation}
+Its expansion at zero is
+\begin{equation}\label{eq:rotation-expansion}
+ G_j+\theta^2\left(h_jE_a-\tfrac12(E_aG_j+G_jE_a)\right)
+ +O(\theta^4).
+\end{equation}
+There is no first-order term. Since
+$\Tr(T_j^2)=\Tr(G_j^2)-(\Tr G_j)^2/k$, differentiation yields
+\begin{align}
+ F_a''(0)
+ &=4\sum_j\Tr\!\left[T_j
+ \left(h_jE_a-\tfrac12(E_aG_j+G_jE_a)\right)\right]\notag\\
+ &=4\sum_j\left(h_j(T_j)_{aa}-(G_jT_j)_{aa}\right).
+ \label{eq:second-variation}
+\end{align}
+The last step again uses $G_jT_j=T_jG_j$. Summing over the $k$ column
+rotations cancels the terms containing $h_j$, because $\Tr T_j=0$.
+Moreover, $\Tr(G_jT_j)=\Tr(T_j^2)$. Therefore
+\begin{equation}\label{eq:negative-sum}
+ \sum_{a=1}^kF_a''(0)
+ =-4\sum_j\Tr(T_j^2)=-4F(X)<0.
+\end{equation}
+Every $F_a''(0)$ must be nonnegative at a minimum, which is a
+contradiction. Thus $F(X)=0$.
+
+A rank-one scalar compression always exists. If $D\ge2$ and the rank
+in \eqref{eq:rank-bound} is at least two, it satisfies
+\eqref{eq:threshold} and is at most $n$, so the first part applies.
+If $D=1$, then $\V=\C I_n$ and rank $n$ is immediate.
+\end{proof}
+
+\begin{remark}
+The same argument shows that any positive stationary value of $F$ has
+a direction of negative second variation under \eqref{eq:threshold}.
+The existence proof uses compactness to select a global minimum; it
+does not provide a running-time guarantee for finding a correcting code.
+\end{remark}
+
+\begin{corollary}\label{cor:lower}
+Every $e$-dimensional complex error space in $M_n(\C)$ has a correcting
+code of dimension at least $L(e,n)$ in \eqref{eq:main}.
+\end{corollary}
+
+\begin{proof}
+Choose a complex basis $A_1,\ldots,A_e$ of $\E$ and form
+\begin{equation}\label{eq:error-system}
+ \V_{\E}=\Span_{\C}\{I_n,A_i^*A_j:1\le i,j\le e\}.
+\end{equation}
+This is an operator system of dimension $d\le e^2+1$.
+Let $k=\lfloor(n+1)/(e^2+1)\rfloor$. If $k\ge2$, then
+$k\le n$ and $n\ge(e^2+1)k-1\ge dk-1$, so
+Theorem~\ref{thm:compression} gives a rank-$k$ scalar compression of
+$\V_{\E}$. The pairwise products $A_i^*A_j$ then satisfy
+\eqref{eq:kl}, and sesquilinearity extends the condition to all
+$A,B\in\E$. When $k\le1$, any line is a correcting code.
+\end{proof}
+
+\section{Explicit tough error spaces}\label{sec:models}
+
+We next construct the error spaces attaining the upper bound in
+Theorem~\ref{thm:main}. The basic obstruction is the following
+block-rank calculation~\cite[Proposition~2.1]{Weaver}.
+
+\Needspace{7\baselineskip}
+\begin{proposition}\label{prop:blocks}
+Let $P_1,\ldots,P_t$ be nonzero mutually orthogonal projections summing
+to $I_n$, and let $\V=\Span_{\C}\{P_1,\ldots,P_t\}$. The largest
+rank of a scalar compression of $\V$ is
+$\max_s\rank P_s$.
+\end{proposition}
+
+\begin{proof}
+If a rank-$k$ projection $P$ satisfies $PP_sP=\lambda_sP$ for all $s$,
+positivity gives $\lambda_s\ge0$ and summing gives $\sum_s\lambda_s=1$.
+For some $s$, $\lambda_s>0$, and hence
+$k=\rank(PP_sP)\le\rank P_s$. Conversely, the range of any $P_s$
+is a scalar compression of $\V$.
+\end{proof}
+
+Assume first that $1\le e<n$, and put $t=\min\{n,e^2+1\}$.
+Let $u_1,\ldots,u_e$ be the coordinate vectors in $\C^e$. Make an
+ordered list of $e^2$ vectors by taking all $u_i$ first, followed, in
+lexicographic order on $i<j$, by
+\begin{equation}\label{eq:labels}
+ u_i+u_j,\qquad u_i+\mathrm{i}u_j.
+\end{equation}
+These are the coordinate and pair vectors in the rank-one spanning
+construction of Li and Tam~\cite[Section~2.1]{LiTam}, without normalizing
+their lengths. Let $v_0=0$, and let $v_1,\ldots,v_{t-1}$ be the first
+$t-1$ vectors of the list. Because $t-1\ge e$, all coordinate vectors
+are included.
+
+Decompose $\C^n$ into $t$ nonzero coordinate blocks with dimensions
+differing by at most one, and denote their projections by
+$P_0,\ldots,P_{t-1}$. Explicitly, writing $n=qt+r$ with $0\le r<t$,
+take $r$ blocks of dimension $q+1$ and $t-r$ blocks of dimension $q$.
+Define diagonal errors
+\begin{equation}\label{eq:errors}
+ A_a=\sum_{s=0}^{t-1}(v_s)_aP_s\quad(1\le a\le e),
+ \qquad \E_{e,n}=\Span_{\C}\{A_1,\ldots,A_e\}.
+\end{equation}
+On the block labelled by $u_i$, $A_a$ equals $\delta_{ai}I$.
+Thus the $A_a$ are linearly independent and $\dim\E_{e,n}=e$.
+
+To identify their product space, write $D_i$ for the projection of the
+block labelled by $u_i$. For $i<j$, let $R_{ij}$ and $S_{ij}$ be the
+projections of the blocks labelled by $u_i+u_j$ and
+$u_i+\mathrm{i}u_j$, respectively; a missing block means the zero
+projection. The labels give
+\begin{equation}\label{eq:cross-products}
+ A_i^*A_j=R_{ij}+\mathrm{i}S_{ij},\qquad
+ R_{ij}=\frac{A_i^*A_j+A_j^*A_i}{2},\qquad
+ S_{ij}=\frac{A_i^*A_j-A_j^*A_i}{2\mathrm{i}}.
+\end{equation}
+They also give
+\begin{align}
+ D_i&=A_i^*A_i-
+ \sum_{\substack{p<q\\i\in\{p,q\}}}(R_{pq}+S_{pq}),
+ \label{eq:coordinate-blocks}\\
+ P_0&=I_n-\sum_iD_i-\sum_{i<j}(R_{ij}+S_{ij}).
+ \label{eq:zero-block}
+\end{align}
+Every block projection therefore belongs to $\V_{\E_{e,n}}$.
+Conversely, the errors and all their products are constant on each
+block. We have proved
+\begin{equation}\label{eq:block-system}
+ \V_{\E_{e,n}}=\Span_{\C}\{P_0,\ldots,P_{t-1}\}.
+\end{equation}
+Proposition~\ref{prop:blocks} now gives
+\begin{equation}\label{eq:largest-code}
+ \alpha(\E_{e,n})=\left\lceil\frac nt\right\rceil
+ =\left\lceil\frac{n}{e^2+1}\right\rceil.
+\end{equation}
+The last equality holds because $t=e^2+1$ when $n\ge e^2+1$, and
+both ceilings equal one otherwise. The rank argument applies to every
+subspace, including codes with support across several blocks.
+
+For $e\ge n$, let $\E_{e,n}$ contain all $n$ diagonal matrix units
+and extend them by off-diagonal matrix units, in lexicographic order,
+to a linearly independent set of $e$ errors. Since $\V_{\E_{e,n}}$
+contains the $n$ rank-one coordinate projections, the same rank argument
+forces every code to have dimension one. Here
+$\lceil n/(e^2+1)\rceil=1$. This covers the remaining parameters,
+including $n=e=1$, and proves the upper bound in
+Theorem~\ref{thm:main}.
+
+The smallest two-error example displaying all five labels is
+\begin{equation}\label{eq:five-block-example}
+ A_1=\operatorname{diag}(0,1,0,1,1),\qquad
+ A_2=\operatorname{diag}(0,0,1,1,\mathrm{i}).
+\end{equation}
+Its product system, with the identity adjoined as in
+\eqref{eq:error-system}, is the full diagonal algebra in $M_5(\C)$,
+so its largest code has dimension one. Replacing the five coordinates
+by balanced blocks gives largest code dimension $\lceil n/5\rceil$
+for every $n\ge5$.
+
+\section{Asymptotics and the remaining integer gap}
+
+It remains to check the one-dimension gap in Theorem~\ref{thm:main}.
+Write $D=e^2+1$ and $n=qD+r$, with $0\le r<D$.
+If $r=0$ or $r=D-1$, the two sides of \eqref{eq:main} agree.
+For $1\le r\le D-2$ and $q\ge1$, they are $q$ and $q+1$.
+If $q=0$, both bounds are one. This proves the stated gap and
+\eqref{eq:asymptotic}.
+It also gives, uniformly in all admissible parameters,
+\begin{equation}\label{eq:uniform-scale}
+ c(e,n)=\Theta\!\left(\max\!\left\{1,\frac{n}{e^2+1}\right\}\right).
+\end{equation}
+For example, absolute comparison constants $1/2$ and $2$ follow
+directly from \eqref{eq:main}.
+
+The bounds recover $c(1,n)=\lceil n/2\rceil$, also a consequence of
+the Hermitian higher-rank numerical-range formula~\cite{CKZ}.
+They give $c(e,n)=1$ whenever $n\le e^2+1$, and exact values at
+$n=q(e^2+1)$ and $n=q(e^2+1)-1$ for every admissible positive $q$.
+For two errors, this yields $c(2,9)=c(2,10)=2$ and
+$c(2,14)=c(2,15)=3$. At $(e,n)=(2,6)$, the present argument leaves
+$1\le c(2,6)\le2$.
+
+The corresponding integer question for arbitrary operator systems is
+whether every $D$-dimensional system has a scalar compression of rank
+$\lceil n/D\rceil$. This is a form of Weaver's conjecture on the lower
+quantum Tur\'an numbers~\cite[following Theorem~2.11]{Weaver}.
+For $D=3$, the stronger threshold $n\ge3k-2$ is known~\cite[Lemma~2.3]{AK}.
+Theorem~\ref{thm:compression} gives $n\ge Dk-1$ for every $D$ but does
+not reach the conjectured threshold $n\ge D(k-1)+1$ in general.
+The remaining rounding problem for error spaces may also benefit from
+their factorization as products $A_i^*A_j$, which was not used beyond
+the dimension bound in Corollary~\ref{cor:lower}.
+
+Finally, normalization changes the extremal problem. If a chosen error
+basis satisfies $\sum_i A_i^*A_i=I_n$, then the identity already lies
+in the product span and $\dim\V_{\E}\le e^2$. The scalar-compression
+theorem still applies with that smaller dimension. The explicit models
+in Section~\ref{sec:models}, however, use a common zero block and need
+not satisfy this normalization. Equation~\eqref{eq:main} concerns the
+arbitrary linear error spaces in \eqref{eq:minimax}.
+
+\begin{thebibliography}{99}
+\raggedright
+\bibitem{KW05}
+O.~Kr\"uger and R.~F.~Werner (eds.),
+\emph{Some Open Problems in Quantum Information Theory} (2005),
+Problem~14, \href{https://arxiv.org/abs/quant-ph/0504166}{arXiv:quant-ph/0504166}.
+
+\bibitem{QIQC}
+QIQCOP Zoo, \emph{Tough error models}, problem record
+\href{https://qiqc-op.com/problem/op_b1b41f737f9b4aeb/}{op\_b1b41f737f9b4aeb},
+version dated 4 September 2026; accessed 13 November 2026.
+
+\bibitem{KL97}
+E.~Knill and R.~Laflamme, Theory of quantum error-correcting codes,
+\emph{Physical Review A} \textbf{55}, 900--911 (1997),
+\href{https://doi.org/10.1103/PhysRevA.55.900}{doi:10.1103/PhysRevA.55.900}.
+
+\bibitem{KLV00}
+E.~Knill, R.~Laflamme, and L.~Viola,
+Theory of quantum error correction for general noise,
+\emph{Physical Review Letters} \textbf{84}, 2525--2528 (2000),
+\href{https://doi.org/10.1103/PhysRevLett.84.2525}{doi:10.1103/PhysRevLett.84.2525};
+\href{https://arxiv.org/abs/quant-ph/9908066}{arXiv:quant-ph/9908066}.
+
+\bibitem{Reimpell}
+M.~Reimpell, \emph{Quantum Information and Convex Optimization},
+doctoral dissertation, Technische Universit\"at Braunschweig (2008),
+Section~3.3.4,
+\href{https://www.osti.gov/etdeweb/servlets/purl/21161752}{archived dissertation}.
+
+\bibitem{Weaver}
+N.~Weaver, The ``quantum'' Tur\'an problem for operator systems,
+\emph{Pacific Journal of Mathematics} \textbf{301}, 335--349 (2019),
+\href{https://doi.org/10.2140/pjm.2019.301.335}{doi:10.2140/pjm.2019.301.335};
+\href{https://arxiv.org/abs/1802.07394}{arXiv:1802.07394}.
+
+\bibitem{AK}
+A.~Allen and A.~Kornell, The quantum Ramsey numbers $QR(2,k)$,
+\emph{Linear and Multilinear Algebra} \textbf{73}, 3959--3964 (2025),
+\href{https://doi.org/10.1080/03081087.2025.2578529}{doi:10.1080/03081087.2025.2578529};
+\href{https://arxiv.org/abs/2507.04128v2}{arXiv:2507.04128v2}.
+
+\bibitem{LiTam}
+C.-K.~Li and B.-S.~Tam, A note on extreme correlation matrices,
+\emph{SIAM Journal on Matrix Analysis and Applications} \textbf{15},
+903--908 (1994),
+\href{https://doi.org/10.1137/S0895479892240683}{doi:10.1137/S0895479892240683}.
+
+\bibitem{Gupta}
+A.~Gupta, B.~Sun, X.~He, and B.~Zeng,
+\emph{Variance Geometry of Exact Pauli-Detecting Codes:
+Continuous Landscapes Beyond Stabilizers} (2026),
+\href{https://arxiv.org/abs/2604.21800v1}{arXiv:2604.21800v1}.
+
+\bibitem{Sun}
+B.~Sun, N.~Cao, Y.~T.~Poon, and B.~Zeng,
+\emph{Geometry of Knill--Laflamme Coefficients for Pauli Error Detection}
+(2026), \href{https://arxiv.org/abs/2610.01992v1}{arXiv:2610.01992v1}.
+
+\bibitem{CKZ}
+M.-D.~Choi, D.~W.~Kribs, and K.~\.{Z}yczkowski,
+Higher-rank numerical ranges and compression problems,
+\emph{Linear Algebra and its Applications} \textbf{418}, 828--839 (2006),
+\href{https://doi.org/10.1016/j.laa.2006.03.019}{doi:10.1016/j.laa.2006.03.019};
+\href{https://arxiv.org/abs/math/0511278}{arXiv:math/0511278}.
+\end{thebibliography}
+\end{document}
