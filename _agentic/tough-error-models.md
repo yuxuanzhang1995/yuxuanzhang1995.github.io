@@ -1,15 +1,15 @@
 ---
 layout: page
 title: "Scalar compressions and asymptotically optimal tough error models"
-description: "A complete candidate for the asymptotic tough-error-model problem: universal bounds differ by at most one code dimension, with explicit nearly worst-case error spaces."
-date: "2026-11-13T00:00:00+01:00"
+description: "Asymptotically matching tough-error bounds, now with a quantitative approximate-code search and a recovery channel with a proved error guarantee."
+date: "2026-11-16T00:00:00+01:00"
 permalink: /agentic-research/tough-error-models/
-status: "Complete asymptotic proof candidate · internal review"
+status: "Version 2 · constructive extension · internal review"
 target: "QIQCOP · Tough error models"
-pdf: "tough-error-models-v1.pdf"
+pdf: "tough-error-models-v2.pdf"
 ---
 
-13 November 2026 · Review version 1.0
+16 November 2026 · Review version 2.0 · Yuxuan Zhang
 
 If an error space has dimension e and acts on an n-dimensional quantum
 system, how much quantum information must remain exactly correctable,
@@ -18,16 +18,26 @@ regardless of the particular errors? The
 asks for this worst-case guarantee and for explicit error spaces that
 nearly attain it.
 
-The manuscript gives a complete proof candidate for the original question's
-asymptotically matching-bounds option. Its two bounds differ by at most one
-code dimension. The proof has received sequential internal analytical
-review; independent review and comprehensive novelty assessment remain
-outstanding.
+Version 2 adds a constructive result to the earlier asymptotically matching
+bounds: an explicit search for approximate codes, a proved bound on the
+number of search steps, and a recovery channel with a quantitative error
+guarantee. The full paper is now 13 pages; Sections 4–6 contain the new
+proofs.
 
-[Full paper (PDF)]({{ '/assets/pdf/agentic/tough-error-models-v1.pdf' | relative_url }})
-· [LaTeX source]({{ '/assets/code/agentic/tough-error-models-v1.tex' | relative_url }})
-· [Source and exact checks (ZIP)]({{ '/assets/code/agentic/tough-error-models-v1.zip' | relative_url }})
-· [Version and SHA-256 metadata]({{ '/assets/code/agentic/tough-error-models-v1.json' | relative_url }})
+The earlier exact bounds still differ by at most one code dimension. The
+new search guarantee is in ideal arithmetic and, for the physical recovery
+corollary, assumes normalized Kraus operators and the stated dimension
+threshold. It does not settle all finite integer values of the original
+problem.
+
+The integrated manuscript and reproducible checks have passed sequential
+internal review. Independent expert review and comprehensive novelty
+assessment remain outstanding.
+
+[Full paper (PDF)]({{ '/assets/pdf/agentic/tough-error-models-v2.pdf' | relative_url }})
+· [LaTeX source]({{ '/assets/code/agentic/tough-error-models-v2.tex' | relative_url }})
+· [Source and exact checks (ZIP)]({{ '/assets/code/agentic/tough-error-models-v2.zip' | relative_url }})
+· [Version and SHA-256 metadata]({{ '/assets/code/agentic/tough-error-models-v2.json' | relative_url }})
 
 ## The result and its scope
 
@@ -62,10 +72,74 @@ to infinity, including when e varies with n.
 
 This is the arbitrary linear-error formulation of the original problem.
 The errors need not include the identity, and no trace-preserving Kraus
-normalization is assumed. The result concerns the dimension of a code,
-not the logarithm of that dimension or an efficient algorithm for finding it.
+normalization is assumed. The result concerns the dimension of a code. The constructive extension
+below supplies a separate approximate search guarantee in ideal arithmetic.
 Some exact finite values remain open; the displayed bounds leave
 1 ≤ c(2,6) ≤ 2.
+
+## New in version 2: search and recovery
+
+The existence proof can now be made quantitative. For Hermitian observables
+H₁,…,Hₘ, let F be the sum of squared traceless compression residuals on a
+rank-k code. Whenever k ≥ 2 and n ≥ (m+1)k−1, Theorem 4.1 proves
+
+$$
+F\le\frac{(k-1)\sqrt{k+1}}{4}\|\operatorname{grad}F\|_{\mathrm F}
+ +\frac{k}{4}\max\{0,-\lambda_{\min}(\operatorname{Hess}F)\}.
+$$
+
+The gradient and Hessian use the real Frobenius metric on the Grassmannian.
+A point with large residual must therefore have either a useful gradient
+or a direction of negative curvature. The search takes a gradient step in
+the first case; in the second, it finds a direction using one singular-vector
+calculation and tests both signs of a column rotation. The complete Hessian
+and decrease estimates appear in the paper.
+
+With β = k∑ⱼhⱼ², where hⱼ ≥ ‖Hⱼ‖op, every step before reaching the target
+obeys
+
+$$
+F_{\mathrm{next}}\le F-\frac{F^2}{48\beta k^3}.
+$$
+
+Consequently, at most ceil(48βk³/τ) steps attain F ≤ τ. For an arbitrary
+specified error basis A₁,…,Aₑ, this controls the approximate
+Knill–Laflamme residual at n ≥ (e²+1)k−1. The residual is measured relative
+to that basis; rescaling the errors changes its size.
+
+For a **physical channel**, assume instead
+
+$$
+\mathcal N(\rho)=\sum_{i=1}^e A_i\rho A_i^*,\qquad
+\sum_{i=1}^e A_i^*A_i=I_n.
+$$
+
+Here e counts the supplied Kraus operators. When e ≥ 2, k ≥ 2 and
+n ≥ e²k−1, Corollary 6.2 constructs an encoding X and a completely
+positive, trace-preserving recovery channel D such that
+
+$$
+\|\mathcal D\circ\mathcal N\circ\mathcal E_X-\operatorname{id}_k\|_\diamond
+\le\varepsilon,
+\qquad \mathcal E_X(\rho)=X\rho X^*,
+$$
+
+using at most
+
+$$
+\left\lceil\frac{768e^2(e^2-1)k^4}{\varepsilon^4}\right\rceil
+$$
+
+search iterations, followed by a polar decomposition and isometric
+completion, for 0 < ε ≤ 2. The decoder is specified on the whole output
+space and the proof includes singular Gram matrices. Its residual bound is
+2√e F^(1/4), capped at 2, in the full diamond-norm convention.
+
+These are ideal matrix-arithmetic iteration bounds. The result does not
+yet provide certified finite-precision complexity, a procedure polynomial
+in the number of qubits, or exact finite termination at ε = 0. The
+normalized-channel threshold does not replace the arbitrary-error threshold
+in the original c(e,n) problem.
 
 ## Why a large scalar compression must exist
 
@@ -179,24 +253,50 @@ compression geometry for Pauli detection; the inspected statements do
 not imply this unconditional dimension guarantee. The manuscript also
 compares Reimpell's earlier tough-model analysis.
 
+The variance optimization objective is already present in
+[Gupta et al., Section VI.1, Eq. (103)](https://arxiv.org/html/2604.21800).
+The recovery agrees on the noisy code support with the standard
+[transpose/Petz map of Ng and Mandayam, Eq. (4)](https://arxiv.org/html/0909.0931).
+General approximate error-correction conditions are developed by
+[Bény and Oreshkov](https://arxiv.org/abs/0907.5391), with broader dilation
+continuity results due to
+[Kretschmann, Schlingemann and Werner](https://arxiv.org/abs/0710.2495).
+The proposed extension is the uniform quantitative search analysis at the
+stated dimension threshold and its explicit recovery consequence.
+
 These are comparisons with specific primary-source statements. They do
 not establish exhaustive priority. The full integer-threshold conjecture
 for general operator systems remains outside the result proved here.
 
 ## Review and reproducibility
 
-The proof and its original-problem scope were read analytically in full.
-Exact arithmetic checks reconstruct nine local second-variation identities
-and reject nine controls that violate the common-orthogonality hypothesis.
-A separate checker exercises the block construction, its dimension and
-normalization assumptions, and deliberately incorrect variants.
-These finite checks support calculations; the universal theorem rests
-on the analytic proof.
+The integrated proof was read analytically in full, with separate checks
+of the exact original statement, dimension assumptions, derivative
+constants, singular-matrix cases and normalized-channel reduction. During
+integration, one auxiliary statement about a literal left kernel was
+corrected to require n > (m+1)k. The main quantitative theorem, its
+threshold n ≥ (m+1)k−1, and the search bounds are unchanged.
 
-The source package includes the full manuscript, both checkers, a replay
-command, hashes and review scope. The PDF is the same seven-page review
-draft approved for this website release. The derivation, literature work,
-computation and drafting used AI assistance under human direction; the
-current proof review was sequential within the same agent. There has been
-no independent expert acceptance, formal proof-assistant certification or
-verified first-publication claim.
+The portable package replays the inherited exact checks, 18 exact
+boundary/extension controls, and four fixed floating search runs. All
+four reached their declared targets, including a run that exercised the
+negative-curvature branch. Finite checks support the calculations; the
+universal guarantees rest on the analytic proofs. Floating residuals are
+not interval-certified numerical diamond bounds.
+
+The package includes the complete manuscript, executable checks, clean
+replay results, the review and correction record, and file hashes. The
+13-page PDF was compiled and every page inspected. The derivation,
+literature work, computation and drafting used AI assistance under human
+direction; the proof review was sequential within the same agent. No
+independent expert acceptance, formal proof-assistant certification or
+verified first-publication claim is asserted.
+
+## Earlier versions
+
+[Website version 1.0 (PDF)]({{ '/assets/pdf/agentic/tough-error-models-v1.pdf' | relative_url }})
+remains available. The
+[earlier archival version 1.1](https://zenodo.org/records/24207864) and its
+[catalog progress report](https://github.com/Naixu-Guo/quantum-open-problems/issues/154)
+precede the constructive extension. This website release is version 2.0;
+those external records have not been updated to it.

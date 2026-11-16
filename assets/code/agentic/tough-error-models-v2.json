@@ -1,0 +1,64 @@
+{
+  "title": "Scalar compressions and asymptotically optimal tough error models",
+  "author": "Yuxuan Zhang",
+  "version": "2.0",
+  "date": "2026-11-16",
+  "status": "Complete asymptotic proof candidate with constructive extension; internally reviewed",
+  "website": "https://yuxuanzhang1995.github.io/agentic-research/tough-error-models/",
+  "review": {
+    "version": "2.0",
+    "date": "2026-11-16",
+    "verdict": "internally_supported_for_authorized_website_release",
+    "review_mode": "same-agent sequential analytical review plus portable finite checks",
+    "independent_expert_review": false,
+    "formal_certification": false,
+    "exhaustive_priority_clearance": false,
+    "original_id": "op_b1b41f737f9b4aeb",
+    "original_asymptotic_option": "inherited complete proof candidate",
+    "new_result": "quantitative scalar compression, ideal-arithmetic approximate search, and normalized-channel recovery corollary",
+    "finite_integer_gap_resolved": false,
+    "finite_precision_complexity_proved": false,
+    "manuscript_source_sha256": "5ebe4a70254a41fb71a6fb95345042f79fd453892d8a492cb1fc3e5095e7d6ad",
+    "manuscript_pdf_sha256": "a4a2be6d78992efd5bb6bf23cc7f8b82407a6979a5f956a6b735cf7a5b2934f9",
+    "pages": 13,
+    "all_six_checker_processes_passed": true,
+    "floating_targets_reached": 4,
+    "new_boundary_extension_exact_controls": 18,
+    "all_pdf_pages_visually_inspected": true,
+    "new_primary_sources_compared": [
+      "https://arxiv.org/html/2604.21800",
+      "https://arxiv.org/html/0909.0931",
+      "https://arxiv.org/abs/0907.5391",
+      "https://arxiv.org/abs/0710.2495"
+    ],
+    "correction": "Auxiliary literal-left-kernel observation requires n > (m+1)k; main theorem and algorithm unaffected."
+  },
+  "previous_versions": {
+    "website_pdf": "https://yuxuanzhang1995.github.io/assets/pdf/agentic/tough-error-models-v1.pdf",
+    "archive_v1_1": "https://zenodo.org/records/24207864",
+    "catalog_report_for_previous_version": "https://github.com/Naixu-Guo/quantum-open-problems/issues/154",
+    "archive_or_catalog_updated_to_v2": false
+  },
+  "files": [
+    {
+      "name": "tough-error-models-v2.pdf",
+      "sha256": "a4a2be6d78992efd5bb6bf23cc7f8b82407a6979a5f956a6b735cf7a5b2934f9",
+      "bytes": 364089,
+      "repository_path": "assets/pdf/agentic/tough-error-models-v2.pdf"
+    },
+    {
+      "name": "tough-error-models-v2.tex",
+      "sha256": "5ebe4a70254a41fb71a6fb95345042f79fd453892d8a492cb1fc3e5095e7d6ad",
+      "bytes": 43132,
+      "repository_path": "assets/code/agentic/tough-error-models-v2.tex"
+    },
+    {
+      "name": "tough-error-models-v2.zip",
+      "sha256": "37cac79a4be7af2595ceab0196c61160cd5113a4b490e256ac29d41701bea83e",
+      "bytes": 423635,
+      "repository_path": "assets/code/agentic/tough-error-models-v2.zip"
+    }
+  ],
+  "source_package_manifest_sha256": "571ed5fe55e345d43b8627a4e2dd34c2cafbe0638ca89b4786f7dc647fae3fd6",
+  "website_page_source_sha256": "6b5e4180b564ac0d7dbe310081ddc08d99383d1a6da1cbaf85d48f58ffb47702"
+}
