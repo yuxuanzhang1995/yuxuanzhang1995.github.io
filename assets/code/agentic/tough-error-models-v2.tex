@@ -1,0 +1,973 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{microtype}
+\usepackage{needspace}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=MidnightBlue,citecolor=MidnightBlue,
+  urlcolor=MidnightBlue,pdftitle={Scalar compressions and asymptotically optimal tough error models},
+  pdfauthor={Yuxuan Zhang},
+  pdfsubject={Version 2.0; quantitative construction; internal review}}
+\newcommand{\C}{\mathbb C}
+\newcommand{\E}{\mathcal E}
+\newcommand{\V}{\mathcal V}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\ran}{ran}
+\DeclareMathOperator{\Span}{span}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\numberwithin{equation}{section}
+\setlength{\emergencystretch}{1em}
+\title{Scalar compressions and asymptotically optimal\protect\\ tough error models}
+\author{Yuxuan Zhang}
+\date{16 November 2026 --- Version 2.0\\[4pt]
+  \small Internal review; independent proof and priority review pending}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+For an $e$-dimensional complex space of errors acting on $\C^n$, let
+$c(e,n)$ be the largest code dimension guaranteed by the Knill--Laflamme
+conditions without further assumptions on the errors. We prove
+\[
+ \max\!\left\{1,\left\lfloor\frac{n+1}{e^2+1}\right\rfloor\right\}
+ \le c(e,n)\le
+ \left\lceil\frac{n}{e^2+1}\right\rceil
+ \qquad (1\le e\le n^2).
+\]
+The two bounds differ by at most one. Explicit error spaces attain the
+upper bound, so their largest codes are within one dimension of the
+worst possible value. The lower bound follows from a scalar-compression
+theorem: every $D$-dimensional operator system in $M_n(\C)$ has a rank-$k$
+scalar compression when $2\le k\le n$ and $n\ge Dk-1$.
+We minimize the squared traceless parts of the compressed observables.
+At a positive minimum, stationarity supplies two linear dependencies;
+these leave a common orthogonal direction along which a sum of second
+variations is negative. Thus $c(e,n)=n/(e^2+1)+O(1)$ uniformly in $e,n$,
+with relative asymptotic equality whenever $n/(e^2+1)\to\infty$.
+We further give a quantitative gradient--curvature inequality for this
+variance objective and an explicit approximation iteration. For a normalized
+channel with $e\ge2$ specified Kraus operators, $k\ge2$, and
+$n\ge e^2k-1$, the iteration constructs a rank-$k$ encoding and a
+transpose-type recovery with logical diamond error at most $\varepsilon$
+in at most $\lceil768e^2(e^2-1)k^4/\varepsilon^4\rceil$ search steps
+in ideal arithmetic. A separate basis-dependent residual guarantee applies
+to arbitrary linear error spaces. No finite-precision complexity or exact
+finite-step search guarantee is asserted, and some finite integer values
+of $c(e,n)$ remain undetermined.
+\end{abstract}
+
+\section{The guaranteed code dimension}
+
+How large an exactly correcting subspace must exist if only the dimension
+of the error space is known? This is the tough-error-model problem in
+Kr\"uger and Werner's collection~\cite[Problem~14]{KW05} and in its
+current catalog formulation~\cite{QIQC}.
+Let $\E\subseteq M_n(\C)$ be a complex linear space with
+$\dim_{\C}\E=e$. A nonzero subspace $C\subseteq\C^n$ corrects $\E$ if
+its orthogonal projection $P_C$ satisfies
+\begin{equation}\label{eq:kl}
+ P_C A^*B P_C=\lambda(A,B)P_C\qquad(A,B\in\E)
+\end{equation}
+for suitable scalars $\lambda(A,B)$. This is the algebraic
+Knill--Laflamme condition~\cite{KL97,KLV00}. Define
+\begin{equation}\label{eq:minimax}
+ \alpha(\E)=\max\{\dim C:C\text{ satisfies \eqref{eq:kl}}\},
+ \qquad
+ c(e,n)=\min_{\substack{\E\subseteq M_n(\C)\\\dim_{\C}\E=e}}
+ \alpha(\E).
+\end{equation}
+Every line satisfies \eqref{eq:kl}, so these quantities are positive
+integers. The definition imposes neither $I_n\in\E$ nor a
+trace-preserving normalization on a basis of $\E$. In particular, $e$
+counts a dimension of an arbitrary error space, rather than the Kraus
+rank of a normalized channel.
+
+\Needspace{7\baselineskip}
+\begin{theorem}\label{thm:main}
+For all integers $n\ge1$ and $1\le e\le n^2$,
+\begin{equation}\label{eq:main}
+ L(e,n):=\max\!\left\{1,\left\lfloor\frac{n+1}{e^2+1}\right\rfloor\right\}
+ \le c(e,n)\le
+ U(e,n):=\left\lceil\frac{n}{e^2+1}\right\rceil.
+\end{equation}
+There is an explicit $e$-dimensional error space $\E_{e,n}$ with
+$\alpha(\E_{e,n})=U(e,n)$. The gap $U(e,n)-L(e,n)$ is at most one.
+\end{theorem}
+
+Thus the construction is asymptotically optimal whenever the guaranteed
+code dimension diverges. More precisely,
+\begin{equation}\label{eq:asymptotic}
+ \left|c(e,n)-\frac{n}{e^2+1}\right|<1,
+ \qquad
+ \frac{c(e,n)}{n/(e^2+1)}\longrightarrow1
+ \quad\text{if }\frac{n}{e^2+1}\longrightarrow\infty.
+\end{equation}
+The error bound is absolute and allows $e$ to vary with $n$. This answers
+the asymptotically matching-bounds version of the problem. It does not
+determine the exact rounding at every integer pair.
+
+The new lower bound comes from treating all scalar-compression constraints
+at once. For a Hermitian basis $I_n,H_1,\ldots,H_{D-1}$ of an operator
+system, consider the sum of the squared traceless parts of
+$X^*H_jX$, where $X$ is an $n\times k$ isometry. If this sum is positive
+at a minimum, stationarity makes the columns of
+$[X,H_1X,\ldots,H_{D-1}X]$ linearly dependent in at least two directions.
+When $n\ge Dk-1$, a vector perpendicular to all these columns remains.
+Rotating each column of $X$ toward that vector gives a negative sum of
+second derivatives, contradicting minimality. Section~\ref{sec:variance}
+gives the argument without assumptions on the spectra or commutators of
+the observables.
+
+For comparison, the historical estimate recorded in~\cite{KW05}, from
+the Knill--Laflamme--Viola construction~\cite{KLV00}, has scale
+$n/[e^2(e^2+1)]$. Reimpell also studied this problem through repeated
+Hermitian compression and numerical optimization~\cite[Section~3.3.4]{Reimpell}.
+In operator-system language, a scalar compression is a quantum anticlique.
+Weaver's general existence argument~\cite[Theorem~2.10]{Weaver} uses
+diagonal compression followed by a convex partition, with an ambient
+dimension requirement quadratic in the operator-system dimension.
+Allen and Kornell~\cite[Theorem~2.7]{AK} obtain sharper bounds in small
+dimensions: dimension at most $2\ell+1$ guarantees rank $k$ when
+$n>3^\ell(k-1)$, and dimension at most $2\ell+2$ when
+$n>2\cdot3^\ell(k-1)$. In particular, their result gives
+$c(2,n)\ge\lceil n/9\rceil$, whereas \eqref{eq:main} has asymptotic
+coefficient $1/5$. These comparisons concern the stated general bounds;
+special low-dimensional results can have better integer thresholds than
+the theorem below.
+
+The upper construction uses standard rank-one spanning vectors from
+Li and Tam~\cite[Section~2.1]{LiTam} and the block-rank obstruction
+in Weaver~\cite[Proposition~2.1]{Weaver}. Section~\ref{sec:models}
+assembles these ingredients into an $e$-dimensional error space, including
+the zero label required by the unnormalized formulation. The construction
+and its exact largest-code calculation are included in full. Geometric
+and variational descriptions of scalar compression also occur in recent
+work on Pauli detection~\cite{Gupta,Sun}; the theorem here is a uniform
+existence statement for arbitrary operator systems, with no prescribed
+Pauli or representation structure.
+
+Version 2 adds a constructive extension to the existence theorem.
+Section~\ref{sec:quantitative} proves a quantitative inequality relating
+compression variance to the gradient and the most negative Hessian
+curvature. Section~\ref{sec:algorithm} turns it into an explicit ideal-
+arithmetic search with a uniform iteration bound, and
+Section~\ref{sec:recovery} connects its residual to a physical recovery
+error for normalized channels. The variance objective itself is not new:
+it appears, for example, in the Pauli-code search of
+Gupta et al.~\cite[Section~VI.1]{Gupta}. Nor is transpose recovery new.
+The proposed addition is the quantitative analysis at the stated dimension
+threshold and its constructive consequence. Comparisons here concern the
+specific cited results and do not establish exhaustive priority.
+
+\section{A variational scalar-compression theorem}\label{sec:variance}
+
+An \emph{operator system} $\V\subseteq M_n(\C)$ is a complex linear
+subspace containing $I_n$ and satisfying $\V^*=\V$. A rank-$k$
+\emph{scalar compression} of $\V$ is an isometry
+$X:\C^k\longrightarrow\C^n$ for which $X^*HX$ is a scalar multiple
+of $I_k$ for every $H\in\V$. Equivalently, $P=XX^*$ is a rank-$k$
+projection with $P\V P=\C P$.
+
+\Needspace{10\baselineskip}
+\begin{theorem}\label{thm:compression}
+Let $\V\subseteq M_n(\C)$ be an operator system of complex dimension
+$D$. If $2\le k\le n$ and
+\begin{equation}\label{eq:threshold}
+ n\ge Dk-1,
+\end{equation}
+then $\V$ has a rank-$k$ scalar compression. Consequently, every such
+system has a scalar compression of rank at least
+\begin{equation}\label{eq:rank-bound}
+ \min\!\left\{n,\max\!\left\{1,
+ \left\lfloor\frac{n+1}{D}\right\rfloor\right\}\right\}.
+\end{equation}
+For $D=1$, the entire space is a scalar compression.
+\end{theorem}
+
+\begin{proof}
+The self-adjoint part of $\V$ has real dimension $D$ and spans $\V$
+over $\C$. Choose a Hermitian basis $I_n,H_1,\ldots,H_{D-1}$.
+For an isometry $X\in M_{n\times k}(\C)$, set
+\begin{equation}\label{eq:objective}
+ G_j=X^*H_jX,\qquad
+ \mu_j=\frac{\Tr G_j}{k},\qquad
+ T_j=G_j-\mu_j I_k,\qquad
+ F(X)=\sum_{j=1}^{D-1}\Tr(T_j^2).
+\end{equation}
+Each $T_j$ is Hermitian and traceless. Thus $F(X)\ge0$, with equality
+precisely when $X$ is a scalar compression. The function is continuous
+on the compact space of isometries and invariant under $X\mapsto XU$
+for unitary $U\in M_k(\C)$. Fix a global minimizer $X$ and suppose
+that $F(X)>0$.
+
+For an arbitrary variation $Z$ of $X$, differentiation gives
+\begin{equation}\label{eq:differential}
+ dF_X[Z]=4\operatorname{Re}\Tr\!\left[
+ \left(\sum_jH_jXT_j\right)^*Z\right].
+\end{equation}
+Every $Z$ satisfying $X^*Z=0$ is tangent to the isometries at $X$.
+Since \eqref{eq:differential} vanishes for all such $Z$, the horizontal
+component of the gradient is zero. Hence
+\begin{equation}\label{eq:stationarity}
+ \sum_j H_jXT_j=XS,\qquad
+ S=\sum_jG_jT_j.
+\end{equation}
+Each $G_j$ commutes with $T_j$, so $S$ is Hermitian. Introduce the block
+matrices
+\begin{equation}\label{eq:dependencies}
+ M=\begin{bmatrix}X&H_1X&\cdots&H_{D-1}X\end{bmatrix},
+ \qquad
+ B=\begin{bmatrix}-S\\T_1\\\vdots\\T_{D-1}\end{bmatrix}.
+\end{equation}
+Equation~\eqref{eq:stationarity} says $MB=0$. Since $F(X)>0$, at least
+one $T_j$ is a nonzero traceless Hermitian matrix. Such a matrix has
+both a positive and a negative eigenvalue, and therefore rank at least
+two. As a block of $B$, it implies $\rank B\ge2$. The matrix $M$ has
+$Dk$ columns, and its kernel contains the range of $B$. Consequently,
+\begin{equation}\label{eq:rank-defect}
+ \rank M\le Dk-2<n.
+\end{equation}
+Choose a unit vector $y\in\C^n$ orthogonal to the range of $M$. Then
+\begin{equation}\label{eq:orthogonality}
+ X^*y=0,\qquad X^*H_jy=0\quad(1\le j\le D-1),
+\end{equation}
+where the second equality uses $H_j^*=H_j$.
+
+Write $X=[x_1,\ldots,x_k]$. For each $a\in\{1,\ldots,k\}$, replace
+the column $x_a$ by $\cos\theta\,x_a+\sin\theta\,y$, leaving all
+other columns fixed. Denote this isometry by $X_a(\theta)$ and put
+$F_a(\theta)=F(X_a(\theta))$. Let $f_a$ be the $a$th coordinate vector
+of $\C^k$, $E_a=f_af_a^*$, and
+$C_a(\theta)=I_k+(\cos\theta-1)E_a$. Then
+\[
+ X_a(\theta)=XC_a(\theta)+\sin\theta\,yf_a^*.
+\]
+Writing $h_j=y^*H_jy$, the orthogonality in
+\eqref{eq:orthogonality} gives the exact identity
+\begin{equation}\label{eq:rotation-exact}
+ X_a(\theta)^*H_jX_a(\theta)
+ =C_a(\theta)G_jC_a(\theta)+\sin^2\theta\,h_jE_a.
+\end{equation}
+Its expansion at zero is
+\begin{equation}\label{eq:rotation-expansion}
+ G_j+\theta^2\left(h_jE_a-\tfrac12(E_aG_j+G_jE_a)\right)
+ +O(\theta^4).
+\end{equation}
+There is no first-order term. Since
+$\Tr(T_j^2)=\Tr(G_j^2)-(\Tr G_j)^2/k$, differentiation yields
+\begin{align}
+ F_a''(0)
+ &=4\sum_j\Tr\!\left[T_j
+ \left(h_jE_a-\tfrac12(E_aG_j+G_jE_a)\right)\right]\notag\\
+ &=4\sum_j\left(h_j(T_j)_{aa}-(G_jT_j)_{aa}\right).
+ \label{eq:second-variation}
+\end{align}
+The last step again uses $G_jT_j=T_jG_j$. Summing over the $k$ column
+rotations cancels the terms containing $h_j$, because $\Tr T_j=0$.
+Moreover, $\Tr(G_jT_j)=\Tr(T_j^2)$. Therefore
+\begin{equation}\label{eq:negative-sum}
+ \sum_{a=1}^kF_a''(0)
+ =-4\sum_j\Tr(T_j^2)=-4F(X)<0.
+\end{equation}
+Every $F_a''(0)$ must be nonnegative at a minimum, which is a
+contradiction. Thus $F(X)=0$.
+
+A rank-one scalar compression always exists. If $D\ge2$ and the rank
+in \eqref{eq:rank-bound} is at least two, it satisfies
+\eqref{eq:threshold} and is at most $n$, so the first part applies.
+If $D=1$, then $\V=\C I_n$ and rank $n$ is immediate.
+\end{proof}
+
+\begin{remark}
+The same argument shows that any positive stationary value of $F$ has
+a direction of negative second variation under \eqref{eq:threshold}.
+The existence proof uses compactness to select a global minimum.
+Sections~\ref{sec:quantitative}--\ref{sec:recovery} supply a quantitative
+approximation search, while exact finite-step construction remains open.
+\end{remark}
+
+\begin{corollary}\label{cor:lower}
+Every $e$-dimensional complex error space in $M_n(\C)$ has a correcting
+code of dimension at least $L(e,n)$ in \eqref{eq:main}.
+\end{corollary}
+
+\begin{proof}
+Choose a complex basis $A_1,\ldots,A_e$ of $\E$ and form
+\begin{equation}\label{eq:error-system}
+ \V_{\E}=\Span_{\C}\{I_n,A_i^*A_j:1\le i,j\le e\}.
+\end{equation}
+This is an operator system of dimension $d\le e^2+1$.
+Let $k=\lfloor(n+1)/(e^2+1)\rfloor$. If $k\ge2$, then
+$k\le n$ and $n\ge(e^2+1)k-1\ge dk-1$, so
+Theorem~\ref{thm:compression} gives a rank-$k$ scalar compression of
+$\V_{\E}$. The pairwise products $A_i^*A_j$ then satisfy
+\eqref{eq:kl}, and sesquilinearity extends the condition to all
+$A,B\in\E$. When $k\le1$, any line is a correcting code.
+\end{proof}
+
+\section{Explicit tough error spaces}\label{sec:models}
+
+We next construct the error spaces attaining the upper bound in
+Theorem~\ref{thm:main}. The basic obstruction is the following
+block-rank calculation~\cite[Proposition~2.1]{Weaver}.
+
+\Needspace{7\baselineskip}
+\begin{proposition}\label{prop:blocks}
+Let $P_1,\ldots,P_t$ be nonzero mutually orthogonal projections summing
+to $I_n$, and let $\V=\Span_{\C}\{P_1,\ldots,P_t\}$. The largest
+rank of a scalar compression of $\V$ is
+$\max_s\rank P_s$.
+\end{proposition}
+
+\begin{proof}
+If a rank-$k$ projection $P$ satisfies $PP_sP=\lambda_sP$ for all $s$,
+positivity gives $\lambda_s\ge0$ and summing gives $\sum_s\lambda_s=1$.
+For some $s$, $\lambda_s>0$, and hence
+$k=\rank(PP_sP)\le\rank P_s$. Conversely, the range of any $P_s$
+is a scalar compression of $\V$.
+\end{proof}
+
+Assume first that $1\le e<n$, and put $t=\min\{n,e^2+1\}$.
+Let $u_1,\ldots,u_e$ be the coordinate vectors in $\C^e$. Make an
+ordered list of $e^2$ vectors by taking all $u_i$ first, followed, in
+lexicographic order on $i<j$, by
+\begin{equation}\label{eq:labels}
+ u_i+u_j,\qquad u_i+\mathrm{i}u_j.
+\end{equation}
+These are the coordinate and pair vectors in the rank-one spanning
+construction of Li and Tam~\cite[Section~2.1]{LiTam}, without normalizing
+their lengths. Let $v_0=0$, and let $v_1,\ldots,v_{t-1}$ be the first
+$t-1$ vectors of the list. Because $t-1\ge e$, all coordinate vectors
+are included.
+
+Decompose $\C^n$ into $t$ nonzero coordinate blocks with dimensions
+differing by at most one, and denote their projections by
+$P_0,\ldots,P_{t-1}$. Explicitly, writing $n=qt+r$ with $0\le r<t$,
+take $r$ blocks of dimension $q+1$ and $t-r$ blocks of dimension $q$.
+Define diagonal errors
+\begin{equation}\label{eq:errors}
+ A_a=\sum_{s=0}^{t-1}(v_s)_aP_s\quad(1\le a\le e),
+ \qquad \E_{e,n}=\Span_{\C}\{A_1,\ldots,A_e\}.
+\end{equation}
+On the block labelled by $u_i$, $A_a$ equals $\delta_{ai}I$.
+Thus the $A_a$ are linearly independent and $\dim\E_{e,n}=e$.
+
+To identify their product space, write $D_i$ for the projection of the
+block labelled by $u_i$. For $i<j$, let $R_{ij}$ and $S_{ij}$ be the
+projections of the blocks labelled by $u_i+u_j$ and
+$u_i+\mathrm{i}u_j$, respectively; a missing block means the zero
+projection. The labels give
+\begin{equation}\label{eq:cross-products}
+ A_i^*A_j=R_{ij}+\mathrm{i}S_{ij},\qquad
+ R_{ij}=\frac{A_i^*A_j+A_j^*A_i}{2},\qquad
+ S_{ij}=\frac{A_i^*A_j-A_j^*A_i}{2\mathrm{i}}.
+\end{equation}
+They also give
+\begin{align}
+ D_i&=A_i^*A_i-
+ \sum_{\substack{p<q\\i\in\{p,q\}}}(R_{pq}+S_{pq}),
+ \label{eq:coordinate-blocks}\\
+ P_0&=I_n-\sum_iD_i-\sum_{i<j}(R_{ij}+S_{ij}).
+ \label{eq:zero-block}
+\end{align}
+Every block projection therefore belongs to $\V_{\E_{e,n}}$.
+Conversely, the errors and all their products are constant on each
+block. We have proved
+\begin{equation}\label{eq:block-system}
+ \V_{\E_{e,n}}=\Span_{\C}\{P_0,\ldots,P_{t-1}\}.
+\end{equation}
+Proposition~\ref{prop:blocks} now gives
+\begin{equation}\label{eq:largest-code}
+ \alpha(\E_{e,n})=\left\lceil\frac nt\right\rceil
+ =\left\lceil\frac{n}{e^2+1}\right\rceil.
+\end{equation}
+The last equality holds because $t=e^2+1$ when $n\ge e^2+1$, and
+both ceilings equal one otherwise. The rank argument applies to every
+subspace, including codes with support across several blocks.
+
+For $e\ge n$, let $\E_{e,n}$ contain all $n$ diagonal matrix units
+and extend them by off-diagonal matrix units, in lexicographic order,
+to a linearly independent set of $e$ errors. Since $\V_{\E_{e,n}}$
+contains the $n$ rank-one coordinate projections, the same rank argument
+forces every code to have dimension one. Here
+$\lceil n/(e^2+1)\rceil=1$. This covers the remaining parameters,
+including $n=e=1$, and proves the upper bound in
+Theorem~\ref{thm:main}.
+
+The smallest two-error example displaying all five labels is
+\begin{equation}\label{eq:five-block-example}
+ A_1=\operatorname{diag}(0,1,0,1,1),\qquad
+ A_2=\operatorname{diag}(0,0,1,1,\mathrm{i}).
+\end{equation}
+Its product system, with the identity adjoined as in
+\eqref{eq:error-system}, is the full diagonal algebra in $M_5(\C)$,
+so its largest code has dimension one. Replacing the five coordinates
+by balanced blocks gives largest code dimension $\lceil n/5\rceil$
+for every $n\ge5$.
+
+\section{A quantitative scalar-compression inequality}\label{sec:quantitative}
+
+We now strengthen the existence argument to a uniform estimate away from
+stationarity. Let $H_1,\ldots,H_m$ be Hermitian $n\times n$ matrices;
+they need not be linearly independent. Throughout this section assume
+$m\ge1$, $2\le k\le n$, and
+\begin{equation}\label{eq:quantitative-dimension}
+ n\ge(m+1)k-1.
+\end{equation}
+Use the definitions $G_j,T_j,F$ in \eqref{eq:objective}, now summing
+over $1\le j\le m$. The Grassmannian is represented by isometries $X$,
+with horizontal tangent space $X^*Z=0$ and real metric
+$\langle Z,W\rangle=\operatorname{Re}\Tr(Z^*W)$. Thus
+\begin{equation}\label{eq:residual-gradient}
+ R=(I_n-XX^*)\sum_jH_jXT_j,\qquad \operatorname{grad}F=4R.
+\end{equation}
+The Hessian quadratic form at $Z$ is the second derivative along the
+geodesic $\exp[t(ZX^*-XZ^*)]X$. Define
+\begin{equation}\label{eq:quantitative-constants}
+ \rho=\|R\|_{\rm op},\qquad
+ \eta=\max\{0,-\lambda_{\min}(\operatorname{Hess}F)\},\qquad
+ a=(k-1)\sqrt{k+1}.
+\end{equation}
+All Hessian eigenvalues refer to this real metric.
+
+\begin{theorem}\label{thm:quantitative}
+Under \eqref{eq:quantitative-dimension}, every isometry $X$ satisfies
+\begin{align}
+ F^2&\le a^2\rho^2+\frac{k}{4}\eta F,\label{eq:robust-quadratic}\\
+ F&\le a\rho+\frac{k}{4}\eta
+ \le\frac{a}{4}\|\operatorname{grad}F\|_{\rm F}
+       +\frac{k}{4}\eta.\label{eq:robust-linear}
+\end{align}
+In particular, if $F>0$ at a stationary point, then
+$\lambda_{\min}(\operatorname{Hess}F)\le-4F/k$.
+\end{theorem}
+
+\begin{lemma}\label{lem:stack}
+For traceless Hermitian $k\times k$ matrices $T_j$, let
+$A=[T_1;\ldots;T_m]$ and $F=\sum_j\|T_j\|_{\rm F}^2$.
+The second largest singular value satisfies
+\begin{equation}\label{eq:stack-bound}
+ \sigma_2(A)^2\ge\frac{F}{k(k-1)}.
+\end{equation}
+The constant is sharp for arbitrary such stacks.
+\end{lemma}
+
+\begin{proof}
+Given a unit vector $v$, write a traceless Hermitian $T$ in a basis
+beginning with $v$ as $\left[\begin{smallmatrix}b&w^*\\w&C\end{smallmatrix}\right]$.
+Here $b\in\mathbb R$ and $\Tr C=-b$, so
+\[
+ \|T\|_{\rm F}^2
+ =b^2+2\|w\|^2+\|C\|_{\rm F}^2
+ \ge\frac{k}{k-1}b^2+2\|w\|^2
+ \ge\frac{k}{k-1}\|Tv\|^2.
+\]
+For $Q=A^*A=\sum_jT_j^2$, this gives
+$\lambda_{\max}(Q)\le(k-1)F/k$. Since $\Tr Q=F$, the remaining
+$k-1$ eigenvalues sum to at least $F/k$. Their largest is at least
+$F/[k(k-1)]$, proving \eqref{eq:stack-bound}. The single matrix
+$\operatorname{diag}(k-1,-1,\ldots,-1)$ attains equality.
+\end{proof}
+
+Complete $X$ to a unitary $[X,Y]$, and write
+\begin{equation}\label{eq:block-hessian-data}
+ [X,Y]^*H_j[X,Y]=
+ \begin{bmatrix}G_j&C_j^*\\C_j&D_j\end{bmatrix},\quad
+ C=[C_1,\ldots,C_m],\quad S=\sum_jG_jT_j.
+\end{equation}
+Here $C$ has $q=n-k$ rows and $p=mk$ columns; \eqref{eq:quantitative-dimension}
+says $q\ge p-1$. The identity $CA=Y^*R$ supplies a useful
+approximately common orthogonal direction whenever $F>0$.
+Indeed, take the two leading left singular vectors of $A$ as the
+columns of $U_2$. Then
+$\|CU_2\|_{\rm op}\le\rho/\sigma_2(A)$, by restricting
+$CA$ to the corresponding two right singular vectors.
+The rank of $C(I_p-U_2U_2^*)$ is at most $p-2<q$, so it has
+a unit vector $u$ in its left kernel. Consequently
+\begin{equation}\label{eq:approx-common}
+ \|C^*u\|^2\le\|CU_2\|_{\rm op}^2
+ \le\frac{k(k-1)\rho^2}{F}.
+\end{equation}
+A unit vector minimizing $\|C^*u\|$ satisfies the same bound.
+This includes rectangular $C$ with $q=p-1$; no inverse of $A$ is used.
+
+For completeness, the full Hessian calculation needed here does not
+assume stationarity or common orthogonality. Write a horizontal direction
+as $Z=YW$ and put $L_j=C_j^*W+W^*C_j$, with
+$L_{j,0}=L_j-(\Tr L_j)I_k/k$. Along its geodesic,
+$X'(0)=YW$ and $X''(0)=-XW^*W$. Therefore
+\[
+ G_j'(0)=L_j,\qquad
+ G_j''(0)=2W^*D_jW-W^*WG_j-G_jW^*W.
+\]
+Differentiating $F=\sum_j\Tr(T_j^2)$ gives
+\begin{equation}\label{eq:full-hessian}
+ \operatorname{Hess}F[YW,YW]
+ =2\sum_j\|L_{j,0}\|_{\rm F}^2
+  +4\sum_j\Tr(T_jW^*D_jW)-4\Tr(SW^*W).
+\end{equation}
+Let $y=Yu$ for a unit $u$ and let $f_b$ denote the $b$th coordinate
+vector in $\C^k$. Apply \eqref{eq:full-hessian} to the $2k$ unit
+directions $Z_b=yf_b^*$ and $\mathrm{i}Z_b$. For $z=C_j^*u$, the
+two first variations are $zf_b^*+f_bz^*$ and
+$\mathrm{i}(zf_b^*-f_bz^*)$. Summing their squared traceless norms
+over $b$ gives $4(k-1/k)\|z\|^2$. The $D_j$ terms cancel since
+$\Tr T_j=0$, and the last terms sum to $-8\Tr S=-8F$. Hence
+\begin{equation}\label{eq:phase-sum}
+ \sum_{b=1}^k\bigl(\operatorname{Hess}F[Z_b,Z_b]
+             +\operatorname{Hess}F[\mathrm{i}Z_b,\mathrm{i}Z_b]\bigr)
+ =8\left(k-\frac1k\right)\|C^*u\|^2-8F.
+\end{equation}
+Both phases are needed for this identity at a general point.
+
+\begin{proof}[Proof of Theorem~\ref{thm:quantitative}]
+The case $F=0$ is immediate. Otherwise choose $u$ as in
+\eqref{eq:approx-common}. The left side of \eqref{eq:phase-sum}
+is at least $-2k\eta$, while its right side is at most
+$8a^2\rho^2/F-8F$. Rearrangement proves
+\eqref{eq:robust-quadratic}. Its positive root is at most
+$a\rho+k\eta/4$; also
+$\rho\le\|\operatorname{grad}F\|_{\rm F}/4$.
+At stationarity $\rho=0$, so a positive $F$ forces $\eta\ge4F/k$.
+\end{proof}
+
+If $n\ge(m+1)k$, then $q\ge p$ and a literal left kernel is
+available when $q>p$. At $q=p$ it need not be. The uniform argument
+above covers both cases; it requires no rank assumption on $C$.
+If $q>p$, \eqref{eq:phase-sum} directly gives a curvature at most
+$-4F/k$ at every point with $F>0$, even without stationarity.
+
+\section{An explicit approximation iteration}\label{sec:algorithm}
+
+Fix bounds $h_j\ge\|H_j\|_{\rm op}$ and let
+\begin{equation}\label{eq:beta}
+ \beta=k\sum_{j=1}^m h_j^2.
+\end{equation}
+Then $0\le F\le\beta$. The following construction counts ideal
+real and complex matrix operations, including singular vectors and
+geodesic evaluations. It is not a finite-precision complexity claim.
+
+\begin{theorem}\label{thm:iteration}
+Assume \eqref{eq:quantitative-dimension}. For every $\tau>0$, the
+iteration below starts from any isometry and attains $F\le\tau$
+in at most
+\begin{equation}\label{eq:iteration-count}
+ \left\lceil\frac{48\beta k^3}{\tau}\right\rceil
+\end{equation}
+iterations in ideal arithmetic. If $m=0$ or $\beta=0$, $F=0$ and
+no iteration is needed.
+\end{theorem}
+
+At a current isometry $X$, stop if $F\le\tau$; otherwise compute
+$g=\|\operatorname{grad}F\|_{\rm F}$ and $a$ from
+\eqref{eq:quantitative-constants}.
+\begin{enumerate}
+\item If $g\ge F/a$, use the unit direction
+$Z=-\operatorname{grad}F/g$ and replace $X$ by
+$\exp[t(ZX^*-XZ^*)]X$, with $t=g/(16\beta)$.
+\item If $g<F/a$, form $C$ in \eqref{eq:block-hessian-data} and
+find a unit vector minimizing $\|C^*u\|$. Among the $2k$ directions
+in \eqref{eq:phase-sum}, choose one with the smallest curvature $q_0$.
+Evaluate its geodesic at both $t$ and $-t$, where
+$t^2=F/(32\beta k)$, and retain the point with smaller $F$.
+\end{enumerate}
+The second step needs a singular-vector calculation and $2k$ directional
+curvatures; it does not require diagonalizing the full Hessian.
+
+\begin{proof}
+For any unit horizontal $Z$, the skew-Hermitian generator
+$J=ZX^*-XZ^*$ satisfies $\|J\|_{\rm op}=\|Z\|_{\rm op}\le1$.
+Along $X(t)=\exp(tJ)X$, each derivative $J^rX(t)$ has operator norm
+at most one and Frobenius norm at most $\sqrt{k}$. Leibniz' rule yields
+\[
+ \left\|\frac{d^r}{dt^r}\bigl(X(t)^*H_jX(t)\bigr)\right\|_{\rm F}
+ \le 2^r\sqrt{k}\,h_j.
+\]
+Traceless projection is a Frobenius contraction. Differentiating its
+squared norm once more gives, for all $r\ge0$ and all $t$,
+\begin{equation}\label{eq:derivative-bound}
+ \left|\frac{d^r}{dt^r}F(X(t))\right|\le4^r\beta.
+\end{equation}
+In the first branch, $F'(0)=-g$ and $|F''(t)|\le16\beta$, so
+\begin{equation}\label{eq:gradient-decrease}
+ F(X(t))\le F-\frac{g^2}{32\beta}
+ \le F-\frac{F^2}{32\beta a^2}
+ \le F-\frac{F^2}{32\beta k^3}.
+\end{equation}
+In the second branch, $\rho\le g/4<F/(4a)$. Combining
+\eqref{eq:approx-common} and \eqref{eq:phase-sum}, and dividing by
+the $2k$ directions, gives
+\begin{equation}\label{eq:chosen-curvature}
+ q_0<-\frac{15F}{4k}\le-\frac{2F}{k}.
+\end{equation}
+Average the two Taylor expansions at $t$ and $-t$; their odd terms
+cancel. Using $|F^{(4)}|\le256\beta$ from
+\eqref{eq:derivative-bound} gives
+\begin{align}
+ \frac{F(X(t))+F(X(-t))}{2}
+ &\le F+\frac{q_0t^2}{2}+\frac{256\beta}{24}t^4\notag\\
+ &\le F-\frac{F^2}{48\beta k^2}.\label{eq:curvature-decrease}
+\end{align}
+One of the two tested values is no greater than their average. Both
+branches therefore satisfy
+\begin{equation}\label{eq:uniform-decrease}
+ F_{\rm next}\le F-\frac{F^2}{48\beta k^3}.
+\end{equation}
+Unless $F_{\rm next}=0$, this implies
+$1/F_{\rm next}\ge1/F+1/(48\beta k^3)$; here $F\le\beta$ ensures
+the denominator is positive. Iterating proves \eqref{eq:iteration-count}.
+\end{proof}
+
+\subsection{Residuals for an arbitrary linear error space}
+
+Fix a basis $A_1,\ldots,A_e$ for the original, unnormalized error space.
+Use $m=e^2$ Hermitian observables
+\begin{equation}\label{eq:arbitrary-observables}
+ A_i^*A_i\ (1\le i\le e),\qquad
+ \frac{A_i^*A_j+A_j^*A_i}{\sqrt2},\quad
+ \frac{A_i^*A_j-A_j^*A_i}{\mathrm{i}\sqrt2}\quad(i<j).
+\end{equation}
+Their objective is exactly
+\begin{equation}\label{eq:kl-residual}
+ F=\sum_{i,j=1}^e
+ \|X^*A_i^*A_jX-\lambda_{ij}I_k\|_{\rm F}^2,\qquad
+ \lambda_{ij}=\frac{\Tr(X^*A_i^*A_jX)}{k}.
+\end{equation}
+To see this, pair the $(i,j)$ and $(j,i)$ residuals, which are adjoints,
+and use the Frobenius parallelogram identity for their real and imaginary
+Hermitian parts. Thus for $n\ge(e^2+1)k-1$ the iteration produces
+$F\le\delta^2$ for any $\delta>0$. If $A=\sum_i a_iA_i$ and
+$B=\sum_i b_iA_i$, Cauchy--Schwarz gives
+\begin{equation}\label{eq:arbitrary-kl-bound}
+ \|X^*A^*BX-(a^*\lambda b)I_k\|_{\rm op}
+ \le\delta\|a\|_2\|b\|_2.
+\end{equation}
+The coefficient norms and $\beta$ refer to the specified basis.
+Rescaling that basis changes them. In particular, this algebraic
+statement makes no assertion about a physical channel's recovery error
+without a channel normalization.
+
+\section{A recovery channel with an explicit error bound}\label{sec:recovery}
+
+We next assume that $A_1,\ldots,A_e\in M_n(\C)$ are Kraus operators
+with $\sum_iA_i^*A_i=I_n$, and write
+$\mathcal N(\sigma)=\sum_iA_i\sigma A_i^*$. They need not be
+linearly independent; here $e$ counts the specified Kraus operators.
+For an isometry $X:\C^k\to\C^n$, let
+$\mathcal E_X(\rho)=X\rho X^*$ and set
+\begin{equation}\label{eq:gram-data}
+ \begin{split}
+ W&=[A_1X,\ldots,A_eX],\qquad K=W^*W,\\
+ \Lambda_{ij}&=\frac{\Tr(K_{ij})}{k},\qquad
+ L=\Lambda\otimes I_k,\qquad F=\|K-L\|_{\rm F}^2.
+ \end{split}
+\end{equation}
+Thus $F$ equals \eqref{eq:kl-residual}, and
+$\Lambda\ge0$, $\Tr\Lambda=1$.
+
+\begin{theorem}\label{thm:recovery}
+Assume $n\ge ek$. Extend the polar factor of $W$ to an isometry
+$U:\C^e\otimes\C^k\to\C^n$, so that $W=U\sqrt K$.
+For any state $\rho_*$ on $\C^k$, the map
+\begin{equation}\label{eq:decoder}
+ \mathcal D(\sigma)=\Tr_{\C^e}(U^*\sigma U)
+       +\Tr[(I_n-UU^*)\sigma]\rho_*
+\end{equation}
+is a channel on all of $M_n(\C)$ and satisfies
+\begin{equation}\label{eq:diamond-bound}
+ \|\mathcal D\mathcal N\mathcal E_X-\operatorname{id}_k\|_\diamond
+ \le\min\{2,\,2\sqrt e\,F^{1/4}\}.
+\end{equation}
+The diamond norm uses the full trace-norm convention, with no factor
+of $1/2$. No invertibility of $K$ or $\Lambda$ is required.
+\end{theorem}
+
+\begin{proof}
+The matrix $\Lambda$ is positive because it is the normalized partial
+trace of the positive block matrix $K$; channel normalization gives
+$\Tr\Lambda=1$. The partial polar isometry of $W$ maps
+$\operatorname{supp}K$ into $\C^n$. The inequality $n\ge ek$
+allows it to be completed isometrically on the kernel of $K$.
+Both terms of \eqref{eq:decoder} are completely positive: the second
+is a positive measurement followed by preparation of $\rho_*$. Their
+traces sum to $\Tr\sigma$, so $\mathcal D$ is trace preserving.
+
+We use the square-root estimate
+\begin{equation}\label{eq:sqrt-holder}
+ \|\sqrt K-\sqrt L\|_{\rm op}
+ \le\|K-L\|_{\rm op}^{1/2}
+ \qquad(K,L\ge0).
+\end{equation}
+Here is an argument that also covers singular matrices. If
+$d=\|K-L\|_{\rm op}$, then $K\le L+dI$ and $L\le K+dI$.
+The square root is operator monotone, as follows from the convergent
+integral
+\[
+ \sqrt A=\frac1\pi\int_0^\infty
+ t^{-1/2}A(A+tI)^{-1}\,dt
+\]
+and $A(A+tI)^{-1}=I-t(A+tI)^{-1}$. Also
+$\sqrt{L+dI}\le\sqrt L+\sqrt d\,I$ by scalar functional calculus
+of $L$. Applying these facts in both orders bounds both signs of
+$\sqrt K-\sqrt L$ by $\sqrt d\,I$, proving \eqref{eq:sqrt-holder}.
+
+Put $W_0=U\sqrt L$, and split it into $e$ blocks $B_i$ of size
+$n\times k$. Explicitly,
+$B_i=U((\sqrt\Lambda\,f_i)\otimes I_k)$, so
+\begin{equation}\label{eq:nearby-channel}
+ \mathcal N_0(\rho)=\sum_iB_i\rho B_i^*
+ =U(\Lambda\otimes\rho)U^*,\qquad
+ \mathcal D\mathcal N_0=\operatorname{id}_k.
+\end{equation}
+The map $\mathcal N_0$ is trace preserving since $\Tr\Lambda=1$.
+Equation~\eqref{eq:sqrt-holder} implies
+$\|W-W_0\|_{\rm op}\le F^{1/4}$.
+For $\Delta_i=A_iX-B_i$, choose the Stinespring isometries
+$V\psi=\sum_i A_iX\psi\otimes f_i$ and
+$V_0\psi=\sum_iB_i\psi\otimes f_i$. Then
+\begin{equation}\label{eq:stinespring-distance}
+ \|V-V_0\|_{\rm op}^2
+ =\left\|\sum_i\Delta_i^*\Delta_i\right\|_{\rm op}
+ \le e\|W-W_0\|_{\rm op}^2\le e\sqrt F.
+\end{equation}
+For an arbitrary reference and trace-class input $Z$, expand
+$VZV^*-V_0ZV_0^*$ as
+$(V-V_0)ZV^*+V_0Z(V^*-V_0^*)$, with reference identities understood.
+The trace-norm ideal property and contraction under the partial trace
+give
+$\|\mathcal N\mathcal E_X-\mathcal N_0\|_\diamond
+ \le2\|V-V_0\|_{\rm op}$.
+Postcomposition by $\mathcal D$ is also contractive. Combining this
+with \eqref{eq:nearby-channel} and \eqref{eq:stinespring-distance}
+proves the nontrivial term in \eqref{eq:diamond-bound}; two channels
+have diamond distance at most two.
+\end{proof}
+
+The recovery construction is an established one. On the range of $W$,
+the polar factor is $(WW^*)^{-1/2}W$, with the inverse restricted to
+the support. The logical recovery Kraus operators are consequently
+\[
+ X^*A_i^*\,[\mathcal N(XX^*)]^{-1/2}.
+\]
+These are the transpose/Petz recovery operators for the maximally mixed
+code state~\cite[Eq.~(4)]{NgMandayam}. Completion of $U$ only specifies
+the action outside the actually noisy code support. General approximate
+Knill--Laflamme conditions and near-optimal recovery are treated
+in~\cite{BenyOreshkov}; Stinespring continuity is developed
+in~\cite{KSW}. We use an elementary, conservative bound expressed in
+the particular variance residual controlled by our iteration, without
+claiming a new general recovery principle or an optimal constant.
+
+\begin{corollary}\label{cor:constructive-channel}
+Let $e\ge2$, $k\ge2$, $n\ge e^2k-1$, and
+$\sum_{i=1}^e A_i^*A_i=I_n$. For every $0<\varepsilon\le2$, an
+isometry $X$ and a recovery channel $\mathcal D$ with logical diamond
+error at most $\varepsilon$ can be constructed using at most
+\begin{equation}\label{eq:physical-iteration-count}
+ \left\lceil\frac{768e^2(e^2-1)k^4}{\varepsilon^4}\right\rceil
+\end{equation}
+search iterations in ideal arithmetic, followed by a polar decomposition
+and isometric completion.
+\end{corollary}
+
+\begin{proof}
+Choose a Hilbert--Schmidt orthonormal Hermitian basis
+$B_0,\ldots,B_{e^2-1}$ of $M_e(\C)$ with $B_0=I_e/\sqrt e$, and set
+\begin{equation}\label{eq:normalized-observables}
+ H_\alpha=\sum_{i,j}(B_\alpha)_{ij}A_i^*A_j.
+\end{equation}
+The map $B\mapsto\sum_{i,j}B_{ij}A_i^*A_j$ is unital and completely
+positive: with $V_A\psi=\sum_i A_i\psi\otimes f_i$, it is
+$V_A^*(I_n\otimes B)V_A$. Thus each $H_\alpha$ is Hermitian and
+$\|H_\alpha\|_{\rm op}\le\|B_\alpha\|_{\rm op}\le1$.
+Also $H_0=I_n/\sqrt e$, whose traceless compression vanishes.
+The coefficient transformation in \eqref{eq:normalized-observables}
+is unitary on the $e^2$ matrix entries, so it preserves the sum of
+squared Frobenius residuals. The remaining $m=e^2-1$ observables
+therefore have exactly the objective $F$ in \eqref{eq:gram-data}.
+
+Apply Theorem~\ref{thm:iteration} with
+$\beta=k(e^2-1)$ and $\tau=\varepsilon^4/(16e^2)$.
+Its dimension condition is precisely $n\ge e^2k-1$, and its count
+is \eqref{eq:physical-iteration-count}. Since $e\ge2$ and $k\ge2$,
+this dimension condition also implies $n\ge ek$. The recovery in
+Theorem~\ref{thm:recovery} now has error at most $\varepsilon$.
+\end{proof}
+
+For one square Kraus operator, normalization makes the channel unitary,
+so its inverse corrects every code. For $k=1$, a fixed logical state
+can be recovered directly. The nontrivial search statement above counts
+operations on dense matrices, not operations polynomial in the number
+of qubits. It does not establish a finite-precision bit bound or exact
+finite termination at $\varepsilon=0$. The arbitrary-error result in
+\eqref{eq:arbitrary-kl-bound} retains the threshold
+$n\ge(e^2+1)k-1$; the normalized threshold in this corollary cannot be
+substituted into the unnormalized minimax problem.
+
+\section{Asymptotics and the remaining integer gap}\label{sec:integer-gap}
+
+It remains to check the one-dimension gap in Theorem~\ref{thm:main}.
+Write $D=e^2+1$ and $n=qD+r$, with $0\le r<D$.
+If $r=0$ or $r=D-1$, the two sides of \eqref{eq:main} agree.
+For $1\le r\le D-2$ and $q\ge1$, they are $q$ and $q+1$.
+If $q=0$, both bounds are one. This proves the stated gap and
+\eqref{eq:asymptotic}.
+It also gives, uniformly in all admissible parameters,
+\begin{equation}\label{eq:uniform-scale}
+ c(e,n)=\Theta\!\left(\max\!\left\{1,\frac{n}{e^2+1}\right\}\right).
+\end{equation}
+For example, absolute comparison constants $1/2$ and $2$ follow
+directly from \eqref{eq:main}.
+
+The bounds recover $c(1,n)=\lceil n/2\rceil$, also a consequence of
+the Hermitian higher-rank numerical-range formula~\cite{CKZ}.
+They give $c(e,n)=1$ whenever $n\le e^2+1$, and exact values at
+$n=q(e^2+1)$ and $n=q(e^2+1)-1$ for every admissible positive $q$.
+For two errors, this yields $c(2,9)=c(2,10)=2$ and
+$c(2,14)=c(2,15)=3$. At $(e,n)=(2,6)$, the present argument leaves
+$1\le c(2,6)\le2$.
+
+The corresponding integer question for arbitrary operator systems is
+whether every $D$-dimensional system has a scalar compression of rank
+$\lceil n/D\rceil$. This is a form of Weaver's conjecture on the lower
+quantum Tur\'an numbers~\cite[following Theorem~2.11]{Weaver}.
+For $D=3$, the stronger threshold $n\ge3k-2$ is known~\cite[Lemma~2.3]{AK}.
+Theorem~\ref{thm:compression} gives $n\ge Dk-1$ for every $D$ but does
+not reach the conjectured threshold $n\ge D(k-1)+1$ in general.
+The remaining rounding problem for error spaces may also benefit from
+their factorization as products $A_i^*A_j$, which was not used beyond
+the dimension bound in Corollary~\ref{cor:lower}.
+
+Finally, normalization changes the extremal problem. If a chosen error
+basis satisfies $\sum_i A_i^*A_i=I_n$, then the identity already lies
+in the product span and $\dim\V_{\E}\le e^2$. The scalar-compression
+theorem still applies with that smaller dimension. The explicit models
+in Section~\ref{sec:models}, however, use a common zero block and need
+not satisfy this normalization. Equation~\eqref{eq:main} concerns the
+arbitrary linear error spaces in \eqref{eq:minimax}.
+
+
+\section*{Verification and research disclosure}
+
+The manuscript has received sequential internal analytical review within
+the same AI-assisted research workflow. This is not independent expert
+acceptance or formal proof-assistant certification. The complete arguments,
+including the metric convention, phase-summed Hessian, singular Gram
+matrices, channel normalization and integer thresholds, were checked
+against their stated hypotheses. During integration, an auxiliary claim
+about a literal left kernel was restricted to $n>(m+1)k$; the main
+quantitative theorem already applies at $n\ge(m+1)k-1$ and is unchanged.
+
+The accompanying source package contains executable finite checks. The
+inherited checks reconstruct nine exact second-variation identities, reject
+nine deliberately invalid orthogonality controls, and exercise the explicit
+block models. The new checks cover boundary Hessians, sharp traceless-stack
+bounds, phase sums, error-basis conversion, singular and nonsingular
+recovery, a rational dephasing example, complex syndrome conventions,
+and excluded normalization and dimension cases. Four floating-point
+search runs illustrate both descent branches and the encoding--recovery
+pipeline. Their small residuals are diagnostics, not certified interval
+bounds or proofs of universal correctness. The universal statements rest
+on the analytic arguments above.
+
+The derivation, primary-source comparison, computations and manuscript
+preparation used AI assistance under human direction. Independent expert
+review, comprehensive novelty assessment, and a certified finite-precision
+implementation remain outstanding. Version 2 retains the earlier exact
+asymptotic result and adds the quantitative construction; it does not
+claim a new resolution of the remaining integer problem.
+
+\begin{thebibliography}{99}
+\raggedright
+\bibitem{KW05}
+O.~Kr\"uger and R.~F.~Werner (eds.),
+\emph{Some Open Problems in Quantum Information Theory} (2005),
+Problem~14, \href{https://arxiv.org/abs/quant-ph/0504166}{arXiv:quant-ph/0504166}.
+
+\bibitem{QIQC}
+QIQCOP Zoo, \emph{Tough error models}, problem record
+\href{https://qiqc-op.com/problem/op_b1b41f737f9b4aeb/}{op\_b1b41f737f9b4aeb},
+version dated 4 September 2026; accessed 16 November 2026.
+
+\bibitem{KL97}
+E.~Knill and R.~Laflamme, Theory of quantum error-correcting codes,
+\emph{Physical Review A} \textbf{55}, 900--911 (1997),
+\href{https://doi.org/10.1103/PhysRevA.55.900}{doi:10.1103/PhysRevA.55.900}.
+
+\bibitem{KLV00}
+E.~Knill, R.~Laflamme, and L.~Viola,
+Theory of quantum error correction for general noise,
+\emph{Physical Review Letters} \textbf{84}, 2525--2528 (2000),
+\href{https://doi.org/10.1103/PhysRevLett.84.2525}{doi:10.1103/PhysRevLett.84.2525};
+\href{https://arxiv.org/abs/quant-ph/9908066}{arXiv:quant-ph/9908066}.
+
+\bibitem{Reimpell}
+M.~Reimpell, \emph{Quantum Information and Convex Optimization},
+doctoral dissertation, Technische Universit\"at Braunschweig (2008),
+Section~3.3.4,
+\href{https://www.osti.gov/etdeweb/servlets/purl/21161752}{archived dissertation}.
+
+\bibitem{Weaver}
+N.~Weaver, The ``quantum'' Tur\'an problem for operator systems,
+\emph{Pacific Journal of Mathematics} \textbf{301}, 335--349 (2019),
+\href{https://doi.org/10.2140/pjm.2019.301.335}{doi:10.2140/pjm.2019.301.335};
+\href{https://arxiv.org/abs/1802.07394}{arXiv:1802.07394}.
+
+\bibitem{AK}
+A.~Allen and A.~Kornell, The quantum Ramsey numbers $QR(2,k)$,
+\emph{Linear and Multilinear Algebra} \textbf{73}, 3959--3964 (2025),
+\href{https://doi.org/10.1080/03081087.2025.2578529}{doi:10.1080/03081087.2025.2578529};
+\href{https://arxiv.org/abs/2507.04128v2}{arXiv:2507.04128v2}.
+
+\bibitem{LiTam}
+C.-K.~Li and B.-S.~Tam, A note on extreme correlation matrices,
+\emph{SIAM Journal on Matrix Analysis and Applications} \textbf{15},
+903--908 (1994),
+\href{https://doi.org/10.1137/S0895479892240683}{doi:10.1137/S0895479892240683}.
+
+\bibitem{Gupta}
+A.~Gupta, B.~Sun, X.~He, and B.~Zeng,
+\emph{Variance Geometry of Exact Pauli-Detecting Codes:
+Continuous Landscapes Beyond Stabilizers} (2026),
+\href{https://arxiv.org/abs/2604.21800v1}{arXiv:2604.21800v1}.
+
+\bibitem{Sun}
+B.~Sun, N.~Cao, Y.~T.~Poon, and B.~Zeng,
+\emph{Geometry of Knill--Laflamme Coefficients for Pauli Error Detection}
+(2026), \href{https://arxiv.org/abs/2610.01992v1}{arXiv:2610.01992v1}.
+
+\bibitem{CKZ}
+M.-D.~Choi, D.~W.~Kribs, and K.~\.{Z}yczkowski,
+Higher-rank numerical ranges and compression problems,
+\emph{Linear Algebra and its Applications} \textbf{418}, 828--839 (2006),
+\href{https://doi.org/10.1016/j.laa.2006.03.019}{doi:10.1016/j.laa.2006.03.019};
+\href{https://arxiv.org/abs/math/0511278}{arXiv:math/0511278}.
+
+\bibitem{NgMandayam}
+H.~K.~Ng and P.~Mandayam,
+A simple approach to approximate quantum error correction based on the
+transpose channel, \emph{Physical Review A} \textbf{81}, 062342 (2010),
+\href{https://arxiv.org/abs/0909.0931v2}{arXiv:0909.0931v2}.
+
+\bibitem{BenyOreshkov}
+C.~B\'eny and O.~Oreshkov,
+General conditions for approximate quantum error correction and near-optimal
+recovery channels, \emph{Physical Review Letters} \textbf{104}, 120501 (2010),
+\href{https://arxiv.org/abs/0907.5391}{arXiv:0907.5391}.
+
+\bibitem{KSW}
+D.~Kretschmann, D.~Schlingemann, and R.~F.~Werner,
+A continuity theorem for Stinespring's dilation,
+\href{https://arxiv.org/abs/0710.2495}{arXiv:0710.2495} (2007).
+
+\end{thebibliography}
+\end{document}
