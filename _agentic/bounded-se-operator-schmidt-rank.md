@@ -35,7 +35,7 @@ $$
 $$
 
 Here operator Schmidt rank is the number of product operators needed to
-write the approximation. The strength \(\mathcal J\) is the largest sum of
+write the approximation. The strength $$\mathcal J$$ is the largest sum of
 output Schmidt coefficients when the interaction acts on a normalized
 product input, including arbitrary local ancillas. Time and accuracy are
 fixed independently of dimension. Both local Hamiltonians are arbitrary;
@@ -51,17 +51,17 @@ the factors, and the approximant need not itself be unitary.
 16, 041035 (2026)](https://doi.org/10.1103/8fcr-5tf4), show in Proposition 9
 that bounded spectral entangling strength does not guarantee a fixed rank
 independent of dimension. They then ask whether a fixed-time, fixed-error
-approximation can require rank growing as a positive power of \(D\).
+approximation can require rank growing as a positive power of $$D$$.
 
 The bound above answers that question negatively: for every fixed
-\(c>0\), \((\log D)^2=o(D^c)\). It is compatible with their example,
+$$c>0$$, $$(\log D)^2=o(D^c)$$. It is compatible with their example,
 which rules out constant rank and admits a logarithmic-dimensional
 approximation.
 
 ## The step that controls dimension
 
 The proof first establishes a uniform approximation theorem for Hermitian
-operators. If \(\mathcal J(V)\le1\), then for every \(\delta>0\) there is
+operators. If $$\mathcal J(V)\le1$$, then for every $$\delta>0$$ there is
 a nearby operator
 
 $$
@@ -70,10 +70,10 @@ W=\sum_s A_s\otimes B_s,
 $$
 
 whose four local square sums
-\(\sum_s A_s^*A_s\), \(\sum_s A_sA_s^*\),
-\(\sum_s B_s^*B_s\), and \(\sum_s B_sB_s^*\)
+$$\sum_s A_s^*A_s$$, $$\sum_s A_sA_s^*$$,
+$$\sum_s B_s^*B_s$$, and $$\sum_s B_sB_s^*$$
 are all bounded by the same dimension-independent number. One explicit
-bound is \(O(\delta^{-4}\log^5(2/\delta))\).
+bound is $$O(\delta^{-4}\log^5(2/\delta))$$.
 
 A theorem of
 [Arhancet and Kriegler](https://doi.org/10.24033/msmf.485) supplies a
@@ -86,7 +86,7 @@ without a bound on the weights' condition numbers, which is where
 dimension disappears from the approximation error.
 
 The evolution-strength inequality
-\(\mathcal J(e^{-itH})\le e^{|t|}\) is already Corollary 6 of Kim et al.
+$$\mathcal J(e^{-itH})\le e^{|t|}$$ is already Corollary 6 of Kim et al.
 Applying the new approximation theorem to the two Hermitian parts of the
 full unitary gives a balanced tensor decomposition. Correlated Gaussian
 local factors then produce unbiased rank-one product samples. Their two
@@ -95,7 +95,7 @@ matrix Bernstein concentration give the squared logarithm.
 
 ## Parameters and relation to other results
 
-With \(T=|t|\), \(q=1+T+\log(1/\epsilon)\), and \(0<\epsilon\le1\),
+With $$T=|t|$$, $$q=1+T+\log(1/\epsilon)$$, and $$0<\epsilon\le1$$,
 the proof supplies the explicit, nonoptimal form
 
 $$
@@ -111,7 +111,7 @@ whether one logarithm always suffices remain quantitative questions.
 dynamics*](https://arxiv.org/abs/2609.27497v1) prove stronger compression
 results under spatial locality and bounded local-strength assumptions.
 The present result instead assumes only the bipartite strength bound.
-The \(\alpha<1/2\) result announced in the Note added of Kim et al.
+The $$\alpha<1/2$$ result announced in the Note added of Kim et al.
 also has a different hypothesis from the endpoint treated here.
 
 ## Supplementary checks and review status
