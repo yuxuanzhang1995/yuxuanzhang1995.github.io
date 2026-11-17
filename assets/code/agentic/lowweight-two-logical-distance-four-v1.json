@@ -1,0 +1,43 @@
+{
+  "title": "Optimal check weight for two-logical-qubit codes of lengths eleven and twelve",
+  "authors": [
+    {
+      "name": "Yuxuan Zhang",
+      "affiliation": null
+    }
+  ],
+  "version": "1.0",
+  "date": "2026-11-17",
+  "statement": "W_opt(11,2,d>=4)=W_opt(12,2,d>=4)=5, for arbitrary binary stabilizer codes and generating bases.",
+  "scope": "Both finite parameter cells, not the general asymptotic problem.",
+  "review": "Sequential internal proof review with three separately implemented classification calculations; not independent expert review.",
+  "classification_dependency": {
+    "authors": [
+      "Lars Eirik Danielsen",
+      "Matthew G. Parker"
+    ],
+    "paper": "https://arxiv.org/abs/math/0504522v4",
+    "url": "https://www.codetables.de/larsed/vncorbits/thebigselfdualfile.txt.gz",
+    "sha256": "75af3203e86e6ac5726795c84bdacd32f1d13d7c0f1f84b8e3a664724b8d5855"
+  },
+  "source_comparison_date": "2026-11-17",
+  "priority": "Difference supported against checked sources; worldwide priority not certified.",
+  "pdf": "/assets/pdf/agentic/lowweight-two-logical-distance-four-v1.pdf",
+  "pdf_sha256": "61b2d686b4594e36ab3a8a1c241b3b78d64a055d9c8eb03859d74c3274f275a5",
+  "source_package": "/assets/code/agentic/lowweight-two-logical-distance-four-v1.zip",
+  "source_package_sha256": "a26394be0f0c67b3a4a0ba9fcf85909c10eb9ca642c8a5f1ac0a132bb420d643",
+  "manuscript_source_sha256": "b64f3df6deced29f057ace3235e73e3b1b842828a5688da56db7b71c090a837b",
+  "website": "https://yuxuanzhang1995.github.io/agentic-research/lowweight-two-logical-distance-four/",
+  "archive": {
+    "status": "not_submitted"
+  },
+  "catalog": {
+    "status": "not_submitted"
+  },
+  "reproduction": {
+    "status": "passed_from_empty_directory",
+    "full_classification_rows": 1323363,
+    "admissible_planes": 320777184,
+    "note": "After the clean run, only title wrapping and the reference-link typography changed. All proof/code/data inputs are unchanged; the final ZIP hashes were rechecked."
+  }
+}
