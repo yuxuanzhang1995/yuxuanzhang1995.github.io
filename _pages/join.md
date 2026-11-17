@@ -107,18 +107,6 @@ Undergraduate and master's students can also come for two to three months throug
 May to July and August to October, and applications open on 15 December 2026. If you'd like to
 work with me, email me before you apply.
 
-IRIS projects for 2027. Each is sized for two to three months and suits a strong student in
-physics, computer science or maths who is comfortable with Python:
-
-- **Where classical simulation of peaked circuits breaks down.** Run tensor-network and Pauli-path
-  simulators on peaked circuits and map where they fail. Builds on
-  [arXiv:2510.25838](https://arxiv.org/abs/2510.25838).
-- **Autonomous discovery of quantum phases.** Apply an automated phase-discovery method to a model
-  it hasn't seen before. Builds on [arXiv:2609.33802](https://arxiv.org/abs/2609.33802).
-- **Compressing circuits for quantum dynamics.** Use Pauli propagation to shorten the circuits for
-  a 2D model's time evolution, and compare against Trotterization. Builds on
-  [arXiv:2507.01883](https://arxiv.org/abs/2507.01883).
-
 Visiting PhD students register at NUS as non-graduating research students. Unless your university
 has an exchange agreement with NUS, that means paying a research fee each semester, so include it
 in your funding application. The NUS application goes in at least 12 weeks before you start.
