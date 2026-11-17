@@ -98,15 +98,14 @@ funds quantum PhDs. It needs a CQT supervisor, and I'm happy to co-supervise wit
 
 ## Visitors
 
-I host visiting students and researchers. Six to twelve months is ideal, three is the minimum.
-You'll need to bring your own funding, for example a scholarship from your home country or a
-joint-PhD programme. If you're applying for one, email me early and I'll write the invitation
-letter.
+We have positions for visiting students and researchers. For long-term visits, we prefer that you
+bring your own funding, for example a scholarship from your home country or a joint-PhD programme.
+If you're applying for one, email me early and I'll write the invitation letter.
 
-Undergraduate and master's students can also come for two to three months through
-[IRIS@NUS](https://nusgs.nus.edu.sg/irisnus/), which is fully funded. For 2027 there are two rounds,
-May to July and August to October, and applications open on 15 December 2026. If you'd like to
-work with me, email me before you apply.
+Singapore also offers opportunities such as [IRIS@NUS](https://nusgs.nus.edu.sg/irisnus/), a fully
+funded programme that brings undergraduate and master's students to NUS for two to three months.
+For 2027 there are two rounds, May to July and August to October, and applications open on
+15 December 2026. If you'd like to work with me, email me before you apply.
 
 Visiting PhD students register at NUS as non-graduating research students. Unless your university
 has an exchange agreement with NUS, that means paying a research fee each semester, so include it
