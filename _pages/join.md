@@ -40,7 +40,9 @@ DeepMind, NVIDIA and OpenAI have all set up AI research labs in the city.
 ## Postdocs
 
 Apply through [Academic Jobs Online](https://academicjobsonline.org/ajo/jobs/32512) by
-**15 November 2026**. Positions start in 2027, or from December 2026 if you're ready earlier.
+**30 November 2026**. We've extended the deadline by two weeks so referees have time to send their
+letters. Review has already started and continues on a rolling basis, and if you've already applied
+there's no need to resubmit. Positions start in 2027, or from December 2026 if you're ready earlier.
 
 If you have your own fellowship, or want to apply for one, I'm happy to host you. These are the
 ones that fit:
