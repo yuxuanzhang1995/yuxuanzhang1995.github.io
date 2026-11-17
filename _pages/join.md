@@ -98,11 +98,10 @@ funds quantum PhDs. It needs a CQT supervisor, and I'm happy to co-supervise wit
 
 ## Visitors
 
-Long visits work best, ideally six to twelve months and at least three. Visitors usually bring their
-own funding, from a national scholarship council, a joint-PhD or exchange programme, or their home
-institution. If you're applying for one of these, I'll write the invitation letter and help with
-the application. Ask early, because the host letter is usually needed well before the scheme's own
-deadline.
+I host visiting students and researchers. Six to twelve months is ideal, three is the minimum.
+You'll need to bring your own funding, for example a scholarship from your home country or a
+joint-PhD programme. If you're applying for one, email me early and I'll write the invitation
+letter.
 
 Undergraduate and master's students can also come for two to three months through
 [IRIS@NUS](https://nusgs.nus.edu.sg/irisnus/), which is fully funded. For 2027 there are two rounds,
