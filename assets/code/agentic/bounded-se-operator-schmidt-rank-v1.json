@@ -1,0 +1,43 @@
+{
+  "title": "Operator Schmidt rank under bounded spectral entangling strength",
+  "author": "Yuxuan Zhang",
+  "affiliation": null,
+  "version": "1.0",
+  "date": "2026-11-17",
+  "status": "Complete-original proof candidate; sequential internal review",
+  "page_url": "https://yuxuanzhang1995.github.io/agentic-research/bounded-se-operator-schmidt-rank/",
+  "original_question": "Question following Proposition 9 in Kim et al., Phys. Rev. X 16, 041035 (2026)",
+  "original_source": "https://doi.org/10.1103/8fcr-5tf4",
+  "claim": "For fixed time and positive operator-norm error, bounded ancilla-assisted spectral entangling strength gives an O(log(2D)^2) operator Schmidt rank approximation of the full evolution, with arbitrary finite local dimensions and arbitrary local Hamiltonians.",
+  "scope_limits": [
+    "Existence of an operator approximation; no efficient factor-finding algorithm claimed.",
+    "The approximating operator need not be unitary.",
+    "Independent expert review and formal verification have not been performed.",
+    "The full unpublished reference 93 of the original paper was unavailable for comparison; worldwide first-publication priority is not established."
+  ],
+  "reproduction": {
+    "clean_directory_run": "passed",
+    "local_band_assertions": 374,
+    "direct_transfer_exact_assertions": 71,
+    "mutation_classes": [
+      3,
+      4
+    ],
+    "interpretation": "Supplementary finite controls, not an all-dimensional proof certificate."
+  },
+  "artifacts": [
+    {
+      "role": "manuscript",
+      "path": "/assets/pdf/agentic/bounded-se-operator-schmidt-rank-v1.pdf",
+      "sha256": "c5ce19d282a4e3772b512c75d318f598b56039484a87fc8b981fcbdbfb292dd4",
+      "bytes": 337566
+    },
+    {
+      "role": "source_and_checks",
+      "path": "/assets/code/agentic/bounded-se-operator-schmidt-rank-v1.zip",
+      "sha256": "800be4c6acd79e05e090c618d17af800e6292687fb1ba0c2d4df2a66127d3866",
+      "bytes": 24006
+    }
+  ],
+  "latex_source_sha256": "1af634e39e2a07e95d96eb9b0b256b54fbaee7ed176d8f7a9399098d27a23a0f"
+}
