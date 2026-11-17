@@ -103,7 +103,9 @@ the application. Ask early, because the host letter is usually needed well befor
 deadline.
 
 Undergraduate and master's students can also come for two to three months through
-[IRIS@NUS](https://nusgs.nus.edu.sg/irisnus/), which NUS funds in full.
+[IRIS@NUS](https://nusgs.nus.edu.sg/irisnus/), which is fully funded. For 2027 there are two rounds,
+May to July and August to October, and applications open on 15 December 2026. If you'd like to
+work with me, email me before you apply.
 
 Visiting PhD students register at NUS as non-graduating research students. Unless your university
 has an exchange agreement with NUS, that means paying a research fee each semester, so include it
