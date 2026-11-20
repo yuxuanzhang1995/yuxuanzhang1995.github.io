@@ -1,0 +1,45 @@
+{
+  "title": "Five settings suffice opposite three binary measurements",
+  "version": "1.1",
+  "date": "2026-11-19",
+  "authors": [
+    {
+      "name": "Yuxuan Zhang",
+      "affiliations": []
+    }
+  ],
+  "status": "Research draft; complete proof candidate for the specified source conjecture; separate AI review completed",
+  "scope": "Finite-setting locality criterion with t=product(a_x)-sum(a_x-1); complete (N,3,2,2) facet classification for every N>=5 using a published finite enumeration. Not a general Bell-polytope classification.",
+  "review": {
+    "mathematics": "Supported internally by a fresh-context separate AI reviewer; no unresolved load-bearing gap found.",
+    "source_comparison": "Prior compatibility interface and finite enumeration explicitly attributed; five-setting consequence not located in the checked primary results.",
+    "priority": "unconfirmed",
+    "external_expert_review": false,
+    "finite_enumeration_independently_reproved": false,
+    "reviewed_tex_sha256": "4203f0a948c9ca3eb1161305ca2859ec58dbcda3d6c18c5ed66b9ef5166547fd"
+  },
+  "reproduction": {
+    "entrypoint": "python3 reproduce.py",
+    "requirements": "Python standard library only; no network or optimization solver",
+    "limitations": "Finite controls do not establish the analytic theorem, finite-list completeness or priority."
+  },
+  "source_target": "https://arxiv.org/abs/2212.03212v3, Section IV.B and Appendix B.2",
+  "website": "https://yuxuanzhang1995.github.io/agentic-research/five-setting-bell-locality/",
+  "artifacts": {
+    "pdf": {
+      "sha256": "0b10347d324847a9b795a67b136f35ab4ea6b2db44a089a70d715d894e41df22",
+      "bytes": 307439,
+      "repository_path": "assets/pdf/agentic/five-setting-bell-locality-v1.1.pdf"
+    },
+    "reproduction_package": {
+      "sha256": "4e0c175ee5bc422390351c2f6f575cac97a5ae861b2dd02dad44eb2f99258628",
+      "bytes": 337046,
+      "repository_path": "assets/code/agentic/five-setting-bell-locality-v1.1.zip"
+    },
+    "website": {
+      "sha256": "f7fbfbc529c066564d32812f32f0a76e2dbe628a73852136837b5b7338e4d968",
+      "bytes": 6000,
+      "repository_path": "_agentic/five-setting-bell-locality.md"
+    }
+  }
+}
