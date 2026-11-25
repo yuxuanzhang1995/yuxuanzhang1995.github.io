@@ -19,7 +19,7 @@ social: false  # includes social icons at the bottom of the page
 </div>
 
 <div style="border-left: 3px solid var(--global-theme-color); background: rgba(128,128,128,0.06); padding: 0.55rem 0.9rem; margin-bottom: 1.4rem; border-radius: 3px;">
-<strong>Industrial PhD with BlueQubit:</strong> I'm looking for a PhD student to work with me at NUS and with <a href="https://www.bluequbit.io/">BlueQubit</a>, the quantum algorithms lab behind our <a href="https://arxiv.org/abs/2510.25838">peaked circuits experiment</a> on Quantinuum's H2 and the <a href="https://arxiv.org/abs/2609.28657">random circuit sampling run</a> on IBM's Nighthawk. It's through EDB's Industrial Postgraduate Programme, for Singapore Citizens and PRs. <a href="/industrial-phd/">Read more and apply</a>.
+<strong>Industrial PhD position with BlueQubit:</strong> We have an opening for a PhD student under EDB's Industrial Postgraduate Programme, joint with <a href="https://www.bluequbit.io/">BlueQubit</a>, our collaborator on the <a href="https://arxiv.org/abs/2510.25838">peaked circuits</a> and <a href="https://arxiv.org/abs/2609.28657">random circuit sampling</a> experiments. Open to Singapore Citizens and PRs. <a href="/industrial-phd/">Details here</a>.
 </div>
 
 Hello! This is Yuxuan (Vincent) Zhang (张宇轩). I am currently a postdoctoral researcher in [Prof. Dmitry Abanin](https://scholar.google.com/citations?user=beJ_6ykAAAAJ&hl=en)’s group, superposed between Princeton and EPFL.

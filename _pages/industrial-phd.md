@@ -2,74 +2,70 @@
 layout: page
 permalink: /industrial-phd/
 title: Industrial PhD with BlueQubit
-description: An NUS PhD with BlueQubit, through EDB's Industrial Postgraduate Programme.
+description: An NUS PhD position joint with BlueQubit, under EDB's Industrial Postgraduate Programme.
 nav: false
 ---
 
-I'm looking for a PhD student to work with me at [NUS](https://www.comp.nus.edu.sg/cs/people/zhangyx/)
-and with [BlueQubit](https://www.bluequbit.io/), through EDB's
+We have an opening for an industrial PhD student, joint between my group at
+[NUS](https://www.comp.nus.edu.sg/cs/people/zhangyx/) and [BlueQubit](https://www.bluequbit.io/),
+under EDB's
 [Industrial Postgraduate Programme (IPP)](https://www.edb.gov.sg/en/business-insights/insights/how-singapore-partners-with-global-companies-to-groom-top-local-r-d-talent.html).
-You'd do an NUS PhD and be employed at BlueQubit while you do it. The IPP is open to Singapore
-Citizens and Permanent Residents.
+The student will be enrolled in the NUS PhD programme and employed by BlueQubit at the same time.
+The IPP is open to Singapore Citizens and Permanent Residents only.
 
-## BlueQubit
+## About BlueQubit
 
-[BlueQubit](https://www.bluequbit.io/) is a quantum algorithms lab in San Francisco. They work on
-applications for today's noisy quantum computers and for the fault-tolerant ones coming next. What
-they're after is real quantum advantage, meaning scientific and commercial problems that the best
-classical supercomputers can't handle. They write their own algorithms and simulators and run them on
-the leading quantum hardware, so you can go from an idea to a real device quickly. This autumn they
-also started
+[BlueQubit](https://www.bluequbit.io/) is a quantum computing company based in San Francisco. The
+team develops quantum algorithms, builds classical simulators, and runs experiments on the latest
+quantum computers, including those from Quantinuum and IBM. They recently launched
 [Quantum Flywheel](https://thequantuminsider.com/2026/11/17/bluequbit-names-eight-research-teams-quantum-flywheel/),
-a grant programme supported by IBM, AWS and NVIDIA that gives research groups AI and computing credits.
-More than 160 proposals came in from 29 countries.
+a grant programme supported by IBM, AWS and NVIDIA, which received more than 160 proposals from 29
+countries.
 
-I've been working with them since 2025. Two things we've done together:
+I have been collaborating with BlueQubit since 2025. Our joint work so far:
 
-- [Peaked circuits on Quantinuum's H2](https://arxiv.org/abs/2510.25838). A peaked circuit hides one
-  bitstring that's hard to find and easy to check. H2 finds it in a circuit with 2000 two-qubit gates
-  in under two hours, and the best classical methods we tried would take years. The paper won the
+- [Heuristic quantum advantage with peaked circuits](https://arxiv.org/abs/2510.25838), demonstrated
+  on Quantinuum's H2. The quantum computer solved a circuit with 2000 two-qubit gates in under two
+  hours, while classical simulation is estimated to take years. This paper received the
   [Best Paper award](https://qce.quantum.ieee.org/2026/wp-content/uploads/sites/13/2026/08/QCE26-Best-Papers-v19.pdf)
   in the Quantum Algorithms track at IEEE Quantum Week 2026.
-- [Random circuit sampling on IBM's Nighthawk](https://arxiv.org/abs/2609.28657). On 61 qubits, the
-  chip collects a million samples in 19 seconds. We estimate the same job would take the Frontier
-  supercomputer more than a century.
+- [Random circuit sampling on IBM's Nighthawk processor](https://arxiv.org/abs/2609.28657). Collecting
+  a million samples took 19 seconds on the chip. We estimate more than a century on the Frontier
+  supercomputer.
 
 ## What we could work on
 
-There's no fixed project. We'll choose one together with BlueQubit, based on what you like and what
-you're good at. Some directions:
+The project is flexible and will be decided together with the student and BlueQubit. Possible topics:
 
-- New algorithms on current quantum computers, aimed at advantage that anyone can check. Peaked
-  circuits are one example, and the [code](https://github.com/yuxuanzhang1995/Peaked-circuits) is public.
-- Algorithms for early fault-tolerant machines, where logical qubits are few and error correction is
-  expensive.
-- Classical simulation with tensor networks and Pauli-path methods, pushed far enough to see where
-  quantum computers really win.
-- AI for quantum computing, from compiling circuits and mitigating errors to agents that work on open
-  problems.
+- quantum advantage experiments on current hardware
+  ([peaked circuits code](https://github.com/yuxuanzhang1995/Peaked-circuits))
+- algorithms for early fault-tolerant quantum computers
+- classical simulation of quantum circuits (tensor networks, Pauli propagation)
+- AI tools for quantum computing
 
-My own view is that quantum computations should be verifiable and useful, and that most of the work of
-running a quantum computer should be learned rather than designed by hand. If that sounds interesting,
-have a look at my [research]({{ '/research/' | relative_url }}) and
-[agentic research]({{ '/agentic-research/' | relative_url }}) pages. If you have your own idea, bring it.
+More about what my group does is on the [research]({{ '/research/' | relative_url }}) and
+[agentic research]({{ '/agentic-research/' | relative_url }}) pages. Your own ideas are welcome too.
 
 ## How the IPP works
 
-You'd be a full-time PhD student in the
-[School of Computing](https://www.comp.nus.edu.sg/programmes/pg/phdcs/industrial/), supervised by me
-and by someone at BlueQubit. The company employs you during the PhD, and at least half of the project
-happens there. EDB and the company cover your tuition, salary and employer CPF, and there's no bond.
-We write the project proposal together, and EDB and the School have to approve it.
+- You are a full-time PhD student at the NUS School of Computing, supervised by me and co-supervised
+  by a researcher at BlueQubit.
+- You are employed by BlueQubit during the PhD, and at least half of the project is carried out at
+  the company.
+- EDB and the company cover tuition, salary and CPF. There is no bond.
+- The project proposal needs approval from EDB and the School.
 
-If you're not a Singapore Citizen or PR, have a look at the
-[other PhD routes]({{ '/join/' | relative_url }}).
+The official description is on the School of Computing's
+[IPP page](https://www.comp.nus.edu.sg/programmes/pg/phdcs/industrial/). If you are not a Singapore
+Citizen or PR, please see the other PhD routes on the [join us]({{ '/join/' | relative_url }}) page.
 
 ## How to apply
 
-Email me at [zhangyx@comp.nus.edu.sg](mailto:zhangyx@comp.nus.edu.sg) with your CV, transcripts and a
-short note on what you'd like to work on. You should have a degree in computer science, physics,
-mathematics or something close, meet the School's
-[admission requirements](https://www.comp.nus.edu.sg/programmes/pg/phdcs/admissions/), program well in
-Python or C++, and know some quantum information. Experience with quantum hardware, tensor networks or
-machine learning helps.
+Please email your CV, transcripts and a short description of your research interests to
+[zhangyx@comp.nus.edu.sg](mailto:zhangyx@comp.nus.edu.sg).
+
+Requirements: a degree in computer science, physics, mathematics or a related field, good
+programming skills (Python or C++), and the School's
+[admission requirements](https://www.comp.nus.edu.sg/programmes/pg/phdcs/admissions/) for the PhD
+programme. Background in quantum computing is preferred. Experience with quantum hardware, tensor
+networks or machine learning is a plus.
