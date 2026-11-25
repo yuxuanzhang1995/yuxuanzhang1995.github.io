@@ -14,8 +14,17 @@ Citizens and Permanent Residents.
 
 ## BlueQubit
 
-[BlueQubit](https://www.bluequbit.io/) is a quantum algorithms lab in San Francisco, and I've been
-working with them since 2025. Two things we've done together:
+[BlueQubit](https://www.bluequbit.io/) is a quantum algorithms lab in San Francisco. They work on
+applications for today's noisy quantum computers and for the fault-tolerant ones coming next. What
+they're after is real quantum advantage, meaning scientific and commercial problems that the best
+classical supercomputers can't handle. They write their own algorithms and simulators and run them on
+the leading quantum hardware, so you can go from an idea to a real device quickly. This autumn they
+also started
+[Quantum Flywheel](https://thequantuminsider.com/2026/11/17/bluequbit-names-eight-research-teams-quantum-flywheel/),
+a grant programme supported by IBM, AWS and NVIDIA that gives research groups AI and computing credits.
+More than 160 proposals came in from 29 countries.
+
+I've been working with them since 2025. Two things we've done together:
 
 - [Peaked circuits on Quantinuum's H2](https://arxiv.org/abs/2510.25838). A peaked circuit hides one
   bitstring that's hard to find and easy to check. H2 finds it in a circuit with 2000 two-qubit gates
@@ -26,21 +35,24 @@ working with them since 2025. Two things we've done together:
   chip collects a million samples in 19 seconds. We estimate the same job would take the Frontier
   supercomputer more than a century.
 
-They also build their own [simulators and platform](https://www.bluequbit.io/), so you can go from an
-idea to a run on a real device quickly. This autumn they ran
-[Quantum Flywheel](https://thequantuminsider.com/2026/11/17/bluequbit-names-eight-research-teams-quantum-flywheel/),
-which gives research groups AI and computing credits, supported by IBM, AWS and NVIDIA. More than 160
-proposals came in from 29 countries.
+## What you could work on
 
-## What you'd work on
+There's no fixed project. We'll choose one together with BlueQubit, based on what you like and what
+you're good at. Some directions:
 
-I want to find quantum computations that are both verifiable and useful. I also think most of the
-work of running a quantum computer, from compiling circuits to mitigating errors, should be learned
-rather than designed by hand. In this project you'd design algorithms whose results can be checked,
-run them on real hardware, and test them against the best classical simulations. You'd also build AI
-tools that take over parts of that work. My [research]({{ '/research/' | relative_url }}) and
-[agentic research]({{ '/agentic-research/' | relative_url }}) pages show what we've been doing, and
-our [peaked circuit code](https://github.com/yuxuanzhang1995/Peaked-circuits) is public.
+- New algorithms on current quantum computers, aimed at advantage that anyone can check. Peaked
+  circuits are one example, and the [code](https://github.com/yuxuanzhang1995/Peaked-circuits) is public.
+- Algorithms for early fault-tolerant machines, where logical qubits are few and error correction is
+  expensive.
+- Classical simulation with tensor networks and Pauli-path methods, pushed far enough to see where
+  quantum computers really win.
+- AI for quantum computing, from compiling circuits and mitigating errors to agents that work on open
+  problems.
+
+My own view is that quantum computations should be verifiable and useful, and that most of the work of
+running a quantum computer should be learned rather than designed by hand. If that sounds interesting,
+have a look at my [research]({{ '/research/' | relative_url }}) and
+[agentic research]({{ '/agentic-research/' | relative_url }}) pages. If you have your own idea, bring it.
 
 ## How the IPP works
 
