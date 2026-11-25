@@ -1,10 +1,9 @@
 ---
 layout: page
 permalink: /industrial-phd/
-title: industrial PhD
+title: Industrial PhD with BlueQubit
 description: An NUS PhD with BlueQubit, through EDB's Industrial Postgraduate Programme.
-nav: true
-nav_order: 5
+nav: false
 ---
 
 I'm looking for a PhD student to work with me at [NUS](https://www.comp.nus.edu.sg/cs/people/zhangyx/)
