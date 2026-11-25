@@ -92,8 +92,8 @@ December. Name me in your research statement and email me, so I know to look for
 
 Two other routes. If you're a Singapore Citizen or PR, there's EDB's
 [Industrial Postgraduate Programme (IPP)](https://www.comp.nus.edu.sg/programmes/pg/phdcs/industrial/),
-where you do your PhD here while employed by a partner company. The project is set up jointly, so
-talk to me first. And the
+where you do your PhD here while employed by a partner company. I have one
+[with BlueQubit]({{ '/industrial-phd/' | relative_url }}). And the
 [National Quantum Scholarships Scheme](https://www.cqt.sg/students/national-quantum-scholarships-scheme/)
 funds quantum PhDs. It needs a CQT supervisor, and I'm happy to co-supervise with a CQT colleague.
 
