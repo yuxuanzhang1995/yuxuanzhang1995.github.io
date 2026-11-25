@@ -1034,3 +1034,15 @@ nav[data-toggle="toc"] {
     padding-top: 0.5rem;
   }
 }
+
+/* Desktop nav: slightly smaller so all items stay on one line */
+@media (min-width: 576px) {
+  .navbar.navbar-expand-sm .navbar-nav .nav-link {
+    font-size: 0.875rem;
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+  .navbar .navbar-brand.title {
+    font-size: 1.0625rem;
+  }
+}

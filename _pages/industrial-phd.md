@@ -3,7 +3,9 @@ layout: page
 permalink: /industrial-phd/
 title: Industrial PhD with BlueQubit
 description: An NUS PhD position joint with BlueQubit, under EDB's Industrial Postgraduate Programme.
-nav: false
+nav: true
+nav_order: 5
+nav_title: industrial PhD
 ---
 
 We have an opening for an industrial PhD student, joint between my group at
@@ -15,8 +17,8 @@ The IPP is open to Singapore Citizens and Permanent Residents only.
 
 ## About BlueQubit
 
-[BlueQubit](https://www.bluequbit.io/) is a quantum computing company based in San Francisco. The
-team develops quantum algorithms, builds classical simulators, and runs experiments on the latest
+[BlueQubit](https://www.bluequbit.io/) is Silicon Valley's first quantum algorithms lab, based in San
+Francisco. The team develops quantum algorithms, builds classical simulators, and runs experiments on the latest
 quantum computers, including those from Quantinuum and IBM. They recently launched
 [Quantum Flywheel](https://thequantuminsider.com/2026/11/17/bluequbit-names-eight-research-teams-quantum-flywheel/),
 a grant programme supported by IBM, AWS and NVIDIA, which received more than 160 proposals from 29
