@@ -35,7 +35,7 @@ I've been working with them since 2025. Two things we've done together:
   chip collects a million samples in 19 seconds. We estimate the same job would take the Frontier
   supercomputer more than a century.
 
-## What you could work on
+## What we could work on
 
 There's no fixed project. We'll choose one together with BlueQubit, based on what you like and what
 you're good at. Some directions:
