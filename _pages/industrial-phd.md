@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /industrial-phd/
-title: Industrial PhD with BlueQubit
+title: Industrial PhD position with NUS and BlueQubit
 description: An NUS PhD position joint with BlueQubit, under EDB's Industrial Postgraduate Programme.
 nav: true
 nav_order: 5
