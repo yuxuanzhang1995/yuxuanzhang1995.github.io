@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-New opening: an [industrial PhD position](/industrial-phd/) joint with [BlueQubit](https://www.bluequbit.io/), under EDB's Industrial Postgraduate Programme. Open to Singapore Citizens and PRs.
+New openings: up to three [industrial PhD positions](/industrial-phd/) joint with [BlueQubit](https://www.bluequbit.io/), under EDB's Industrial Postgraduate Programme. Open to Singapore Citizens and PRs.

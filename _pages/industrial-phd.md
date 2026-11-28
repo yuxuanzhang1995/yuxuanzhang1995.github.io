@@ -1,18 +1,18 @@
 ---
 layout: page
 permalink: /industrial-phd/
-title: Industrial PhD position with NUS and BlueQubit
-description: An NUS PhD position joint with BlueQubit, under EDB's Industrial Postgraduate Programme.
+title: Industrial PhD positions with NUS and BlueQubit
+description: NUS PhD positions joint with BlueQubit, under EDB's Industrial Postgraduate Programme.
 nav: true
 nav_order: 5
 nav_title: industrial PhD
 ---
 
-We have an opening for an industrial PhD student, joint between my group at
+We have openings for up to three industrial PhD students, joint between my group at
 [NUS](https://www.comp.nus.edu.sg/cs/people/zhangyx/) and [BlueQubit](https://www.bluequbit.io/),
 under EDB's
 [Industrial Postgraduate Programme (IPP)](https://www.edb.gov.sg/en/business-insights/insights/how-singapore-partners-with-global-companies-to-groom-top-local-r-d-talent.html).
-The student will be enrolled in the NUS PhD programme and employed by BlueQubit at the same time.
+Students will be enrolled in the NUS PhD programme and employed by BlueQubit at the same time.
 The IPP is open to Singapore Citizens and Permanent Residents only.
 
 ## About BlueQubit
@@ -37,7 +37,7 @@ I have been collaborating with BlueQubit since 2025. Our joint work so far:
 
 ## What we could work on
 
-The project is flexible and will be decided together with the student and BlueQubit. Possible topics:
+Projects are flexible and will be decided together with each student and BlueQubit. Possible topics:
 
 - quantum advantage experiments on current hardware
   ([peaked circuits code](https://github.com/yuxuanzhang1995/Peaked-circuits))
